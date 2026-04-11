@@ -4,3 +4,8 @@
 
 [node name="Main" type="Node2D" unique_id=1220581384]
 script = ExtResource("1_vt8gv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=903229959]
+offset_right = 632.0
+offset_bottom = 355.0
+color = Color(0.15487596, 0.154876, 0.15487596, 1)
