@@ -10,5 +10,14 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.15487596, 0.154876, 0.15487596, 1)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
+[node name="Camera2D" type="Camera2D" parent="ColorRect" unique_id=1624516011]
 anchor_mode = 0
+
+[node name="TabBar" type="TabBar" parent="." unique_id=853886123]
+offset_right = 319.0
+offset_bottom = 40.0
+current_tab = 0
+tab_count = 3
+tab_0/title = "Store"
+tab_1/title = "Library"
+tab_2/title = "Community"
