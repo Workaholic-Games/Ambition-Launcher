@@ -6,6 +6,9 @@
 script = ExtResource("1_vt8gv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=903229959]
-offset_right = 632.0
-offset_bottom = 355.0
+offset_right = 640.0
+offset_bottom = 360.0
 color = Color(0.15487596, 0.154876, 0.15487596, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
+anchor_mode = 0

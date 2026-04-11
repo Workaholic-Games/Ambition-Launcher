@@ -31,6 +31,7 @@ window/stretch/mode="canvas_items"
 folder_colors={
 "res://branding/": "yellow",
 "res://entites/": "blue",
+"res://entites/library/": "green",
 "res://entites/main/": "purple"
 }
 
