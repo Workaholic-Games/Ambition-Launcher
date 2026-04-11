@@ -1,11 +1,21 @@
 extends Node2D
+var path = "user://save/data.res"
+var launcher_data = data.new()
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
+func _ready():
+	DirAccess.make_dir_absolute(path)
+	load_data()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func load_data():
+	if (ResourceLoader.exists(path)):
+		launcher_data = ResourceLoader.load(path).duplicate(true)
+		print("LOADED")
+	else:
+		print("NO SAVE DATA FOUND. CREATED NEW FILE")
+func save_data():
+	ResourceSaver.save(launcher_data, path)
+	print("SAVED!")

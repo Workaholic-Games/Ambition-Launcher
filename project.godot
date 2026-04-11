@@ -18,6 +18,10 @@ boot_splash/use_filter=false
 boot_splash/image="uid://i0vpjh01eyt6"
 config/icon="uid://i0vpjh01eyt6"
 
+[autoload]
+
+Main="*uid://hki2er1uwscs"
+
 [display]
 
 window/size/viewport_width=640
@@ -31,8 +35,15 @@ window/stretch/mode="canvas_items"
 folder_colors={
 "res://branding/": "yellow",
 "res://entites/": "blue",
-"res://entites/main/": "purple"
+"res://entites/main/": "purple",
+"res://entites/store/": "green",
+"res://fonts/": "gray",
+"res://game_assets/": "red"
 }
+
+[gui]
+
+theme/custom_font="uid://cju7vrq1y7gpl"
 
 [physics]
 
@@ -40,6 +51,7 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

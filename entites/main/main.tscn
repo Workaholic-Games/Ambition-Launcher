@@ -1,23 +1,205 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
-[ext_resource type="Script" uid="uid://hki2er1uwscs" path="res://entites/main/main.gd" id="1_vt8gv"]
+[ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
+[ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
+[ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dgon"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 2
+border_color = Color(0.38431373, 0, 0.003921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
+bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38446033, 2.7735346e-06, 0.004088972, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfcn8"]
+bg_color = Color(0.16206557, 0.1620656, 0.16206554, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.80091834, 9.1304035e-05, 0.018680604, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7kjj"]
+bg_color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.65192723, 5.1499906e-06, 0.012794694, 1)
 
 [node name="Main" type="Node2D" unique_id=1220581384]
-script = ExtResource("1_vt8gv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=903229959]
 offset_right = 640.0
 offset_bottom = 360.0
-color = Color(0.15487596, 0.154876, 0.15487596, 1)
+color = Color(0.09803922, 0.09803922, 0.09803922, 1)
 
 [node name="Camera2D" type="Camera2D" parent="ColorRect" unique_id=1624516011]
 anchor_mode = 0
 
-[node name="TabBar" type="TabBar" parent="." unique_id=853886123]
-offset_right = 319.0
+[node name="Tabs" type="Control" parent="." unique_id=1890686298]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
 offset_bottom = 40.0
-current_tab = 0
-tab_count = 3
-tab_0/title = "Store"
-tab_1/title = "Library"
-tab_2/title = "Community"
+
+[node name="Panel" type="Panel" parent="Tabs" unique_id=918435449]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2dgon")
+
+[node name="Label" type="Label" parent="Tabs/Panel" unique_id=168517107]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 126.0
+offset_right = 95.0
+offset_bottom = 320.0
+text = "THIS IS FOR LAUNCHER GAMES"
+autowrap_mode = 3
+
+[node name="Buttons" type="GridContainer" parent="Tabs" unique_id=997375876]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 360.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Store" type="Button" parent="Tabs/Buttons" unique_id=940841122]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvqcv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rvqcv")
+toggle_mode = true
+button_group = ExtResource("3_bfcn8")
+text = "Store"
+
+[node name="Library" type="Button" parent="Tabs/Buttons" unique_id=651700251]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvqcv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
+toggle_mode = true
+button_group = ExtResource("3_bfcn8")
+text = "Library"
+
+[node name="Community" type="Button" parent="Tabs/Buttons" unique_id=791475924]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvqcv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
+toggle_mode = true
+button_group = ExtResource("3_bfcn8")
+text = "Community"
+
+[node name="Settings" type="Button" parent="Tabs/Buttons" unique_id=576620853]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvqcv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
+toggle_mode = true
+button_group = ExtResource("3_bfcn8")
+text = "Settings"
+
+[node name="Quit Launcher" type="Button" parent="Tabs/Buttons" unique_id=2073025503]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvqcv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bfcn8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
+toggle_mode = true
+button_group = ExtResource("3_bfcn8")
+text = "Quit Launcher"
+
+[node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_l7kjj")
+items = NodePath("Area/GridContainer")
+
+[node name="Area" type="ScrollContainer" parent="Store" unique_id=639740205]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 352.0
+
+[node name="GridContainer" type="GridContainer" parent="Store/Area" unique_id=65950568]
+layout_mode = 2
+
+[node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 48.0
+placeholder_text = "Search the Store..."
+emoji_menu_enabled = false
+clear_button_enabled = true
+
+[node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_l7kjj")
+items = NodePath("Area/GridContainer")
+
+[node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 352.0
+
+[node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
+layout_mode = 2
+
+[node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 48.0
+placeholder_text = "Search your Library..."
+emoji_menu_enabled = false
+clear_button_enabled = true
+
+[connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
+[connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
