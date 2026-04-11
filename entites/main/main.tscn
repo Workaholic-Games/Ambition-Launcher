@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
+[ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
+[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
 bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
@@ -85,6 +87,8 @@ border_width_left = 6
 border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwoik"]
+
+[sub_resource type="GDScript" id="GDScript_eq36p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlte"]
 bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
@@ -178,6 +182,7 @@ toggle_mode = true
 button_pressed = true
 button_group = ExtResource("3_bfcn8")
 text = "Store"
+script = ExtResource("3_4mlte")
 
 [node name="Community" type="Button" parent="Tabs/Buttons" unique_id=791475924]
 custom_minimum_size = Vector2(110, 0)
@@ -269,6 +274,35 @@ offset_left = 108.0
 offset_right = 110.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g3yru")
+
+[node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_l7kjj")
+items = NodePath("Area/GridContainer")
+
+[node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 352.0
+
+[node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
+layout_mode = 2
+
+[node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 48.0
+placeholder_text = "Search your Library..."
+emoji_menu_enabled = false
+clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
 layout_mode = 3
@@ -509,25 +543,25 @@ placeholder_text = "Search the Store..."
 emoji_menu_enabled = false
 clear_button_enabled = true
 
-[node name="Store Pages" type="Control" parent="." unique_id=1439287199]
-layout_mode = 3
+[node name="Store Pages" type="Control" parent="Store" unique_id=1439287199]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_tkre5")
 
-[node name="FNAB" type="Control" parent="Store Pages" unique_id=116970929]
+[node name="FNAB" type="Control" parent="Store/Store Pages" unique_id=116970929]
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
+script = SubResource("GDScript_eq36p")
 
-[node name="Background" type="Panel" parent="Store Pages/FNAB" unique_id=1212018716]
+[node name="Background" type="Panel" parent="Store/Store Pages/FNAB" unique_id=1212018716]
 layout_mode = 0
 offset_right = 530.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
 
-[node name="Version Select Label" type="Label" parent="Store Pages/FNAB" unique_id=74541496]
+[node name="Version Select Label" type="Label" parent="Store/Store Pages/FNAB" unique_id=74541496]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 8.0
@@ -535,7 +569,7 @@ offset_right = 146.0
 offset_bottom = 26.0
 text = "Version Select:"
 
-[node name="FNAB Versions" type="OptionButton" parent="Store Pages/FNAB" unique_id=1505936404]
+[node name="FNAB Versions" type="OptionButton" parent="Store/Store Pages/FNAB" unique_id=1505936404]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 24.0
@@ -555,7 +589,7 @@ popup/item_1/id = 0
 popup/item_2/text = "DEMO"
 popup/item_2/id = 2
 
-[node name="Install" type="Button" parent="Store Pages/FNAB" unique_id=1110838534]
+[node name="Install" type="Button" parent="Store/Store Pages/FNAB" unique_id=1110838534]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 320.0
@@ -571,7 +605,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
 text = "Install"
 
-[node name="Version Changes" type="RichTextLabel" parent="Store Pages/FNAB" unique_id=656689229]
+[node name="Version Changes" type="RichTextLabel" parent="Store/Store Pages/FNAB" unique_id=656689229]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 56.0
@@ -583,7 +617,7 @@ text = "Ambition Edition - Important Changes:
 -Fixed Bulba and Gigabot overlapping
 -Remade the Eternal Night system"
 
-[node name="Game Description" type="RichTextLabel" parent="Store Pages/FNAB" unique_id=762663260]
+[node name="Game Description" type="RichTextLabel" parent="Store/Store Pages/FNAB" unique_id=762663260]
 layout_mode = 0
 offset_left = 178.0
 offset_top = 208.0
@@ -593,7 +627,7 @@ theme = SubResource("Theme_1dv2i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
 
-[node name="Age Rating" type="Label" parent="Store Pages/FNAB" unique_id=1950780056]
+[node name="Age Rating" type="Label" parent="Store/Store Pages/FNAB" unique_id=1950780056]
 layout_mode = 0
 offset_left = 394.0
 offset_top = 208.0
@@ -604,7 +638,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 text = "AGE RATING:
 T for Teen"
 
-[node name="Genre and Difficulty" type="Label" parent="Store Pages/FNAB" unique_id=1600659123]
+[node name="Genre and Difficulty" type="Label" parent="Store/Store Pages/FNAB" unique_id=1600659123]
 layout_mode = 0
 offset_left = 394.0
 offset_top = 256.0
@@ -615,13 +649,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 text = "Genre: Horror
 Difficulty: Hard"
 
-[node name="Thumbnail" type="Sprite2D" parent="Store Pages/FNAB" unique_id=1503507865]
+[node name="Thumbnail" type="Sprite2D" parent="Store/Store Pages/FNAB" unique_id=1503507865]
 position = Vector2(178, 8)
 scale = Vector2(0.17777775, 0.17777775)
 texture = ExtResource("11_4mlte")
 centered = false
 
-[node name="Label" type="Label" parent="Store Pages/FNAB" unique_id=1679075641]
+[node name="Label" type="Label" parent="Store/Store Pages/FNAB" unique_id=1679075641]
 layout_mode = 0
 offset_left = 17.999985
 offset_top = 215.99998
@@ -632,35 +666,16 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
 text = "WIP STILL WORKING ON"
 
-[node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_l7kjj")
-items = NodePath("Area/GridContainer")
-
-[node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
+[node name="Close Button" type="Button" parent="Store/Store Pages" unique_id=186477530]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 64.0
-offset_right = 624.0
-offset_bottom = 352.0
+offset_left = 616.0
+offset_right = 632.0
+offset_bottom = 26.0
+text = "X"
+script = ExtResource("13_eq36p")
 
-[node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
-layout_mode = 2
-
-[node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 16.0
-offset_right = 576.0
-offset_bottom = 48.0
-placeholder_text = "Search your Library..."
-emoji_menu_enabled = false
-clear_button_enabled = true
-
+[connection signal="pressed" from="Tabs/Buttons/Store" to="Tabs/Buttons/Store" method="_on_pressed"]
+[connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_pressed"]
@@ -677,5 +692,5 @@ clear_button_enabled = true
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
-[connection signal="item_selected" from="Store Pages/FNAB/FNAB Versions" to="Store Pages" method="_on_fnab_versions_item_selected"]
-[connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
+[connection signal="item_selected" from="Store/Store Pages/FNAB/FNAB Versions" to="Store/Store Pages" method="_on_fnab_versions_item_selected"]
+[connection signal="pressed" from="Store/Store Pages/Close Button" to="Store/Store Pages/Close Button" method="_on_pressed"]
