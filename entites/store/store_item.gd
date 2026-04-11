@@ -1,6 +1,6 @@
 extends TextureButton
 
-@export var store_page : Control
+@onready var store_page : Control = $"../../../../../Store Pages/FNAB"
 @onready var store_pages: Control = $"../../../../../Store Pages"
 
 
@@ -19,6 +19,7 @@ func _on_pressed() -> void:
 	#store_page.visible = true
 	#this is temp solution, will change to var in future
 	store_pages.visible = true
+	store_page.visible = true
 	
 
 

@@ -88,8 +88,6 @@ border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwoik"]
 
-[sub_resource type="GDScript" id="GDScript_eq36p"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlte"]
 bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
 
@@ -550,10 +548,10 @@ offset_bottom = 40.0
 script = ExtResource("10_tkre5")
 
 [node name="FNAB" type="Control" parent="Store/Store Pages" unique_id=116970929]
+visible = false
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
-script = SubResource("GDScript_eq36p")
 
 [node name="Background" type="Panel" parent="Store/Store Pages/FNAB" unique_id=1212018716]
 layout_mode = 0
