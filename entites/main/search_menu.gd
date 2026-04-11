@@ -14,8 +14,10 @@ func _on_search_bar_text_changed(new_text: String) -> void:
 	matches.clear()
 	
 	for i in items.get_children():
-		if new_text in i.text.to_lower():
+		if new_text in i.name.to_lower():
 			matches.append(i)
+	
+	
 	
 	for i in items.get_children():
 		if i in matches:
