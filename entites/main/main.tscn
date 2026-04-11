@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
-[ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
+[ext_resource type="Script" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
-[ext_resource type="Script" uid="uid://duhe0sixyhjbt" path="res://entites/main/library_button.gd" id="3_xjj0j"]
+[ext_resource type="Script" path="res://entites/main/library_button.gd" id="3_xjj0j"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
@@ -13,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
-[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
-[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
-[ext_resource type="Script" uid="uid://ctkfs3ywexvlv" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
-[ext_resource type="Script" uid="uid://oqnblmaj7u3t" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
+[ext_resource type="Script" path="res://entites/main/close_button.gd" id="13_eq36p"]
+[ext_resource type="Script" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Script" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
+[ext_resource type="Script" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
 bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
@@ -35,6 +35,13 @@ border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.65192723, 5.1499906e-06, 0.012794694, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwoik"]
+bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
+border_width_left = 6
+border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3a0l5"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xd8mv"]
 color = Color(0.9079417, 0.9079417, 0.90794164, 1)
@@ -82,11 +89,6 @@ fill_from = Vector2(0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkre5"]
 bg_color = Color(0, 0, 0, 0.68235296)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwoik"]
-bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
-border_width_left = 6
-border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwoik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlte"]
@@ -127,6 +129,7 @@ border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 bg_color = Color(0.38431373, 0, 0.003921569, 1)
 
 [node name="Main" type="Node2D" unique_id=1220581384]
+metadata/_edit_vertical_guides_ = [-56.0]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -188,9 +191,10 @@ layout_mode = 2
 [node name="Search Bar" type="LineEdit" parent="Tabs/Buttons/Library/Library" unique_id=834488182]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 16.0
 offset_right = 576.0
-offset_bottom = 48.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3a0l5")
 placeholder_text = "Search your Library..."
 emoji_menu_enabled = false
 clear_button_enabled = true
@@ -261,6 +265,7 @@ texture_normal = ExtResource("4_akru0")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+type = "FNAB"
 
 [node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=769458817]
 visible = false
@@ -292,6 +297,7 @@ texture_normal = ExtResource("5_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+type = "FNAB2"
 
 [node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1500190869]
 visible = false
@@ -340,6 +346,7 @@ texture_normal = ExtResource("7_fwoik")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+type = "VegAlpha"
 
 [node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" unique_id=1212034947]
 visible = false
@@ -370,6 +377,7 @@ texture_normal = ExtResource("6_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+type = "VegRegrown"
 
 [node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1970307114]
 visible = false
@@ -445,34 +453,34 @@ autowrap_mode = 3
 [node name="Search Bar" type="LineEdit" parent="Tabs/Buttons/Store/Store" unique_id=1887941621]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 16.0
 offset_right = 576.0
-offset_bottom = 48.0
+offset_bottom = 32.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fwoik")
 placeholder_text = "Search the Store..."
 emoji_menu_enabled = false
 clear_button_enabled = true
 
-[node name="Store Pages" type="Control" parent="Tabs/Buttons/Store/Store" unique_id=1439287199]
+[node name="Store Pages" type="Control" parent="Tabs/Buttons/Store" unique_id=1439287199]
+visible = false
 anchors_preset = 0
+offset_top = -20.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 20.0
 script = ExtResource("10_tkre5")
 
-[node name="FNAB" type="Control" parent="Tabs/Buttons/Store/Store/Store Pages" unique_id=116970929]
-visible = false
+[node name="FNAB" type="Control" parent="Tabs/Buttons/Store/Store Pages" unique_id=116970929]
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
 
-[node name="Background" type="Panel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1212018716]
+[node name="Background" type="Panel" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1212018716]
 layout_mode = 0
 offset_right = 530.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
 
-[node name="Version Select Label" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=74541496]
+[node name="Version Select Label" type="Label" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=74541496]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 8.0
@@ -480,13 +488,18 @@ offset_right = 146.0
 offset_bottom = 26.0
 text = "Version Select:"
 
-[node name="FNAB Versions" type="OptionButton" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1505936404]
+[node name="FNAB Versions" type="OptionButton" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1505936404]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 24.0
 offset_right = 170.0
 offset_bottom = 50.0
 theme = SubResource("Theme_g3yru")
+theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fwoik")
@@ -500,11 +513,11 @@ popup/item_1/id = 0
 popup/item_2/text = "DEMO"
 popup/item_2/id = 2
 
-[node name="Install" type="Button" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1110838534]
+[node name="Install" type="Button" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1110838534]
 layout_mode = 0
-offset_left = 58.0
+offset_left = 178.0
 offset_top = 320.0
-offset_right = 122.0
+offset_right = 274.0
 offset_bottom = 346.0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
@@ -516,29 +529,33 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
 text = "Install"
 
-[node name="Version Changes" type="RichTextLabel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=656689229]
+[node name="Version Changes" type="RichTextLabel" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=656689229]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 56.0
 offset_right = 170.0
-offset_bottom = 304.0
+offset_bottom = 344.0
 theme = SubResource("Theme_1dv2i")
+theme_override_colors/default_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "Ambition Edition - Important Changes:
+bbcode_enabled = true
+text = "[color=green]Important Changes:[/color]
 -Fixed Bulba and Gigabot overlapping
 -Remade the Eternal Night system"
 
-[node name="Game Description" type="RichTextLabel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=762663260]
+[node name="Game Description" type="RichTextLabel" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=762663260]
 layout_mode = 0
 offset_left = 178.0
 offset_top = 208.0
 offset_right = 386.0
-offset_bottom = 352.0
+offset_bottom = 304.0
 theme = SubResource("Theme_1dv2i")
+theme_override_colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+bbcode_enabled = true
 text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
 
-[node name="Age Rating" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1950780056]
+[node name="Age Rating" type="Label" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1950780056]
 layout_mode = 0
 offset_left = 394.0
 offset_top = 208.0
@@ -548,41 +565,37 @@ theme = SubResource("Theme_1dv2i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 text = "AGE RATING:
 T for Teen"
+vertical_alignment = 1
 
-[node name="Genre and Difficulty" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1600659123]
+[node name="Genre and Difficulty" type="Label" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1600659123]
 layout_mode = 0
 offset_left = 394.0
 offset_top = 256.0
 offset_right = 530.0
-offset_bottom = 296.0
+offset_bottom = 304.0
 theme = SubResource("Theme_1dv2i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 text = "Genre: Horror
 Difficulty: Hard"
+vertical_alignment = 1
 
-[node name="Thumbnail" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1503507865]
+[node name="Thumbnail" type="Sprite2D" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=1503507865]
 position = Vector2(178, 8)
 scale = Vector2(0.17777775, 0.17777775)
 texture = ExtResource("11_4mlte")
 centered = false
 
-[node name="Label" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1679075641]
+[node name="Close Button" type="Button" parent="Tabs/Buttons/Store/Store Pages/FNAB" unique_id=186477530]
 layout_mode = 0
-offset_left = 17.999985
-offset_top = 215.99998
-offset_right = 504.0
-offset_bottom = 270.0
-rotation = -0.28800118
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
-text = "WIP STILL WORKING ON"
-
-[node name="Close Button" type="Button" parent="Tabs/Buttons/Store/Store/Store Pages" unique_id=186477530]
-layout_mode = 0
-offset_left = 616.0
-offset_right = 632.0
-offset_bottom = 26.0
-text = "X"
+offset_left = 290.0
+offset_top = 320.0
+offset_right = 386.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjj0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
+text = "Back"
 script = ExtResource("13_eq36p")
 
 [node name="Community" type="Button" parent="Tabs/Buttons" unique_id=791475924]
@@ -729,8 +742,8 @@ text = "Are you sure?"
 [connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
 [connection signal="text_changed" from="Tabs/Buttons/Store/Store/Search Bar" to="Tabs/Buttons/Store/Store" method="_on_search_bar_text_changed"]
-[connection signal="item_selected" from="Tabs/Buttons/Store/Store/Store Pages/FNAB/FNAB Versions" to="Tabs/Buttons/Store/Store/Store Pages" method="_on_fnab_versions_item_selected"]
-[connection signal="pressed" from="Tabs/Buttons/Store/Store/Store Pages/Close Button" to="Tabs/Buttons/Store/Store/Store Pages/Close Button" method="_on_pressed"]
+[connection signal="item_selected" from="Tabs/Buttons/Store/Store Pages/FNAB/FNAB Versions" to="Tabs/Buttons/Store/Store Pages" method="_on_fnab_versions_item_selected"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store Pages/FNAB/Close Button" to="Tabs/Buttons/Store/Store Pages/FNAB/Close Button" method="_on_pressed"]
 [connection signal="pressed" from="Tabs/Buttons/Quit Launcher" to="Tabs/Buttons/Quit Launcher" method="_on_pressed"]
 [connection signal="pressed" from="Window/Camera2D/Yes" to="Window/Camera2D/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Window/Camera2D/No" to="Window/Camera2D/No" method="_on_pressed"]
