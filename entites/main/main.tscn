@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
 [ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
+[ext_resource type="Script" uid="uid://duhe0sixyhjbt" path="res://entites/main/library_button.gd" id="3_xjj0j"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
@@ -13,6 +14,9 @@
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
 [ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
+[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Script" uid="uid://ctkfs3ywexvlv" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
+[ext_resource type="Script" uid="uid://oqnblmaj7u3t" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
 bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
@@ -31,9 +35,6 @@ border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.65192723, 5.1499906e-06, 0.012794694, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3yru"]
-bg_color = Color(0.38431373, 0, 0.003921569, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xd8mv"]
 color = Color(0.9079417, 0.9079417, 0.90794164, 1)
@@ -122,6 +123,9 @@ bg_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 border_width_left = 2
 border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3yru"]
+bg_color = Color(0.38431373, 0, 0.003921569, 1)
+
 [node name="Main" type="Node2D" unique_id=1220581384]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
@@ -161,6 +165,35 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Library"
+script = ExtResource("3_xjj0j")
+
+[node name="Library" type="Control" parent="Tabs/Buttons/Library" unique_id=337733771 node_paths=PackedStringArray("items")]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_l7kjj")
+items = NodePath("Area/GridContainer")
+
+[node name="Area" type="ScrollContainer" parent="Tabs/Buttons/Library/Library" unique_id=491017469]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 352.0
+
+[node name="GridContainer" type="GridContainer" parent="Tabs/Buttons/Library/Library/Area" unique_id=1987771235]
+layout_mode = 2
+
+[node name="Search Bar" type="LineEdit" parent="Tabs/Buttons/Library/Library" unique_id=834488182]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 48.0
+placeholder_text = "Search your Library..."
+emoji_menu_enabled = false
+clear_button_enabled = true
 
 [node name="Store" type="Button" parent="Tabs/Buttons" unique_id=940841122]
 custom_minimum_size = Vector2(110, 0)
@@ -181,6 +214,376 @@ button_pressed = true
 button_group = ExtResource("3_bfcn8")
 text = "Store"
 script = ExtResource("3_4mlte")
+
+[node name="Store" type="Control" parent="Tabs/Buttons/Store" unique_id=2112552624 node_paths=PackedStringArray("items")]
+anchors_preset = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+script = ExtResource("4_l7kjj")
+items = NodePath("Area/GridContainer")
+
+[node name="Area" type="ScrollContainer" parent="Tabs/Buttons/Store/Store" unique_id=639740205]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 64.0
+offset_right = 641.0
+offset_bottom = 360.0
+theme = SubResource("Theme_1dv2i")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Tabs/Buttons/Store/Store/Area" unique_id=65950568]
+layout_mode = 2
+
+[node name="Five Nights at Bulbas (FNAB)" type="VBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer" unique_id=526257688]
+custom_minimum_size = Vector2(523, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1701956488]
+layout_mode = 2
+text = "Five Night's at Bulba's"
+horizontal_alignment = 1
+
+[node name="Line" type="Panel" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=893160749]
+custom_minimum_size = Vector2(523, 4)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
+
+[node name="Games" type="HBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1710918498]
+layout_mode = 2
+alignment = 1
+
+[node name="FNAB" type="TextureButton" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=989411366]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("4_akru0")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=769458817]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=184796373]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
+text = "Five Night's at Bulba's"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="FNAB2" type="TextureButton" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=1754228612]
+texture_filter = 2
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("5_xd8mv")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1500190869]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1123276015]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
+text = "Five Night's at Bulba's 2"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="The Vegetable Game (Regrown)" type="VBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer" unique_id=364897010]
+custom_minimum_size = Vector2(523, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=155710770]
+layout_mode = 2
+text = "The Vegetable Game('s)"
+horizontal_alignment = 1
+
+[node name="Line" type="Panel" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=104340366]
+custom_minimum_size = Vector2(523, 4)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
+
+[node name="Games" type="HBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=2109483381]
+layout_mode = 2
+alignment = 1
+
+[node name="The Vegetable Game (Alpha)" type="TextureButton" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=754867142]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("7_fwoik")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" unique_id=1212034947]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" unique_id=1056248521]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
+text = "The Vegetable Game Alpha"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="The Vegetable Game Regrown" type="TextureButton" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=848103061]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("6_xd8mv")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1970307114]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1549571349]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
+text = "The Vegetable Game Regrown"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Other (Bitcoin Miner)" type="VBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer" unique_id=443762424]
+custom_minimum_size = Vector2(523, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=64931198]
+layout_mode = 2
+text = "Other Games"
+horizontal_alignment = 1
+
+[node name="Line" type="Panel" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=5009249]
+custom_minimum_size = Vector2(523, 4)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
+
+[node name="Games" type="HBoxContainer" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=824905173]
+layout_mode = 2
+alignment = 1
+
+[node name="Bitcoin Miner" type="TextureButton" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("7_1dv2i")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=350238601]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
+text = "Bitcoin Miner"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Search Bar" type="LineEdit" parent="Tabs/Buttons/Store/Store" unique_id=1887941621]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 576.0
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fwoik")
+placeholder_text = "Search the Store..."
+emoji_menu_enabled = false
+clear_button_enabled = true
+
+[node name="Store Pages" type="Control" parent="Tabs/Buttons/Store/Store" unique_id=1439287199]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_tkre5")
+
+[node name="FNAB" type="Control" parent="Tabs/Buttons/Store/Store/Store Pages" unique_id=116970929]
+visible = false
+anchors_preset = 0
+offset_left = 110.0
+offset_right = 110.0
+
+[node name="Background" type="Panel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1212018716]
+layout_mode = 0
+offset_right = 530.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
+
+[node name="Version Select Label" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=74541496]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 146.0
+offset_bottom = 26.0
+text = "Version Select:"
+
+[node name="FNAB Versions" type="OptionButton" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1505936404]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = 170.0
+offset_bottom = 50.0
+theme = SubResource("Theme_g3yru")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwoik")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwoik")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
+selected = 0
+item_count = 3
+popup/item_0/text = "Ambition Edition *"
+popup/item_0/id = 0
+popup/item_1/text = "1.1"
+popup/item_1/id = 0
+popup/item_2/text = "DEMO"
+popup/item_2/id = 2
+
+[node name="Install" type="Button" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1110838534]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 320.0
+offset_right = 122.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_rvqcv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjj0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
+text = "Install"
+
+[node name="Version Changes" type="RichTextLabel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=656689229]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 56.0
+offset_right = 170.0
+offset_bottom = 304.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "Ambition Edition - Important Changes:
+-Fixed Bulba and Gigabot overlapping
+-Remade the Eternal Night system"
+
+[node name="Game Description" type="RichTextLabel" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=762663260]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 208.0
+offset_right = 386.0
+offset_bottom = 352.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
+
+[node name="Age Rating" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1950780056]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 208.0
+offset_right = 530.0
+offset_bottom = 248.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "AGE RATING:
+T for Teen"
+
+[node name="Genre and Difficulty" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1600659123]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 256.0
+offset_right = 530.0
+offset_bottom = 296.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "Genre: Horror
+Difficulty: Hard"
+
+[node name="Thumbnail" type="Sprite2D" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1503507865]
+position = Vector2(178, 8)
+scale = Vector2(0.17777775, 0.17777775)
+texture = ExtResource("11_4mlte")
+centered = false
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Store/Store/Store Pages/FNAB" unique_id=1679075641]
+layout_mode = 0
+offset_left = 17.999985
+offset_top = 215.99998
+offset_right = 504.0
+offset_bottom = 270.0
+rotation = -0.28800118
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "WIP STILL WORKING ON"
+
+[node name="Close Button" type="Button" parent="Tabs/Buttons/Store/Store/Store Pages" unique_id=186477530]
+layout_mode = 0
+offset_left = 616.0
+offset_right = 632.0
+offset_bottom = 26.0
+text = "X"
+script = ExtResource("13_eq36p")
 
 [node name="Community" type="Button" parent="Tabs/Buttons" unique_id=791475924]
 custom_minimum_size = Vector2(110, 0)
@@ -256,6 +659,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
+script = ExtResource("15_kxcgb")
 
 [node name="Label" type="Label" parent="Tabs" unique_id=168517107]
 layout_mode = 0
@@ -273,422 +677,60 @@ offset_right = 110.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g3yru")
 
-[node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
+[node name="Window" type="Window" parent="." unique_id=78687604]
+oversampling_override = 1.0
+title = "Quit"
+initial_position = 1
 visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_l7kjj")
-items = NodePath("Area/GridContainer")
 
-[node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 64.0
-offset_right = 624.0
-offset_bottom = 352.0
+[node name="Camera2D" type="Camera2D" parent="Window" unique_id=1515278510]
+offset = Vector2(50, 50)
+zoom = Vector2(-6.32, -3.49)
 
-[node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
-layout_mode = 2
+[node name="Yes" type="Button" parent="Window/Camera2D" unique_id=772219974]
+offset_left = 2.0
+offset_top = 46.0
+offset_right = 36.0
+offset_bottom = 60.0
+text = "Yes"
+script = ExtResource("16_exgh8")
 
-[node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 16.0
-offset_right = 576.0
-offset_bottom = 48.0
-placeholder_text = "Search your Library..."
-emoji_menu_enabled = false
-clear_button_enabled = true
+[node name="No" type="Button" parent="Window/Camera2D" unique_id=931617972]
+offset_left = 66.0
+offset_top = 46.0
+offset_right = 100.0
+offset_bottom = 60.0
+text = "No"
+script = ExtResource("17_3a0l5")
 
-[node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_l7kjj")
-items = NodePath("Area/GridContainer")
+[node name="Label" type="Label" parent="Window/Camera2D" unique_id=1694044909]
+offset_left = -6.0
+offset_top = -2.0
+offset_right = 88.0
+offset_bottom = 16.0
+text = "Are you sure?"
 
-[node name="Area" type="ScrollContainer" parent="Store" unique_id=639740205]
-layout_mode = 0
-offset_left = 110.0
-offset_top = 64.0
-offset_right = 641.0
-offset_bottom = 360.0
-theme = SubResource("Theme_1dv2i")
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="Store/Area" unique_id=65950568]
-layout_mode = 2
-
-[node name="Five Nights at Bulbas (FNAB)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
-custom_minimum_size = Vector2(523, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1701956488]
-layout_mode = 2
-text = "Five Night's at Bulba's"
-horizontal_alignment = 1
-
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=893160749]
-custom_minimum_size = Vector2(523, 4)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
-
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1710918498]
-layout_mode = 2
-alignment = 1
-
-[node name="FNAB" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=989411366]
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("4_akru0")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=769458817]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=184796373]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
-text = "Five Night's at Bulba's"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=1754228612]
-texture_filter = 2
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("5_xd8mv")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1500190869]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1123276015]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
-text = "Five Night's at Bulba's 2"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="The Vegetable Game (Regrown)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=364897010]
-custom_minimum_size = Vector2(523, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=155710770]
-layout_mode = 2
-text = "The Vegetable Game('s)"
-horizontal_alignment = 1
-
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=104340366]
-custom_minimum_size = Vector2(523, 4)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
-
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=2109483381]
-layout_mode = 2
-alignment = 1
-
-[node name="The Vegetable Game (Alpha)" type="TextureButton" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=754867142]
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("7_fwoik")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" unique_id=1212034947]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" unique_id=1056248521]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
-text = "The Vegetable Game Alpha"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="The Vegetable Game Regrown" type="TextureButton" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=848103061]
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("6_xd8mv")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1970307114]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1549571349]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
-text = "The Vegetable Game Regrown"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Other (Bitcoin Miner)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=443762424]
-custom_minimum_size = Vector2(523, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=64931198]
-layout_mode = 2
-text = "Other Games"
-horizontal_alignment = 1
-
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=5009249]
-custom_minimum_size = Vector2(523, 4)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xd8mv")
-
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=824905173]
-layout_mode = 2
-alignment = 1
-
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("7_1dv2i")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=350238601]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tkre5")
-text = "Bitcoin Miner"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 16.0
-offset_right = 576.0
-offset_bottom = 48.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_fwoik")
-placeholder_text = "Search the Store..."
-emoji_menu_enabled = false
-clear_button_enabled = true
-
-[node name="Store Pages" type="Control" parent="Store" unique_id=1439287199]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("10_tkre5")
-
-[node name="FNAB" type="Control" parent="Store/Store Pages" unique_id=116970929]
-visible = false
-anchors_preset = 0
-offset_left = 110.0
-offset_right = 110.0
-
-[node name="Background" type="Panel" parent="Store/Store Pages/FNAB" unique_id=1212018716]
-layout_mode = 0
-offset_right = 530.0
-offset_bottom = 360.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
-
-[node name="Version Select Label" type="Label" parent="Store/Store Pages/FNAB" unique_id=74541496]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 8.0
-offset_right = 146.0
-offset_bottom = 26.0
-text = "Version Select:"
-
-[node name="FNAB Versions" type="OptionButton" parent="Store/Store Pages/FNAB" unique_id=1505936404]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 24.0
-offset_right = 170.0
-offset_bottom = 50.0
-theme = SubResource("Theme_g3yru")
-theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
-selected = 0
-item_count = 3
-popup/item_0/text = "Ambition Edition *"
-popup/item_0/id = 0
-popup/item_1/text = "1.1"
-popup/item_1/id = 0
-popup/item_2/text = "DEMO"
-popup/item_2/id = 2
-
-[node name="Install" type="Button" parent="Store/Store Pages/FNAB" unique_id=1110838534]
-layout_mode = 0
-offset_left = 58.0
-offset_top = 320.0
-offset_right = 122.0
-offset_bottom = 346.0
-theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
-theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-theme_override_constants/line_spacing = -6
-theme_override_fonts/font = ExtResource("2_rvqcv")
-theme_override_styles/normal = SubResource("StyleBoxFlat_xjj0j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
-text = "Install"
-
-[node name="Version Changes" type="RichTextLabel" parent="Store/Store Pages/FNAB" unique_id=656689229]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 56.0
-offset_right = 170.0
-offset_bottom = 304.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "Ambition Edition - Important Changes:
--Fixed Bulba and Gigabot overlapping
--Remade the Eternal Night system"
-
-[node name="Game Description" type="RichTextLabel" parent="Store/Store Pages/FNAB" unique_id=762663260]
-layout_mode = 0
-offset_left = 178.0
-offset_top = 208.0
-offset_right = 386.0
-offset_bottom = 352.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
-
-[node name="Age Rating" type="Label" parent="Store/Store Pages/FNAB" unique_id=1950780056]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 208.0
-offset_right = 530.0
-offset_bottom = 248.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "AGE RATING:
-T for Teen"
-
-[node name="Genre and Difficulty" type="Label" parent="Store/Store Pages/FNAB" unique_id=1600659123]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 256.0
-offset_right = 530.0
-offset_bottom = 296.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "Genre: Horror
-Difficulty: Hard"
-
-[node name="Thumbnail" type="Sprite2D" parent="Store/Store Pages/FNAB" unique_id=1503507865]
-position = Vector2(178, 8)
-scale = Vector2(0.17777775, 0.17777775)
-texture = ExtResource("11_4mlte")
-centered = false
-
-[node name="Label" type="Label" parent="Store/Store Pages/FNAB" unique_id=1679075641]
-layout_mode = 0
-offset_left = 17.999985
-offset_top = 215.99998
-offset_right = 504.0
-offset_bottom = 270.0
-rotation = -0.28800118
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
-text = "WIP STILL WORKING ON"
-
-[node name="Close Button" type="Button" parent="Store/Store Pages" unique_id=186477530]
-layout_mode = 0
-offset_left = 616.0
-offset_right = 632.0
-offset_bottom = 26.0
-text = "X"
-script = ExtResource("13_eq36p")
-
+[connection signal="pressed" from="Tabs/Buttons/Library" to="Tabs/Buttons/Library" method="_on_pressed"]
+[connection signal="text_changed" from="Tabs/Buttons/Library/Library/Search Bar" to="Tabs/Buttons/Library/Library" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Tabs/Buttons/Store" to="Tabs/Buttons/Store" method="_on_pressed"]
-[connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
-[connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
-[connection signal="item_selected" from="Store/Store Pages/FNAB/FNAB Versions" to="Store/Store Pages" method="_on_fnab_versions_item_selected"]
-[connection signal="pressed" from="Store/Store Pages/Close Button" to="Store/Store Pages/Close Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_exited"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_mouse_exited"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game (Alpha)" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_exited"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Tabs/Buttons/Store/Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Tabs/Buttons/Store/Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
+[connection signal="text_changed" from="Tabs/Buttons/Store/Store/Search Bar" to="Tabs/Buttons/Store/Store" method="_on_search_bar_text_changed"]
+[connection signal="item_selected" from="Tabs/Buttons/Store/Store/Store Pages/FNAB/FNAB Versions" to="Tabs/Buttons/Store/Store/Store Pages" method="_on_fnab_versions_item_selected"]
+[connection signal="pressed" from="Tabs/Buttons/Store/Store/Store Pages/Close Button" to="Tabs/Buttons/Store/Store/Store Pages/Close Button" method="_on_pressed"]
+[connection signal="pressed" from="Tabs/Buttons/Quit Launcher" to="Tabs/Buttons/Quit Launcher" method="_on_pressed"]
+[connection signal="pressed" from="Window/Camera2D/Yes" to="Window/Camera2D/Yes" method="_on_pressed"]
+[connection signal="pressed" from="Window/Camera2D/No" to="Window/Camera2D/No" method="_on_pressed"]
