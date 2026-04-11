@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
-[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="10_xjj0j"]
+[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
 bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
@@ -509,37 +509,38 @@ placeholder_text = "Search the Store..."
 emoji_menu_enabled = false
 clear_button_enabled = true
 
-[node name="Store Pages" type="Control" parent="Store" unique_id=1439287199]
+[node name="Store Pages" type="Control" parent="." unique_id=1439287199]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_tkre5")
 
-[node name="FNAB" type="Control" parent="Store/Store Pages" unique_id=868858028]
+[node name="FNAB" type="Control" parent="Store Pages" unique_id=116970929]
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
 
-[node name="Background" type="Panel" parent="Store/Store Pages/FNAB" unique_id=2095217033]
+[node name="Background" type="Panel" parent="Store Pages/FNAB" unique_id=1212018716]
 layout_mode = 0
 offset_right = 530.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
 
-[node name="Version Select Label" type="Label" parent="Store/Store Pages/FNAB" unique_id=636158732]
+[node name="Version Select Label" type="Label" parent="Store Pages/FNAB" unique_id=74541496]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 192.0
+offset_top = 8.0
 offset_right = 146.0
-offset_bottom = 210.0
+offset_bottom = 26.0
 text = "Version Select:"
 
-[node name="FNAB Versions" type="OptionButton" parent="Store/Store Pages/FNAB" unique_id=585906049]
+[node name="FNAB Versions" type="OptionButton" parent="Store Pages/FNAB" unique_id=1505936404]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 210.0
-offset_right = 314.0
-offset_bottom = 236.0
+offset_top = 24.0
+offset_right = 170.0
+offset_bottom = 50.0
 theme = SubResource("Theme_g3yru")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fwoik")
@@ -547,19 +548,19 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 selected = 0
 item_count = 3
-popup/item_0/text = "Five Night's at Bulba's Ambition Edition *"
-popup/item_0/id = 2
-popup/item_1/text = "Five Night's at Bulba's 1.1"
+popup/item_0/text = "Ambition Edition *"
+popup/item_0/id = 0
+popup/item_1/text = "1.1"
 popup/item_1/id = 0
-popup/item_2/text = "Five Night's at Bulba's DEMO"
-popup/item_2/id = 1
+popup/item_2/text = "DEMO"
+popup/item_2/id = 2
 
-[node name="Quit Launcher" type="Button" parent="Store/Store Pages/FNAB" unique_id=27069192]
+[node name="Install" type="Button" parent="Store Pages/FNAB" unique_id=1110838534]
 layout_mode = 0
-offset_left = 322.0
-offset_top = 210.0
-offset_right = 386.0
-offset_bottom = 236.0
+offset_left = 58.0
+offset_top = 320.0
+offset_right = 122.0
+offset_bottom = 346.0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
@@ -570,23 +571,66 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kxcgb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exgh8")
 text = "Install"
 
-[node name="Version Changes" type="RichTextLabel" parent="Store/Store Pages/FNAB" unique_id=813611542]
+[node name="Version Changes" type="RichTextLabel" parent="Store Pages/FNAB" unique_id=656689229]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 240.0
-offset_right = 314.0
-offset_bottom = 360.0
+offset_top = 56.0
+offset_right = 170.0
+offset_bottom = 304.0
 theme = SubResource("Theme_1dv2i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
-text = "Ambition Edition - Changelog:
+text = "Ambition Edition - Important Changes:
 -Fixed Bulba and Gigabot overlapping
 -Remade the Eternal Night system"
 
-[node name="Thumbnail" type="Sprite2D" parent="Store/Store Pages/FNAB" unique_id=276656]
-position = Vector2(10.0000305, 8)
-scale = Vector2(0.17037039, 0.17037037)
-texture = ExtResource("10_xjj0j")
+[node name="Game Description" type="RichTextLabel" parent="Store Pages/FNAB" unique_id=762663260]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 208.0
+offset_right = 386.0
+offset_bottom = 352.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
+
+[node name="Age Rating" type="Label" parent="Store Pages/FNAB" unique_id=1950780056]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 208.0
+offset_right = 530.0
+offset_bottom = 248.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "AGE RATING:
+T for Teen"
+
+[node name="Genre and Difficulty" type="Label" parent="Store Pages/FNAB" unique_id=1600659123]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 256.0
+offset_right = 530.0
+offset_bottom = 296.0
+theme = SubResource("Theme_1dv2i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+text = "Genre: Horror
+Difficulty: Hard"
+
+[node name="Thumbnail" type="Sprite2D" parent="Store Pages/FNAB" unique_id=1503507865]
+position = Vector2(178, 8)
+scale = Vector2(0.17777775, 0.17777775)
+texture = ExtResource("11_4mlte")
 centered = false
+
+[node name="Label" type="Label" parent="Store Pages/FNAB" unique_id=1679075641]
+layout_mode = 0
+offset_left = 17.999985
+offset_top = 215.99998
+offset_right = 504.0
+offset_bottom = 270.0
+rotation = -0.28800118
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "WIP STILL WORKING ON"
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
 visible = false
@@ -633,5 +677,5 @@ clear_button_enabled = true
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
-[connection signal="item_selected" from="Store/Store Pages/FNAB/FNAB Versions" to="Store/Store Pages" method="_on_fnab_versions_item_selected"]
+[connection signal="item_selected" from="Store Pages/FNAB/FNAB Versions" to="Store Pages" method="_on_fnab_versions_item_selected"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
