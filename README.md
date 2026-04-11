@@ -10,7 +10,7 @@ our launcher is the gateway to fun!
 Founder and C.E.O. of Workaholic Games. Creator of Five Nights at Bulba's and The Vegetable Game, 
 
 ### TheProOfFPS
-Head of Music and Sound Design.
+Head of Music and Sound Design. Creator of Bitcoin Miner and all of the hit Origianl Sound Tracks of Workaholic Games.
 
 ### NinjaBot2010
 Creator of Gavin's Fantastically Fun Adventure
