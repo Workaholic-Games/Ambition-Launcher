@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
-[ext_resource type="Script" path="res://entites/main/store_button.gd" id="3_4mlte"]
+[ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
-[ext_resource type="Script" path="res://entites/main/library_button.gd" id="3_xjj0j"]
+[ext_resource type="Script" uid="uid://duhe0sixyhjbt" path="res://entites/main/library_button.gd" id="3_xjj0j"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
@@ -13,10 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
-[ext_resource type="Script" path="res://entites/main/close_button.gd" id="13_eq36p"]
-[ext_resource type="Script" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
-[ext_resource type="Script" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
-[ext_resource type="Script" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
+[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
+[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Script" uid="uid://cw71o7gokthmj" path="res://entites/main/community_button.gd" id="15_md7jf"]
+[ext_resource type="Script" uid="uid://cx6jwtpmflrgk" path="res://entites/main/changelog_button.gd" id="16_5enwe"]
+[ext_resource type="Script" uid="uid://ctkfs3ywexvlv" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
+[ext_resource type="Script" uid="uid://oqnblmaj7u3t" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
+[ext_resource type="Script" uid="uid://dwyaqima2omsg" path="res://entites/main/developers_button.gd" id="17_fl0aj"]
+[ext_resource type="Script" uid="uid://kkmeusfdw3rs" path="res://entites/main/settings_button.gd" id="18_gjwx3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvqcv"]
 bg_color = Color(0.09620472, 0.09620475, 0.09620469, 1)
@@ -612,6 +616,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Community"
+script = ExtResource("15_md7jf")
+
+[node name="Community" type="Control" parent="Tabs/Buttons/Community" unique_id=1571939401]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Community/Community" unique_id=800728427]
+layout_mode = 0
+offset_left = 111.999985
+offset_top = 247.99998
+offset_right = 151.99998
+offset_bottom = 266.0
+rotation = -0.5354669
+theme_override_colors/font_color = Color(1, 0, 0.13333334, 1)
+theme_override_font_sizes/font_size = 74
+text = "Work in Progress"
 
 [node name="Changelog" type="Button" parent="Tabs/Buttons" unique_id=608995006]
 custom_minimum_size = Vector2(110, 0)
@@ -627,6 +649,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Changelog"
+script = ExtResource("16_5enwe")
+
+[node name="Changelog" type="Control" parent="Tabs/Buttons/Changelog" unique_id=1204020412]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Changelog/Changelog" unique_id=1364837255]
+layout_mode = 0
+offset_left = 111.999985
+offset_top = 227.99998
+offset_right = 648.0
+offset_bottom = 312.0
+rotation = -0.5354669
+theme_override_colors/font_color = Color(1, 0, 0.13333334, 1)
+theme_override_font_sizes/font_size = 74
+text = "Work in Progress"
 
 [node name="Developers" type="Button" parent="Tabs/Buttons" unique_id=1211144331]
 custom_minimum_size = Vector2(110, 0)
@@ -642,6 +682,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Developers"
+script = ExtResource("17_fl0aj")
+
+[node name="Developers" type="Control" parent="Tabs/Buttons/Developers" unique_id=871039976]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Developers/Developers" unique_id=2028191557]
+layout_mode = 0
+offset_left = 111.999985
+offset_top = 207.99998
+offset_right = 648.0
+offset_bottom = 292.0
+rotation = -0.5354669
+theme_override_colors/font_color = Color(1, 0, 0.13333334, 1)
+theme_override_font_sizes/font_size = 74
+text = "Work in Progress"
 
 [node name="Settings" type="Button" parent="Tabs/Buttons" unique_id=576620853]
 custom_minimum_size = Vector2(110, 0)
@@ -657,6 +715,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l7kjj")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Settings"
+script = ExtResource("18_gjwx3")
+
+[node name="Settings" type="Control" parent="Tabs/Buttons/Settings" unique_id=841640467]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Tabs/Buttons/Settings/Settings" unique_id=1067629183]
+layout_mode = 0
+offset_left = 111.999985
+offset_top = 187.99998
+offset_right = 648.0
+offset_bottom = 272.0
+rotation = -0.5354669
+theme_override_colors/font_color = Color(1, 0, 0.13333334, 1)
+theme_override_font_sizes/font_size = 74
+text = "Work in Progress"
 
 [node name="Quit Launcher" type="Button" parent="Tabs/Buttons" unique_id=2073025503]
 custom_minimum_size = Vector2(110, 0)
@@ -697,30 +773,29 @@ initial_position = 1
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="Window" unique_id=1515278510]
+position = Vector2(2, 6)
 offset = Vector2(50, 50)
-zoom = Vector2(-6.32, -3.49)
 
 [node name="Yes" type="Button" parent="Window/Camera2D" unique_id=772219974]
-offset_left = 2.0
-offset_top = 46.0
-offset_right = 36.0
-offset_bottom = 60.0
+offset_top = 48.0
+offset_right = 34.0
+offset_bottom = 74.0
 text = "Yes"
 script = ExtResource("16_exgh8")
 
 [node name="No" type="Button" parent="Window/Camera2D" unique_id=931617972]
-offset_left = 66.0
-offset_top = 46.0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = 62.0
+offset_top = 48.0
+offset_right = 96.0
+offset_bottom = 74.0
 text = "No"
 script = ExtResource("17_3a0l5")
 
 [node name="Label" type="Label" parent="Window/Camera2D" unique_id=1694044909]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = 88.0
-offset_bottom = 16.0
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 96.0
+offset_bottom = 32.0
 text = "Are you sure?"
 
 [connection signal="pressed" from="Tabs/Buttons/Library" to="Tabs/Buttons/Library" method="_on_pressed"]
@@ -744,6 +819,10 @@ text = "Are you sure?"
 [connection signal="text_changed" from="Tabs/Buttons/Store/Store/Search Bar" to="Tabs/Buttons/Store/Store" method="_on_search_bar_text_changed"]
 [connection signal="item_selected" from="Tabs/Buttons/Store/Store Pages/FNAB/FNAB Versions" to="Tabs/Buttons/Store/Store Pages" method="_on_fnab_versions_item_selected"]
 [connection signal="pressed" from="Tabs/Buttons/Store/Store Pages/FNAB/Close Button" to="Tabs/Buttons/Store/Store Pages/FNAB/Close Button" method="_on_pressed"]
+[connection signal="pressed" from="Tabs/Buttons/Community" to="Tabs/Buttons/Community" method="_on_pressed"]
+[connection signal="pressed" from="Tabs/Buttons/Changelog" to="Tabs/Buttons/Changelog" method="_on_pressed"]
+[connection signal="pressed" from="Tabs/Buttons/Developers" to="Tabs/Buttons/Developers" method="_on_pressed"]
+[connection signal="pressed" from="Tabs/Buttons/Settings" to="Tabs/Buttons/Settings" method="_on_pressed"]
 [connection signal="pressed" from="Tabs/Buttons/Quit Launcher" to="Tabs/Buttons/Quit Launcher" method="_on_pressed"]
 [connection signal="pressed" from="Window/Camera2D/Yes" to="Window/Camera2D/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Window/Camera2D/No" to="Window/Camera2D/No" method="_on_pressed"]
