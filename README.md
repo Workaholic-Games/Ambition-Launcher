@@ -5,4 +5,6 @@ The Ambition Launcher is the home of all Workaholic Games Titles.
 Featuring titles such as Five Nights at Bulba's, The Vegetable Game, and Gavin's Fantastically Fun Adventure,
 our launcher is the gateway to fun!
 
-##About us
+## About us
+### BulbasaurTF
+Founder and C.E.O. of Workaholic Games. Creator of Five Nights at Bulba's and The Vegetable Game, 
