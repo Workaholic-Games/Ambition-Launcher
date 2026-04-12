@@ -1,19 +1,19 @@
 [gd_resource type="Theme" format=3 uid="uid://cihgarrvpnrkw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
-bg_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
 border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.6509804, 0, 0.011764706, 1)
+border_color = Color(0.86999315, 0.00027540416, 0.022652835, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
-bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+bg_color = Color(0.87761533, 0.8776159, 0.8776152, 1)
 border_width_bottom = 2
-border_color = Color(0.38431373, 0, 0.003921569, 1)
+border_color = Color(0.9997557, 0.22081825, 0.17655927, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
-bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+bg_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
 border_width_left = 8
 border_width_bottom = 2
 border_color = Color(0.8, 0, 0.019607844, 1)
@@ -27,14 +27,24 @@ bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
 bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2k11"]
+bg_color = Color(0.87058824, 0, 0.023529412, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
-bg_color = Color(0.772951, 0.77295107, 0.77295107, 1)
+bg_color = Color(0.9297146, 0.9297147, 0.9297146, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f16gj"]
+bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p32uf"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [resource]
 resource_name = "Default (Dark)"
-Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Button/colors/font_color = Color(0.072842844, 0.072842546, 0.072842605, 1)
+Button/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Button/colors/font_hover_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Button/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Button/constants/line_spacing = -6
 Button/styles/hover = SubResource("StyleBoxFlat_5p1rt")
 Button/styles/normal = SubResource("StyleBoxFlat_10o2q")
@@ -47,4 +57,14 @@ Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
+Label/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Line/base_type = &"Panel"
+Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
+OptionButton/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+OptionButton/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+OptionButton/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
+PopupMenu/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+PopupMenu/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_f16gj")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_p32uf")
