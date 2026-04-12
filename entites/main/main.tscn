@@ -735,6 +735,7 @@ text = "Are you sure?"
 [connection signal="pressed" from="Panel/Tabs/Buttons/Changelog" to="Panel/Tabs/Buttons/Changelog" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Developers" to="Panel/Tabs/Buttons/Developers" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs/Buttons/Settings" method="_on_pressed"]
+[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs/Buttons/Quit Launcher" method="_on_pressed"]
 [connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit/Camera2D/Yes" method="_on_pressed"]
 [connection signal="pressed" from="Quit/Camera2D/No" to="Quit/Camera2D/No" method="_on_pressed"]

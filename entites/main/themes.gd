@@ -15,4 +15,3 @@ func _ready() -> void:
 func _on_option_button_item_selected(index: int) -> void:
 	var option: String = $Panel/Tabs/Buttons/Settings/Settings/OptionButton.get_item_text(index)
 	theme = themes[option]
-	print(option)
