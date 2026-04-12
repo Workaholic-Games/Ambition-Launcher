@@ -11,12 +11,24 @@ func _ready():
 		3: $Window.emit_signal("item_selected", 3)
 	
 	match Main.launcher_data.start_page:
-		0: $"../../Library".emit_signal("pressed")
-		1: $"../../Store".emit_signal("pressed")
-		2: $"../../Community".emit_signal("pressed")
-		3: $"../../Changelog".emit_signal("pressed")
-		4: $"../../Developers".emit_signal("pressed")
-		5: $"..".emit_signal("pressed")
+		0: 
+			$"../../Library".emit_signal("pressed")
+			$"../../Library".set_pressed_no_signal(true)
+		1: 
+			$"../../Store".emit_signal("pressed")
+			$"../../Store".set_pressed_no_signal(true)
+		2: 
+			$"../../Community".emit_signal("pressed")
+			$"../../Community".set_pressed_no_signal(true)
+		3: 
+			$"../../Changelog".emit_signal("pressed")
+			$"../../Changelog".set_pressed_no_signal(true)
+		4: 
+			$"../../Developers".emit_signal("pressed")
+			$"../../Developers".set_pressed_no_signal(true)
+		5: 
+			$"..".emit_signal("pressed")
+			$"..".set_pressed_no_signal(true)
 
 
 

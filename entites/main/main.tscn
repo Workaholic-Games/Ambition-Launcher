@@ -145,7 +145,6 @@ clear_button_enabled = true
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_pressed = true
 button_group = ExtResource("3_bfcn8")
 text = "Store"
 
