@@ -30,8 +30,23 @@ bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvamo"]
 bg_color = Color(0.38431373, 0, 0.003921569, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogguv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj2g"]
+bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
 bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0g8s"]
+bg_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+border_width_left = 2
+border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svek6"]
+bg_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+border_width_left = 2
+border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [resource]
 resource_name = "Default (Dark)"
@@ -52,4 +67,10 @@ Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_otj2g")
 Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
+RichTextLabel/colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_j0g8s")
+Store_Page/base_type = &"Label"
+Store_Page/styles/normal = SubResource("StyleBoxFlat_svek6")

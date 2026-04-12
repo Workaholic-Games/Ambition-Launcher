@@ -1,16 +1,15 @@
 extends Control
 
-
-
 var themes: Dictionary[String, Theme] = {
 	"Default (Dark)": load("res://themes/default_dark_theme.tres"),
-	"Default (Light)": load("res://themes/default_light_theme.tres")
+	"Default (Light)": load("res://themes/default_light_theme.tres"),
+	"Ocean Breeze": load("res://themes/ocean_breeze.tres")
 }
 
 func _ready() -> void:
 	for option: String in themes.keys():
 		$Panel/Tabs/Buttons/Settings/Settings/OptionButton.add_item(option)
-	theme = themes["Default (Dark)"]
+	theme = themes["Ocean Breeze"]
 
 
 
