@@ -677,39 +677,40 @@ offset_right = 110.0
 offset_bottom = 360.0
 theme_type_variation = &"Line"
 
-[node name="Quit" type="Window" parent="." unique_id=78687604]
-oversampling_override = 1.0
-title = "Quit"
-initial_position = 1
-visible = false
-script = ExtResource("15_kxcgb")
-
-[node name="Camera2D" type="Camera2D" parent="Quit" unique_id=1515278510]
-position = Vector2(2, 6)
-offset = Vector2(50, 50)
-
-[node name="Yes" type="Button" parent="Quit/Camera2D" unique_id=772219974]
-offset_top = 48.0
-offset_right = 34.0
-offset_bottom = 74.0
-text = "Yes"
-
-[node name="No" type="Button" parent="Quit/Camera2D" unique_id=931617972]
-offset_left = 66.0
-offset_top = 48.0
-offset_right = 100.0
-offset_bottom = 74.0
-text = "No"
-
-[node name="Are You Sure?" type="Label" parent="Quit/Camera2D" unique_id=1694044909]
-offset_left = 2.0
-offset_top = 14.0
-offset_right = 96.0
-offset_bottom = 32.0
-text = "Are you sure?"
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
 environment = SubResource("Environment_3a0l5")
+
+[node name="Quit" type="Panel" parent="." unique_id=760659814]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 128.0
+offset_right = 404.0
+offset_bottom = 228.0
+script = ExtResource("15_kxcgb")
+
+[node name="Yes" type="Button" parent="Quit" unique_id=772219974]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 54.0
+offset_right = 36.0
+offset_bottom = 80.0
+text = "Yes"
+
+[node name="No" type="Button" parent="Quit" unique_id=931617972]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 54.0
+offset_right = 102.0
+offset_bottom = 80.0
+text = "No"
+
+[node name="Are You Sure?" type="Label" parent="Quit" unique_id=1694044909]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 98.0
+offset_bottom = 38.0
+text = "Are you sure?"
 
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="text_changed" from="Panel/Tabs/Buttons/Library/Library/Search Bar" to="Panel/Tabs/Buttons/Library/Library" method="_on_search_bar_text_changed"]
@@ -739,6 +740,4 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Startup Location" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
-[connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit" method="_on_yes_pressed"]
-[connection signal="pressed" from="Quit/Camera2D/No" to="Quit" method="_on_no_pressed"]
+[connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
