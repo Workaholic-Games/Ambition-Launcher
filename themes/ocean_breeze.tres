@@ -1,22 +1,22 @@
-[gd_resource type="Theme" format=3 uid="uid://cihgarrvpnrkw"]
+[gd_resource type="Theme" format=3 uid="uid://hi2kg4ba6gu0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
-bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
+bg_color = Color(0.4314, 0.9040357, 0.9764449, 1)
 border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.86999315, 0.00027540416, 0.022652835, 1)
+border_color = Color(0.16360578, 0.4940157, 0.68546593, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
-bg_color = Color(0.87761533, 0.8776159, 0.8776152, 1)
+bg_color = Color(0.14506236, 0.713215, 0.78588593, 1)
 border_width_bottom = 2
-border_color = Color(0.9997557, 0.22081825, 0.17655927, 1)
+border_color = Color(0.18397579, 0.60407954, 0.81611943, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
-bg_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+bg_color = Color(0.22045991, 0.82339376, 0.90521294, 1)
 border_width_left = 8
 border_width_bottom = 2
-border_color = Color(0.8, 0, 0.019607844, 1)
+border_color = Color(0.12628305, 0.46187383, 0.5920142, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
 bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
@@ -28,21 +28,21 @@ bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2k11"]
-bg_color = Color(0.87058824, 0, 0.023529412, 1)
+bg_color = Color(0.118311755, 0.47600108, 0.7783168, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2k11"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi5jk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqxr6"]
-bg_color = Color(0.86898494, 0.86898494, 0.8689847, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxw3s"]
+bg_color = Color(0.15912533, 0.64133424, 0.7861785, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
-bg_color = Color(0.9297146, 0.9297147, 0.9297146, 1)
+bg_color = Color(0.27896968, 0.75660145, 0.8520175, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f16gj"]
-bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+bg_color = Color(0.43137255, 0.90588236, 0.9764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p32uf"]
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+bg_color = Color(0.14509805, 0.7137255, 0.78431374, 1)
 
 [resource]
 resource_name = "Default (Dark)"
@@ -67,9 +67,8 @@ Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
 LineEdit/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 LineEdit/colors/font_placeholder_color = Color(0.07450981, 0.07450981, 0.07450981, 0.6)
-LineEdit/icons/clear = null
-LineEdit/styles/focus = SubResource("StyleBoxEmpty_u2k11")
-LineEdit/styles/normal = SubResource("StyleBoxFlat_nqxr6")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_fi5jk")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_fxw3s")
 OptionButton/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 OptionButton/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 OptionButton/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
