@@ -45,6 +45,7 @@ folder_colors={
 [gui]
 
 theme/default_font_antialiasing=0
+theme/custom="uid://7wvlbsb0aabd"
 theme/custom_font="uid://cju7vrq1y7gpl"
 
 [input]

@@ -27,6 +27,9 @@ bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
 bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xc3v"]
+bg_color = Color(0.9428228, 0.94282264, 0.94282264, 0.68235296)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2k11"]
 bg_color = Color(0.87058824, 0, 0.023529412, 1)
 
@@ -62,6 +65,8 @@ Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
+Hover_Label/base_type = &"Label"
+Hover_Label/styles/normal = SubResource("StyleBoxFlat_5xc3v")
 Label/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
