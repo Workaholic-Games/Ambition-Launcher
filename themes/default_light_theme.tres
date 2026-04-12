@@ -1,0 +1,50 @@
+[gd_resource type="Theme" format=3 uid="uid://cihgarrvpnrkw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0, 0.011764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
+bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+border_width_bottom = 2
+border_color = Color(0.38431373, 0, 0.003921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
+bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+border_width_left = 8
+border_width_bottom = 2
+border_color = Color(0.8, 0, 0.019607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
+bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86m3o"]
+bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
+bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
+bg_color = Color(0.772951, 0.77295107, 0.77295107, 1)
+
+[resource]
+resource_name = "Default (Dark)"
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Button/constants/line_spacing = -6
+Button/styles/hover = SubResource("StyleBoxFlat_5p1rt")
+Button/styles/normal = SubResource("StyleBoxFlat_10o2q")
+Button/styles/pressed = SubResource("StyleBoxFlat_y6g8n")
+Close_Button/base_type = &"Button"
+Close_Button/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Close_Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Close_Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Close_Button/constants/line_spacing = -6
+Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
+Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
+Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
+Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
