@@ -38,8 +38,23 @@ bg_color = Color(0.38431373, 0, 0.003921569, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj2g"]
 bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xu5d"]
+bg_color = Color(0.11858138, 0.11858138, 0.11858138, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k1lq"]
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjti2"]
+bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
 bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nlnu"]
+bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh3ls"]
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0g8s"]
 bg_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
@@ -97,7 +112,17 @@ Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_otj2g")
+OptionButton/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+OptionButton/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+OptionButton/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+OptionButton/styles/hover = SubResource("StyleBoxFlat_4xu5d")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_4k1lq")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_yjti2")
 Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
+PopupMenu/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+PopupMenu/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_2nlnu")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_dh3ls")
 RichTextLabel/colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_j0g8s")
 Store_Page/base_type = &"Label"
