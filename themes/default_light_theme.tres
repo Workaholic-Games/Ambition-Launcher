@@ -56,6 +56,9 @@ bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p32uf"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q08p0"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_u2k11"]
 color = Color(0.14117648, 0.49019608, 0.72156864, 1)
 thickness = 8
@@ -119,6 +122,7 @@ PopupMenu/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 PopupMenu/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_f16gj")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_p32uf")
+Quit/styles/panel = SubResource("StyleBoxFlat_q08p0")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/styles/normal = null
 Store_Page/styles/normal = null
