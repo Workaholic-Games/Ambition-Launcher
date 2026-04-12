@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="Theme" uid="uid://7wvlbsb0aabd" path="res://themes/default_dark_theme.tres" id="1_gtc6m"]
-[ext_resource type="Script" path="res://entites/main/themes.gd" id="1_p0fg6"]
+[ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://entites/main/themes.gd" id="1_p0fg6"]
+[ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://entites/main/tab_buttons.gd" id="2_exgh8"]
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
-[ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
-[ext_resource type="Script" uid="uid://duhe0sixyhjbt" path="res://entites/main/library_button.gd" id="3_xjj0j"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
@@ -17,12 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
 [ext_resource type="Script" path="res://entites/main/close_button.gd" id="13_eq36p"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
-[ext_resource type="Script" path="res://entites/main/community_button.gd" id="15_md7jf"]
-[ext_resource type="Script" path="res://entites/main/changelog_button.gd" id="16_5enwe"]
-[ext_resource type="Script" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
-[ext_resource type="Script" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
-[ext_resource type="Script" path="res://entites/main/developers_button.gd" id="17_fl0aj"]
-[ext_resource type="Script" path="res://entites/main/settings_button.gd" id="18_gjwx3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwoik"]
 bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
@@ -111,6 +104,7 @@ offset_bottom = 360.0
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("2_exgh8")
 
 [node name="Buttons" type="GridContainer" parent="Panel/Tabs" unique_id=997375876]
 custom_minimum_size = Vector2(50, 0)
@@ -127,7 +121,6 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Library"
-script = ExtResource("3_xjj0j")
 
 [node name="Library" type="Control" parent="Panel/Tabs/Buttons/Library" unique_id=337733771 node_paths=PackedStringArray("items")]
 visible = false
@@ -165,7 +158,6 @@ toggle_mode = true
 button_pressed = true
 button_group = ExtResource("3_bfcn8")
 text = "Store"
-script = ExtResource("3_4mlte")
 
 [node name="Store" type="Control" parent="Panel/Tabs/Buttons/Store" unique_id=2112552624 node_paths=PackedStringArray("items")]
 visible = false
@@ -546,7 +538,6 @@ theme_override_fonts/font = ExtResource("2_rvqcv")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Community"
-script = ExtResource("15_md7jf")
 
 [node name="Community" type="Control" parent="Panel/Tabs/Buttons/Community" unique_id=1571939401]
 visible = false
@@ -571,7 +562,6 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Changelog"
-script = ExtResource("16_5enwe")
 
 [node name="Changelog" type="Control" parent="Panel/Tabs/Buttons/Changelog" unique_id=1204020412]
 visible = false
@@ -596,7 +586,6 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Developers"
-script = ExtResource("17_fl0aj")
 
 [node name="Developers" type="Control" parent="Panel/Tabs/Buttons/Developers" unique_id=871039976]
 visible = false
@@ -621,7 +610,6 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Settings"
-script = ExtResource("18_gjwx3")
 
 [node name="Settings" type="Control" parent="Panel/Tabs/Buttons/Settings" unique_id=841640467]
 anchors_preset = 0
@@ -652,7 +640,6 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
-script = ExtResource("15_kxcgb")
 
 [node name="Launcher Games" type="Label" parent="Panel/Tabs" unique_id=168517107]
 layout_mode = 0
@@ -683,6 +670,7 @@ oversampling_override = 1.0
 title = "Quit"
 initial_position = 1
 visible = false
+script = ExtResource("15_kxcgb")
 
 [node name="Camera2D" type="Camera2D" parent="Quit" unique_id=1515278510]
 position = Vector2(2, 6)
@@ -693,7 +681,6 @@ offset_top = 48.0
 offset_right = 34.0
 offset_bottom = 74.0
 text = "Yes"
-script = ExtResource("16_exgh8")
 
 [node name="No" type="Button" parent="Quit/Camera2D" unique_id=931617972]
 offset_left = 66.0
@@ -701,7 +688,6 @@ offset_top = 48.0
 offset_right = 100.0
 offset_bottom = 74.0
 text = "No"
-script = ExtResource("17_3a0l5")
 
 [node name="Are You Sure?" type="Label" parent="Quit/Camera2D" unique_id=1694044909]
 offset_left = 2.0
@@ -710,9 +696,9 @@ offset_right = 96.0
 offset_bottom = 32.0
 text = "Are you sure?"
 
-[connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs/Buttons/Library" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="text_changed" from="Panel/Tabs/Buttons/Library/Library/Search Bar" to="Panel/Tabs/Buttons/Library/Library" method="_on_search_bar_text_changed"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Store" to="Panel/Tabs/Buttons/Store" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Store" to="Panel/Tabs" method="_on_store_pressed"]
 [connection signal="mouse_entered" from="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Panel/Tabs/Buttons/Store/Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_pressed"]
@@ -731,11 +717,11 @@ text = "Are you sure?"
 [connection signal="text_changed" from="Panel/Tabs/Buttons/Store/Store/Search Bar" to="Panel/Tabs/Buttons/Store/Store" method="_on_search_bar_text_changed"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Store/Store Pages/FNAB/FNAB Versions" to="Panel/Tabs/Buttons/Store/Store Pages" method="_on_fnab_versions_item_selected"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Store/Store Pages/FNAB/Close Button" to="Panel/Tabs/Buttons/Store/Store Pages/FNAB/Close Button" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Community" to="Panel/Tabs/Buttons/Community" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Changelog" to="Panel/Tabs/Buttons/Changelog" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Developers" to="Panel/Tabs/Buttons/Developers" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs/Buttons/Settings" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Community" to="Panel/Tabs" method="_on_community_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Changelog" to="Panel/Tabs" method="_on_changelog_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Developers" to="Panel/Tabs" method="_on_developers_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs" method="_on_settings_pressed"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/OptionButton" to="." method="_on_option_button_item_selected"]
-[connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs/Buttons/Quit Launcher" method="_on_pressed"]
-[connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit/Camera2D/Yes" method="_on_pressed"]
-[connection signal="pressed" from="Quit/Camera2D/No" to="Quit/Camera2D/No" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
+[connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit" method="_on_yes_pressed"]
+[connection signal="pressed" from="Quit/Camera2D/No" to="Quit" method="_on_no_pressed"]
