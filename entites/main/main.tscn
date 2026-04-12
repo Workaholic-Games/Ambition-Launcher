@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="Theme" uid="uid://7wvlbsb0aabd" path="res://themes/default_dark_theme.tres" id="1_gtc6m"]
-[ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://entites/main/themes.gd" id="1_p0fg6"]
+[ext_resource type="Script" path="res://entites/main/themes.gd" id="1_p0fg6"]
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
 [ext_resource type="Script" uid="uid://bh7aa3gsn05u4" path="res://entites/main/store_button.gd" id="3_4mlte"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
@@ -15,14 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
 [ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
-[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
+[ext_resource type="Script" path="res://entites/main/close_button.gd" id="13_eq36p"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
-[ext_resource type="Script" uid="uid://cw71o7gokthmj" path="res://entites/main/community_button.gd" id="15_md7jf"]
-[ext_resource type="Script" uid="uid://cx6jwtpmflrgk" path="res://entites/main/changelog_button.gd" id="16_5enwe"]
-[ext_resource type="Script" uid="uid://ctkfs3ywexvlv" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
-[ext_resource type="Script" uid="uid://oqnblmaj7u3t" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
-[ext_resource type="Script" uid="uid://dwyaqima2omsg" path="res://entites/main/developers_button.gd" id="17_fl0aj"]
-[ext_resource type="Script" uid="uid://kkmeusfdw3rs" path="res://entites/main/settings_button.gd" id="18_gjwx3"]
+[ext_resource type="Script" path="res://entites/main/community_button.gd" id="15_md7jf"]
+[ext_resource type="Script" path="res://entites/main/changelog_button.gd" id="16_5enwe"]
+[ext_resource type="Script" path="res://entites/main/quit_menu_yes.gd" id="16_exgh8"]
+[ext_resource type="Script" path="res://entites/main/quit_menu_no.gd" id="17_3a0l5"]
+[ext_resource type="Script" path="res://entites/main/developers_button.gd" id="17_fl0aj"]
+[ext_resource type="Script" path="res://entites/main/settings_button.gd" id="18_gjwx3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwoik"]
 bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
@@ -657,9 +657,9 @@ script = ExtResource("15_kxcgb")
 [node name="Launcher Games" type="Label" parent="Panel/Tabs" unique_id=168517107]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 148.0
+offset_top = 192.0
 offset_right = 97.0
-offset_bottom = 342.0
+offset_bottom = 352.0
 text = "THIS IS FOR LAUNCHER GAMES"
 autowrap_mode = 3
 
