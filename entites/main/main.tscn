@@ -89,7 +89,6 @@ bg_color = Color(0.38431373, 0, 0.003921569, 1)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_p0fg6")
-metadata/_edit_vertical_guides_ = [-56.0]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
