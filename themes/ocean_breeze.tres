@@ -46,10 +46,10 @@ bg_color = Color(0.14509805, 0.7137255, 0.78431374, 1)
 
 [resource]
 resource_name = "Default (Dark)"
-Button/colors/font_color = Color(0.072842844, 0.072842546, 0.072842605, 1)
-Button/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
-Button/colors/font_hover_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
-Button/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Button/colors/font_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+Button/colors/font_hover_color = Color(0.14509805, 0.14509805, 0.14509805, 1)
+Button/colors/font_hover_pressed_color = Color(0.14509805, 0.14509805, 0.14509805, 1)
+Button/colors/font_pressed_color = Color(0.14509805, 0.14509805, 0.14509805, 1)
 Button/constants/line_spacing = -6
 Button/styles/hover = SubResource("StyleBoxFlat_5p1rt")
 Button/styles/normal = SubResource("StyleBoxFlat_10o2q")
