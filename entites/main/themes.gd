@@ -9,7 +9,7 @@ var themes: Dictionary[String, Theme] = {
 func _ready() -> void:
 	for option: String in themes.keys():
 		$Panel/Tabs/Buttons/Settings/Settings/OptionButton.add_item(option)
-	theme = themes["Ocean Breeze"]
+	theme = themes["Default (Dark)"]
 
 
 
