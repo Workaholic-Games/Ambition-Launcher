@@ -73,6 +73,11 @@ bg_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 border_width_left = 2
 border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
+[sub_resource type="Environment" id="Environment_3a0l5"]
+background_mode = 3
+tonemap_mode = 1
+adjustment_enabled = true
+
 [node name="Main" type="Control" unique_id=1449737561]
 layout_mode = 3
 anchors_preset = 0
@@ -597,6 +602,34 @@ offset_right = 47.99997
 text = "Theme:"
 vertical_alignment = 2
 
+[node name="Startup Location" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=1787472182]
+layout_mode = 0
+offset_left = 264.92606
+offset_top = 59.999996
+offset_right = 441.5434
+offset_bottom = 80.0
+selected = 0
+item_count = 6
+popup/item_0/text = "Library"
+popup/item_0/id = 0
+popup/item_1/text = "Store"
+popup/item_1/id = 1
+popup/item_2/text = "Community"
+popup/item_2/id = 2
+popup/item_3/text = "Changelog"
+popup/item_3/id = 3
+popup/item_4/text = "Developers"
+popup/item_4/id = 4
+popup/item_5/text = "Settings"
+popup/item_5/id = 5
+
+[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings/Startup Location" unique_id=1140732417]
+layout_mode = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Startup Location"
+vertical_alignment = 2
+
 [node name="Window" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=2136730873]
 layout_mode = 0
 offset_left = 264.92606
@@ -675,6 +708,9 @@ offset_right = 96.0
 offset_bottom = 32.0
 text = "Are you sure?"
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
+environment = SubResource("Environment_3a0l5")
+
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="text_changed" from="Panel/Tabs/Buttons/Library/Library/Search Bar" to="Panel/Tabs/Buttons/Library/Library" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Store" to="Panel/Tabs" method="_on_store_pressed"]
@@ -701,6 +737,7 @@ text = "Are you sure?"
 [connection signal="pressed" from="Panel/Tabs/Buttons/Developers" to="Panel/Tabs" method="_on_developers_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs" method="_on_settings_pressed"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Themes" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Startup Location" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
 [connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit" method="_on_yes_pressed"]

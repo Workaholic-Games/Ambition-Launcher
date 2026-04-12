@@ -5,11 +5,18 @@ extends Control
 func _ready():
 	get_tree().root.size_changed.connect(_on_window_size_changed)
 	match Main.launcher_data.window_mode:
-		0: $Window.select(0)
-		1: $Window.select(1)
-		2: $Window.select(2)
-		3: $Window.select(3)
-
+		0: $Window.emit_signal("item_selected", 0)
+		1: $Window.emit_signal("item_selected", 1)
+		2: $Window.emit_signal("item_selected", 2)
+		3: $Window.emit_signal("item_selected", 3)
+	
+	match Main.launcher_data.start_page:
+		0: $"../../Library".emit_signal("pressed")
+		1: $"../../Store".emit_signal("pressed")
+		2: $"../../Community".emit_signal("pressed")
+		3: $"../../Changelog".emit_signal("pressed")
+		4: $"../../Developers".emit_signal("pressed")
+		5: $"..".emit_signal("pressed")
 
 
 
@@ -42,3 +49,8 @@ func _on_window_size_changed():
 		$Window.select(2)
 	elif mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
 		$Window.select(3)
+
+
+
+func _on_startup_location_item_selected(index: int) -> void:
+	Main.launcher_data.start_page = index

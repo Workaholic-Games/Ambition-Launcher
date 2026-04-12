@@ -8,11 +8,11 @@ var launcher_data = data.new()
 func _ready():
 	DirAccess.make_dir_absolute(file_path)
 	load_data()
-	print(launcher_data.window_mode)
+	print(launcher_data.start_page)
 
 
 func load_data():
-	if (ResourceLoader.exists(file_path)):
+	if (ResourceLoader.exists(file_path + file_name)):
 		launcher_data = ResourceLoader.load(file_path + file_name).duplicate(true)
 		print("LOADED")
 	else:
