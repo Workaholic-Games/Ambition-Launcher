@@ -679,36 +679,37 @@ theme_type_variation = &"Line"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
 environment = SubResource("Environment_3a0l5")
 
-[node name="Quit" type="Panel" parent="." unique_id=760659814]
+[node name="Quit" type="Panel" parent="." unique_id=1799576681]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 128.0
-offset_right = 384.0
-offset_bottom = 228.0
+offset_left = 266.0
+offset_top = 134.0
+offset_right = 366.0
+offset_bottom = 234.0
+theme_type_variation = &"Quit"
 script = ExtResource("15_kxcgb")
 
 [node name="Yes" type="Button" parent="Quit" unique_id=772219974]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 50.0
-offset_right = 42.0
-offset_bottom = 76.0
+offset_left = 1.0
+offset_top = 68.0
+offset_right = 41.0
+offset_bottom = 88.0
 text = "Yes"
 
 [node name="No" type="Button" parent="Quit" unique_id=931617972]
 layout_mode = 0
-offset_left = 74.0
-offset_top = 50.0
-offset_right = 108.0
-offset_bottom = 76.0
+offset_left = 59.0
+offset_top = 68.0
+offset_right = 99.0
+offset_bottom = 88.0
 text = "No"
 
 [node name="Are You Sure?" type="Label" parent="Quit" unique_id=1694044909]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 16.0
-offset_right = 104.0
-offset_bottom = 34.0
+offset_left = 4.0
+offset_top = 18.0
+offset_right = 98.0
+offset_bottom = 36.0
 text = "Are you sure?"
 
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
@@ -739,4 +740,6 @@ text = "Are you sure?"
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Startup Location" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
+[connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
 [connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
+[connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
