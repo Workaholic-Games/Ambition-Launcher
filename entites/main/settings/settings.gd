@@ -3,8 +3,13 @@ extends Control
 
 
 func _ready():
-	# Connect to the root viewport's size_changed signal
 	get_tree().root.size_changed.connect(_on_window_size_changed)
+	match Main.launcher_data.window_mode:
+		0: $Window.select(0)
+		1: $Window.select(1)
+		2: $Window.select(2)
+		3: $Window.select(3)
+
 
 
 
