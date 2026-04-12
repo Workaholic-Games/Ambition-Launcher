@@ -3,7 +3,6 @@ extends Control
 
 
 func _ready():
-	get_tree().root.size_changed.connect(_on_window_size_changed)
 	match Main.launcher_data.window_mode:
 		0: $Window.emit_signal("item_selected", 0)
 		1: $Window.emit_signal("item_selected", 1)
@@ -49,7 +48,7 @@ func _on_window_item_selected(index: int) -> void:
 
 
 
-func _on_window_size_changed():
+func _process(_delta: float) -> void:
 	var mode = DisplayServer.window_get_mode()
 	if mode == DisplayServer.WINDOW_MODE_MAXIMIZED:
 		$Window.select(1)
