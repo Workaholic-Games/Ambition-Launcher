@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="Theme" uid="uid://7wvlbsb0aabd" path="res://themes/default_dark_theme.tres" id="1_gtc6m"]
-[ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://entites/main/themes.gd" id="1_p0fg6"]
-[ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://entites/main/tab_buttons.gd" id="2_exgh8"]
+[ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://entites/main/settings/themes.gd" id="1_p0fg6"]
+[ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://entites/main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
-[ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/main_buttons.tres" id="3_bfcn8"]
-[ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/store/store_item.gd" id="4_2dgon"]
+[ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://entites/main/tab_buttons/main_buttons.tres" id="3_bfcn8"]
+[ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://entites/main/store/store_item.gd" id="4_2dgon"]
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
 [ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="6_xd8mv"]
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Texture2D" uid="uid://dl5yr0ksk58kw" path="res://game_assets/covers/vegetable_game_alpha.png" id="7_fwoik"]
-[ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store_pages.gd" id="10_tkre5"]
+[ext_resource type="Script" uid="uid://jwffsxh432ds" path="res://entites/main/store/store_pages.gd" id="10_tkre5"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
-[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/close_button.gd" id="13_eq36p"]
-[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/store/close_button.gd" id="13_eq36p"]
+[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xd8mv"]
 color = Color(0.9079417, 0.9079417, 0.90794164, 1)
@@ -611,23 +612,48 @@ anchors_preset = 0
 offset_top = -80.0
 offset_right = 40.0
 offset_bottom = -40.0
+script = ExtResource("16_3a0l5")
 
-[node name="OptionButton" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=563725016]
+[node name="Themes" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=563725016]
 layout_mode = 0
-offset_left = 481.68375
-offset_top = 4.0
-offset_right = 613.6838
-offset_bottom = 30.0
+offset_left = 449.57153
+offset_top = 5.9999967
+offset_right = 577.23145
+offset_bottom = 30.659359
 scale = Vector2(1.0061805, 0.9732614)
 alignment = 1
 
-[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=1340238910]
+[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings/Themes" unique_id=1340238910]
 layout_mode = 0
-offset_left = 481.68372
-offset_top = -12.0
-offset_right = 529.6837
-offset_bottom = 6.0
+offset_left = -3.0517578e-05
+offset_top = -24.659351
+offset_right = 47.99997
 text = "Theme:"
+vertical_alignment = 2
+
+[node name="Window" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=2136730873]
+layout_mode = 0
+offset_left = 264.92606
+offset_top = 6.0
+offset_right = 441.5434
+offset_bottom = 32.0
+selected = 0
+item_count = 4
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Maximized"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+popup/item_3/text = "Exclusive Fullscreen"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings/Window" unique_id=148624935]
+layout_mode = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Window Mode"
+vertical_alignment = 2
 
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
 custom_minimum_size = Vector2(110, 0)
@@ -651,14 +677,6 @@ offset_left = 108.0
 offset_right = 110.0
 offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g3yru")
-
-[node name="Background" type="ColorRect" parent="." unique_id=903229959]
-visible = false
-layout_mode = 0
-offset_right = 640.0
-offset_bottom = 360.0
-theme = ExtResource("1_gtc6m")
-color = Color(0.09803922, 0.09803922, 0.09803922, 1)
 
 [node name="Quit" type="Window" parent="." unique_id=78687604]
 oversampling_override = 1.0
@@ -716,7 +734,8 @@ text = "Are you sure?"
 [connection signal="pressed" from="Panel/Tabs/Buttons/Changelog" to="Panel/Tabs" method="_on_changelog_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Developers" to="Panel/Tabs" method="_on_developers_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs" method="_on_settings_pressed"]
-[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Themes" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
 [connection signal="pressed" from="Quit/Camera2D/Yes" to="Quit" method="_on_yes_pressed"]
 [connection signal="pressed" from="Quit/Camera2D/No" to="Quit" method="_on_no_pressed"]

@@ -37,7 +37,6 @@ folder_colors={
 "res://editor_icons/": "green",
 "res://entites/": "blue",
 "res://entites/main/": "purple",
-"res://entites/store/": "green",
 "res://fonts/": "gray",
 "res://game_assets/": "red",
 "res://themes/": "purple"

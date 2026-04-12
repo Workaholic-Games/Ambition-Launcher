@@ -8,7 +8,7 @@ our launcher is the gateway to fun!
 
 ## About Us
 ### BulbasaurTF
-Founder and C.E.O. of Workaholic Games. Creator of Five Nights at Bulba's and The Vegetable Game, 
+Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series and The Vegetable Game, 
 
 ### TheProOfFPS
 Head of Music. Creator of Bitcoin Miner and all of the hit Origianl Sound Tracks of Workaholic Games.

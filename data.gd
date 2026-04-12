@@ -1,3 +1,3 @@
 extends Resource
 class_name data
-@export var levels : int = 0
+@export var window_mode : int = 0
