@@ -5,18 +5,18 @@ bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
 border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.86999315, 0.00027540416, 0.022652835, 1)
+border_color = Color(0.15249151, 0.49447626, 0.68883556, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
 bg_color = Color(0.87761533, 0.8776159, 0.8776152, 1)
 border_width_bottom = 2
-border_color = Color(0.9997557, 0.22081825, 0.17655927, 1)
+border_color = Color(0.21374542, 0.5992646, 0.8294968, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
 border_width_left = 8
 border_width_bottom = 2
-border_color = Color(0.8, 0, 0.019607844, 1)
+border_color = Color(0.18706569, 0.44981384, 0.61605656, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
 bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
@@ -31,7 +31,7 @@ bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 0.68235296)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2k11"]
-bg_color = Color(0.87058824, 0, 0.023529412, 1)
+bg_color = Color(0.13967147, 0.4887638, 0.71975696, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2k11"]
 
@@ -46,6 +46,26 @@ bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p32uf"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_u2k11"]
+color = Color(0.14117648, 0.49019608, 0.72156864, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_f16gj"]
+color = Color(0.2205897, 0.5221603, 0.8110225, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_p32uf"]
+color = Color(0.2627451, 0.5647059, 0.85882354, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nqxr6"]
+color = Color(0.851769, 0.8517689, 0.85176885, 1)
+thickness = 8
+vertical = true
 
 [resource]
 resource_name = "Default (Dark)"
@@ -66,6 +86,10 @@ Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
 Hover_Label/base_type = &"Label"
+Hover_Label/colors/font_shadow_color = Color(0.7058867, 0.7058868, 0.7058867, 1)
+Hover_Label/constants/shadow_offset_x = 0
+Hover_Label/constants/shadow_offset_y = 2
+Hover_Label/constants/shadow_outline_size = 0
 Hover_Label/styles/normal = SubResource("StyleBoxFlat_5xc3v")
 Label/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Line/base_type = &"Panel"
@@ -86,3 +110,7 @@ PopupMenu/styles/panel = SubResource("StyleBoxFlat_p32uf")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/styles/normal = null
 Store_Page/styles/normal = null
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_u2k11")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_f16gj")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_p32uf")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_nqxr6")

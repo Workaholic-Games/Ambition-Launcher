@@ -27,6 +27,9 @@ bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
 bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l5r5"]
+bg_color = Color(0, 0, 0, 0.68235296)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvamo"]
 bg_color = Color(0.38431373, 0, 0.003921569, 1)
 
@@ -48,6 +51,25 @@ bg_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 border_width_left = 2
 border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ogguv"]
+color = Color(0.38431373, 0, 0.003921569, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5p1rt"]
+color = Color(0.5254902, 0, 0.007843138, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_10o2q"]
+color = Color(0.58431375, 0, 0.007843138, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_y6g8n"]
+thickness = 8
+vertical = true
+
 [resource]
 resource_name = "Default (Dark)"
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -65,6 +87,12 @@ Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
+Hover_Label/base_type = &"Label"
+Hover_Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Hover_Label/constants/shadow_offset_x = 0
+Hover_Label/constants/shadow_offset_y = 2
+Hover_Label/constants/shadow_outline_size = 0
+Hover_Label/styles/normal = SubResource("StyleBoxFlat_2l5r5")
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
@@ -74,3 +102,7 @@ RichTextLabel/colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_j0g8s")
 Store_Page/base_type = &"Label"
 Store_Page/styles/normal = SubResource("StyleBoxFlat_svek6")
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_ogguv")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_5p1rt")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_10o2q")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_y6g8n")
