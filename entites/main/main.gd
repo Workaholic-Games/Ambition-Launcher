@@ -3,6 +3,8 @@ var file_path = "user://save/"
 var file_name = "data.res"
 var launcher_data = data.new()
 
+
+
 func _ready():
 	DirAccess.make_dir_absolute(file_path)
 	load_data()
