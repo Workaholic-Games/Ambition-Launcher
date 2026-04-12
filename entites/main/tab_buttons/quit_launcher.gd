@@ -1,10 +1,6 @@
-extends Window
-
+extends Panel
 
 
 func _on_yes_pressed() -> void:
-	get_tree().quit()
-
-
-func _on_no_pressed() -> void:
-	self.visible = false
+	Main.save_data()
+	get_tree().quit
