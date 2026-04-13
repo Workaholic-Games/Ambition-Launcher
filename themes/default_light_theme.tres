@@ -27,6 +27,24 @@ bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
 bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5xc3v"]
+color = Color(0.14117648, 0.49019608, 0.72156864, 1)
+thickness = 9
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8k5nm"]
+color = Color(0.2205897, 0.5221603, 0.8110225, 1)
+thickness = 9
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bd2bo"]
+color = Color(0.2627451, 0.5647059, 0.85882354, 1)
+thickness = 9
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6ud3o"]
+color = Color(0.851769, 0.8517689, 0.85176885, 1)
+thickness = 9
+vertical = true
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xc3v"]
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 0.68235296)
 
@@ -103,6 +121,10 @@ Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
 Close_Button/styles/pressed = SubResource("StyleBoxFlat_ug50d")
+HScrollBar/styles/grabber = SubResource("StyleBoxLine_5xc3v")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_8k5nm")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_bd2bo")
+HScrollBar/styles/scroll = SubResource("StyleBoxLine_6ud3o")
 Hover_Label/base_type = &"Label"
 Hover_Label/colors/font_shadow_color = Color(0.7058867, 0.7058868, 0.7058867, 1)
 Hover_Label/constants/shadow_offset_x = 0

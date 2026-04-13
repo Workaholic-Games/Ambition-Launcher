@@ -18,9 +18,9 @@ func _on_pressed() -> void:
 	$"../../../../../../Store Pages".visible = true
 	match type:
 		"FNAB": $"../../../../../../Store Pages/FNAB".visible = true
-		"FNAB2": pass
-		"VegAlpha": pass
-		"VegRegrown": pass
+		"FNAB2": $"../../../../../../Store Pages/FNAB2".visible = true
+		"VegRegrown": $"../../../../../../Store Pages/Vegetable Game Regrown".visible = true
+		"BitcoinMiner": $"../../../../../../Store Pages/Bitcoin Miner".visible = true
 
 
 ## Dev Notes

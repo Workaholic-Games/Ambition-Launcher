@@ -24,7 +24,7 @@ func _on_fnab_2_versions_item_selected(index: int) -> void:
 	match index:
 		0: $"FNAB2/Version Changes".text = "[color=green]Important Changes:[/color]
 -Rebalanced Night 6 to be more fair.
--Tweaked Gigabot to be more unforgiving. However he know always changes pose when you enter the closet."
+-Tweaked Gigabot to be more unforgiving. However he now always changes pose when you enter the closet."
 			
 		1: $"FNAB2/Version Changes".text = "[color=green]Important Changes:[/color]
 -Added Night 6
@@ -32,8 +32,4 @@ func _on_fnab_2_versions_item_selected(index: int) -> void:
 -Added Custom Night
 -Added Challenges
 -Added Texting Segments in between nights
--Updated Gavin and Bulba's Jumpscares
--Added Camera Labeling
--Added Classic Camera UI toggle in the Settings
--Added Voice lines when The Emotional Support Fries are clicked
--Added chance to have some special things to happen on death"
+-Updated Gavin and Bulba's Jumpscares"
