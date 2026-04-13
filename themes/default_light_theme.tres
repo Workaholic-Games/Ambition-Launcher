@@ -19,13 +19,13 @@ border_width_bottom = 2
 border_color = Color(0.18706569, 0.44981384, 0.61605656, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
-bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
+bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86m3o"]
-bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
-bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xc3v"]
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 0.68235296)
@@ -59,6 +59,12 @@ bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q08p0"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldlso"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v14gr"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_u2k11"]
 color = Color(0.14117648, 0.49019608, 0.72156864, 1)
 thickness = 8
@@ -90,9 +96,9 @@ Button/styles/hover = SubResource("StyleBoxFlat_5p1rt")
 Button/styles/normal = SubResource("StyleBoxFlat_10o2q")
 Button/styles/pressed = SubResource("StyleBoxFlat_y6g8n")
 Close_Button/base_type = &"Button"
-Close_Button/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Close_Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Close_Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Close_Button/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Close_Button/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+Close_Button/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
@@ -124,8 +130,8 @@ PopupMenu/styles/hover = SubResource("StyleBoxFlat_f16gj")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_p32uf")
 Quit/styles/panel = SubResource("StyleBoxFlat_q08p0")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/styles/normal = null
-Store_Page/styles/normal = null
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_ldlso")
+Store_Page/styles/normal = SubResource("StyleBoxFlat_v14gr")
 VScrollBar/styles/grabber = SubResource("StyleBoxLine_u2k11")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_f16gj")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_p32uf")

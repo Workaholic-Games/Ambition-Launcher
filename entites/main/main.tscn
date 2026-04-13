@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
-[ext_resource type="Theme" uid="uid://7wvlbsb0aabd" path="res://themes/default_dark_theme.tres" id="1_gtc6m"]
 [ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://entites/main/settings/themes.gd" id="1_p0fg6"]
 [ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://entites/main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
 [ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
@@ -26,52 +25,7 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mlte"]
-bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwoik"]
-bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
-border_width_left = 6
-border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_xd8mv"]
-color = Color(0.9079417, 0.9079417, 0.90794164, 1)
-thickness = 7
-vertical = true
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_1dv2i"]
-color = Color(1, 1, 1, 1)
-thickness = 7
-vertical = true
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_akru0"]
-color = Color(0.69965345, 0.69965345, 0.69965345, 1)
-thickness = 7
-vertical = true
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_fwoik"]
-color = Color(0.23031491, 0.23031494, 0.23031494, 1)
-thickness = 7
-vertical = true
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_g3yru"]
-color = Color(0.23031491, 0.23031494, 0.23031494, 1)
-thickness = 7
-vertical = true
-
-[sub_resource type="Theme" id="Theme_1dv2i"]
-VScrollBar/styles/grabber = SubResource("StyleBoxLine_xd8mv")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_1dv2i")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_akru0")
-VScrollBar/styles/scroll = SubResource("StyleBoxLine_fwoik")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxLine_g3yru")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a0l5"]
-bg_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
-border_width_left = 2
-border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -377,7 +331,6 @@ scale = Vector2(1, 1.0014004)
 script = ExtResource("10_tkre5")
 
 [node name="FNAB" type="Control" parent="Panel/Tabs/Buttons/Store/Store Pages" unique_id=116970929]
-visible = false
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
@@ -386,7 +339,6 @@ offset_right = 110.0
 layout_mode = 0
 offset_right = 530.0
 offset_bottom = 360.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4mlte")
 
 [node name="Version Select Label" type="Label" parent="Panel/Tabs/Buttons/Store/Store Pages/FNAB" unique_id=74541496]
 layout_mode = 0
@@ -402,15 +354,12 @@ offset_left = 10.0
 offset_top = 24.0
 offset_right = 170.0
 offset_bottom = 50.0
-theme = ExtResource("1_gtc6m")
+theme_type_variation = &"OptionButton"
 theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
 theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_fwoik")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fwoik")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 selected = 0
 item_count = 3
@@ -436,9 +385,6 @@ offset_left = 10.0
 offset_top = 56.0
 offset_right = 170.0
 offset_bottom = 344.0
-theme = SubResource("Theme_1dv2i")
-theme_override_colors/default_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 bbcode_enabled = true
 text = "[color=green]Important Changes:[/color]
 -Fixed Bulba and Gigabot overlapping
@@ -450,9 +396,6 @@ offset_left = 178.0
 offset_top = 208.0
 offset_right = 386.0
 offset_bottom = 304.0
-theme = SubResource("Theme_1dv2i")
-theme_override_colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
 bbcode_enabled = true
 text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
 
@@ -462,8 +405,7 @@ offset_left = 394.0
 offset_top = 208.0
 offset_right = 530.0
 offset_bottom = 248.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+theme_type_variation = &"Store_Page"
 text = "AGE RATING:
 T for Teen"
 vertical_alignment = 1
@@ -474,8 +416,7 @@ offset_left = 394.0
 offset_top = 256.0
 offset_right = 530.0
 offset_bottom = 304.0
-theme = SubResource("Theme_1dv2i")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a0l5")
+theme_type_variation = &"Store_Page"
 text = "Genre: Horror
 Difficulty: Hard"
 vertical_alignment = 1
@@ -578,6 +519,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Settings"
 
 [node name="Settings" type="Control" parent="Panel/Tabs/Buttons/Settings" unique_id=841640467]
+visible = false
 anchors_preset = 0
 offset_top = -80.0
 offset_right = 40.0
