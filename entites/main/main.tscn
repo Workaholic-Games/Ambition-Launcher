@@ -680,6 +680,7 @@ theme_type_variation = &"Line"
 environment = SubResource("Environment_3a0l5")
 
 [node name="Quit" type="Panel" parent="." unique_id=1799576681]
+visible = false
 layout_mode = 0
 offset_left = 266.0
 offset_top = 134.0
