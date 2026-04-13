@@ -103,7 +103,6 @@ button_group = ExtResource("3_bfcn8")
 text = "Store"
 
 [node name="Store" type="Control" parent="Panel/Tabs/Buttons/Store" unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_top = -20.0
 offset_right = 40.0
