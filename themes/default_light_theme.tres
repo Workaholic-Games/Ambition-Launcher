@@ -67,22 +67,22 @@ bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_u2k11"]
 color = Color(0.14117648, 0.49019608, 0.72156864, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_f16gj"]
 color = Color(0.2205897, 0.5221603, 0.8110225, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_p32uf"]
 color = Color(0.2627451, 0.5647059, 0.85882354, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nqxr6"]
 color = Color(0.851769, 0.8517689, 0.85176885, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [resource]

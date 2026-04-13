@@ -71,21 +71,21 @@ border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ogguv"]
 color = Color(0.38431373, 0, 0.003921569, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5p1rt"]
 color = Color(0.5254902, 0, 0.007843138, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_10o2q"]
 color = Color(0.58431375, 0, 0.007843138, 1)
-thickness = 8
+thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_y6g8n"]
-thickness = 8
+thickness = 9
 vertical = true
 
 [resource]

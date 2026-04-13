@@ -114,7 +114,7 @@ items = NodePath("Area/GridContainer")
 layout_mode = 0
 offset_left = 110.0
 offset_top = 64.0
-offset_right = 641.0
+offset_right = 642.24493
 offset_bottom = 360.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
@@ -330,6 +330,7 @@ scale = Vector2(1, 1.0014004)
 script = ExtResource("10_tkre5")
 
 [node name="FNAB" type="Control" parent="Panel/Tabs/Buttons/Store/Store Pages" unique_id=116970929]
+visible = false
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
