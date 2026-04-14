@@ -1163,11 +1163,35 @@ offset_right = 40.0
 offset_bottom = -40.0
 script = ExtResource("16_3a0l5")
 
+[node name="Window" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=2136730873]
+layout_mode = 0
+offset_left = 128.449
+offset_top = 6.0
+offset_right = 305.06635
+offset_bottom = 32.0
+selected = 0
+item_count = 4
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Maximized"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+popup/item_3/text = "Exclusive Fullscreen"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings/Window" unique_id=148624935]
+layout_mode = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Window Mode"
+vertical_alignment = 2
+
 [node name="Themes" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=563725016]
 layout_mode = 0
-offset_left = 449.57153
+offset_left = 313.09445
 offset_top = 5.9999967
-offset_right = 577.23145
+offset_right = 440.75436
 offset_bottom = 30.659359
 scale = Vector2(1.0061805, 0.9732614)
 alignment = 1
@@ -1182,10 +1206,10 @@ vertical_alignment = 2
 
 [node name="Startup Location" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=1787472182]
 layout_mode = 0
-offset_left = 264.92606
-offset_top = 59.999996
-offset_right = 441.5434
-offset_bottom = 80.0
+offset_left = 449.57144
+offset_top = 4.0
+offset_right = 626.1887
+offset_bottom = 30.000004
 selected = 0
 item_count = 6
 popup/item_0/text = "Library"
@@ -1207,39 +1231,6 @@ offset_top = -23.999996
 offset_right = 40.0
 text = "Startup Location"
 vertical_alignment = 2
-
-[node name="Window" type="OptionButton" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=2136730873]
-layout_mode = 0
-offset_left = 264.92606
-offset_top = 6.0
-offset_right = 441.5434
-offset_bottom = 32.0
-selected = 0
-item_count = 4
-popup/item_0/text = "Windowed"
-popup/item_0/id = 0
-popup/item_1/text = "Maximized"
-popup/item_1/id = 1
-popup/item_2/text = "Fullscreen"
-popup/item_2/id = 2
-popup/item_3/text = "Exclusive Fullscreen"
-popup/item_3/id = 3
-
-[node name="Label" type="Label" parent="Panel/Tabs/Buttons/Settings/Settings/Window" unique_id=148624935]
-layout_mode = 0
-offset_top = -23.999996
-offset_right = 40.0
-text = "Window Mode"
-vertical_alignment = 2
-
-[node name="CheckBox" type="CheckBox" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=1854674491]
-visible = false
-layout_mode = 0
-offset_left = 264.92606
-offset_top = 92.0
-offset_right = 326.92606
-offset_bottom = 116.0
-text = "NSFW"
 
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
 custom_minimum_size = Vector2(110, 0)
@@ -1268,34 +1259,36 @@ theme_type_variation = &"Line"
 visible = false
 layout_mode = 0
 offset_left = 266.0
-offset_top = 134.0
-offset_right = 366.0
-offset_bottom = 234.0
+offset_top = 136.0
+offset_right = 376.0
+offset_bottom = 248.0
 theme_type_variation = &"Quit"
 script = ExtResource("15_kxcgb")
 
 [node name="Yes" type="Button" parent="Quit" unique_id=772219974]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 68.0
-offset_right = 41.0
-offset_bottom = 88.0
+offset_left = 6.0
+offset_top = 74.0
+offset_right = 46.0
+offset_bottom = 94.0
+theme_type_variation = &"Close_Button"
 text = "Yes"
 
 [node name="No" type="Button" parent="Quit" unique_id=931617972]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 68.0
-offset_right = 99.0
-offset_bottom = 88.0
+offset_left = 64.0
+offset_top = 74.0
+offset_right = 104.0
+offset_bottom = 94.0
+theme_type_variation = &"Close_Button"
 text = "No"
 
 [node name="Are You Sure?" type="Label" parent="Quit" unique_id=1694044909]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 18.0
-offset_right = 98.0
-offset_bottom = 36.0
+offset_left = 9.0
+offset_top = 24.0
+offset_right = 103.0
+offset_bottom = 42.0
 text = "Are you sure?"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
@@ -1336,9 +1329,9 @@ position = Vector2(704, 0)
 [connection signal="pressed" from="Panel/Tabs/Buttons/Developers/Developers/Jonathan Bio/Portrait/Close" to="Panel/Tabs/Buttons/Developers/Developers" method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Developers/Developers/Sawyer Bio/Portrait/Close" to="Panel/Tabs/Buttons/Developers/Developers" method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Settings" to="Panel/Tabs" method="_on_settings_pressed"]
+[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Startup Location" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_startup_location_item_selected"]
-[connection signal="item_selected" from="Panel/Tabs/Buttons/Settings/Settings/Window" to="Panel/Tabs/Buttons/Settings/Settings" method="_on_window_item_selected"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
 [connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]

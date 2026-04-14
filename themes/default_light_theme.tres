@@ -2,7 +2,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
-border_width_left = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.15249151, 0.49447626, 0.68883556, 1)
@@ -14,9 +13,9 @@ border_color = Color(0.21374542, 0.5992646, 0.8294968, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
-border_width_left = 8
+border_width_left = 4
 border_width_bottom = 2
-border_color = Color(0.18706569, 0.44981384, 0.61605656, 1)
+border_color = Color(0.27999997, 0.85599977, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
 bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
@@ -55,6 +54,7 @@ bg_color = Color(0.13967147, 0.4887638, 0.71975696, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqxr6"]
 bg_color = Color(0.86898494, 0.86898494, 0.8689847, 1)
+expand_margin_left = 3.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bd2bo"]
 bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
@@ -73,6 +73,7 @@ bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p32uf"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+expand_margin_right = 15.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q08p0"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
@@ -126,7 +127,7 @@ HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_8k5nm")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_bd2bo")
 HScrollBar/styles/scroll = SubResource("StyleBoxLine_6ud3o")
 Hover_Label/base_type = &"Label"
-Hover_Label/colors/font_shadow_color = Color(0.7058867, 0.7058868, 0.7058867, 1)
+Hover_Label/colors/font_shadow_color = Color(0.71, 0.71, 0.71, 0)
 Hover_Label/constants/shadow_offset_x = 0
 Hover_Label/constants/shadow_offset_y = 2
 Hover_Label/constants/shadow_outline_size = 0
@@ -134,6 +135,7 @@ Hover_Label/styles/normal = SubResource("StyleBoxFlat_5xc3v")
 Label/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
+LineEdit/colors/caret_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 LineEdit/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 LineEdit/colors/font_placeholder_color = Color(0.07450981, 0.07450981, 0.07450981, 0.6)
 LineEdit/icons/clear = null
@@ -142,6 +144,7 @@ LineEdit/styles/normal = SubResource("StyleBoxFlat_nqxr6")
 OptionButton/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 OptionButton/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 OptionButton/colors/font_pressed_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+OptionButton/constants/align_to_largest_stylebox = 1
 OptionButton/styles/hover = SubResource("StyleBoxFlat_bd2bo")
 OptionButton/styles/normal = SubResource("StyleBoxFlat_6ud3o")
 OptionButton/styles/pressed = SubResource("StyleBoxFlat_8k5nm")

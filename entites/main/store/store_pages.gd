@@ -3,11 +3,6 @@ extends Control
 
 
 
-func _ready() -> void:
-	$"FNAB/FNAB Versions".get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
-	
-	#$"FNAB2/FNAB2 Versions".get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
-
 func _on_fnab_versions_item_selected(index: int) -> void:
 	match index:
 		0: $"FNAB/Version Changes".text = "[color=green]Important Changes:[/color]

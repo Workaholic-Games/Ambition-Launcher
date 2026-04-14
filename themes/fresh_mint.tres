@@ -1,43 +1,43 @@
-[gd_resource type="Theme" format=3 uid="uid://7wvlbsb0aabd"]
+[gd_resource type="Theme" format=3 uid="uid://c22x7xaaac4c7"]
 
-[ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://entites/main/settings/selected.png" id="1_10o2q"]
-[ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://entites/main/settings/unselected.png" id="2_y6g8n"]
+[ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://entites/main/settings/selected.png" id="1_78kbg"]
+[ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://entites/main/settings/unselected.png" id="2_8ejsu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
-bg_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+bg_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
 border_width_bottom = 2
-border_color = Color(0.6509804, 0, 0.011764706, 1)
+border_color = Color(0, 0.79, 0.3423334, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
-bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+bg_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
 border_width_bottom = 2
-border_color = Color(0.38431373, 0, 0.003921569, 1)
+border_color = Color(0, 0.67, 0.2903334, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
 bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
 border_width_left = 4
 border_width_bottom = 2
-border_color = Color(0.8, 0, 0.019607844, 1)
+border_color = Color(0, 0.95, 0.41166672, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
-bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
+bg_color = Color(0.14, 0.14, 0.14, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86m3o"]
-bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+bg_color = Color(0.1, 0.1, 0.1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
-bg_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+bg_color = Color(0.25, 0.25, 0.25, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_86m3o"]
-color = Color(0.38431373, 0, 0.003921569, 1)
+color = Color(0, 0.67058825, 0.2901961, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ug50d"]
-color = Color(0.5254902, 0, 0.007843138, 1)
+color = Color(0, 0.7882353, 0.34117648, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_m2m0a"]
-color = Color(0.58431375, 0, 0.007843138, 1)
+color = Color(0, 0.9490196, 0.4117647, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xvamo"]
@@ -47,7 +47,7 @@ thickness = 9
 bg_color = Color(0, 0, 0, 0.68235296)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvamo"]
-bg_color = Color(0.38431373, 0, 0.003921569, 1)
+bg_color = Color(0, 0.67058825, 0.2901961, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogguv"]
 
@@ -67,7 +67,7 @@ bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
-bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+bg_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nlnu"]
 content_margin_right = 15.0
@@ -78,7 +78,7 @@ content_margin_right = 15.0
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec18n"]
-bg_color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+bg_color = Color(0.11489687, 0.1148968, 0.11489678, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0g8s"]
 bg_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
@@ -91,17 +91,17 @@ border_width_left = 2
 border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ogguv"]
-color = Color(0.38431373, 0, 0.003921569, 1)
+color = Color(0, 0.67058825, 0.2901961, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5p1rt"]
-color = Color(0.5254902, 0, 0.007843138, 1)
+color = Color(0, 0.7882353, 0.34117648, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_10o2q"]
-color = Color(0.58431375, 0, 0.007843138, 1)
+color = Color(0, 0.9490196, 0.4117647, 1)
 thickness = 9
 vertical = true
 
@@ -111,18 +111,18 @@ vertical = true
 
 [resource]
 resource_name = "Default (Dark)"
-Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Button/colors/font_color = Color(0.5985, 0.95, 0.7508167, 1)
+Button/colors/font_hover_color = Color(0.6, 0.9490196, 0.7490196, 1)
+Button/colors/font_hover_pressed_color = Color(0.6, 0.9490196, 0.7490196, 1)
+Button/colors/font_pressed_color = Color(0.6, 0.9490196, 0.7490196, 1)
 Button/constants/line_spacing = -6
 Button/styles/hover = SubResource("StyleBoxFlat_5p1rt")
 Button/styles/normal = SubResource("StyleBoxFlat_10o2q")
 Button/styles/pressed = SubResource("StyleBoxFlat_y6g8n")
 Close_Button/base_type = &"Button"
-Close_Button/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Close_Button/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-Close_Button/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+Close_Button/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
+Close_Button/colors/font_hover_color = Color(0.6, 0.9490196, 0.7490196, 1)
+Close_Button/colors/font_pressed_color = Color(0.6, 0.9490196, 0.7490196, 1)
 Close_Button/constants/line_spacing = -6
 Close_Button/styles/hover = SubResource("StyleBoxFlat_m2m0a")
 Close_Button/styles/normal = SubResource("StyleBoxFlat_86m3o")
@@ -137,30 +137,31 @@ Hover_Label/constants/shadow_offset_x = 0
 Hover_Label/constants/shadow_offset_y = 2
 Hover_Label/constants/shadow_outline_size = 0
 Hover_Label/styles/normal = SubResource("StyleBoxFlat_2l5r5")
+Label/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
 LineEdit/colors/caret_color = Color(0.95, 0.95, 0.95, 1)
-LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_otj2g")
-OptionButton/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-OptionButton/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-OptionButton/colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+OptionButton/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
+OptionButton/colors/font_hover_color = Color(0.6, 0.9490196, 0.7490196, 1)
+OptionButton/colors/font_pressed_color = Color(0.6, 0.9490196, 0.7490196, 1)
 OptionButton/constants/align_to_largest_stylebox = 1
 OptionButton/icons/arrow = SubResource("AtlasTexture_10o2q")
 OptionButton/styles/hover = SubResource("StyleBoxFlat_4xu5d")
 OptionButton/styles/normal = SubResource("StyleBoxFlat_4k1lq")
 OptionButton/styles/pressed = SubResource("StyleBoxFlat_yjti2")
 Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
-PopupMenu/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-PopupMenu/colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-PopupMenu/icons/radio_checked = ExtResource("1_10o2q")
-PopupMenu/icons/radio_unchecked = ExtResource("2_y6g8n")
+PopupMenu/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
+PopupMenu/colors/font_hover_color = Color(0.6, 0.9490196, 0.7490196, 1)
+PopupMenu/icons/radio_checked = ExtResource("1_78kbg")
+PopupMenu/icons/radio_unchecked = ExtResource("2_8ejsu")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_2nlnu")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_dh3ls")
 Quit/base_type = &"Panel"
 Quit/styles/panel = SubResource("StyleBoxFlat_ec18n")
-RichTextLabel/colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
+RichTextLabel/colors/default_color = Color(0.3973864, 0.8147109, 0.5917179, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_j0g8s")
 Store_Page/base_type = &"Label"
 Store_Page/styles/normal = SubResource("StyleBoxFlat_svek6")
