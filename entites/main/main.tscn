@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
+[ext_resource type="PackedScene" uid="uid://cm2wiau1au8ek" path="res://workaholic_intro/workaholic_intro.tscn" id="24_p0fg6"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -1096,7 +1097,7 @@ offset_top = 31.999996
 offset_right = -8.028076
 offset_bottom = 55.999992
 theme_type_variation = &"Store_Page"
-text = "Fem/Boy"
+text = "He/Him"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1232,6 +1233,7 @@ text = "Window Mode"
 vertical_alignment = 2
 
 [node name="CheckBox" type="CheckBox" parent="Panel/Tabs/Buttons/Settings/Settings" unique_id=1854674491]
+visible = false
 layout_mode = 0
 offset_left = 264.92606
 offset_top = 92.0
@@ -1261,9 +1263,6 @@ offset_left = 108.0
 offset_right = 110.0
 offset_bottom = 360.0
 theme_type_variation = &"Line"
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
-environment = SubResource("Environment_3a0l5")
 
 [node name="Quit" type="Panel" parent="." unique_id=1799576681]
 visible = false
@@ -1298,6 +1297,12 @@ offset_top = 18.0
 offset_right = 98.0
 offset_bottom = 36.0
 text = "Are you sure?"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
+environment = SubResource("Environment_3a0l5")
+
+[node name="Workaholic Intro" parent="." unique_id=2021610784 instance=ExtResource("24_p0fg6")]
+position = Vector2(704, 0)
 
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="text_changed" from="Panel/Tabs/Buttons/Library/Library/Search Bar" to="Panel/Tabs/Buttons/Library/Library" method="_on_search_bar_text_changed"]
