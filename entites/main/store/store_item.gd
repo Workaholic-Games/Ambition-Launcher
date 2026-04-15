@@ -1,6 +1,6 @@
 @icon("res://editor_icons/shop_item.png")
 extends TextureButton
-@export var type : String
+@export var page : Control
 
 
 
@@ -16,11 +16,7 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 	$"../../../../../../Store Pages".visible = true
-	match type:
-		"FNAB": $"../../../../../../Store Pages/FNAB".visible = true
-		"FNAB2": $"../../../../../../Store Pages/FNAB2".visible = true
-		"VegRegrown": $"../../../../../../Store Pages/Vegetable Game Regrown".visible = true
-		"BitcoinMiner": $"../../../../../../Store Pages/Bitcoin Miner".visible = true
+	page.visible = true
 
 
 ## Dev Notes
@@ -31,3 +27,10 @@ func _on_pressed() -> void:
 # moved store pages node to be under the store button for cleaner organization 
 # in the editor just name 
 # also some point im moving most of the buttons to one script thats so many buttons that just have one function
+
+
+
+# bitcoin miner 1.25
+# bitcoin miner 1.2
+# fnab2 ambition edition
+# fnab2 reg

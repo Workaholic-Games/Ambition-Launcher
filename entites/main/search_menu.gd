@@ -1,3 +1,4 @@
+@icon("res://editor_icons/shop_item.png")
 extends Control
 var matches : Array = []
 @export var items : GridContainer
