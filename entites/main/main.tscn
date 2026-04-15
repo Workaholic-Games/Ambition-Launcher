@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
 [ext_resource type="Script" uid="uid://bd8bgwp3dutcj" path="res://entites/main/install.gd" id="11_6l2pj"]
 [ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/store/close_button.gd" id="13_eq36p"]
+[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="14_3a0l5"]
 [ext_resource type="Texture2D" uid="uid://dfqjnl8idlcc7" path="res://white.png" id="14_qsgxr"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
@@ -262,7 +263,7 @@ text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=1754228612]
+[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=1754228612 node_paths=PackedStringArray("page")]
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -270,6 +271,7 @@ texture_normal = ExtResource("5_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/FNAB2")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1500190869]
 visible = false
@@ -392,7 +394,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -432,7 +433,6 @@ tint_under = Color(0, 0, 0, 1)
 tint_progress = Color(0, 0.56, 0.0653334, 1)
 
 [node name="FNAB" type="Control" parent="Store Pages" unique_id=116970929]
-visible = false
 anchors_preset = 0
 offset_left = 110.0
 offset_right = 110.0
@@ -504,6 +504,78 @@ Difficulty: Normal
 position = Vector2(178, 8)
 scale = Vector2(0.17777775, 0.17777775)
 texture = ExtResource("11_4mlte")
+centered = false
+
+[node name="FNAB2" type="Control" parent="Store Pages" unique_id=2098870221]
+anchors_preset = 0
+offset_left = 110.0
+offset_right = 110.0
+
+[node name="Version Select Label" type="Label" parent="Store Pages/FNAB2" unique_id=114912441]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 146.0
+offset_bottom = 26.0
+text = "Version Select:"
+
+[node name="FNAB2 Versions" type="OptionButton" parent="Store Pages/FNAB2" unique_id=492916983]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = 170.0
+offset_bottom = 50.0
+theme_type_variation = &"OptionButton"
+theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
+selected = 0
+item_count = 2
+popup/item_0/text = "Ambition Edition *"
+popup/item_0/id = 0
+popup/item_1/text = "2.3"
+popup/item_1/id = 0
+
+[node name="Install" type="Button" parent="Store Pages/FNAB2" unique_id=709099579]
+layout_mode = 0
+offset_left = 178.28828
+offset_top = 208.0
+offset_right = 338.44843
+offset_bottom = 234.0
+theme_type_variation = &"Close_Button"
+text = "Install"
+script = ExtResource("11_6l2pj")
+url = "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition.exe"
+file_name = "FNAB2_Ambition_Edition.exe"
+
+[node name="Game Description" type="RichTextLabel" parent="Store Pages/FNAB2" unique_id=1428467061]
+layout_mode = 0
+offset_left = 10.120117
+offset_top = 56.0
+offset_right = 170.28027
+offset_bottom = 192.0
+bbcode_enabled = true
+text = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
+
+[node name="Age Rating" type="Label" parent="Store Pages/FNAB2" unique_id=57195602]
+layout_mode = 0
+offset_left = 10.120087
+offset_top = 200.0
+offset_right = 170.28027
+offset_bottom = 344.0
+theme_type_variation = &"Store_Page"
+text = "RATED: T for Teen
+Difficulty: Hard
+
+"
+
+[node name="Thumbnail" type="Sprite2D" parent="Store Pages/FNAB2" unique_id=941049453]
+position = Vector2(178, 8)
+scale = Vector2(0.17777775, 0.17777775)
+texture = ExtResource("14_3a0l5")
 centered = false
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
@@ -1001,6 +1073,7 @@ use_threads = true
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Store Pages/Close Button" to="Store Pages/Close Button" method="_on_pressed"]
 [connection signal="pressed" from="Store Pages/FNAB/Install" to="Store Pages/FNAB/Install" method="_on_pressed"]
+[connection signal="pressed" from="Store Pages/FNAB2/Install" to="Store Pages/FNAB2/Install" method="_on_pressed"]
 [connection signal="pressed" from="Developers/Bulba" to="Developers" method="_on_bulba_pressed"]
 [connection signal="pressed" from="Developers/Jonathan" to="Developers" method="_on_jonathan_pressed"]
 [connection signal="pressed" from="Developers/Sawyer" to="Developers" method="_on_sawyer_pressed"]

@@ -18,6 +18,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	var absolute_path = ProjectSettings.globalize_path("user://" + file_name)
 	OS.shell_open(absolute_path)
 	can_download = true
+	print(absolute_path)
 
 
 func _physics_process(_delta: float) -> void:
@@ -26,3 +27,6 @@ func _physics_process(_delta: float) -> void:
 			
 	if total > 0:
 		$"../../Progress Bar".value = (float(downloaded) / total) * 100
+
+# launcher randomly forces exclusive fullscreen
+# it seems to want FNAB1 even when the variables are set to fnab2
