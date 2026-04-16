@@ -892,7 +892,10 @@ environment = SubResource("Environment_3a0l5")
 [node name="Workaholic Intro" parent="." unique_id=2021610784 instance=ExtResource("24_p0fg6")]
 position = Vector2(704, 0)
 
-[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=56440822]
+[node name="Download Check" type="HTTPRequest" parent="." unique_id=56440822]
+use_threads = true
+
+[node name="Install Update" type="HTTPRequest" parent="." unique_id=87263896]
 use_threads = true
 
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
@@ -924,3 +927,5 @@ use_threads = true
 [connection signal="item_selected" from="Settings/Window" to="Settings" method="_on_window_item_selected"]
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
+[connection signal="request_completed" from="Download Check" to="Update" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="Install Update" to="Update" method="_on_install_update_request_completed"]

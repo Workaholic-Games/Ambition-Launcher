@@ -1,18 +1,30 @@
 extends Panel
+var current_version : int = 0
+var path : String = OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) #OS.get_executable_path()
 
 
 
 func _ready():
-	# Connect the signal to handle the response
-	$"../HTTPRequest".request_completed.connect(_on_request_completed)
+	$"../Download Check".request("https://raw.githubusercontent.com/bulbatf7-lgtm/Version-Checker/refs/heads/main/README.md")
+
+
+
+func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+	var version_number = body.get_string_from_utf8()
+	print("Remote number found: ", version_number)
 	
-	var error = $"../HTTPRequest".request(version_url)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+	if int(version_number) > current_version:
+		DirAccess.remove_absolute(path + "/Ambition_Test.exe")
+		$"../Install Update".download_file = path + "/Ambition_Test.exe"
+		$"../Install Update".request("https://github.com/bulbatf7-lgtm/Version-Checker/releases/download/ambition/Ambition_Test.exe")
+	else:
+		print("ON LATEST VERSION")
 
 
 
-func _on_request_completed(_result, _response_code, _headers, body):
-	var remote_content = body.get_string_from_utf8()
-	var remote_version = float(remote_content.strip_edges())
-	print("Remote number found: ", remote_version)
+func _on_install_update_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	get_tree().quit()
+	OS.shell_open($"../Install Update".download_file)
+
+
+# need to make sure this all like works properly

@@ -1,6 +1,7 @@
 extends Control
 
 
+
 # Applying of settings on startup
 func _ready():
 	fix_option_button_ui()
