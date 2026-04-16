@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://entites/main/search_menu.gd" id="4_l7kjj"]
 [ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
+[ext_resource type="Script" uid="uid://dxuwvtpiouklv" path="res://entites/main/update.gd" id="6_fl0aj"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="6_xd8mv"]
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
@@ -130,6 +131,7 @@ theme_type_variation = &"Line"
 
 [node name="Quit" type="Panel" parent="." unique_id=1799576681]
 visible = false
+z_index = 15
 layout_mode = 0
 offset_left = 266.0
 offset_top = 136.0
@@ -163,6 +165,28 @@ offset_top = 24.0
 offset_right = 103.0
 offset_bottom = 42.0
 text = "Are you sure?"
+
+[node name="Update" type="Panel" parent="." unique_id=1089150131]
+visible = false
+z_index = 15
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+theme_type_variation = &"Quit"
+script = ExtResource("6_fl0aj")
+
+[node name="Are You Sure?" type="Label" parent="Update" unique_id=1188462879]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+theme_override_constants/line_spacing = -20
+theme_override_font_sizes/font_size = 32
+text = "Updating Launcher...
+
+Please Wait."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
 visible = false
@@ -284,6 +308,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="The Vegetable Game (Regrown)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=364897010]
+visible = false
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
 
@@ -300,32 +325,6 @@ theme_type_variation = &"Line"
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=2109483381]
 layout_mode = 2
 alignment = 1
-
-[node name="The Vegetable Game Regrown" type="TextureButton" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=848103061]
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("6_xd8mv")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1970307114]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1549571349]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-text = "The Vegetable Game Regrown"
-horizontal_alignment = 1
-autowrap_mode = 3
 
 [node name="Other (Bitcoin Miner)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=443762424]
 custom_minimum_size = Vector2(523, 100)
@@ -345,7 +344,7 @@ theme_type_variation = &"Line"
 layout_mode = 2
 alignment = 1
 
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376]
+[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -353,6 +352,7 @@ texture_normal = ExtResource("7_1dv2i")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
 visible = false
@@ -411,6 +411,19 @@ Difficulty: Hard"
 versions = PackedStringArray("Ambition Edition")
 version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition.exe")
 version_file_names = PackedStringArray("FNAB2_Ambition_Edition")
+
+[node name="Bitcoin Miner" parent="Store Pages" unique_id=474046365 instance=ExtResource("12_5enwe")]
+visible = false
+layout_mode = 0
+offset_left = 112.112114
+offset_right = 112.112114
+description = "Basically, just a joke I made with my friends that evolved into an actually decent game.
+It is just a cookie clicker-like game that I added some stuff. (Minecraft don't dmca me for using pickaxe models)"
+rating = "Rated: E for Everyone
+Difficulty: Easy"
+versions = PackedStringArray("1.25")
+version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.exe")
+version_file_names = PackedStringArray("Bitcoin_Miner.1.25")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -898,9 +911,6 @@ use_threads = true
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" to="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]

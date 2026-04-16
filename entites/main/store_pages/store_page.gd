@@ -18,6 +18,7 @@ func _ready() -> void:
 	match version_file_names.get(0):
 		"FNAB1_Ambition_Edition": $Thumbnail.play("fnab1")
 		"FNAB2_Ambition_Edition": $Thumbnail.play("fnab2")
+		"Bitcoin_Miner.1.25": $Thumbnail.play("bitcoin_miner")
 
 
 
