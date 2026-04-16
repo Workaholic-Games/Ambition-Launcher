@@ -24,11 +24,6 @@ func _on_pressed() -> void:
 # Generally: set the cover texture mode to Linear for High Res and Nearest for Low Res.
 
 
-# moved store pages node to be under the store button for cleaner organization 
-# in the editor just name 
-# also some point im moving most of the buttons to one script thats so many buttons that just have one function
-
-
 
 # bitcoin miner 1.25
 # bitcoin miner 1.2

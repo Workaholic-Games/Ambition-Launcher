@@ -8,21 +8,17 @@ var launcher_data = data.new()
 func _ready():
 	DirAccess.make_dir_absolute(file_path)
 	load_data()
-	print(launcher_data.start_page)
 
 
+# Save Data related
 func load_data():
 	if (ResourceLoader.exists(file_path + file_name)):
 		launcher_data = ResourceLoader.load(file_path + file_name).duplicate(true)
-		print("LOADED")
-	else:
-		print("NO SAVE DATA FOUND. CREATED NEW FILE")
 
 func save_data():
 	ResourceSaver.save(launcher_data, file_path + file_name)
-	print("SAVED!")
 
 
-
+# Save game when you click X and I believe Alt-F4
 func _exit_tree() -> void:
 	save_data()

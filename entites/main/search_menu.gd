@@ -4,7 +4,7 @@ var matches : Array = []
 @export var items : GridContainer
 
 
-
+# Searchbar Functionality
 func _on_search_bar_text_changed(new_text: String) -> void:
 	new_text = new_text.to_lower()
 	

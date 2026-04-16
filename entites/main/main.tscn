@@ -382,6 +382,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

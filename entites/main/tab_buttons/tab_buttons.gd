@@ -1,7 +1,7 @@
 extends Node
 
 
-
+# Just a bunch of UI hiding then turning the Correct UI Visible.
 func _on_library_pressed() -> void:
 	hide_ui()
 	$"../../Library".visible = true
@@ -25,6 +25,8 @@ func _on_quit_launcher_pressed() -> void:
 	$"../../Quit".visible = true
 
 
+
+# UI hide function
 func hide_ui():
 	$"../../Library".visible = false
 	$"../../Store".visible = false

@@ -1,7 +1,7 @@
 extends Control
 
 
-
+# Applying of settings on startup
 func _ready():
 	fix_option_button_ui()
 	match Main.launcher_data.window_mode:
@@ -37,7 +37,7 @@ func _ready():
 			$"../Panel/Tabs/Buttons/Settings".set_pressed_no_signal(true)
 
 
-
+# Window settings
 func _on_window_item_selected(index: int) -> void:
 	match index:
 		0: 
@@ -54,7 +54,7 @@ func _on_window_item_selected(index: int) -> void:
 			Main.launcher_data.window_mode = 3
 
 
-
+# Updating setting if you click F11 and such
 func _process(_delta: float) -> void:
 	var mode = DisplayServer.window_get_mode()
 	if mode == DisplayServer.WINDOW_MODE_MAXIMIZED: $Window.select(1)
@@ -73,10 +73,13 @@ func _process(_delta: float) -> void:
 
 
 
+# Move user to Startup Location
 func _on_startup_location_item_selected(index: int) -> void:
 	Main.launcher_data.start_page = index
 
 
+
+# Fixes the stupid option buttons not being rendered properly
 func fix_option_button_ui():
 	var option_buttons = get_tree().get_root().find_children("*", "OptionButton", true, false)
 	for button in option_buttons:
