@@ -72,4 +72,3 @@ func _on_visibility_changed() -> void:
 func check_for_uninstall():
 	if FileAccess.file_exists("user://" + version_file_names.get(selected_link) + ".exe"):
 		$Install.text = "Uninstall"
-		

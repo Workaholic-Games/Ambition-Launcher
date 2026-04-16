@@ -17,9 +17,10 @@
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
+[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
-[ext_resource type="PackedScene" uid="uid://cm2wiau1au8ek" path="res://workaholic_intro/workaholic_intro.tscn" id="24_p0fg6"]
+[ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -886,14 +887,22 @@ offset_right = 40.0
 text = "Startup Location"
 vertical_alignment = 2
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
-environment = SubResource("Environment_3a0l5")
+[node name="Intro" type="VideoStreamPlayer" parent="." unique_id=1260205218]
+z_index = 20
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+stream = ExtResource("20_gjwx3")
+expand = true
 
-[node name="Workaholic Intro" parent="." unique_id=2021610784 instance=ExtResource("24_p0fg6")]
-position = Vector2(704, 0)
+[node name="Intro Audio" type="AudioStreamPlayer" parent="Intro" unique_id=912610543]
+stream = ExtResource("21_qsgxr")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
+environment = SubResource("Environment_3a0l5")
 
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Store" to="Panel/Tabs" method="_on_store_pressed"]
@@ -924,4 +933,5 @@ use_threads = true
 [connection signal="item_selected" from="Settings/Window" to="Settings" method="_on_window_item_selected"]
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
+[connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]

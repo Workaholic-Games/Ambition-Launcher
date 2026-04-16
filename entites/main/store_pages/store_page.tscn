@@ -139,20 +139,20 @@ offset_right = 514.0
 offset_bottom = 264.0
 show_percentage = false
 
+[node name="Line" type="Panel" parent="." unique_id=1850942960]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 7.65217
+offset_right = 522.0
+offset_bottom = 216.0
+theme_type_variation = &"Line"
+
 [node name="Thumbnail" type="AnimatedSprite2D" parent="." unique_id=1524105498]
 position = Vector2(186, 16)
 scale = Vector2(0.17083333, 0.17777777)
 sprite_frames = SubResource("SpriteFrames_3vhim")
 animation = &"fnab1"
 centered = false
-
-[node name="Line" type="Panel" parent="Thumbnail" unique_id=1850942960]
-show_behind_parent = true
-offset_left = -46.829346
-offset_top = -46.956543
-offset_right = 1966.8291
-offset_bottom = 1125.0
-theme_type_variation = &"Line"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1449829384]
 use_threads = true
