@@ -75,6 +75,12 @@ bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 expand_margin_right = 15.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5p4u"]
+bg_color = Color(0.8047426, 0.80474263, 0.8047426, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24lni"]
+bg_color = Color(0, 0.6901961, 0.05882353, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q08p0"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
@@ -153,6 +159,8 @@ PopupMenu/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 PopupMenu/colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_f16gj")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_p32uf")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_s5p4u")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_24lni")
 Quit/styles/panel = SubResource("StyleBoxFlat_q08p0")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_ldlso")

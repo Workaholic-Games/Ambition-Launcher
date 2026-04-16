@@ -77,6 +77,12 @@ bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 content_margin_right = 15.0
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4lg8"]
+bg_color = Color(0.1, 0.1, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00hrq"]
+bg_color = Color(0, 0.69, 0.057499945, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec18n"]
 bg_color = Color(0.16206557, 0.1620656, 0.16206557, 1)
 
@@ -158,6 +164,8 @@ PopupMenu/icons/radio_checked = ExtResource("1_10o2q")
 PopupMenu/icons/radio_unchecked = ExtResource("2_y6g8n")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_2nlnu")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_dh3ls")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_f4lg8")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_00hrq")
 Quit/base_type = &"Panel"
 Quit/styles/panel = SubResource("StyleBoxFlat_ec18n")
 RichTextLabel/colors/default_color = Color(0.69803923, 0.69803923, 0.69803923, 1)

@@ -10,11 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="6_xd8mv"]
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
-[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="11_4mlte"]
-[ext_resource type="Script" uid="uid://bd8bgwp3dutcj" path="res://entites/main/install.gd" id="11_6l2pj"]
-[ext_resource type="Script" uid="uid://bhbg8k2dk5loy" path="res://entites/main/store/close_button.gd" id="13_eq36p"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="14_3a0l5"]
-[ext_resource type="Texture2D" uid="uid://dfqjnl8idlcc7" path="res://white.png" id="14_qsgxr"]
+[ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
@@ -31,8 +27,6 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -215,12 +209,10 @@ vertical_scroll_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="Store/Area" unique_id=65950568]
 layout_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="Five Nights at Bulbas (FNAB)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1701956488]
 layout_mode = 2
@@ -243,7 +235,7 @@ texture_normal = ExtResource("4_akru0")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/FNAB")
+page = NodePath("../../../../../../Store Pages/FNAB1")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=769458817]
 visible = false
@@ -294,7 +286,6 @@ autowrap_mode = 3
 [node name="The Vegetable Game (Regrown)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=364897010]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=155710770]
 layout_mode = 2
@@ -309,7 +300,6 @@ theme_type_variation = &"Line"
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=2109483381]
 layout_mode = 2
 alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="The Vegetable Game Regrown" type="TextureButton" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games" unique_id=848103061]
 custom_minimum_size = Vector2(120, 180)
@@ -318,7 +308,6 @@ texture_normal = ExtResource("6_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
-metadata/_edit_lock_ = true
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)/Games/The Vegetable Game Regrown" unique_id=1970307114]
 visible = false
@@ -341,7 +330,6 @@ autowrap_mode = 3
 [node name="Other (Bitcoin Miner)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=443762424]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=64931198]
 layout_mode = 2
@@ -399,184 +387,29 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.999, 1)
 
-[node name="Install" type="Control" parent="Store Pages" unique_id=69545208]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Background" type="Panel" parent="Store Pages" unique_id=1212018716]
+[node name="FNAB1" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
-offset_left = 110.0
-offset_right = 642.8879
-offset_bottom = 360.0
+offset_left = 112.112114
+offset_right = 112.112114
+description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
+rating = "Rated: T for Teen
+Difficulty: Normal"
+versions = PackedStringArray("Ambition Edition")
+version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition.exe")
+version_file_names = PackedStringArray("FNAB1_Ambition_Edition")
 
-[node name="Close Button" type="Button" parent="Store Pages" unique_id=186477530]
+[node name="FNAB2" parent="Store Pages" unique_id=1186039038 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
-offset_left = 512.5125
-offset_top = 208.0
-offset_right = 632.76483
-offset_bottom = 234.0
-scale = Vector2(0.99058485, 0.97051007)
-theme_type_variation = &"Close_Button"
-text = "Back"
-script = ExtResource("13_eq36p")
-
-[node name="Progress Bar" type="TextureProgressBar" parent="Store Pages" unique_id=457830431]
-layout_mode = 0
-offset_left = 288.2883
-offset_top = 240.0
-offset_right = 632.6327
-offset_bottom = 256.0
-nine_patch_stretch = true
-texture_progress = ExtResource("14_qsgxr")
-tint_under = Color(0, 0, 0, 1)
-tint_progress = Color(0, 0.56, 0.0653334, 1)
-
-[node name="FNAB" type="Control" parent="Store Pages" unique_id=116970929]
-anchors_preset = 0
-offset_left = 110.0
-offset_right = 110.0
-
-[node name="Version Select Label" type="Label" parent="Store Pages/FNAB" unique_id=74541496]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 8.0
-offset_right = 146.0
-offset_bottom = 26.0
-text = "Version Select:"
-
-[node name="FNAB Versions" type="OptionButton" parent="Store Pages/FNAB" unique_id=1505936404]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 24.0
-offset_right = 170.0
-offset_bottom = 50.0
-theme_type_variation = &"OptionButton"
-theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
-theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
-selected = 0
-item_count = 3
-popup/item_0/text = "Ambition Edition *"
-popup/item_0/id = 0
-popup/item_1/text = "1.1"
-popup/item_1/id = 0
-popup/item_2/text = "DEMO"
-popup/item_2/id = 2
-
-[node name="Install" type="Button" parent="Store Pages/FNAB" unique_id=1110838534]
-layout_mode = 0
-offset_left = 178.28828
-offset_top = 208.0
-offset_right = 338.44843
-offset_bottom = 234.0
-theme_type_variation = &"Close_Button"
-text = "Install"
-script = ExtResource("11_6l2pj")
-url = "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition.exe"
-file_name = "FNAB1_Ambition_Edition.exe"
-
-[node name="Game Description" type="RichTextLabel" parent="Store Pages/FNAB" unique_id=762663260]
-layout_mode = 0
-offset_left = 10.120117
-offset_top = 56.0
-offset_right = 170.28027
-offset_bottom = 192.0
-bbcode_enabled = true
-text = "You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and his nasty crew until 6AM."
-
-[node name="Age Rating" type="Label" parent="Store Pages/FNAB" unique_id=1950780056]
-layout_mode = 0
-offset_left = 10.120087
-offset_top = 200.0
-offset_right = 170.28027
-offset_bottom = 344.0
-theme_type_variation = &"Store_Page"
-text = "RATED: T for Teen
-Difficulty: Normal
-
-"
-
-[node name="Thumbnail" type="Sprite2D" parent="Store Pages/FNAB" unique_id=1503507865]
-position = Vector2(178, 8)
-scale = Vector2(0.17777775, 0.17777775)
-texture = ExtResource("11_4mlte")
-centered = false
-
-[node name="FNAB2" type="Control" parent="Store Pages" unique_id=2098870221]
-anchors_preset = 0
-offset_left = 110.0
-offset_right = 110.0
-
-[node name="Version Select Label" type="Label" parent="Store Pages/FNAB2" unique_id=114912441]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 8.0
-offset_right = 146.0
-offset_bottom = 26.0
-text = "Version Select:"
-
-[node name="FNAB2 Versions" type="OptionButton" parent="Store Pages/FNAB2" unique_id=492916983]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 24.0
-offset_right = 170.0
-offset_bottom = 50.0
-theme_type_variation = &"OptionButton"
-theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
-theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
-selected = 0
-item_count = 2
-popup/item_0/text = "Ambition Edition *"
-popup/item_0/id = 0
-popup/item_1/text = "2.3"
-popup/item_1/id = 0
-
-[node name="Install" type="Button" parent="Store Pages/FNAB2" unique_id=709099579]
-layout_mode = 0
-offset_left = 178.28828
-offset_top = 208.0
-offset_right = 338.44843
-offset_bottom = 234.0
-theme_type_variation = &"Close_Button"
-text = "Install"
-script = ExtResource("11_6l2pj")
-url = "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition.exe"
-file_name = "FNAB2_Ambition_Edition.exe"
-
-[node name="Game Description" type="RichTextLabel" parent="Store Pages/FNAB2" unique_id=1428467061]
-layout_mode = 0
-offset_left = 10.120117
-offset_top = 56.0
-offset_right = 170.28027
-offset_bottom = 192.0
-bbcode_enabled = true
-text = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
-
-[node name="Age Rating" type="Label" parent="Store Pages/FNAB2" unique_id=57195602]
-layout_mode = 0
-offset_left = 10.120087
-offset_top = 200.0
-offset_right = 170.28027
-offset_bottom = 344.0
-theme_type_variation = &"Store_Page"
-text = "RATED: T for Teen
-Difficulty: Hard
-
-"
-
-[node name="Thumbnail" type="Sprite2D" parent="Store Pages/FNAB2" unique_id=941049453]
-position = Vector2(178, 8)
-scale = Vector2(0.17777775, 0.17777775)
-texture = ExtResource("14_3a0l5")
-centered = false
+offset_left = 112.112114
+offset_right = 112.112114
+description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
+rating = "Rated: T for Teen
+Difficulty: Hard"
+versions = PackedStringArray("Ambition Edition")
+version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition.exe")
+version_file_names = PackedStringArray("FNAB2_Ambition_Edition")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -1071,9 +904,6 @@ use_threads = true
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
-[connection signal="pressed" from="Store Pages/Close Button" to="Store Pages/Close Button" method="_on_pressed"]
-[connection signal="pressed" from="Store Pages/FNAB/Install" to="Store Pages/FNAB/Install" method="_on_pressed"]
-[connection signal="pressed" from="Store Pages/FNAB2/Install" to="Store Pages/FNAB2/Install" method="_on_pressed"]
 [connection signal="pressed" from="Developers/Bulba" to="Developers" method="_on_bulba_pressed"]
 [connection signal="pressed" from="Developers/Jonathan" to="Developers" method="_on_jonathan_pressed"]
 [connection signal="pressed" from="Developers/Sawyer" to="Developers" method="_on_sawyer_pressed"]
@@ -1083,4 +913,3 @@ use_threads = true
 [connection signal="item_selected" from="Settings/Window" to="Settings" method="_on_window_item_selected"]
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
-[connection signal="request_completed" from="HTTPRequest" to="Store Pages/FNAB/Install" method="_on_http_request_request_completed"]

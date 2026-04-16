@@ -67,7 +67,7 @@ func _process(_delta: float) -> void:
 		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN: 
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			Main.launcher_data.window_mode = 0
-		elif mode == DisplayServer.WINDOW_MODE_WINDOWED: 
+		elif mode != DisplayServer.WINDOW_MODE_FULLSCREEN: 
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			Main.launcher_data.window_mode = 3
 
