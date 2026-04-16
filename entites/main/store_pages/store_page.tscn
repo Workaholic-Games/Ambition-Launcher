@@ -102,21 +102,12 @@ offset_bottom = 264.0
 theme_type_variation = &"Close_Button"
 text = "Install"
 
-[node name="Wishlist" type="Button" parent="." unique_id=346153321]
+[node name="Back" type="Button" parent="." unique_id=1063336792]
 layout_mode = 0
 offset_left = 362.0
 offset_top = 272.0
 offset_right = 514.0
 offset_bottom = 304.0
-theme_type_variation = &"Close_Button"
-text = "Wishlist"
-
-[node name="Back" type="Button" parent="." unique_id=1063336792]
-layout_mode = 0
-offset_left = 362.0
-offset_top = 312.0
-offset_right = 514.0
-offset_bottom = 344.0
 theme_type_variation = &"Close_Button"
 text = "Back to Store"
 
@@ -165,6 +156,7 @@ theme_type_variation = &"Line"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1449829384]
 use_threads = true
+timeout = 60.0
 
 [connection signal="item_selected" from="Versions" to="." method="_on_versions_item_selected"]
 [connection signal="pressed" from="Install" to="." method="_on_install_pressed"]
