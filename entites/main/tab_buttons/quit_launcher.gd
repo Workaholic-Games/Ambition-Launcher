@@ -1,3 +1,4 @@
+@icon("res://editor_icons/quit.png")
 extends Panel
 
 

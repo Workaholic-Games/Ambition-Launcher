@@ -1,4 +1,4 @@
-@icon("res://editor_icons/shop_item.png")
+@icon("res://editor_icons/shop_icon.png")
 extends TextureButton
 @export var page : Control
 

@@ -1,4 +1,4 @@
-@icon("res://editor_icons/shop_icon.png")
+@icon("res://editor_icons/shop_item.png")
 extends Control
 @export_multiline var description : String
 @export_multiline var rating : String
@@ -70,6 +70,8 @@ func _on_visibility_changed() -> void:
 	check_for_uninstall()
 
 
+
 func check_for_uninstall():
-	if FileAccess.file_exists("user://" + version_file_names.get(selected_link) + ".exe"):
-		$Install.text = "Uninstall"
+	if $Versions.get_item_count() > 0:
+		if FileAccess.file_exists("user://" + version_file_names.get(selected_link) + ".exe"):
+			$Install.text = "Uninstall"

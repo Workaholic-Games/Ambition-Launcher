@@ -1,3 +1,4 @@
+@icon("res://editor_icons/tos.png")
 extends Panel
 
 
