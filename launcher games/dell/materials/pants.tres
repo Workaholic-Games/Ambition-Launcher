@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5iuwdsdqh71r"]
+
+[resource]
+resource_name = "pants"
+cull_mode = 2
+albedo_color = Color(0.9921569, 0.7960787, 0.5921569, 1)

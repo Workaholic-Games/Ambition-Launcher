@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dow35v32evqso"]
+
+[resource]
+resource_name = "wine"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.5277682, 0, 0.01248983, 1)
+metallic = 0.1
+roughness = 0.05

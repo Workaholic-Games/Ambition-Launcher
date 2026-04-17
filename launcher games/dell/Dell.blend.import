@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dkdqbp60iirhj"
+uid="uid://drqpkc0cxk3du"
 path="res://.godot/imported/Dell.blend-55cbd370473aac89e27a70d57fa57803.scn"
 
 [deps]
@@ -37,7 +37,65 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"beard": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/beard.tres",
+"use_external/path": "uid://wp1mvpr1ls5j"
+},
+"black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/black.tres",
+"use_external/path": "uid://dx23uonnlytw5"
+},
+"boot": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/boot.tres",
+"use_external/path": "uid://d17hobsd5ueyn"
+},
+"eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/eye.tres",
+"use_external/path": "uid://cx2fq0lawbmge"
+},
+"eye_color": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/eye_color.tres",
+"use_external/path": "uid://1g8bn7punmtn"
+},
+"lips": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/lips.tres",
+"use_external/path": "uid://b2haaum0ukj6j"
+},
+"pants": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/pants.tres",
+"use_external/path": "uid://c5iuwdsdqh71r"
+},
+"shirt": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/shirt.tres",
+"use_external/path": "uid://cp4jdaqw0guli"
+},
+"skin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/skin.tres",
+"use_external/path": "uid://cqjhx1swado3w"
+},
+"wine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/wine.tres",
+"use_external/path": "uid://dow35v32evqso"
+},
+"wine_glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/wine_glass.tres",
+"use_external/path": "uid://b6te5uthacp22"
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

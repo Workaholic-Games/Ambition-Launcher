@@ -52,7 +52,7 @@ bg_color = Color(0, 0.67058825, 0.2901961, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogguv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj2g"]
-bg_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+bg_color = Color(0.02, 0.02, 0.02, 1)
 expand_margin_left = 3.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10o2q"]
@@ -146,7 +146,7 @@ Hover_Label/styles/normal = SubResource("StyleBoxFlat_2l5r5")
 Label/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
-LineEdit/colors/caret_color = Color(0.95, 0.95, 0.95, 1)
+LineEdit/colors/caret_color = Color(0.79493165, 0.97802013, 0.865452, 1)
 LineEdit/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_otj2g")

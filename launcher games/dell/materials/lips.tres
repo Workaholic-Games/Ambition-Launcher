@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2haaum0ukj6j"]
+
+[resource]
+resource_name = "lips"
+cull_mode = 2
+albedo_color = Color(0.8, 0.38960004, 0.344, 1)

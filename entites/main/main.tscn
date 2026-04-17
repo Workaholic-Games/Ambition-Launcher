@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
+[ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
@@ -32,6 +33,10 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -1182,26 +1187,57 @@ offset_top = 142.0
 offset_right = 46.0
 offset_bottom = 182.0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games" unique_id=381719285]
+[node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24_6l2pj")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
 layout_mode = 0
 offset_left = -6.0
 offset_top = -2.0
-offset_right = 426.0
-offset_bottom = 878.0
-scale = Vector2(0.25, 0.25)
+offset_right = 858.0
+offset_bottom = 1758.0
+scale = Vector2(0.125, 0.125)
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="Launcher Games/SubViewportContainer" unique_id=1108012191]
+[node name="SubViewport" type="SubViewport" parent="Launcher Games/Dell/SubViewportContainer" unique_id=1108012191]
 handle_input_locally = false
 msaa_3d = 1
-size = Vector2i(432, 880)
+size = Vector2i(864, 1760)
 render_target_update_mode = 4
 
-[node name="Camera" type="Camera3D" parent="Launcher Games/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.718812, 1.5126698, 0)
+[node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.711371, 7.303131, 0)
 fov = 90.0
 
-[node name="Dell" parent="Launcher Games/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
+[node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
+
+[node name="Input" type="LineEdit" parent="Launcher Games/Dell" unique_id=1326285556]
+layout_mode = 0
+offset_top = 193.0
+offset_right = 99.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 12
+placeholder_text = "Ask Dell"
+alignment = 1
+
+[node name="Response" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=89382335]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 135.0
+offset_right = 102.0
+offset_bottom = 192.0
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6l2pj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3a4v")
+scroll_following_visible_characters = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
+wait_time = 0.05
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1242,4 +1278,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
+[connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
+[connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]

@@ -24,6 +24,10 @@ func _ready():
 
 
 
+## THE Fresh Mint AND Grape UI THEMES NEED THEIR SEARCH BARS FIXED
+
+
+
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var absolute_path = ProjectSettings.globalize_path("user://installer.exe")
 	OS.shell_open(absolute_path)

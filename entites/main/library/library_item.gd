@@ -10,7 +10,6 @@ var selected_version : int = 0
 func _ready() -> void:
 	$"Game Label".text = game_name
 	
-	print(Main.launcher_data.last_played)
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
 		#get_parent().move_child(self, 0)
@@ -25,7 +24,6 @@ func _on_pressed() -> void:
 	OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
-	print(Main.launcher_data.last_played)
 	
 	#var target_index = get_index()
 	get_parent().move_child(self, 0)
