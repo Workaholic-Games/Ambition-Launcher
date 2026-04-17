@@ -1,3 +1,4 @@
+@icon("res://editor_icons/shop_icon.png")
 extends Control
 @export_multiline var description : String
 @export_multiline var rating : String
@@ -56,8 +57,8 @@ func _physics_process(_delta: float) -> void:
 
 # Download Complete code
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
-	var absolute_path = ProjectSettings.globalize_path("user://" + version_file_names.get(selected_link) + ".exe")
-	OS.shell_open(absolute_path)
+	#var absolute_path = ProjectSettings.globalize_path("user://" + version_file_names.get(selected_link) + ".exe")
+	#OS.shell_open(absolute_path)
 	can_download = true
 	$ProgressBar.visible = false
 	check_for_uninstall()

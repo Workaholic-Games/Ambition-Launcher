@@ -34,11 +34,13 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://branding/": "yellow",
+"res://community/": "pink",
 "res://editor_icons/": "green",
 "res://entites/": "blue",
 "res://entites/main/": "purple",
 "res://fonts/": "gray",
 "res://game_assets/": "red",
+"res://launcher games/": "orange",
 "res://themes/": "purple"
 }
 

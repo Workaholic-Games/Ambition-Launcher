@@ -1,12 +1,12 @@
 extends Node
 
 
+
 # Just a bunch of UI hiding then turning the Correct UI Visible.
 func _on_library_pressed() -> void:
 	hide_ui()
 	$"../../Library".visible = true
 func _on_store_pressed() -> void:
-	print("PRESSED")
 	hide_ui()
 	$"../../Store".visible = true
 func _on_community_pressed() -> void:
@@ -39,4 +39,3 @@ func hide_ui():
 	$"../../Quit".visible = false
 	for i in $"../../Store Pages".get_children():
 		i.visible = false
-		print(i.visible)

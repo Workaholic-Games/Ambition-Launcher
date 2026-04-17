@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c7euu153tj8we"]
+
+[ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="1_sit7t"]
+[ext_resource type="Script" uid="uid://bbd6lkldu0a4i" path="res://entites/main/library/library_item.gd" id="2_ybi6t"]
+
+[sub_resource type="Gradient" id="Gradient_mh5tx"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 0.11764706)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
+gradient = SubResource("Gradient_mh5tx")
+fill_from = Vector2(0, 1)
+
+[node name="Library Item" type="TextureButton" unique_id=1778090871]
+custom_minimum_size = Vector2(120, 180)
+texture_normal = ExtResource("1_sit7t")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_ybi6t")
+
+[node name="Hover" type="Sprite2D" parent="." unique_id=1476178982]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="." unique_id=1102608909]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Uninstall" type="Button" parent="." unique_id=1635288642]
+layout_mode = 0
+offset_top = 208.0
+offset_right = 120.0
+offset_bottom = 236.0
+theme_type_variation = &"Close_Button"
+text = "Uninstall"
+
+[node name="Versions" type="OptionButton" parent="." unique_id=853332808]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 120.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+clip_text = true
+fit_to_longest_item = false
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="Uninstall" to="." method="_on_uninstall_pressed"]
+[connection signal="item_selected" from="Versions" to="." method="_on_versions_item_selected"]
