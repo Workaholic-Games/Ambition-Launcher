@@ -26,8 +26,12 @@
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 [ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
+[ext_resource type="Script" uid="uid://ds5bwbwssfnqy" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://b6w56yalhh6a2" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://d1fxowfybfv43" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
+size = Vector2(542.5, 12)
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -37,22 +41,20 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mp0f"]
+size = Vector2(542.5, 12)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
 
-[sub_resource type="GDScript" id="GDScript_k7a3d"]
-script/source = "extends TextureButton
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 32, 16, 16)
 
-
-
-func _on_pressed() -> void:
-	$\"../CharacterBody2D\".process_mode =Node.PROCESS_MODE_INHERIT
-	$\"../CharacterBody2D\".visible = true
-	$\"../WalkTimer\".start()
-	$\"../JumpTimer\".start()
-	pass
-"
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
 atlas = ExtResource("28_5mp0f")
@@ -118,6 +120,17 @@ region = Rect2(48, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_12ljg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnd3n")
+}],
+"loop": false,
+"name": &"slime_fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5mp0f")
 }, {
 "duration": 1.0,
@@ -145,7 +158,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"slime_jump",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 2.5,
@@ -427,6 +440,14 @@ custom_minimum_size = Vector2(523, 4)
 layout_mode = 2
 theme_type_variation = &"Line"
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line" unique_id=813401851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line/StaticBody2D" unique_id=1995320203]
+position = Vector2(266, 6)
+shape = SubResource("RectangleShape2D_qp5pd")
+one_way_collision = true
+one_way_collision_margin = 19.0
+
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1710918498]
 layout_mode = 2
 alignment = 1
@@ -518,6 +539,14 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(523, 4)
 layout_mode = 2
 theme_type_variation = &"Line"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Line" unique_id=987064834]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D" unique_id=1399760219]
+position = Vector2(265.25, 6)
+shape = SubResource("RectangleShape2D_5mp0f")
+one_way_collision = true
+one_way_collision_margin = 19.0
 
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=824905173]
 layout_mode = 2
@@ -1400,20 +1429,18 @@ offset_bottom = 18.0
 texture_normal = ExtResource("26_k7a3d")
 ignore_texture_size = true
 stretch_mode = 0
-script = SubResource("GDScript_k7a3d")
+script = ExtResource("27_3gblu")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/LauncherPets" unique_id=1696254225]
 process_mode = 4
-visible = false
-position = Vector2(338, 50)
+position = Vector2(355, 34)
 script = ExtResource("27_5mp0f")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=1295667330]
 position = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"slime_walk"
+animation = &"slime_fall"
 autoplay = "slime_idle"
-frame_progress = 0.8819895
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=910393911]
 position = Vector2(10, 10)
@@ -1443,7 +1470,7 @@ position = Vector2(90, 218)
 shape = SubResource("WorldBoundaryShape2D_5mp0f")
 
 [node name="WalkTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=503514440]
-wait_time = 1.9
+wait_time = 3.8
 
 [node name="JumpTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=1128844296]
 wait_time = 9.5
