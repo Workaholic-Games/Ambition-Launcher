@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
-[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="VideoStream" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
@@ -29,8 +29,9 @@
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Script" uid="uid://eqght8vqxlf3" path="res://entites/main/slime_button.gd" id="28_qp5pd"]
+[ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
+[ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
@@ -51,6 +52,14 @@ fill_from = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3gblu"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ei0e"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16.289528, 16.39955)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lero"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
 atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 0, 16.289528, 16.39955)
@@ -58,6 +67,10 @@ region = Rect2(0, 0, 16.289528, 16.39955)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
 atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u1yx"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
 size = Vector2(16, 16)
@@ -121,6 +134,14 @@ region = Rect2(32, 16, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5kpq"]
 atlas = ExtResource("28_5mp0f")
 region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn814"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ylro"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwt88"]
 atlas = ExtResource("31_fqae6")
@@ -195,6 +216,22 @@ animations = [{
 "loop": true,
 "name": &"slime_walk",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn814")
+}],
+"loop": false,
+"name": &"snail_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ylro")
+}],
+"loop": false,
+"name": &"snail_walk",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1484,25 +1521,38 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("27_3gblu")
 
-[node name="Square Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=310176782]
+[node name="GridContainer" type="GridContainer" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=1391015889]
+visible = false
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 0
-offset_left = 40.0
-offset_top = -16.0
-offset_right = 56.0
-texture_normal = ExtResource("26_k7a3d")
+offset_left = 24.0
+offset_right = 60.0
+offset_bottom = 32.0
+columns = 2
+script = ExtResource("28_xn47k")
+
+[node name="Snail Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=1671665789]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1ei0e")
+texture_pressed = SubResource("AtlasTexture_6lero")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Slime Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=49733039]
-layout_mode = 0
-offset_left = 24.0
-offset_top = -16.0
-offset_right = 40.0
+[node name="Slime Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=49733039]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
 texture_normal = SubResource("AtlasTexture_12ljg")
 texture_pressed = SubResource("AtlasTexture_rnd3n")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("28_qp5pd")
+
+[node name="Square Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=310176782]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_4u1yx")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/Launcher Pets" unique_id=1696254225]
 process_mode = 4
@@ -1515,8 +1565,7 @@ shape = SubResource("RectangleShape2D_3gblu")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=1295667330]
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"square_walk"
-autoplay = "slime_idle"
+animation = &"snail_walk"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1563,7 +1612,10 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_pressed"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" method="_on_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_snail_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_square_button_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]

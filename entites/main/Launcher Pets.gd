@@ -22,14 +22,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = -SPEED
 		$Pets.flip_h = true
 		$Pets.play(walk_animation)
-		if $Pets.frame == 0 or $Pets.frame == 7 or $Pets.frame == 1:
-			velocity.x = -SPEED
+		if walk_animation == "slime_walk" and $Pets.frame == 0 or $Pets.frame == 7 or $Pets.frame == 1:
+			velocity.x = 0
+			
 	elif direction > 0:
 		velocity.x = SPEED
 		$Pets.flip_h = false
 		$Pets.play(walk_animation)
-		if $Pets.frame == 0 or $Pets.frame == 7 or $Pets.frame == 1:
-			velocity.x = SPEED
+		if walk_animation == "slime_walk" and$Pets.frame == 0 or $Pets.frame == 7 or $Pets.frame == 1:
+			velocity.x = 0
 	if is_on_floor() and can_jump == true:
 		velocity.y = JUMP_VELOCITY
 		can_jump = false
@@ -54,7 +55,10 @@ func _on_slime_button_pressed() -> void:
 	walk_animation = "slime_walk"
 	jump_animation = "slime_jump"
 
-
 func _on_square_button_pressed() -> void:
 	idle_animation = "square_idle"
 	walk_animation = "square_walk"
+
+func _on_snail_button_pressed() -> void:
+	idle_animation = "snail_idle"
+	walk_animation = "snail_walk"
