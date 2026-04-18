@@ -25,6 +25,9 @@
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
+[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
+[ext_resource type="Script" uid="uid://b6w56yalhh6a2" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://d1fxowfybfv43" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -37,6 +40,147 @@ fill_from = Vector2(0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
+
+[sub_resource type="GDScript" id="GDScript_k7a3d"]
+script/source = "extends TextureButton
+
+
+
+func _on_pressed() -> void:
+	$\"../CharacterBody2D\".process_mode =Node.PROCESS_MODE_INHERIT
+	$\"../CharacterBody2D\".visible = true
+	$\"../WalkTimer\".start()
+	$\"../JumpTimer\".start()
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gblu"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5pd"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqae6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8nh6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn47k"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgps4"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ang"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgucs"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13033"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7gk6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbrtn"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vgeh"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j32lm"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5kpq"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mp0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gblu")
+}],
+"loop": true,
+"name": &"slime_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp5pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqae6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8nh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn47k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgps4")
+}],
+"loop": false,
+"name": &"slime_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_86ang")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgucs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13033")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7gk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbrtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vgeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j32lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5kpq")
+}],
+"loop": true,
+"name": &"slime_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
+size = Vector2(16, 16)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -1247,6 +1391,63 @@ wait_time = 0.05
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="LauncherPets" type="TextureButton" parent="Launcher Games/LauncherPets" unique_id=1295541966]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 2.0
+offset_right = 98.0
+offset_bottom = 18.0
+texture_normal = ExtResource("26_k7a3d")
+ignore_texture_size = true
+stretch_mode = 0
+script = SubResource("GDScript_k7a3d")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/LauncherPets" unique_id=1696254225]
+process_mode = 4
+visible = false
+position = Vector2(338, 50)
+script = ExtResource("27_5mp0f")
+
+[node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=1295667330]
+position = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_3gblu")
+animation = &"slime_walk"
+autoplay = "slime_idle"
+frame_progress = 0.8819895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=910393911]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_3gblu")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=912694663]
+position = Vector2(30.105, -30.104996)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D3" unique_id=1629972608]
+position = Vector2(-603.895, -128.10493)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=689193874]
+position = Vector2(0, -30.105)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D2" unique_id=1616928695]
+position = Vector2(168.10501, 6)
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=170510984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D" unique_id=298018289]
+position = Vector2(90, 218)
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="WalkTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=503514440]
+wait_time = 1.9
+
+[node name="JumpTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=1128844296]
+wait_time = 9.5
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
