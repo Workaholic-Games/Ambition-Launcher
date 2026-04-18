@@ -727,6 +727,7 @@ layout_mode = 2
 theme_override_constants/separation = 9
 
 [node name="Scaryhead" type="TextureRect" parent="Developers/Jonathan Bio/Portrait/ScrollContainer/GridContainer" unique_id=1845503258]
+texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 texture = ExtResource("21_gtc6m")
@@ -910,6 +911,7 @@ text = "Startup Location"
 vertical_alignment = 2
 
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
+visible = false
 z_index = 20
 layout_mode = 0
 offset_right = 640.0
@@ -921,6 +923,7 @@ layout_mode = 0
 offset_left = 144.0
 offset_right = 496.0
 offset_bottom = 320.0
+focus_mode = 2
 text = "TERMS AND CONDITIONS
 Last updated April 16, 2026
 
@@ -1149,6 +1152,7 @@ This Terms and Conditions was created using Termly's Terms and Conditions Genera
 
 "
 horizontal_alignment = 1
+selection_enabled = true
 
 [node name="Deny" type="Button" parent="TOS" unique_id=1459202958]
 layout_mode = 0
@@ -1224,7 +1228,7 @@ alignment = 1
 
 [node name="Response" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=89382335]
 layout_mode = 0
-offset_left = -3.0
+offset_left = -6.0
 offset_top = 135.0
 offset_right = 102.0
 offset_bottom = 192.0
