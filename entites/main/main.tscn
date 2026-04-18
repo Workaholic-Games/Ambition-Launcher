@@ -18,13 +18,17 @@
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
-[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="VideoStream" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
+[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
+[ext_resource type="Script" uid="uid://ddjqyfpdmusb3" path="res://entites/main/LauncherPets.gd" id="27_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://d1fxowfybfv43" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+[ext_resource type="Script" uid="uid://cgd3ic4endyve" path="res://entites/main/pet_physics.gd" id="29_3gblu"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -37,6 +41,129 @@ fill_from = Vector2(0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gblu"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5pd"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqae6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8nh6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn47k"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgps4"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ang"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgucs"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13033"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7gk6"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbrtn"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vgeh"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j32lm"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5kpq"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mp0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gblu")
+}],
+"loop": true,
+"name": &"slime_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp5pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqae6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8nh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn47k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgps4")
+}],
+"loop": false,
+"name": &"slime_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_86ang")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgucs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13033")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7gk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbrtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vgeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j32lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5kpq")
+}],
+"loop": true,
+"name": &"slime_walk",
+"speed": 5.0
+}]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -251,7 +378,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1191,6 +1317,7 @@ offset_right = 46.0
 offset_bottom = 182.0
 
 [node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1209,7 +1336,7 @@ stretch = true
 handle_input_locally = false
 msaa_3d = 1
 size = Vector2i(864, 1760)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.711371, 7.303131, 0)
@@ -1241,6 +1368,30 @@ vertical_alignment = 1
 
 [node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
 wait_time = 0.05
+
+[node name="LauncherPets" type="Control" parent="Launcher Games" unique_id=873874695]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LauncherPets" type="TextureButton" parent="Launcher Games/LauncherPets" unique_id=1295541966]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 2.0
+offset_right = 98.0
+offset_bottom = 18.0
+texture_normal = ExtResource("26_k7a3d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("27_5mp0f")
+
+[node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/LauncherPets" unique_id=1295667330]
+visible = false
+position = Vector2(90, 10)
+sprite_frames = SubResource("SpriteFrames_3gblu")
+animation = &"slime_walk"
+autoplay = "slime_idle"
+script = ExtResource("29_3gblu")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1283,4 +1434,5 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
 [connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
 [connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
+[connection signal="pressed" from="Launcher Games/LauncherPets/LauncherPets" to="Launcher Games/LauncherPets/LauncherPets" method="_on_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
