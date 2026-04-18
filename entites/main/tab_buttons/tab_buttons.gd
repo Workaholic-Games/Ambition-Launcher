@@ -9,6 +9,8 @@ func _on_library_pressed() -> void:
 func _on_store_pressed() -> void:
 	hide_ui()
 	$"../../Store".visible = true
+	$"../../Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line/StaticBody2D/CollisionShape2D".disabled = false
+	$"../../Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D/CollisionShape2D".disabled = false
 func _on_community_pressed() -> void:
 	hide_ui()
 	$"../../Community".visible = true
@@ -37,5 +39,7 @@ func hide_ui():
 	$"../../Developers".visible = false
 	$"../../Settings".visible = false
 	$"../../Quit".visible = false
+	$"../../Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line/StaticBody2D/CollisionShape2D".disabled = true
+	$"../../Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D/CollisionShape2D".disabled = true
 	for i in $"../../Store Pages".get_children():
 		i.visible = false

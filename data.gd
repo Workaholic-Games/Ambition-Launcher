@@ -7,3 +7,4 @@ class_name data
 @export var last_played = ""
 @export var played_order = null
 @export var tos : bool = false
+@export var pet_spawned = false

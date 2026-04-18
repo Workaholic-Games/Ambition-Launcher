@@ -1,17 +1,17 @@
 extends TextureButton
-var spawned = false
 
-
-func _on_pressed() -> void:
-	
-	if spawned == false:
-		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_INHERIT
-		$"../CharacterBody2D".visible = true
-		$"../WalkTimer".start()
-		$"../JumpTimer".start()
-		spawned = true
+func _on_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		print("toggled on")
+		$"Square Button".visible = true
+		$"Slime Button".visible = true
+		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_DISABLED
 	else:
+		print("toggled off")
+		$"Slime Button".visible = false
+		$"Square Button".visible = false
 		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_DISABLED
 		$"../CharacterBody2D".visible = false
-		$"../CharacterBody2D".position = Vector2(355.0, 34)
-		spawned = false
+		$"../WalkTimer".stop()
+		$"../JumpTimer".stop()
+		Main.launcher_data.pet_spawned = false
