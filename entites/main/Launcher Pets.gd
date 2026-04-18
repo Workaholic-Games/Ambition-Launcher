@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 10
-var JUMP_VELOCITY = randi_range(-650.0, -400)
+var JUMP_VELOCITY = randi_range(-650, -400)
 var direction = 0
 var can_jump = false
 var idle_animation = "slime_idle"
