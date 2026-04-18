@@ -18,6 +18,10 @@ boot_splash/use_filter=false
 boot_splash/image="uid://i0vpjh01eyt6"
 config/icon="uid://b4a4tfw78i630"
 
+[audio]
+
+general/text_to_speech=true
+
 [autoload]
 
 Main="*uid://hki2er1uwscs"
