@@ -42,7 +42,7 @@ var sus : PackedStringArray = [
 ## might need to add a dialogue speed slider
 ## I wanna add it so if you attempt anything sus you get rejected
 
-
+# make collision shapes turn invis when you switch tabs
 
 func _on_input_text_submitted(new_text: String) -> void:
 	$Response.text = ""
