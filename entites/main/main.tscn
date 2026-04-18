@@ -26,9 +26,8 @@
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 [ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
-[ext_resource type="Script" uid="uid://ddjqyfpdmusb3" path="res://entites/main/LauncherPets.gd" id="27_5mp0f"]
+[ext_resource type="Script" uid="uid://b6w56yalhh6a2" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://d1fxowfybfv43" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Script" uid="uid://cgd3ic4endyve" path="res://entites/main/pet_physics.gd" id="29_3gblu"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -41,6 +40,19 @@ fill_from = Vector2(0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
+
+[sub_resource type="GDScript" id="GDScript_k7a3d"]
+script/source = "extends TextureButton
+
+
+
+func _on_pressed() -> void:
+	$\"../CharacterBody2D\".process_mode =Node.PROCESS_MODE_INHERIT
+	$\"../CharacterBody2D\".visible = true
+	$\"../WalkTimer\".start()
+	$\"../JumpTimer\".start()
+	pass
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
 atlas = ExtResource("28_5mp0f")
@@ -164,6 +176,11 @@ animations = [{
 "name": &"slime_walk",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
+size = Vector2(16, 16)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -1383,15 +1400,53 @@ offset_bottom = 18.0
 texture_normal = ExtResource("26_k7a3d")
 ignore_texture_size = true
 stretch_mode = 0
+script = SubResource("GDScript_k7a3d")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/LauncherPets" unique_id=1696254225]
+process_mode = 4
+visible = false
+position = Vector2(338, 50)
 script = ExtResource("27_5mp0f")
 
-[node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/LauncherPets" unique_id=1295667330]
-visible = false
-position = Vector2(90, 10)
+[node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=1295667330]
+position = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_3gblu")
 animation = &"slime_walk"
 autoplay = "slime_idle"
-script = ExtResource("29_3gblu")
+frame_progress = 0.8819895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/CharacterBody2D" unique_id=910393911]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_3gblu")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=912694663]
+position = Vector2(30.105, -30.104996)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D3" unique_id=1629972608]
+position = Vector2(-603.895, -128.10493)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=689193874]
+position = Vector2(0, -30.105)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D2" unique_id=1616928695]
+position = Vector2(168.10501, 6)
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Launcher Games/LauncherPets" unique_id=170510984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/LauncherPets/StaticBody2D" unique_id=298018289]
+position = Vector2(90, 218)
+shape = SubResource("WorldBoundaryShape2D_5mp0f")
+
+[node name="WalkTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=503514440]
+wait_time = 1.9
+
+[node name="JumpTimer" type="Timer" parent="Launcher Games/LauncherPets" unique_id=1128844296]
+wait_time = 9.5
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1435,4 +1490,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
 [connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
 [connection signal="pressed" from="Launcher Games/LauncherPets/LauncherPets" to="Launcher Games/LauncherPets/LauncherPets" method="_on_pressed"]
+[connection signal="timeout" from="Launcher Games/LauncherPets/WalkTimer" to="Launcher Games/LauncherPets/CharacterBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Launcher Games/LauncherPets/JumpTimer" to="Launcher Games/LauncherPets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
