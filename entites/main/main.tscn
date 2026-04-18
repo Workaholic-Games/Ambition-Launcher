@@ -29,6 +29,8 @@
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+[ext_resource type="Script" uid="uid://eqght8vqxlf3" path="res://entites/main/slime_button.gd" id="28_qp5pd"]
+[ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
@@ -48,6 +50,14 @@ fill_from = Vector2(0, 1)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3gblu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16.289528, 16.39955)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
 size = Vector2(16, 16)
@@ -112,6 +122,10 @@ region = Rect2(32, 16, 16, 16)
 atlas = ExtResource("28_5mp0f")
 region = Rect2(48, 16, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwt88"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
 animations = [{
 "frames": [{
@@ -173,6 +187,14 @@ animations = [{
 "loop": true,
 "name": &"slime_walk",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwt88")
+}],
+"loop": false,
+"name": &"square_idle",
+"speed": 1.0
 }]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
@@ -1437,10 +1459,31 @@ offset_left = 82.0
 offset_top = 2.0
 offset_right = 98.0
 offset_bottom = 18.0
+toggle_mode = true
 texture_normal = ExtResource("26_k7a3d")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("27_3gblu")
+
+[node name="Square Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=310176782]
+layout_mode = 0
+offset_left = 40.0
+offset_top = -16.0
+offset_right = 56.0
+texture_normal = ExtResource("26_k7a3d")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slime Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=49733039]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 40.0
+texture_normal = SubResource("AtlasTexture_12ljg")
+texture_pressed = SubResource("AtlasTexture_rnd3n")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("28_qp5pd")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/Launcher Pets" unique_id=1696254225]
 process_mode = 4
@@ -1453,9 +1496,8 @@ shape = SubResource("RectangleShape2D_3gblu")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=1295667330]
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"slime_walk"
+animation = &"square_idle"
 autoplay = "slime_idle"
-frame_progress = 0.8819895
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1501,4 +1543,8 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_pressed"]
+[connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" method="_on_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
