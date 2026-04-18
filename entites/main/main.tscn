@@ -29,7 +29,7 @@
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Script" uid="uid://eqght8vqxlf3" path="res://entites/main/slime_button.gd" id="28_qp5pd"]
+[ext_resource type="Script" path="res://entites/main/slime_button.gd" id="28_qp5pd"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
@@ -1545,6 +1545,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_pressed"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" method="_on_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
