@@ -126,6 +126,14 @@ region = Rect2(48, 16, 16, 16)
 atlas = ExtResource("31_fqae6")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovdq3"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(16, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
 animations = [{
 "frames": [{
@@ -195,6 +203,17 @@ animations = [{
 "loop": false,
 "name": &"square_idle",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovdq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hupd3")
+}],
+"loop": true,
+"name": &"square_walk",
+"speed": 5.0
 }]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
@@ -1496,7 +1515,7 @@ shape = SubResource("RectangleShape2D_3gblu")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=1295667330]
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"square_idle"
+animation = &"square_walk"
 autoplay = "slime_idle"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]

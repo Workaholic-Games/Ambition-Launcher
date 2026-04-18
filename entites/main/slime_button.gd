@@ -13,7 +13,7 @@ func _on_pressed() -> void:
 	else:
 		
 		$"../../CharacterBody2D".visible = false
-		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_DISABLED
+		$"../../CharacterBody2D".process_mode =Node.PROCESS_MODE_DISABLED
 		$"../../WalkTimer".stop()
 		$"../../JumpTimer".stop()
 		Main.launcher_data.pet_spawned = false
