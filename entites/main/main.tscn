@@ -1243,6 +1243,11 @@ vertical_alignment = 1
 [node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
 wait_time = 0.05
 
+[node name="Control" type="Control" parent="Launcher Games" unique_id=564404724]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
 
