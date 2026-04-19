@@ -35,6 +35,66 @@ var sus : PackedStringArray = [
 	"stunning",
 	"doll",
 	"honey",
+	"hot",
+	]
+var drugs : PackedStringArray = [
+	"crack",
+	"cocaine",
+	"meth",
+	"coke",
+	"weed",
+	"mj",
+	"tobacoo",
+]
+var master_list : PackedStringArray = [
+	"hi",
+	"hello",
+	"hey",
+	"yo",
+	"wsg",
+	"sup",
+	"good morning",
+	"good evening",
+	"bye",
+	"goodbye",
+	"cya",
+	"see ya",
+	"fuck",
+	"shit",
+	"dick",
+	"damn",
+	"asshole",
+	"ass",
+	"babe",
+	"baby",
+	"sweetheart",
+	"darling",
+	"my love",
+	"dear",
+	"gorgeous",
+	"beautiful",
+	"stunning",
+	"doll",
+	"honey",
+	"bitch",
+	"open game",
+	"jonathan",
+	"bulba",
+	"help",
+	"clanker",
+	"hot",
+	"crack",
+	"cocaine",
+	"meth",
+	"coke",
+	"weed",
+	"mj",
+	"tobacoo",
+	"jarvis",
+	"fnab3",
+	"scaryhead",
+	"project u",
+	"vegetable game",
 	]
 
 
@@ -49,16 +109,21 @@ func _on_input_text_submitted(new_text: String) -> void:
 	var text = new_text.to_lower()
 	
 	for i in greetings.size():
-		if new_text.contains(greetings.get(i)): $Response.text = "Hello! My name is Dell. Your (somewhat limited) assistant created by Workaholic Games. How may I serve you sir?"
+		if text.contains(greetings.get(i)): $Response.text = "Hello! My name is Dell. Your (somewhat limited) assistant created by Workaholic Games. How may I serve you sir?"
 	
 	for i in byes.size():
-		if new_text.contains(byes.get(i)): $Response.text = "I will stand ready for your next arrival sir."
+		if text.contains(byes.get(i)): $Response.text = "I will stand ready for your next arrival sir."
 	
 	for i in bad_langauge.size():
-		if new_text.contains(bad_langauge.get(i)): $Response.text = "I'm going to contact HR."
+		if text.contains(bad_langauge.get(i)): $Response.text = "I'm going to contact HR."
 	
 	for i in sus.size():
-		if new_text.contains(sus.get(i)): $Response.text = "You really thought you had a chance? Am I really that ugly?"
+		if text.contains(sus.get(i)): $Response.text = "You really thought you had a chance? Am I really that ugly sir?"
+	
+	for i in drugs.size():
+		if text.contains(sus.get(i)): $Response.text = "As of now I am not allowed to give you anything like that
+		sir."
+	
 	
 	
 	# Extra words
@@ -70,15 +135,15 @@ func _on_input_text_submitted(new_text: String) -> void:
 		modulate = Color.RED
 		await get_tree().create_timer(0.5).timeout
 		get_tree().quit()
-	elif text.contains("adam"): $Response.text = "He's such a big back chud for real for real."
-	elif text.contains("mark"): $Response.text = "Mark? I didn't accidently step on him did I? I didn't see him down there."
-	elif text.contains("robert"): $Response.text = "Who's robert?"
-	elif text.contains("sawyer"): $Response.text = "Sawyer..."
-	elif text.contains("gavin"): $Response.text = "Oh don't remind me of his fish smell."
-	elif text.contains("claire"): $Response.text = "Who?"
-	elif text.contains("charlie"): $Response.text = "I'm gonna gun that animal down with my hunting rifle."
-	elif text.contains("jonathan"): $Response.text = "Oh jonathan. He's on of my creators... ummm... Can we switch the topic please?"
-	elif text.contains("bulba"): $Response.text = "Oh bulba. He's on of my creators... ummm... Can we switch the topic please?"
+	elif text.contains("jonathan"): $Response.text = "Jonathan is one of my two creators. However, he was more hands off in my creation"
+	elif text.contains("bulba"): $Response.text = "Bulba is one of my two creators. He was the one creating my inner systems."
+	elif text.contains("help"): $Response.text = "Please be more specific sir."
+	elif text.contains("jarvis"): $Response.text = "I am not jarvis sir. My name is Dell."
+	elif text.contains("fnab3"): $Response.text = "He's not ready yet."
+	elif text.contains("scaryhead"): $Response.text = "L Mortisha."
+	elif text.contains("project u"): $Response.text = "You will not be on the road yet..."
+	elif text.contains("vegetable game"): $Response.text = "I'm sure he will release the game eventually. Right?"
+	
 	
 	
 	if $Response.text == "":
@@ -87,6 +152,7 @@ func _on_input_text_submitted(new_text: String) -> void:
 	
 	var voices = DisplayServer.tts_get_voices_for_language("en")
 	var voice_id = voices[1] # Select the first English voice
+	DisplayServer.tts_stop()
 	DisplayServer.tts_speak($Response.text, voice_id, 50, 1.6, 1.0)
 	yap()
 
@@ -97,6 +163,7 @@ func yap():
 	$Response.visible_ratio = 0.0
 	$Response.visible_characters = 0
 	$"Yap Timer".start()
+	$Input.release_focus()
 
 
 
@@ -112,3 +179,14 @@ func _on_yap_timer_timeout() -> void:
 
 #You agree that Jonathan has mega aura and surpreme rizz and gets all the huzz.
 #You agree that Bulba is jacked gigachad with tuff looksmaxing aura level 67.
+
+
+func _on_input_text_changed(new_text: String) -> void:
+	$Input.modulate = Color.WHITE
+	var text = new_text.to_lower()
+	
+	for i in master_list.size():
+		if text.contains(master_list.get(i)): $Input.modulate = Color.CYAN
+
+
+## considering a bunch of technical changes to how dell works to make this all a bit cleaner

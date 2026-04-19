@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
-[ext_resource type="VideoStream" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
@@ -29,7 +29,7 @@
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
+[ext_resource type="Script" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
 
@@ -1474,7 +1474,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
-wait_time = 0.05
+wait_time = 0.06
 
 [node name="Launcher Pets" type="Control" parent="Launcher Games" unique_id=564404724]
 anchors_preset = 0
@@ -1606,16 +1606,17 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
+[connection signal="text_changed" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_changed"]
 [connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
 [connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_pressed"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_snail_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_slime_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
