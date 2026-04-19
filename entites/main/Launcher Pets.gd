@@ -41,13 +41,11 @@ func _on_jump_timer_timeout() -> void:
 	var jump = randi_range(0, 5)
 	if jump == 5:
 		can_jump = true
-		print("JUMP")
 
 
 func _on_walk_timer_timeout() -> void:
 	var rand = randi_range(-1, 1)
 	direction = rand
-	print(direction)
 
 
 func _on_slime_button_pressed() -> void:
