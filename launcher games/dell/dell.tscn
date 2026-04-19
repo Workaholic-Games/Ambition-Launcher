@@ -929,7 +929,7 @@ transform = Transform3D(0.54258424, 0, 0, 0, 1.2868313, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hepbh")
 
 [node name="Neck" type="Node3D" parent="Dell - Default/Core" unique_id=217044272]
-transform = Transform3D(0.9910788, 0.12713468, 0.03999523, -0.12640943, 0.9917728, -0.020177998, -0.042231496, 0.014942206, 0.9989964, 0, 1.4326296, 0)
+transform = Transform3D(0.99107885, 0.12713468, 0.03999523, -0.12640944, 0.9917728, -0.020177998, -0.0422315, 0.014942206, 0.9989964, 0, 1.4326296, 0)
 
 [node name="Eyebrows" type="MeshInstance3D" parent="Dell - Default/Core/Neck" unique_id=2077332509]
 transform = Transform3D(0.40847683, 0, 0, 0, 0.13172486, 0.0024354374, 0, -0.0005140507, 0.62407786, 1.2129517, 2.0477505, 0.4320998)
@@ -994,7 +994,7 @@ transform = Transform3D(-0.32803735, 0, 0, 0, -0.3951009, 0, 0, 0, -1.3170757, 0
 mesh = SubResource("ArrayMesh_2dgmg")
 
 [node name="Right Shoulder" type="Node3D" parent="Dell - Default/Core" unique_id=1431793886]
-transform = Transform3D(-0.3049561, 0.3351402, 0.89144975, -0.9474507, -0.011781143, -0.31968436, -0.09663678, -0.94209445, 0.32112157, 0, 1.1879601, -1.27723)
+transform = Transform3D(-0.30495608, 0.33514017, 0.8914497, -0.94745064, -0.011781143, -0.31968436, -0.09663678, -0.9420944, 0.32112157, 0, 1.1879601, -1.27723)
 
 [node name="Arm_001" type="MeshInstance3D" parent="Dell - Default/Core/Right Shoulder" unique_id=1170822437]
 transform = Transform3D(-0.30442515, 0, 0, 0, -0.36666143, 0, 0, 0, -1.2222723, 0, -0.003255844, 0.7782209)
