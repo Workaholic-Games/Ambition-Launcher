@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
+[ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
 [ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
@@ -23,15 +24,19 @@
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
+[ext_resource type="Texture2D" uid="uid://cbl1ts6fjeqf8" path="res://community/Untitled226_20251127183012.png" id="24_12ljg"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 [ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Script" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
+[ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
+[ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
@@ -72,8 +77,32 @@ region = Rect2(16, 0, 16, 16)
 atlas = ExtResource("31_fqae6")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ttif"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
 size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7flok"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipqc"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtbh3"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j17j7"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pddd4"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
 atlas = ExtResource("28_5mp0f")
@@ -157,6 +186,34 @@ region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7flok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tipqc")
+}],
+"loop": true,
+"name": &"blueguy_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtbh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j17j7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtbh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pddd4")
+}],
+"loop": true,
+"name": &"blueguy_walk",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5mp0f")
@@ -701,6 +758,172 @@ offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 80.0
 
+[node name="Best Artwork" type="Label" parent="Community" unique_id=338952825]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -8.0
+offset_right = 624.0
+offset_bottom = 136.0
+theme_type_variation = &"Store_Page"
+theme_override_font_sizes/font_size = 12
+text = "Best Art"
+
+[node name="Bulba\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1385621603]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 34.0
+text = "Bulba's Pick"
+horizontal_alignment = 1
+
+[node name="Jonathan\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1890620615]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 34.0
+text = "Jonathan's Pick"
+horizontal_alignment = 1
+
+[node name="Sawyer\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1431475193]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 16.0
+offset_right = 480.0
+offset_bottom = 34.0
+text = "Sawyer's Pick"
+horizontal_alignment = 1
+
+[node name="Bulba Art" type="TextureRect" parent="Community/Best Artwork" unique_id=932509087]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("24_12ljg")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Best Artwork/Bulba Art" unique_id=1850589535]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 96.0
+offset_right = 124.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "I drew the peas - KitKat"
+horizontal_alignment = 1
+
+[node name="Jonathan Art" type="TextureRect" parent="Community/Best Artwork" unique_id=439289867]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 32.0
+offset_right = 304.0
+offset_bottom = 128.0
+texture = ExtResource("23_12ljg")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Best Artwork/Jonathan Art" unique_id=794045597]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 96.0
+offset_right = 124.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "Seedling - GigaAdam64"
+horizontal_alignment = 1
+
+[node name="Sawyer Art" type="TextureRect" parent="Community/Best Artwork" unique_id=1539715783]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 32.0
+offset_right = 464.0
+offset_bottom = 128.0
+expand_mode = 1
+
+[node name="Best Memes" type="Label" parent="Community" unique_id=197830391]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 144.0
+offset_right = 624.0
+offset_bottom = 288.0
+theme_type_variation = &"Store_Page"
+theme_override_font_sizes/font_size = 12
+text = "Best Memes"
+
+[node name="Bulba\'s Pick" type="Label" parent="Community/Best Memes" unique_id=998676779]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 34.0
+text = "Bulba's Pick"
+horizontal_alignment = 1
+
+[node name="Jonathan\'s Pick" type="Label" parent="Community/Best Memes" unique_id=391824318]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 34.0
+text = "Jonathan's Pick"
+horizontal_alignment = 1
+
+[node name="Sawyer\'s Pick" type="Label" parent="Community/Best Memes" unique_id=2083139813]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 16.0
+offset_right = 480.0
+offset_bottom = 34.0
+text = "Sawyer's Pick"
+horizontal_alignment = 1
+
+[node name="Bulba Meme" type="TextureRect" parent="Community/Best Memes" unique_id=770749474]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("37_j17j7")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Best Memes/Bulba Meme" unique_id=1641051508]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 96.0
+offset_right = 124.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "Cog-Mo"
+horizontal_alignment = 1
+
+[node name="Jonathan Meme" type="TextureRect" parent="Community/Best Memes" unique_id=1313359070]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 32.0
+offset_right = 304.0
+offset_bottom = 128.0
+texture = ExtResource("18_13033")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Best Memes/Jonathan Meme" unique_id=64430464]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 96.0
+offset_right = 124.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "GigaAdam64"
+horizontal_alignment = 1
+
+[node name="Sawyer Meme" type="TextureRect" parent="Community/Best Memes" unique_id=1853477269]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 32.0
+offset_right = 464.0
+offset_bottom = 128.0
+expand_mode = 1
+
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
 visible = false
 anchors_preset = 0
@@ -808,15 +1031,16 @@ texture = ExtResource("19_gjwx3")
 visible = false
 z_index = 1
 layout_mode = 0
+offset_left = 112.0
 offset_top = -79.99999
 offset_right = 642.2449
 offset_bottom = 279.99997
 
 [node name="Portrait" type="Panel" parent="Developers/Bulba Bio" unique_id=459705433]
 layout_mode = 0
-offset_left = 457.59955
+offset_left = 400.0
 offset_top = 23.999992
-offset_right = 569.5996
+offset_right = 512.00006
 offset_bottom = 135.99998
 theme_type_variation = &"Line"
 
@@ -849,10 +1073,10 @@ vertical_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Developers/Bulba Bio/Portrait" unique_id=1268576468]
 layout_mode = 0
-offset_left = -377.31894
+offset_left = -384.0
 offset_right = -120.42093
 offset_bottom = 103.99999
-text = "Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series and The Vegetable Game."
+text = "Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series and The Vegetable Game and Head Developer of the Ambition Launcher."
 
 [node name="Featured Games" type="Label" parent="Developers/Bulba Bio/Portrait" unique_id=451242982]
 layout_mode = 0
@@ -899,15 +1123,16 @@ text = "Back"
 visible = false
 z_index = 1
 layout_mode = 0
+offset_left = 112.0
 offset_top = -79.99999
 offset_right = 642.2449
 offset_bottom = 279.99997
 
 [node name="Portrait" type="Panel" parent="Developers/Jonathan Bio" unique_id=1425497807]
 layout_mode = 0
-offset_left = 457.6
+offset_left = 400.00003
 offset_top = 24.0
-offset_right = 569.6
+offset_right = 512.0
 offset_bottom = 136.0
 theme_type_variation = &"Line"
 
@@ -934,10 +1159,10 @@ vertical_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Developers/Jonathan Bio/Portrait" unique_id=2034928231]
 layout_mode = 0
-offset_left = -377.31894
-offset_right = -120.42093
+offset_left = -392.0
+offset_right = -127.10199
 offset_bottom = 103.99999
-text = "Creator of Gavin's Fantastically Fun Adventure."
+text = "Creator of Gavin's Fantastically Fun Adventure and Head Developer of the Ambition Launcher."
 
 [node name="Featured Games" type="Label" parent="Developers/Jonathan Bio/Portrait" unique_id=33905717]
 layout_mode = 0
@@ -985,15 +1210,16 @@ text = "Back"
 visible = false
 z_index = 1
 layout_mode = 0
+offset_left = 112.0
 offset_top = -79.99999
 offset_right = 642.2449
 offset_bottom = 279.99997
 
 [node name="Portrait" type="Panel" parent="Developers/Sawyer Bio" unique_id=550369139]
 layout_mode = 0
-offset_left = 457.6
+offset_left = 400.00003
 offset_top = 24.0
-offset_right = 569.6
+offset_right = 512.0
 offset_bottom = 136.0
 theme_type_variation = &"Line"
 
@@ -1020,7 +1246,7 @@ vertical_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Developers/Sawyer Bio/Portrait" unique_id=916253380]
 layout_mode = 0
-offset_left = -377.31894
+offset_left = -384.0
 offset_right = -120.42093
 offset_bottom = 103.99999
 text = "Head of Music. Creator of Bitcoin Miner and all of the hit Origianl Sound Tracks of Workaholic Games."
@@ -1554,6 +1780,25 @@ texture_normal = SubResource("AtlasTexture_4u1yx")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Blue Guy Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=1540236328]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1ttif")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Size" type="HSlider" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=14604268]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = -5.0
+offset_right = 96.0
+offset_bottom = 11.0
+scale = Vector2(0.5, 0.5)
+min_value = 1.0
+max_value = 15.0
+value = 1.0
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/Launcher Pets" unique_id=1696254225]
 process_mode = 4
 visible = false
@@ -1565,7 +1810,22 @@ shape = SubResource("RectangleShape2D_3gblu")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=1295667330]
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"snail_walk"
+animation = &"blueguy_walk"
+
+[node name="Container" type="Panel" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=60389008]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -1611,7 +1871,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_pressed"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_snail_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
@@ -1619,4 +1878,9 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_square_button_pressed"]
 [connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_blue_guy_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_blue_guy_button_pressed"]
+[connection signal="value_changed" from="Launcher Games/Launcher Pets/Launcher Pets/Size" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_size_value_changed"]
+[connection signal="mouse_entered" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_entered"]
+[connection signal="mouse_exited" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_exited"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
