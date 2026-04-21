@@ -31,6 +31,7 @@ func _on_quit_launcher_pressed() -> void:
 
 # UI hide function
 func hide_ui():
+	
 	$"../../Library".visible = false
 	$"../../Store".visible = false
 	$"../../Store Pages".visible = false
@@ -41,5 +42,3 @@ func hide_ui():
 	$"../../Quit".visible = false
 	$"../../Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line/StaticBody2D/CollisionShape2D".disabled = true
 	$"../../Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D/CollisionShape2D".disabled = true
-	for i in $"../../Store Pages".get_children():
-		i.visible = false

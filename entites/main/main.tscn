@@ -752,7 +752,6 @@ version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-
 version_file_names = PackedStringArray("Bitcoin_Miner.1.25")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
-visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
@@ -771,27 +770,27 @@ text = "Best Art"
 [node name="Bulba\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1385621603]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 144.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Bulba's Pick"
 horizontal_alignment = 1
 
 [node name="Jonathan\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1890620615]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 320.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
 
 [node name="Sawyer\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1431475193]
 layout_mode = 0
 offset_left = 352.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 480.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Sawyer's Pick"
 horizontal_alignment = 1
 
@@ -854,27 +853,27 @@ text = "Best Memes"
 [node name="Bulba\'s Pick" type="Label" parent="Community/Best Memes" unique_id=998676779]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 144.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Bulba's Pick"
 horizontal_alignment = 1
 
 [node name="Jonathan\'s Pick" type="Label" parent="Community/Best Memes" unique_id=391824318]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 320.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
 
 [node name="Sawyer\'s Pick" type="Label" parent="Community/Best Memes" unique_id=2083139813]
 layout_mode = 0
 offset_left = 352.0
-offset_top = 16.0
+offset_top = 15.0
 offset_right = 480.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 text = "Sawyer's Pick"
 horizontal_alignment = 1
 
