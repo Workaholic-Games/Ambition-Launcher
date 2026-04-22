@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bog7xqk63omy5"]
 
+[ext_resource type="Texture2D" uid="uid://dn3nohpgn6tfd" path="res://entites/main/settings/scroll.png" id="1_omti5"]
 [ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://entites/main/settings/selected.png" id="1_w8v67"]
 [ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://entites/main/settings/unselected.png" id="2_omti5"]
 
@@ -41,6 +42,9 @@ color = Color(0.22352941, 0, 0.84705883, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xvamo"]
+thickness = 9
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_78kbg"]
 thickness = 9
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l5r5"]
@@ -137,6 +141,11 @@ HScrollBar/styles/grabber = SubResource("StyleBoxLine_86m3o")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_ug50d")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_m2m0a")
 HScrollBar/styles/scroll = SubResource("StyleBoxLine_xvamo")
+HSlider/icons/grabber = ExtResource("1_omti5")
+HSlider/icons/grabber_highlight = ExtResource("1_omti5")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_78kbg")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_78kbg")
+HSlider/styles/slider = SubResource("StyleBoxLine_78kbg")
 Hover_Label/base_type = &"Label"
 Hover_Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Hover_Label/constants/shadow_offset_x = 0

@@ -30,13 +30,13 @@
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="Texture2D" uid="uid://cbl1ts6fjeqf8" path="res://community/Untitled226_20251127183012.png" id="24_12ljg"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
-[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="26_k7a3d"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
+[ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 
@@ -58,6 +58,14 @@ fill_from = Vector2(0, 1)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3gblu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
+atlas = ExtResource("32_lbrtn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjyjg"]
+atlas = ExtResource("32_lbrtn")
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ei0e"]
 atlas = ExtResource("31_w8nh6")
@@ -180,11 +188,23 @@ region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovdq3"]
 atlas = ExtResource("31_fqae6")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
-atlas = ExtResource("31_fqae6")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ovnf"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mc0d5"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qt1k"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o22vj"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
 animations = [{
@@ -295,21 +315,30 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iwt88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovdq3")
 }],
 "loop": false,
 "name": &"square_idle",
-"speed": 1.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ovdq3")
+"texture": SubResource("AtlasTexture_8ovnf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hupd3")
+"texture": SubResource("AtlasTexture_mc0d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qt1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o22vj")
 }],
 "loop": true,
 "name": &"square_walk",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
@@ -1727,12 +1756,13 @@ wait_time = 9.5
 
 [node name="Launcher Pets" type="TextureButton" parent="Launcher Games/Launcher Pets" unique_id=1295541966]
 layout_mode = 0
-offset_left = 82.0
+offset_left = 74.0
 offset_top = 2.0
 offset_right = 98.0
-offset_bottom = 18.0
+offset_bottom = 26.0
 toggle_mode = true
-texture_normal = ExtResource("26_k7a3d")
+texture_normal = SubResource("AtlasTexture_hupd3")
+texture_pressed = SubResource("AtlasTexture_bjyjg")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("27_3gblu")
@@ -1741,9 +1771,10 @@ script = ExtResource("27_3gblu")
 visible = false
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 0
-offset_left = 24.0
-offset_right = 60.0
-offset_bottom = 32.0
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 68.0
+offset_bottom = 44.0
 columns = 2
 script = ExtResource("28_xn47k")
 
@@ -1780,13 +1811,12 @@ stretch_mode = 0
 [node name="Size" type="HSlider" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=14604268]
 visible = false
 layout_mode = 0
-offset_left = 24.0
-offset_top = -5.0
-offset_right = 96.0
-offset_bottom = 11.0
-scale = Vector2(0.5, 0.5)
+offset_left = 32.0
+offset_right = 104.0
+offset_bottom = 16.0
+scale = Vector2(0.725, 0.725)
 min_value = 1.0
-max_value = 15.0
+max_value = 10.0
 value = 1.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/Launcher Pets" unique_id=1696254225]
@@ -1800,7 +1830,7 @@ shape = SubResource("RectangleShape2D_3gblu")
 
 [node name="Pets" type="AnimatedSprite2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=1295667330]
 sprite_frames = SubResource("SpriteFrames_3gblu")
-animation = &"blueguy_walk"
+animation = &"square_walk"
 
 [node name="Container" type="Panel" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=60389008]
 modulate = Color(1, 1, 1, 0)

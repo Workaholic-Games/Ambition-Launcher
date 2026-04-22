@@ -7,7 +7,6 @@ func _on_toggled(toggled_on: bool) -> void:
 		print("toggled on")
 		$"GridContainer".visible = true
 		$Size.visible = true
-		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_DISABLED
 	else:
 		print("toggled off")
 		$"GridContainer".visible = false
