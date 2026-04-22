@@ -26,12 +26,7 @@ func _ready() -> void:
 	$"Age Rating".text = rating
 	$Thumbnail.texture = cover
 	
-	for version: String in version_names:
-		match Main.operating_system:
-			"Windows": $"Versions Windows".add_item(version)
-			"macOS": $"Versions Mac".add_item(version)
-			"Linux": $"Versions Linux".add_item(version)
-		
+	
 	
 	match Main.operating_system:
 		"Windows": 

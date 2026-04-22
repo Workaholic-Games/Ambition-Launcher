@@ -31,6 +31,11 @@ theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "Ambition Edition"
+popup/item_0/id = 0
+popup/item_1/text = "DEMO"
+popup/item_1/id = 1
 
 [node name="Version Select Label" type="Label" parent="Versions Windows" unique_id=1372846403]
 layout_mode = 0
@@ -53,6 +58,11 @@ theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "Ambition Edition"
+popup/item_0/id = 0
+popup/item_1/text = "DEMO"
+popup/item_1/id = 1
 
 [node name="Version Select Label" type="Label" parent="Versions Mac" unique_id=351358849]
 layout_mode = 0
@@ -75,6 +85,9 @@ theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Ambition Edition"
+popup/item_0/id = 0
 
 [node name="Version Select Label" type="Label" parent="Versions Linux" unique_id=5516797]
 layout_mode = 0

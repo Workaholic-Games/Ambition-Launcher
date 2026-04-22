@@ -28,9 +28,18 @@ func _ready() -> void:
 
 # Boot up version of game
 func _on_pressed() -> void:
-	var absolute_path = ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
+	match Main.operating_system:
+		"Windows":
+			var absolute_path = ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
+			OS.shell_open(absolute_path)
+		"macOS":
+			OS.execute("xattr", ["-d", "com.apple.quarantine", ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
+			OS.create_process("open", [ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
+		"Linux":
+			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
+			OS.create_process(ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type), [])
 	
-	OS.shell_open(absolute_path)
+	
 	
 	Main.launcher_data.last_played = self.name
 	get_parent().move_child(self, 0)
