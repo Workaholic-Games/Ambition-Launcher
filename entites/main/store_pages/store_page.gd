@@ -2,46 +2,102 @@
 extends Control
 @export_multiline var description : String
 @export_multiline var rating : String
-@export var versions : PackedStringArray
-@export var version_links : PackedStringArray
+
+## The names that will be displayed in engine
+@export var version_names : PackedStringArray
+
+@export var version_links_windows : PackedStringArray
+@export var version_links_mac : PackedStringArray
+@export var version_links_linux : PackedStringArray
+
+## The actual file name for the application
 @export var version_file_names : PackedStringArray
+@export var cover : Texture
+var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
+
+
 
 
 
 func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
-	for version: String in versions:
-		$Versions.add_item(version)
+	$Thumbnail.texture = cover
 	
-	match version_file_names.get(0):
-		"FNAB1_Ambition_Edition": $Thumbnail.play("fnab1")
-		"FNAB2_Ambition_Edition": $Thumbnail.play("fnab2")
-		"Bitcoin_Miner.1.25": $Thumbnail.play("bitcoin_miner")
+	for version: String in version_names:
+		match Main.operating_system:
+			"Windows": $"Versions Windows".add_item(version)
+			"macOS": $"Versions Mac".add_item(version)
+			"Linux": $"Versions Linux".add_item(version)
+		
+	
+	match Main.operating_system:
+		"Windows": 
+			$"Versions Windows".visible = true
+			os_name = "_Windows"
+		"macOS": 
+			$"Versions Mac".visible = true
+			os_name = "_Mac"
+		"Linux": 
+			$"Versions Linux".visible = true
+			os_name = "_Linux"
 
 
 
 func _on_versions_item_selected(index: int) -> void:
 	selected_link = index
-	check_for_uninstall()
 
 
-# Installation and Uninstallation
 func _on_install_pressed() -> void:
 	if can_download == true and $Install.text == "Install":
-		$HTTPRequest.download_file = "user://" + version_file_names.get(selected_link) + ".exe"
-		$HTTPRequest.request(version_links.get(selected_link))
+		$HTTPRequest.download_file = "user://Package.zip"
+		match Main.operating_system:
+			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
+			"macOS": $HTTPRequest.request(version_links_mac.get(selected_link))
+			"Linux": $HTTPRequest.request(version_links_linux.get(selected_link))
+		
 		can_download = false
 		$ProgressBar.visible = false
-	elif can_download == true and $Install.text == "Uninstall":
-		DirAccess.remove_absolute("user://" + version_file_names.get(selected_link) + ".exe")
-		$Install.text = "Install"
+		$ProgressBar.value = 0
+
+
+
+# Download Complete code
+func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	var reader := ZIPReader.new()
+	reader.open("user://Package.zip")
+	var root_dir := DirAccess.open("user://")
+	
+	
+	var files := reader.get_files()
+	for file_path in files:
+		if file_path.ends_with("/"):
+			root_dir.make_dir(file_path)
+			continue
+		var buffer := reader.read_file(file_path)
+		var file := FileAccess.open(root_dir.get_current_dir().path_join(file_path), FileAccess.WRITE)
+		file.store_buffer(buffer)
+	
+	
+	#var absolute_path = ProjectSettings.globalize_path("user://" + version_file_names.get(selected_link) + os_name + Main.file_type)
+	#OS.shell_open(absolute_path)
+		
+	reader.close()
+	DirAccess.remove_absolute("user://Package.zip")
+		
+		
+		
+	$ProgressBar.visible = false
+	can_download = true
+
+
 
 
 func _on_back_pressed() -> void:
 	visible = false
+
 
 
 # Progress Bar function
@@ -55,23 +111,13 @@ func _physics_process(_delta: float) -> void:
 
 
 
-# Download Complete code
-func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
-	#var absolute_path = ProjectSettings.globalize_path("user://" + version_file_names.get(selected_link) + ".exe")
-	#OS.shell_open(absolute_path)
-	can_download = true
-	$ProgressBar.visible = false
-	check_for_uninstall()
 
+## Developer @export variable setup example:
+# Version Name: Ambition Edition
+# Version Links Windows: (Windows Link)
+# Version Links Mac: (Mac Link)
+# Version Links Linux: (Linux Link)
+# Version File Name: FNAB1_Ambition_Edition
 
-
-# Crap to check if you can Uninstall the game
-func _on_visibility_changed() -> void:
-	check_for_uninstall()
-
-
-
-func check_for_uninstall():
-	if $Versions.get_item_count() > 0:
-		if FileAccess.file_exists("user://" + version_file_names.get(selected_link) + ".exe"):
-			$Install.text = "Uninstall"
+# Ensure on the github side the zip is called TITLEHERE_Windows/Mac/Linux 
+# and put them all under the same release for organization

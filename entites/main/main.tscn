@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://entites/main/library/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
+[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="16_lbrtn"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -501,17 +503,15 @@ columns = 4
 [node name="FNAB" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game_name = "Five Night's at Bulba's"
-game_file_name = "FNAB1_"
-game_file_display_names = PackedStringArray("Ambition Edition")
-game_file_names = PackedStringArray("Ambition_Edition")
+game_file_display_names = PackedStringArray("Ambition Edition", "DEMO")
+game_file_names = PackedStringArray("FNAB1_Ambition_Edition", "FNAB1_DEMO")
 
 [node name="FNAB2" parent="Library/Area/GridContainer" unique_id=634759457 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("5_xd8mv")
 game_name = "Five Night's at Bulba's 2"
-game_file_name = "FNAB2_"
 game_file_display_names = PackedStringArray("Ambition Edition")
-game_file_names = PackedStringArray("Ambition_Edition")
+game_file_names = PackedStringArray("FNAB2_Ambition_Edition")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
@@ -670,7 +670,7 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376 node_paths=PackedStringArray("page")]
+[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -678,7 +678,6 @@ texture_normal = ExtResource("7_1dv2i")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
 visible = false
@@ -708,7 +707,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -722,36 +720,29 @@ offset_right = 112.112114
 description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
 rating = "Rated: T for Teen
 Difficulty: Normal"
-versions = PackedStringArray("Ambition Edition")
-version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition.exe")
-version_file_names = PackedStringArray("FNAB1_Ambition_Edition")
+version_names = PackedStringArray("Ambition Edition", "DEMO")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip")
+version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux demo")
+version_file_names = PackedStringArray("FNAB1_Ambition_Edition", "FNAB1_DEMO")
+cover = ExtResource("15_x7gk6")
 
-[node name="FNAB2" parent="Store Pages" unique_id=1186039038 instance=ExtResource("12_5enwe")]
+[node name="FNAB2" parent="Store Pages" unique_id=425717294 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112114
 offset_right = 112.112114
-description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
 rating = "Rated: T for Teen
 Difficulty: Hard"
-versions = PackedStringArray("Ambition Edition")
-version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition.exe")
+version_names = PackedStringArray("Ambition Edition")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip")
+version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Linux.zip")
 version_file_names = PackedStringArray("FNAB2_Ambition_Edition")
-
-[node name="Bitcoin Miner" parent="Store Pages" unique_id=474046365 instance=ExtResource("12_5enwe")]
-visible = false
-layout_mode = 0
-offset_left = 112.112114
-offset_right = 112.112114
-description = "Basically, just a joke I made with my friends that evolved into an actually decent game.
-It is just a cookie clicker-like game that I added some stuff. (Minecraft don't dmca me for using pickaxe models)"
-rating = "Rated: E for Everyone
-Difficulty: Easy"
-versions = PackedStringArray("1.25")
-version_links = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.exe")
-version_file_names = PackedStringArray("Bitcoin_Miner.1.25")
+cover = ExtResource("16_lbrtn")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
+visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0

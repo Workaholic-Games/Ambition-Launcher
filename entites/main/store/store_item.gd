@@ -22,10 +22,3 @@ func _on_pressed() -> void:
 ## Dev Notes
 # Resolutions for game covers are 600x900 for High Res and 60x90 for Low Res.
 # Generally: set the cover texture mode to Linear for High Res and Nearest for Low Res.
-
-# https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition.Installer.exe
-
-# bitcoin miner 1.25
-# bitcoin miner 1.2
-# fnab2 ambition edition
-# fnab2 reg

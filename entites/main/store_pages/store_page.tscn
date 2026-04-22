@@ -1,63 +1,8 @@
 [gd_scene format=3 uid="uid://pyf70rc5r3m7"]
 
 [ext_resource type="Script" uid="uid://b86fteujc080h" path="res://entites/main/store_pages/store_page.gd" id="1_83v7k"]
-[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="2_83v7k"]
-[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin_miner.png" id="2_nuqog"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="4_1ck6d"]
-[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/vegetable_game.png" id="5_cal3h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bavxr"]
-atlas = ExtResource("2_nuqog")
-region = Rect2(0, 0, 1920, 1080)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkhue"]
-atlas = ExtResource("2_83v7k")
-region = Rect2(0, 0, 1920, 1080)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r563u"]
-atlas = ExtResource("4_1ck6d")
-region = Rect2(0, 0, 1920, 1080)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1eocj"]
-atlas = ExtResource("5_cal3h")
-region = Rect2(0, 0, 1920, 1080)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3vhim"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bavxr")
-}],
-"loop": true,
-"name": &"bitcoin_miner",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qkhue")
-}],
-"loop": true,
-"name": &"fnab1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r563u")
-}],
-"loop": true,
-"name": &"fnab2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1eocj")
-}],
-"loop": true,
-"name": &"vegetable",
-"speed": 5.0
-}]
 
 [node name="Store Page" type="Control" unique_id=1882300884]
 layout_mode = 3
@@ -72,7 +17,8 @@ offset_left = -2.0
 offset_right = 530.0
 offset_bottom = 360.0
 
-[node name="Versions" type="OptionButton" parent="." unique_id=1955193242]
+[node name="Versions Windows" type="OptionButton" parent="." unique_id=1955193242]
+visible = false
 layout_mode = 0
 offset_left = 186.0
 offset_top = 248.0
@@ -86,7 +32,51 @@ theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0,
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
 
-[node name="Version Select Label" type="Label" parent="Versions" unique_id=1372846403]
+[node name="Version Select Label" type="Label" parent="Versions Windows" unique_id=1372846403]
+layout_mode = 0
+offset_top = -21.0
+offset_right = 160.0
+offset_bottom = -3.0
+text = "Version Select:"
+
+[node name="Versions Mac" type="OptionButton" parent="." unique_id=680259942]
+visible = false
+layout_mode = 0
+offset_left = 186.0
+offset_top = 248.0
+offset_right = 346.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
+fit_to_longest_item = false
+
+[node name="Version Select Label" type="Label" parent="Versions Mac" unique_id=351358849]
+layout_mode = 0
+offset_top = -21.0
+offset_right = 160.0
+offset_bottom = -3.0
+text = "Version Select:"
+
+[node name="Versions Linux" type="OptionButton" parent="." unique_id=174234688]
+visible = false
+layout_mode = 0
+offset_left = 186.0
+offset_top = 248.0
+offset_right = 346.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0.88, 0.49866667, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8784314, 0.49803922, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
+fit_to_longest_item = false
+
+[node name="Version Select Label" type="Label" parent="Versions Linux" unique_id=5516797]
 layout_mode = 0
 offset_top = -21.0
 offset_right = 160.0
@@ -147,19 +137,18 @@ offset_right = 522.0
 offset_bottom = 216.0
 theme_type_variation = &"Line"
 
-[node name="Thumbnail" type="AnimatedSprite2D" parent="." unique_id=1524105498]
+[node name="Thumbnail" type="Sprite2D" parent="." unique_id=265515300]
 position = Vector2(186, 16)
 scale = Vector2(0.17083333, 0.17777777)
-sprite_frames = SubResource("SpriteFrames_3vhim")
-animation = &"fnab1"
 centered = false
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1449829384]
 use_threads = true
 timeout = 60.0
 
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="item_selected" from="Versions" to="." method="_on_versions_item_selected"]
+[connection signal="item_selected" from="Versions Windows" to="." method="_on_versions_item_selected"]
+[connection signal="item_selected" from="Versions Mac" to="." method="_on_versions_item_selected"]
+[connection signal="item_selected" from="Versions Linux" to="." method="_on_versions_item_selected"]
 [connection signal="pressed" from="Install" to="." method="_on_install_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

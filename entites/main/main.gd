@@ -8,7 +8,6 @@ var file_type : String = ".exe"
 
 
 func _ready():
-	print(operating_system)
 	match operating_system:
 		"Windows": file_type = ".exe"
 		"macOS": file_type = ".app"

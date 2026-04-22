@@ -1,9 +1,9 @@
 extends TextureButton
 @export var game_name : String
-@export var game_file_name : String
 @export var game_file_display_names : PackedStringArray
 @export var game_file_names : PackedStringArray
 var selected_version : int = 0
+var os_name : String = "_Windows"
 
 
 
@@ -16,37 +16,47 @@ func _ready() -> void:
 	
 	for version: String in game_file_display_names:
 		$Versions.add_item(version)
+	
+	match Main.operating_system:
+		"Windows": os_name = "_Windows"
+		"macOS": os_name = "_Mac"
+		"Linux": os_name = "_Linux"
+	
+	check()
+
 
 
 # Boot up version of game
 func _on_pressed() -> void:
-	var absolute_path = ProjectSettings.globalize_path("user://" + game_file_name + game_file_names.get(selected_version) + ".exe")
+	var absolute_path = ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
+	
 	OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
-	
-	#var target_index = get_index()
 	get_parent().move_child(self, 0)
 
 
 
 # Uninstall Version of game
 func _on_uninstall_pressed() -> void:
-	DirAccess.remove_absolute("user://" + game_file_name + game_file_names.get(selected_version) + ".exe")
+	DirAccess.remove_absolute("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
 	check()
 
 
 # Check if any versions of game exist
 func check():
+	visible = false
 	for i in $Versions.item_count:
-		if FileAccess.file_exists("user://" + game_file_name + game_file_names.get(i) + ".exe"):
+		if FileAccess.file_exists("user://" + game_file_names.get(i) + os_name + Main.file_type):
 			visible = true
-		else:
-			visible = false
+			$Versions.select(i)
+			$Versions.emit_signal("item_selected", i)
+			break
+
+
 
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
-	
 	selected_version = index
 
 
