@@ -68,10 +68,11 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
-			var path = ProjectSettings.globalize_path("user://Ambition_Installer.app")
-			OS.execute("xattr", ["-d", "com.apple.quarantine", path])
-			OS.execute("chmod", ["+x", path + "/Contents/MacOS/BinaryName"])
-			OS.execute("open", [path])
+			pass
+			#var path = ProjectSettings.globalize_path("user://Ambition_Installer.app")
+			#OS.execute("xattr", ["-d", "com.apple.quarantine", path])
+			#OS.execute("chmod", ["+x", path + "/Contents/MacOS/BinaryName"])
+			#OS.execute("open", [path])
 		"Linux": 
 			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://Ambition_Installer_Linux")])
 			OS.create_process(ProjectSettings.globalize_path("user://Ambition_Installer_Linux"), [])
