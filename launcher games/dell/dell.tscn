@@ -708,57 +708,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7e0i7")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig68x"]
-resource_name = "floor"
-cull_mode = 2
-albedo_color = Color(0.16700937, 0.44443473, 0.17753042, 1)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0kx7f"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "floor",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_x2npw"]
-resource_name = "Floor_Cube"
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_ig68x"),
-"name": "floor",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_0kx7f")
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_smc08"]
-
-[sub_resource type="Sky" id="Sky_wnmi6"]
-sky_material = SubResource("ProceduralSkyMaterial_smc08")
-
-[sub_resource type="Environment" id="Environment_pr5nx"]
-background_mode = 2
-sky = SubResource("Sky_wnmi6")
-ambient_light_source = 3
-reflected_light_source = 2
-tonemap_mode = 1
-glow_enabled = true
-glow_bloom = 1.0
-
 [sub_resource type="Animation" id="Animation_v7yw3"]
 length = 0.001
 tracks/0/type = "value"
@@ -920,7 +869,7 @@ _data = {
 [node name="Dell" type="Node3D" unique_id=1716658321]
 
 [node name="Dell - Default" type="Node3D" parent="." unique_id=1886130995]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.598956, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 5.598956, 0)
 
 [node name="Core" type="Node3D" parent="Dell - Default" unique_id=304827258]
 
@@ -994,7 +943,7 @@ transform = Transform3D(-0.32803735, 0, 0, 0, -0.3951009, 0, 0, 0, -1.3170757, 0
 mesh = SubResource("ArrayMesh_2dgmg")
 
 [node name="Right Shoulder" type="Node3D" parent="Dell - Default/Core" unique_id=1431793886]
-transform = Transform3D(-0.30495608, 0.33514017, 0.8914497, -0.94745064, -0.011781143, -0.31968436, -0.09663678, -0.9420944, 0.32112157, 0, 1.1879601, -1.27723)
+transform = Transform3D(-0.30495602, 0.33514008, 0.8914496, -0.9474504, -0.01178114, -0.3196843, -0.09663676, -0.94209415, 0.3211215, 0, 1.1879601, -1.27723)
 
 [node name="Arm_001" type="MeshInstance3D" parent="Dell - Default/Core/Right Shoulder" unique_id=1170822437]
 transform = Transform3D(-0.30442515, 0, 0, 0, -0.36666143, 0, 0, 0, -1.2222723, 0, -0.003255844, 0.7782209)
@@ -1011,16 +960,8 @@ mesh = SubResource("ArrayMesh_bmxw4")
 transform = Transform3D(-0.018316193, -0.123693325, 7.717742e-09, -0.04663444, 0.0069055064, -0.11581476, 0.114565566, -0.016964575, -0.04714291, 0.12168455, -0.07505536, 2.7933688)
 mesh = SubResource("ArrayMesh_gdgb7")
 
-[node name="Floor" type="MeshInstance3D" parent="." unique_id=1969227153]
-transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7.083999, 0, 0, 0)
-visible = false
-mesh = SubResource("ArrayMesh_x2npw")
-
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2024449423]
-transform = Transform3D(-0.32011694, -0.5369142, 0.7805436, 0, 0.8238988, 0.56673706, -0.94737804, 0.18142211, -0.26374397, 0, 5.757623, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1647063388]
-environment = SubResource("Environment_pr5nx")
+transform = Transform3D(-0.5, 0, 0.8660255, 0.4330127, 0.8660254, 0.24999997, -0.75000006, 0.50000006, -0.4330127, 9, 5.757623, 0)
 
 [node name="Animations" type="Node" parent="." unique_id=1289162820]
 

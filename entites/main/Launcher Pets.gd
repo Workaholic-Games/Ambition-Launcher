@@ -49,6 +49,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		grabbed = false
 		$Container.scale = Vector2(1.0, 1.0)
+		
+	if Input.is_action_just_pressed("flip") and can_grab == true:
+		if direction == 1:
+			direction = -1
+		elif direction == -1:
+			direction = 1
+		
+		if $Pets.flip_h == false:
+			$Pets.flip_h = true
+		else:
+			$Pets.flip_h = false
 
 
 

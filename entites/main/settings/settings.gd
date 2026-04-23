@@ -1,5 +1,13 @@
 @icon("res://editor_icons/settings.png")
 extends Control
+var cursors: Dictionary = {
+	"None": null,
+	"White": load("res://entites/cursors/white_cursor.png"),
+	"Dark": load("res://entites/cursors/dark_cursor.png"),
+	"Fry": load("res://entites/cursors/fry_cursor.png"),
+	"Seedling": load("res://entites/cursors/seedling_cursor.png"),
+	"Sun": load("res://entites/cursors/sad_sun.png"),
+}
 
 
 
@@ -37,6 +45,14 @@ func _ready():
 			$"Startup Location".select(5)
 			$"../Panel/Tabs/Buttons/Settings".emit_signal("pressed")
 			$"../Panel/Tabs/Buttons/Settings".set_pressed_no_signal(true)
+	
+	for cursor in cursors.keys():
+		$Cursor.add_item(cursor)
+	
+	var cursor : String = $Cursor.get_item_text(Main.launcher_data.cursor)
+	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
+	$Cursor.select(Main.launcher_data.cursor)
+
 
 
 # Window settings
@@ -86,3 +102,12 @@ func fix_option_button_ui():
 	var option_buttons = get_tree().get_root().find_children("*", "OptionButton", true, false)
 	for button in option_buttons:
 		button.get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
+
+
+
+# Custom Cursor Stuff
+func _on_cursor_item_selected(index: int) -> void:
+	var cursor : String = $Cursor.get_item_text(index)
+	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
+	Main.launcher_data.cursor = index
+	Main.save_data()

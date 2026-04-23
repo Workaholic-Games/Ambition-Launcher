@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dasttujewriix"]
 
-[ext_resource type="Script" uid="uid://1qntx1m0fctp" path="res://entites/main/communtiy/community_item.gd" id="1_kt0kh"]
+[ext_resource type="Script" uid="uid://1qntx1m0fctp" path="res://community/communtiy/community_item.gd" id="1_kt0kh"]
 
 [node name="Community Item" type="GraphNode" unique_id=1442136687]
 offset_right = 140.0

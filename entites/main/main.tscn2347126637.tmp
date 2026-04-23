@@ -18,7 +18,6 @@
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="16_lbrtn"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
@@ -37,7 +36,6 @@
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
-[ext_resource type="Texture2D" uid="uid://b0j5v21ii750h" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
@@ -53,13 +51,9 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
-atlas = ExtResource("32_6vgeh")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2pj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7divq"]
-atlas = ExtResource("32_6vgeh")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3a4v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
@@ -431,6 +425,15 @@ toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
 
+[node name="Launcher Games" type="Label" parent="Panel/Tabs" unique_id=168517107]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 192.0
+offset_right = 97.0
+offset_bottom = 352.0
+text = "THIS IS FOR LAUNCHER GAMES"
+autowrap_mode = 3
+
 [node name="Line" type="Panel" parent="Panel/Tabs" unique_id=459346034]
 layout_mode = 0
 offset_left = 108.0
@@ -546,7 +549,6 @@ offset_right = 576.0
 offset_bottom = 32.0
 mouse_default_cursor_shape = 0
 placeholder_text = "Search your Library..."
-context_menu_enabled = false
 emoji_menu_enabled = false
 clear_button_enabled = true
 
@@ -570,34 +572,34 @@ vertical_scroll_mode = 2
 [node name="GridContainer" type="GridContainer" parent="Store/Area" unique_id=65950568]
 layout_mode = 2
 
-[node name="Five Nights at Bulbas (FNAB, FNAB2)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
+[node name="Five Nights at Bulbas (FNAB)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)" unique_id=1701956488]
+[node name="Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1701956488]
 layout_mode = 2
 text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)" unique_id=893160749]
+[node name="Line" type="Panel" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=893160749]
 custom_minimum_size = Vector2(523, 4)
 layout_mode = 2
 theme_type_variation = &"Line"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Line" unique_id=1281986240]
+[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line" unique_id=1281986240]
 position = Vector2(2, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Line/StaticBody2D" unique_id=803637203]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Line/StaticBody2D" unique_id=803637203]
 position = Vector2(262, 7)
 shape = SubResource("RectangleShape2D_qp5pd")
 one_way_collision = true
 one_way_collision_margin = 19.0
 
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)" unique_id=1710918498]
+[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)" unique_id=1710918498]
 layout_mode = 2
 alignment = 1
 
-[node name="FNAB" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=989411366 node_paths=PackedStringArray("page")]
+[node name="FNAB" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=989411366 node_paths=PackedStringArray("page")]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 texture_normal = ExtResource("4_akru0")
@@ -606,13 +608,13 @@ stretch_mode = 4
 script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/FNAB1")
 
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" unique_id=769458817]
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=769458817]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" unique_id=184796373]
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" unique_id=184796373]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -624,7 +626,7 @@ text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=1754228612 node_paths=PackedStringArray("page")]
+[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games" unique_id=1754228612 node_paths=PackedStringArray("page")]
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -634,13 +636,13 @@ stretch_mode = 4
 script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/FNAB2")
 
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" unique_id=1500190869]
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1500190869]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" unique_id=1123276015]
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" unique_id=1123276015]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -725,60 +727,6 @@ text = "Bitcoin Miner"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Coming Soon" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=1289074799]
-custom_minimum_size = Vector2(523, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Store/Area/GridContainer/Coming Soon" unique_id=1299017266]
-layout_mode = 2
-text = "Coming Soon"
-horizontal_alignment = 1
-
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/Coming Soon" unique_id=1935351013]
-custom_minimum_size = Vector2(523, 4)
-layout_mode = 2
-theme_type_variation = &"Line"
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Coming Soon/Line" unique_id=470246366]
-position = Vector2(2, -2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Coming Soon/Line/StaticBody2D" unique_id=1743159470]
-position = Vector2(262, 7)
-shape = SubResource("RectangleShape2D_qp5pd")
-one_way_collision = true
-one_way_collision_margin = 19.0
-
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Coming Soon" unique_id=770636206]
-layout_mode = 2
-alignment = 1
-
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("7_1dv2i")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" unique_id=1251014016]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" unique_id=101408882]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-text = "Bitcoin Miner"
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
 layout_mode = 0
 offset_left = 192.0
@@ -786,7 +734,6 @@ offset_right = 576.0
 offset_bottom = 32.0
 mouse_default_cursor_shape = 0
 placeholder_text = "Search the Store..."
-context_menu_enabled = false
 emoji_menu_enabled = false
 clear_button_enabled = true
 
@@ -816,7 +763,6 @@ visible = false
 layout_mode = 0
 offset_left = 112.112114
 offset_right = 112.112114
-description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
 rating = "Rated: T for Teen
 Difficulty: Hard"
 version_names = PackedStringArray("Ambition Edition")
@@ -832,52 +778,18 @@ anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 80.0
-script = ExtResource("17_j32lm")
 
-[node name="Featured Art" type="Button" parent="Community" unique_id=1639509894]
+[node name="Best Artwork" type="Label" parent="Community" unique_id=338952825]
 layout_mode = 0
 offset_left = 128.0
-offset_top = -40.0
-offset_right = 240.0
-offset_bottom = -16.0
-theme_type_variation = &"Close_Button"
-text = "Featured Art"
-
-[node name="Install Mods" type="Button" parent="Community" unique_id=789851959]
-layout_mode = 0
-offset_left = 248.0
-offset_top = -40.0
-offset_right = 360.0
-offset_bottom = -16.0
-theme_type_variation = &"Close_Button"
-text = "Install Mods
-"
-
-[node name="Modding Guide" type="Button" parent="Community" unique_id=307928120]
-layout_mode = 0
-offset_left = 368.0
-offset_top = -40.0
-offset_right = 480.0
-offset_bottom = -16.0
-theme_type_variation = &"Close_Button"
-text = "Modding Guide"
-
-[node name="Featured" type="Control" parent="Community" unique_id=1648727257]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Best Artwork" type="Label" parent="Community/Featured" unique_id=338952825]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 8.0
+offset_top = -8.0
 offset_right = 624.0
-offset_bottom = 152.0
+offset_bottom = 136.0
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Art"
 
-[node name="Bulba\'s Pick" type="Label" parent="Community/Featured/Best Artwork" unique_id=1385621603]
+[node name="Bulba\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1385621603]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 15.0
@@ -886,7 +798,7 @@ offset_bottom = 33.0
 text = "Bulba's Pick"
 horizontal_alignment = 1
 
-[node name="Jonathan\'s Pick" type="Label" parent="Community/Featured/Best Artwork" unique_id=1890620615]
+[node name="Jonathan\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1890620615]
 layout_mode = 0
 offset_left = 192.0
 offset_top = 15.0
@@ -895,7 +807,7 @@ offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
 
-[node name="Sawyer\'s Pick" type="Label" parent="Community/Featured/Best Artwork" unique_id=1431475193]
+[node name="Sawyer\'s Pick" type="Label" parent="Community/Best Artwork" unique_id=1431475193]
 layout_mode = 0
 offset_left = 352.0
 offset_top = 15.0
@@ -904,7 +816,7 @@ offset_bottom = 33.0
 text = "Sawyer's Pick"
 horizontal_alignment = 1
 
-[node name="Bulba Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=932509087]
+[node name="Bulba Art" type="TextureRect" parent="Community/Best Artwork" unique_id=932509087]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
@@ -913,7 +825,7 @@ offset_bottom = 128.0
 texture = ExtResource("24_12ljg")
 expand_mode = 1
 
-[node name="Title" type="Label" parent="Community/Featured/Best Artwork/Bulba Art" unique_id=1850589535]
+[node name="Title" type="Label" parent="Community/Best Artwork/Bulba Art" unique_id=1850589535]
 layout_mode = 0
 offset_left = -24.0
 offset_top = 96.0
@@ -923,7 +835,7 @@ theme_override_font_sizes/font_size = 12
 text = "I drew the peas - KitKat"
 horizontal_alignment = 1
 
-[node name="Jonathan Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=439289867]
+[node name="Jonathan Art" type="TextureRect" parent="Community/Best Artwork" unique_id=439289867]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 32.0
@@ -932,7 +844,7 @@ offset_bottom = 128.0
 texture = ExtResource("23_12ljg")
 expand_mode = 1
 
-[node name="Title" type="Label" parent="Community/Featured/Best Artwork/Jonathan Art" unique_id=794045597]
+[node name="Title" type="Label" parent="Community/Best Artwork/Jonathan Art" unique_id=794045597]
 layout_mode = 0
 offset_left = -24.0
 offset_top = 96.0
@@ -942,7 +854,7 @@ theme_override_font_sizes/font_size = 12
 text = "Seedling - GigaAdam64"
 horizontal_alignment = 1
 
-[node name="Sawyer Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=1539715783]
+[node name="Sawyer Art" type="TextureRect" parent="Community/Best Artwork" unique_id=1539715783]
 layout_mode = 0
 offset_left = 368.0
 offset_top = 32.0
@@ -950,17 +862,17 @@ offset_right = 464.0
 offset_bottom = 128.0
 expand_mode = 1
 
-[node name="Best Memes" type="Label" parent="Community/Featured" unique_id=197830391]
+[node name="Best Memes" type="Label" parent="Community" unique_id=197830391]
 layout_mode = 0
 offset_left = 128.0
-offset_top = 160.0
+offset_top = 144.0
 offset_right = 624.0
-offset_bottom = 304.0
+offset_bottom = 288.0
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Memes"
 
-[node name="Bulba\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=998676779]
+[node name="Bulba\'s Pick" type="Label" parent="Community/Best Memes" unique_id=998676779]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 15.0
@@ -969,7 +881,7 @@ offset_bottom = 33.0
 text = "Bulba's Pick"
 horizontal_alignment = 1
 
-[node name="Jonathan\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=391824318]
+[node name="Jonathan\'s Pick" type="Label" parent="Community/Best Memes" unique_id=391824318]
 layout_mode = 0
 offset_left = 192.0
 offset_top = 15.0
@@ -978,7 +890,7 @@ offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
 
-[node name="Sawyer\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=2083139813]
+[node name="Sawyer\'s Pick" type="Label" parent="Community/Best Memes" unique_id=2083139813]
 layout_mode = 0
 offset_left = 352.0
 offset_top = 15.0
@@ -987,7 +899,7 @@ offset_bottom = 33.0
 text = "Sawyer's Pick"
 horizontal_alignment = 1
 
-[node name="Bulba Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=770749474]
+[node name="Bulba Meme" type="TextureRect" parent="Community/Best Memes" unique_id=770749474]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
@@ -996,7 +908,7 @@ offset_bottom = 128.0
 texture = ExtResource("37_j17j7")
 expand_mode = 1
 
-[node name="Title" type="Label" parent="Community/Featured/Best Memes/Bulba Meme" unique_id=1641051508]
+[node name="Title" type="Label" parent="Community/Best Memes/Bulba Meme" unique_id=1641051508]
 layout_mode = 0
 offset_left = -24.0
 offset_top = 96.0
@@ -1006,7 +918,7 @@ theme_override_font_sizes/font_size = 12
 text = "Cog-Mo"
 horizontal_alignment = 1
 
-[node name="Jonathan Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=1313359070]
+[node name="Jonathan Meme" type="TextureRect" parent="Community/Best Memes" unique_id=1313359070]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 32.0
@@ -1015,7 +927,7 @@ offset_bottom = 128.0
 texture = ExtResource("18_13033")
 expand_mode = 1
 
-[node name="Title" type="Label" parent="Community/Featured/Best Memes/Jonathan Meme" unique_id=64430464]
+[node name="Title" type="Label" parent="Community/Best Memes/Jonathan Meme" unique_id=64430464]
 layout_mode = 0
 offset_left = -24.0
 offset_top = 96.0
@@ -1025,7 +937,7 @@ theme_override_font_sizes/font_size = 12
 text = "GigaAdam64"
 horizontal_alignment = 1
 
-[node name="Sawyer Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=1853477269]
+[node name="Sawyer Meme" type="TextureRect" parent="Community/Best Memes" unique_id=1853477269]
 layout_mode = 0
 offset_left = 368.0
 offset_top = 32.0
@@ -1437,7 +1349,7 @@ layout_mode = 0
 offset_left = 313.09445
 offset_top = 5.9999967
 offset_right = 440.75436
-offset_bottom = 32.714306
+offset_bottom = 30.659359
 scale = Vector2(1.0061805, 0.9732614)
 alignment = 1
 
@@ -1451,15 +1363,15 @@ vertical_alignment = 2
 
 [node name="Startup Location" type="OptionButton" parent="Settings" unique_id=1787472182]
 layout_mode = 0
-offset_left = 449.0
-offset_top = 6.0
-offset_right = 625.61707
-offset_bottom = 32.0
+offset_left = 449.57144
+offset_top = 4.0
+offset_right = 626.1887
+offset_bottom = 30.000004
 selected = 0
 item_count = 6
-popup/item_0/text = "Library                   "
+popup/item_0/text = "Library"
 popup/item_0/id = 0
-popup/item_1/text = "Store  "
+popup/item_1/text = "Store"
 popup/item_1/id = 1
 popup/item_2/text = "Community"
 popup/item_2/id = 2
@@ -1778,14 +1690,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("24_6l2pj")
 
-[node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
-layout_mode = 0
-offset_left = -6.0
-offset_top = -2.0
-offset_right = 102.0
-offset_bottom = 218.0
-theme_type_variation = &"Line"
-
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
 layout_mode = 0
 offset_left = -6.0
@@ -1796,64 +1700,46 @@ scale = Vector2(0.125, 0.125)
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Launcher Games/Dell/SubViewportContainer" unique_id=1108012191]
-transparent_bg = true
 handle_input_locally = false
 msaa_3d = 1
 size = Vector2i(864, 1760)
 render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.711371, 7.303131, -0.5034995)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.711371, 7.303131, 0)
 fov = 90.0
 
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
-transform = Transform3D(0.99731064, 0, 0.073290415, 0, 1, 0, -0.073290415, 0, 0.99731064, 0, 0, 0)
 
 [node name="Input" type="LineEdit" parent="Launcher Games/Dell" unique_id=1326285556]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 201.0
-offset_right = 104.0
-offset_bottom = 218.0
-theme_override_font_sizes/font_size = 8
+offset_top = 193.0
+offset_right = 99.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 12
 placeholder_text = "Ask Dell"
 alignment = 1
-context_menu_enabled = false
-emoji_menu_enabled = false
 
 [node name="Response" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=89382335]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 58.0
+offset_left = -6.0
+offset_top = 135.0
 offset_right = 102.0
-offset_bottom = 74.0
-theme_override_font_sizes/normal_font_size = 8
-fit_content = true
-scroll_active = false
+offset_bottom = 192.0
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6l2pj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3a4v")
 scroll_following_visible_characters = true
-horizontal_alignment = 2
-visible_characters_behavior = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
 wait_time = 0.06
 
-[node name="Dell" type="TextureButton" parent="Launcher Games/Dell" unique_id=94201817]
-layout_mode = 0
-offset_left = -2.0
-offset_top = 2.0
-offset_right = 22.0
-offset_bottom = 26.0
-toggle_mode = true
-button_pressed = true
-texture_normal = SubResource("AtlasTexture_xaw78")
-texture_pressed = SubResource("AtlasTexture_7divq")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="Launcher Pets" type="Control" parent="Launcher Games" unique_id=564404724]
 anchors_preset = 0
-offset_right = 2.0
-offset_bottom = 2.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Launcher Games/Launcher Pets" unique_id=170510984]
 position = Vector2(634, 124)
@@ -1993,22 +1879,16 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB)/Games/FNAB2" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
-[connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
-[connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
-[connection signal="pressed" from="Community/Modding Guide" to="Community" method="_on_modding_guide_pressed"]
 [connection signal="pressed" from="Developers/Bulba" to="Developers" method="_on_bulba_pressed"]
 [connection signal="pressed" from="Developers/Jonathan" to="Developers" method="_on_jonathan_pressed"]
 [connection signal="pressed" from="Developers/Sawyer" to="Developers" method="_on_sawyer_pressed"]
@@ -2025,7 +1905,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="text_changed" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_changed"]
 [connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
 [connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
-[connection signal="toggled" from="Launcher Games/Dell/Dell" to="Launcher Games/Dell" method="_on_dell_toggled"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]

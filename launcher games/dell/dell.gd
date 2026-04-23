@@ -149,12 +149,12 @@ func _on_input_text_submitted(new_text: String) -> void:
 	if $Response.text == "":
 		$Response.text = "I am unable to comprehend what you are asking me. I recommend annoying one of my creators to get what you want."
 	
-	
-	var voices = DisplayServer.tts_get_voices_for_language("en")
-	var voice_id = voices[1] # Select the first English voice
+	var voices = DisplayServer.tts_get_voices_for_language("en") # Select the first English voice
 	DisplayServer.tts_stop()
-	DisplayServer.tts_speak($Response.text, voice_id, 50, 1.6, 1.0)
+	DisplayServer.tts_speak($Response.text, voices[1], 50, 1.6, 1.0)
 	yap()
+	$Response.visible = true
+	$Response.size = Vector2(52.0, 0)
 
 
 
@@ -190,3 +190,17 @@ func _on_input_text_changed(new_text: String) -> void:
 
 
 ## considering a bunch of technical changes to how dell works to make this all a bit cleaner
+
+
+func _on_dell_toggled(toggled_on: bool) -> void:
+	match toggled_on:
+		true:
+			$BG.visible = true
+			$SubViewportContainer.visible = true
+			$Input.visible = true
+			$Response.visible = true
+		false:
+			$BG.visible = false
+			$SubViewportContainer.visible = false
+			$Input.visible = false
+			$Response.visible = false

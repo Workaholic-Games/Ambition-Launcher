@@ -89,7 +89,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 
 
 
-
 func _on_back_pressed() -> void:
 	visible = false
 
