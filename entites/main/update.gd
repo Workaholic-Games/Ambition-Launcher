@@ -7,34 +7,36 @@ extends Panel
 
 func _ready():
 	$"../Intro".queue_free()
-	pass
 	
-	#if Main.launcher_data.just_installed == false:
-		#$".".visible = true
-		#
-		#if FileAccess.file_exists("user://installer" + Main.file_type):
-			#var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
-			#OS.shell_open(absolute_path)
-			#Main.launcher_data.just_installed = true
-			#Main.save_data()
-			#get_tree().quit()
-		#else:
-			#$"../HTTPRequest".download_file = "user://Package.zip"
-			#match Main.operating_system:
-				#"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
-				#
-				#"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
-				#
-				#"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-	#
-	#else:
-		#Main.launcher_data.just_installed = false
-		#$"../Intro".play()
-		#$"../Intro/Intro Audio".play()
+	if Main.launcher_data.just_installed == false:
+		$".".visible = true
+		
+		if FileAccess.file_exists("user://installer" + Main.file_type):
+			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
+			OS.shell_open(absolute_path)
+			Main.launcher_data.just_installed = true
+			Main.save_data()
+			print("ATTEMPTED TO OPEN - ALREADY HAVE INSTALLER")
+			get_tree().quit()
+		else:
+			print("INSTALLING")
+			$"../HTTPRequest".download_file = "user://Package.zip"
+			match Main.operating_system:
+				"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
+				
+				"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
+				
+				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
+	
+	else:
+		Main.launcher_data.just_installed = false
+		$"../Intro".play()
+		$"../Intro/Intro Audio".play()
 
 
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	print("FINISHED INSTALLING")
 	var reader := ZIPReader.new()
 	var err = reader.open("user://Package.zip")
 	
@@ -68,6 +70,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
+			print("ATTEMPTED TO OPEN AFTER INSTALL")
 			var path = ProjectSettings.globalize_path("user://Ambition_Installer")
 			OS.execute("xattr", ["-d", "com.apple.quarantine", path])
 			OS.execute("chmod", ["+x", path + "/Contents/MacOS/BinaryName"])
