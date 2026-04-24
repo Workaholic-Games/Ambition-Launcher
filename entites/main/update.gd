@@ -93,7 +93,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
-			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.app")
+			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")
 			OS.shell_open("file://" + absolute_path)
 		"Linux": 
 			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://Ambition_Installer_Linux")])
