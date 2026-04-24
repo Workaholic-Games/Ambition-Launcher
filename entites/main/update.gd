@@ -66,7 +66,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			DirAccess.remove_absolute("user://Package.zip") 
 	elif Main.operating_system == "macOS":
 		var abs_zip = ProjectSettings.globalize_path("user://Package.zip")
-		var abs_dest = ProjectSettings.globalize_path("user://Ambition_Installer.app")
+		var abs_dest = ProjectSettings.globalize_path("user://")
 		OS.execute("unzip", ["-o", abs_zip, "-d", abs_dest])
 		print("Unzip finished.")
 		
