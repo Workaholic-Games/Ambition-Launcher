@@ -62,7 +62,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			file.close() # Explicitly close for safety
 	
 	reader.close()
-	DirAccess.remove_absolute("user://Package.zip") 
+	#DirAccess.remove_absolute("user://Package.zip") 
 	
 	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 	match Main.operating_system:
