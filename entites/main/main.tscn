@@ -22,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
 [ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/Fries Avatar.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
@@ -948,7 +950,18 @@ offset_left = 368.0
 offset_top = 32.0
 offset_right = 464.0
 offset_bottom = 128.0
+texture = ExtResource("20_12ljg")
 expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Featured/Best Artwork/Sawyer Art" unique_id=2082768414]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "GABE ASGORE - GigaAdam64"
+horizontal_alignment = 1
 
 [node name="Best Memes" type="Label" parent="Community/Featured" unique_id=197830391]
 layout_mode = 0
@@ -1031,7 +1044,18 @@ offset_left = 368.0
 offset_top = 32.0
 offset_right = 464.0
 offset_bottom = 128.0
+texture = ExtResource("20_n5kpq")
 expand_mode = 1
+
+[node name="Title" type="Label" parent="Community/Featured/Best Memes/Sawyer Meme" unique_id=399822536]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 12
+text = "GigaAdam64"
+horizontal_alignment = 1
 
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
 visible = false
@@ -1772,13 +1796,13 @@ offset_right = 46.0
 offset_bottom = 182.0
 
 [node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("24_6l2pj")
 
 [node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
+visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = -2.0
@@ -1787,6 +1811,7 @@ offset_bottom = 218.0
 theme_type_variation = &"Line"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
+visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = -2.0
@@ -1810,6 +1835,7 @@ fov = 90.0
 transform = Transform3D(0.99731064, 0, 0.073290415, 0, 1, 0, -0.073290415, 0, 0.99731064, 0, 0, 0)
 
 [node name="Input" type="LineEdit" parent="Launcher Games/Dell" unique_id=1326285556]
+visible = false
 layout_mode = 0
 offset_left = -3.0
 offset_top = 201.0
@@ -1822,6 +1848,7 @@ context_menu_enabled = false
 emoji_menu_enabled = false
 
 [node name="Response" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=89382335]
+visible = false
 layout_mode = 0
 offset_left = 50.0
 offset_top = 58.0
@@ -1844,7 +1871,6 @@ offset_top = 2.0
 offset_right = 22.0
 offset_bottom = 26.0
 toggle_mode = true
-button_pressed = true
 texture_normal = SubResource("AtlasTexture_xaw78")
 texture_pressed = SubResource("AtlasTexture_7divq")
 ignore_texture_size = true
