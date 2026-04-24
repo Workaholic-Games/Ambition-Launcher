@@ -73,7 +73,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			continue
 		
 		var full_path = "user://".path_join(file_path)
-		print(full_path)
 		if file_path.ends_with("/"):
 			DirAccess.make_dir_recursive_absolute(full_path)
 			continue
@@ -90,6 +89,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			file.close()
 	reader.close()
 	
+	print(version_file_names.get(selected_link))
 	
 	if OS.get_name() == "macOS":
 		var app_bundle_name = version_file_names.get(selected_link) + ".app"
@@ -122,7 +122,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	$ProgressBar.visible = false
 	can_download = true
 
-
+ 
 
 func _on_back_pressed() -> void:
 	visible = false
