@@ -46,7 +46,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	for file_path in files:
 		var clean_path = file_path.trim_prefix("/")
-		var full_path = "user://".path_join(clean_path)
+		var full_path = ProjectSettings.globalize_path("user://".path_join(clean_path))
 		if file_path.ends_with("/"):
 			DirAccess.make_dir_recursive_absolute(full_path)
 			continue
@@ -59,8 +59,8 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		var file := FileAccess.open(full_path, FileAccess.WRITE)
 		if file:
 			file.store_buffer(buffer)
-			file.close()
 			file.flush()
+			file.close()
 	reader.close()
 	DirAccess.remove_absolute("user://Package.zip") 
 	
