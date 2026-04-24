@@ -93,12 +93,8 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
-			var project_name = ProjectSettings.get_setting("application/config/name")
-			var app_path_absolute = ProjectSettings.globalize_path("user://" + project_name + ".app")
-			var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(project_name)
-			print("App Path: ", app_path_absolute)
-			print("Binary Path: ", binary_path_absolute)
-			OS.execute("open", [app_path_absolute])
+			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.app")
+			OS.shell_open(absolute_path)
 		"Linux": 
 			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://Ambition_Installer_Linux")])
 			OS.create_process(ProjectSettings.globalize_path("user://Ambition_Installer_Linux"), [])
