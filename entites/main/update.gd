@@ -36,39 +36,34 @@ func _ready():
 
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
-	print("FINISHED INSTALLING")
-	if Main.operating_system != "macOS":
-		var reader := ZIPReader.new()
-		var err = reader.open("user://Package.zip")
-		
-		if err != OK:
-			print("Failed to open ZIP: ", err)
-			return
-		var files := reader.get_files()
-		
-		for file_path in files:
-			var full_path = "user://".path_join(file_path)
-			if file_path.ends_with("/"):
-				DirAccess.make_dir_recursive_absolute(full_path)
-				continue
-		
-			var parent_dir = full_path.get_base_dir()
-			if !DirAccess.dir_exists_absolute(parent_dir):
-				DirAccess.make_dir_recursive_absolute(parent_dir)
-		
-			var buffer := reader.read_file(file_path)
-			var file := FileAccess.open(full_path, FileAccess.WRITE)
-			if file:
-				file.store_buffer(buffer)
-				file.close() # Explicitly close for safety
+	var reader := ZIPReader.new()
+	var err = reader.open("user://Package.zip")
 	
-			reader.close()
-			DirAccess.remove_absolute("user://Package.zip") 
-	elif Main.operating_system == "macOS":
-		var abs_zip = ProjectSettings.globalize_path("user://Package.zip")
-		var abs_dest = ProjectSettings.globalize_path("user://")
-		OS.execute("unzip", ["-o", abs_zip, "-d", abs_dest])
-		print("Unzip finished.")
+	if err != OK:
+		print("Failed to open ZIP: ", err)
+		return
+	var files := reader.get_files()
+	
+	for file_path in files:
+		var clean_path = file_path.trim_prefix("/")
+		var full_path = "user://".path_join(clean_path)
+		if file_path.ends_with("/"):
+			DirAccess.make_dir_recursive_absolute(full_path)
+			continue
+	
+		var parent_dir = full_path.get_base_dir()
+		if !DirAccess.dir_exists_absolute(parent_dir):
+			DirAccess.make_dir_recursive_absolute(parent_dir)
+	
+		var buffer := reader.read_file(file_path)
+		var file := FileAccess.open(full_path, FileAccess.WRITE)
+		if file:
+			file.store_buffer(buffer)
+			file.close()
+			file.flush()
+	reader.close()
+	DirAccess.remove_absolute("user://Package.zip") 
+	
 		
 	
 	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
@@ -77,7 +72,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
-			print("ATTEMPTED TO OPEN AFTER INSTALL")
 			var path = ProjectSettings.globalize_path("user://Ambition_Installer.app")
 			OS.execute("xattr", ["-d", "com.apple.quarantine", path])
 			OS.execute("chmod", ["+x", path + "/Contents/MacOS/BinaryName"])
