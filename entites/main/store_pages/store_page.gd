@@ -51,7 +51,6 @@ func _on_install_pressed() -> void:
 		match Main.operating_system:
 			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
 			"macOS": $HTTPRequest.request(version_links_mac.get(selected_link))
-			"Linux": $HTTPRequest.request(version_links_linux.get(selected_link))
 		
 		can_download = false
 		$ProgressBar.visible = false
@@ -62,25 +61,61 @@ func _on_install_pressed() -> void:
 # Download Complete code
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
-	reader.open("user://Package.zip")
-	var root_dir := DirAccess.open("user://")
+	var err = reader.open("user://Package.zip")
 	
-	
+	if err != OK:
+		print("Failed to open ZIP: ", err)
+		return
 	var files := reader.get_files()
+	
 	for file_path in files:
-		if file_path.ends_with("/"):
-			root_dir.make_dir(file_path)
+		if file_path.begins_with("__MACOSX") or file_path.get_file().begins_with("._"):
 			continue
-		var buffer := reader.read_file(file_path)
-		var file := FileAccess.open(root_dir.get_current_dir().path_join(file_path), FileAccess.WRITE)
-		file.store_buffer(buffer)
-	
-	
-	#var absolute_path = ProjectSettings.globalize_path("user://" + version_file_names.get(selected_link) + os_name + Main.file_type)
-	#OS.shell_open(absolute_path)
 		
+		var full_path = "user://".path_join(file_path)
+		print(full_path)
+		if file_path.ends_with("/"):
+			DirAccess.make_dir_recursive_absolute(full_path)
+			continue
+	
+		var parent_dir = full_path.get_base_dir()
+		if !DirAccess.dir_exists_absolute(parent_dir):
+			DirAccess.make_dir_recursive_absolute(parent_dir)
+	
+		var buffer := reader.read_file(file_path)
+		var file := FileAccess.open(full_path, FileAccess.WRITE)
+		if file:
+			file.store_buffer(buffer)
+			file.flush()
+			file.close()
 	reader.close()
-	DirAccess.remove_absolute("user://Package.zip")
+	
+	
+	if OS.get_name() == "macOS":
+		var app_bundle_name = version_file_names.get(selected_link) + ".app"
+		var binary_name = version_file_names.get(selected_link)
+		
+		var app_path_absolute = ProjectSettings.globalize_path("user://" + app_bundle_name)
+		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
+		
+		var chmod_err = OS.execute("chmod", ["+x", binary_path_absolute])
+		if chmod_err != 0:
+			print("Warning: chmod failed with code ", chmod_err)
+		
+		var xattr_err = OS.execute("xattr", ["-dr", "com.apple.quarantine", app_path_absolute])
+		if xattr_err != 0:
+			print("Warning: xattr failed with code ", xattr_err)
+	
+	DirAccess.remove_absolute("user://Package.zip") 
+	
+	var absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".exe")
+	match Main.operating_system:
+		"Windows": 
+			absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".exe")
+			OS.shell_open(absolute_path)
+		"macOS": 
+			absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".app")
+			OS.shell_open("file://" + absolute_path)
 		
 		
 		

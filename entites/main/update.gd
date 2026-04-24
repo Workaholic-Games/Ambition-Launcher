@@ -6,8 +6,6 @@ extends Panel
 
 
 func _ready():
-	$"../Intro".queue_free()
-	
 	if Main.launcher_data.just_installed == false:
 		$".".visible = true
 		
@@ -16,10 +14,8 @@ func _ready():
 			OS.shell_open(absolute_path)
 			Main.launcher_data.just_installed = true
 			Main.save_data()
-			print("ATTEMPTED TO OPEN - ALREADY HAVE INSTALLER")
 			get_tree().quit()
 		else:
-			print("INSTALLING")
 			$"../HTTPRequest".download_file = "user://Package.zip"
 			match Main.operating_system:
 				"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
@@ -27,7 +23,6 @@ func _ready():
 				"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
 				
 				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-	
 	else:
 		Main.launcher_data.just_installed = false
 		$"../Intro".play()
@@ -40,7 +35,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	var err = reader.open("user://Package.zip")
 	
 	if err != OK:
-		print("Failed to open ZIP: ", err)
 		return
 	var files := reader.get_files()
 	
@@ -49,7 +43,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			continue
 		
 		var full_path = "user://".path_join(file_path)
-		print(full_path)
 		if file_path.ends_with("/"):
 			DirAccess.make_dir_recursive_absolute(full_path)
 			continue
@@ -95,12 +88,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		"macOS": 
 			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")
 			OS.shell_open("file://" + absolute_path)
-		"Linux": 
-			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://Ambition_Installer_Linux")])
-			OS.create_process(ProjectSettings.globalize_path("user://Ambition_Installer_Linux"), [])
-	
-	if !FileAccess.file_exists("user://Ambition_Installer_Linux"):
-		print("NO LINUX INSTALLER")
 	
 	Main.launcher_data.just_installed = true
 	Main.save_data()

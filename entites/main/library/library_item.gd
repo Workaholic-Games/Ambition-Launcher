@@ -20,7 +20,6 @@ func _ready() -> void:
 	match Main.operating_system:
 		"Windows": os_name = "_Windows"
 		"macOS": os_name = "_Mac"
-		"Linux": os_name = "_Linux"
 	
 	check()
 
@@ -33,11 +32,8 @@ func _on_pressed() -> void:
 			var absolute_path = ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
 			OS.shell_open(absolute_path)
 		"macOS":
-			OS.execute("xattr", ["-d", "com.apple.quarantine", ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
-			OS.create_process("open", [ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
-		"Linux":
-			OS.execute("chmod", ["+x", ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)])
-			OS.create_process(ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type), [])
+			var absolute_path = ProjectSettings.globalize_path(game_file_names.get(selected_version) + ".app")
+			OS.shell_open("file://" + absolute_path)
 	
 	
 	
@@ -77,3 +73,6 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	$Hover.visible = false
 	$"Game Label".visible = false
+
+
+# get rid of the stoopid Main.file_type just putting ".exe" would be more readable
