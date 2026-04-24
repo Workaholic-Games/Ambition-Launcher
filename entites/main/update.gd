@@ -65,6 +65,30 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			file.flush()
 			file.close()
 	reader.close()
+	
+	
+	if OS.get_name() == "macOS":
+		# 1. Define the internal binary path inside the .app bundle
+		# Example: "YourApp.app/Contents/MacOS/YourApp"
+		var app_bundle_name = "YourNewApp.app" 
+		var binary_name = "YourBinaryName" # The actual name of the exe file
+		
+		var app_path_absolute = ProjectSettings.globalize_path("user://" + app_bundle_name)
+		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
+		
+		# Fix A: Restore Executable Permissions
+		# Without this, macOS thinks the app is a text folder
+		var chmod_err = OS.execute("chmod", ["+x", binary_path_absolute])
+		if chmod_err != 0:
+			print("Warning: chmod failed with code ", chmod_err)
+		
+		# Fix B: Remove Quarantine Flag
+		# This stops the "App is damaged" or "Can't be opened" popup
+		var xattr_err = OS.execute("xattr", ["-dr", "com.apple.quarantine", app_path_absolute])
+		if xattr_err != 0:
+			print("Warning: xattr failed with code ", xattr_err)
+	
+	
 	DirAccess.remove_absolute("user://Package.zip") 
 	
 		
