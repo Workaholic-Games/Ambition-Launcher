@@ -17,6 +17,7 @@ func _ready():
 	load_data()
 
 
+
 # Save Data related
 func load_data():
 	if (ResourceLoader.exists(file_path + file_name)):

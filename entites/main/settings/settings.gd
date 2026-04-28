@@ -72,6 +72,7 @@ func _on_window_item_selected(index: int) -> void:
 			Main.launcher_data.window_mode = 3
 
 
+
 # Updating setting if you click F11 and such
 func _process(_delta: float) -> void:
 	var mode = DisplayServer.window_get_mode()

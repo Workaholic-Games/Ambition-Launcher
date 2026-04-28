@@ -10,8 +10,11 @@ extends Control
 @export var version_links_mac : PackedStringArray
 @export var version_links_linux : PackedStringArray
 
-## The actual file name for the application
-@export var version_file_names : PackedStringArray
+## The .exe .app or .x86_64 file names to be opened by the launcher
+@export var version_file_names_windows : PackedStringArray
+@export var version_file_names_mac : PackedStringArray
+@export var version_file_names_linux : PackedStringArray
+
 @export var cover : Texture
 var os_name : String = "Windows"
 var selected_link : int = 0
@@ -19,15 +22,10 @@ var can_download : bool = true
 
 
 
-
-
 func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
 	$Thumbnail.texture = cover
-	
-	
-	
 	match Main.operating_system:
 		"Windows": 
 			$"Versions Windows".visible = true
@@ -64,7 +62,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	var err = reader.open("user://Package.zip")
 	
 	if err != OK:
-		print("Failed to open ZIP: ", err)
 		return
 	var files := reader.get_files()
 	
@@ -89,11 +86,10 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			file.close()
 	reader.close()
 	
-	print(version_file_names.get(selected_link))
 	
 	if OS.get_name() == "macOS":
-		var app_bundle_name = version_file_names.get(selected_link) + ".app"
-		var binary_name = version_file_names.get(selected_link)
+		var app_bundle_name = "Ambition Installer.app" 
+		var binary_name = "Ambition Installer"
 		
 		var app_path_absolute = ProjectSettings.globalize_path("user://" + app_bundle_name)
 		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
@@ -108,21 +104,19 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	DirAccess.remove_absolute("user://Package.zip") 
 	
-	var absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".exe")
+	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 	match Main.operating_system:
 		"Windows": 
-			absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".exe")
+			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
-			absolute_path = ProjectSettings.globalize_path(version_file_names.get(selected_link) + ".app")
+			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")
 			OS.shell_open("file://" + absolute_path)
-		
-		
-		
+	
 	$ProgressBar.visible = false
 	can_download = true
 
- 
+
 
 func _on_back_pressed() -> void:
 	visible = false
@@ -137,7 +131,6 @@ func _physics_process(_delta: float) -> void:
 		var total = $HTTPRequest.get_body_size()
 		if total > 0:
 			$ProgressBar.value = (float(downloaded) / total) * 100
-
 
 
 

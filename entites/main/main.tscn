@@ -13,13 +13,14 @@
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://entites/main/library/library.gd" id="8_gjwx3"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://entites/main/library/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
+[ext_resource type="Texture2D" uid="uid://0romx66k1h1p" path="res://game_assets/covers/cover.png" id="15_12ljg"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="16_lbrtn"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
 [ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
+[ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
@@ -31,7 +32,6 @@
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
-[ext_resource type="Texture2D" uid="uid://cbl1ts6fjeqf8" path="res://community/Untitled226_20251127183012.png" id="24_12ljg"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
@@ -54,6 +54,14 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_12ljg"]
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_12ljg"]
+width = 60
+height = 90
+noise = SubResource("FastNoiseLite_12ljg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
 atlas = ExtResource("32_6vgeh")
@@ -626,7 +634,7 @@ text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=1754228612 node_paths=PackedStringArray("page")]
+[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=1754228612]
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -634,7 +642,6 @@ texture_normal = ExtResource("5_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/FNAB2")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" unique_id=1500190869]
 visible = false
@@ -653,25 +660,6 @@ theme_type_variation = &"Hover_Label"
 text = "Five Night's at Bulba's 2"
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="The Vegetable Game (Regrown)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=364897010]
-visible = false
-custom_minimum_size = Vector2(523, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=155710770]
-layout_mode = 2
-text = "The Vegetable Game('s)"
-horizontal_alignment = 1
-
-[node name="Line" type="Panel" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=104340366]
-custom_minimum_size = Vector2(523, 4)
-layout_mode = 2
-theme_type_variation = &"Line"
-
-[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/The Vegetable Game (Regrown)" unique_id=2109483381]
-layout_mode = 2
-alignment = 1
 
 [node name="Other (Bitcoin Miner)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=443762424]
 custom_minimum_size = Vector2(523, 100)
@@ -754,22 +742,22 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932]
+[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("7_1dv2i")
+texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
 
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" unique_id=1251014016]
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" unique_id=101408882]
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=101408882]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -777,8 +765,67 @@ offset_top = 141.0
 offset_right = 120.0
 offset_bottom = 180.0
 theme_type_variation = &"Hover_Label"
-text = "Bitcoin Miner"
+theme_override_font_sizes/font_size = 12
+text = "Gavin's Fantastically
+Fun Adventure"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="The Vegetable Game" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=56088225]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("15_12ljg")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" unique_id=420188677]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" unique_id=1239195966]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+text = "The Vegetable Game"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Whatever" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1209658610]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_12ljg")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/Whatever" unique_id=926007471]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/Whatever" unique_id=449110319]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+theme_override_font_sizes/font_size = 12
+text = "Whatever The Heck Sawyer's Making"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
@@ -810,23 +857,7 @@ version_names = PackedStringArray("Ambition Edition", "DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip")
 version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux demo")
-version_file_names = PackedStringArray("FNAB1_Ambition_Edition", "FNAB1_DEMO")
 cover = ExtResource("15_x7gk6")
-
-[node name="FNAB2" parent="Store Pages" unique_id=425717294 instance=ExtResource("12_5enwe")]
-visible = false
-layout_mode = 0
-offset_left = 112.112114
-offset_right = 112.112114
-description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
-rating = "Rated: T for Teen
-Difficulty: Hard"
-version_names = PackedStringArray("Ambition Edition")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip")
-version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Linux.zip")
-version_file_names = PackedStringArray("FNAB2_Ambition_Edition")
-cover = ExtResource("16_lbrtn")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -890,9 +921,9 @@ horizontal_alignment = 1
 
 [node name="Jonathan\'s Pick" type="Label" parent="Community/Featured/Best Artwork" unique_id=1890620615]
 layout_mode = 0
-offset_left = 192.0
+offset_left = 176.0
 offset_top = 15.0
-offset_right = 320.0
+offset_right = 304.0
 offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
@@ -912,7 +943,7 @@ offset_left = 32.0
 offset_top = 32.0
 offset_right = 128.0
 offset_bottom = 128.0
-texture = ExtResource("24_12ljg")
+texture = ExtResource("19_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Bulba Art" unique_id=1850589535]
@@ -922,14 +953,14 @@ offset_top = 96.0
 offset_right = 124.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 12
-text = "I drew the peas - KitKat"
+text = "Title - KitKat"
 horizontal_alignment = 1
 
 [node name="Jonathan Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=439289867]
 layout_mode = 0
-offset_left = 208.0
+offset_left = 192.0
 offset_top = 32.0
-offset_right = 304.0
+offset_right = 288.0
 offset_bottom = 128.0
 texture = ExtResource("23_12ljg")
 expand_mode = 1
@@ -984,9 +1015,9 @@ horizontal_alignment = 1
 
 [node name="Jonathan\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=391824318]
 layout_mode = 0
-offset_left = 192.0
+offset_left = 176.0
 offset_top = 15.0
-offset_right = 320.0
+offset_right = 304.0
 offset_bottom = 33.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
@@ -1021,9 +1052,9 @@ horizontal_alignment = 1
 
 [node name="Jonathan Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=1313359070]
 layout_mode = 0
-offset_left = 208.0
+offset_left = 192.0
 offset_top = 32.0
-offset_right = 304.0
+offset_right = 288.0
 offset_bottom = 128.0
 texture = ExtResource("18_13033")
 expand_mode = 1
@@ -1426,6 +1457,7 @@ theme_type_variation = &"Close_Button"
 text = "Back"
 
 [node name="Settings" type="Control" parent="." unique_id=841640467]
+visible = false
 anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
@@ -2028,9 +2060,15 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" to="Store/Area/GridContainer/Coming Soon/Games/Bitcoin Miner" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
 [connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
