@@ -1,10 +1,14 @@
 extends TextureButton
 @export var game_name : String
 @export var game_file_display_names : PackedStringArray
-@export var game_file_names : PackedStringArray
+@export var version_file_names_windows : PackedStringArray
+@export var version_file_names_mac : PackedStringArray
+@export var version_file_names_linux : PackedStringArray
 var selected_version : int = 0
-var os_name : String = "_Windows"
 
+
+# make only versions you have installed appear
+# add checking if theres a new version of whatever app and a respective install button
 
 
 func _ready() -> void:
@@ -17,24 +21,20 @@ func _ready() -> void:
 	for version: String in game_file_display_names:
 		$Versions.add_item(version)
 	
-	match Main.operating_system:
-		"Windows": os_name = "_Windows"
-		"macOS": os_name = "_Mac"
-	
 	check()
 
 
 
 # Boot up version of game
 func _on_pressed() -> void:
+	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 	match Main.operating_system:
 		"Windows":
-			var absolute_path = ProjectSettings.globalize_path("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
+			absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_windows.get(selected_version) + ".exe")
 			OS.shell_open(absolute_path)
 		"macOS":
-			var absolute_path = ProjectSettings.globalize_path(game_file_names.get(selected_version) + ".app")
-			OS.shell_open("file://" + absolute_path)
-	
+			absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_mac.get(selected_version) + ".app")
+			OS.shell_open(absolute_path)
 	
 	
 	Main.launcher_data.last_played = self.name
@@ -44,20 +44,32 @@ func _on_pressed() -> void:
 
 # Uninstall Version of game
 func _on_uninstall_pressed() -> void:
-	DirAccess.remove_absolute("user://" + game_file_names.get(selected_version) + os_name + Main.file_type)
+	match Main.operating_system:
+		"Windows":
+			DirAccess.remove_absolute("user://" + version_file_names_windows.get(selected_version) + ".exe")
+		"macOS":
+			DirAccess.remove_absolute("user://" + version_file_names_windows.get(selected_version) + ".app")
 	check()
 
 
 # Check if any versions of game exist
 func check():
 	visible = false
-	for i in $Versions.item_count:
-		if FileAccess.file_exists("user://" + game_file_names.get(i) + os_name + Main.file_type):
-			visible = true
-			$Versions.select(i)
-			$Versions.emit_signal("item_selected", i)
-			break
-
+	match Main.operating_system:
+		"Windows":
+			for i in $Versions.item_count:
+				if FileAccess.file_exists("user://" + version_file_names_windows.get(i) + ".exe"):
+					visible = true
+					$Versions.select(i)
+					$Versions.emit_signal("item_selected", i)
+					break
+		"macOS":
+			for i in $Versions.item_count:
+				if FileAccess.file_exists("user://" + version_file_names_mac.get(i) + ".app"):
+					visible = true
+					$Versions.select(i)
+					$Versions.emit_signal("item_selected", i)
+					break
 
 
 # Version Selector

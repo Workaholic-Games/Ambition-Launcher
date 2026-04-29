@@ -88,8 +88,8 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	
 	if OS.get_name() == "macOS":
-		var app_bundle_name = "Ambition Installer.app" 
-		var binary_name = "Ambition Installer"
+		var app_bundle_name = version_file_names_mac.get(selected_link) + ".app"
+		var binary_name = version_file_names_mac.get(selected_link)
 		
 		var app_path_absolute = ProjectSettings.globalize_path("user://" + app_bundle_name)
 		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
@@ -104,14 +104,14 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	DirAccess.remove_absolute("user://Package.zip") 
 	
-	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
-	match Main.operating_system:
-		"Windows": 
-			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
-			OS.shell_open(absolute_path)
-		"macOS": 
-			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")
-			OS.shell_open("file://" + absolute_path)
+	#var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
+	#match Main.operating_system:
+		#"Windows": 
+			#absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_windows.get(selected_link) + ".exe")
+			#OS.shell_open(absolute_path)
+		#"macOS": 
+			#absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_mac.get(selected_link) + ".app")
+			#OS.shell_open("file://" + absolute_path)
 	
 	$ProgressBar.visible = false
 	can_download = true

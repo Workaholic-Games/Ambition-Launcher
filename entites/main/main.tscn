@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://entites/main/library/library.gd" id="8_gjwx3"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://entites/main/library/library_item.tscn" id="9_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://jaop0enpo2k4" path="res://game_assets/covers/placeholder_cover.png" id="10_iwt88"]
+[ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://entites/main/store/sparkle.png" id="11_rnd3n"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://0romx66k1h1p" path="res://game_assets/covers/cover.png" id="15_12ljg"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
@@ -55,13 +57,14 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_12ljg"]
-frequency = 1.0
+[sub_resource type="Curve" id="Curve_iwt88"]
+_data = [Vector2(0, 0.7), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+metadata/_snap_enabled = true
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_12ljg"]
-width = 60
-height = 90
-noise = SubResource("FastNoiseLite_12ljg")
+[sub_resource type="Gradient" id="Gradient_ovdq3"]
+offsets = PackedFloat32Array(0, 0.0701107)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
 atlas = ExtResource("32_6vgeh")
@@ -540,14 +543,9 @@ columns = 4
 layout_mode = 2
 game_name = "Five Night's at Bulba's"
 game_file_display_names = PackedStringArray("Ambition Edition", "DEMO")
-game_file_names = PackedStringArray("FNAB1_Ambition_Edition", "FNAB1_DEMO")
-
-[node name="FNAB2" parent="Library/Area/GridContainer" unique_id=634759457 instance=ExtResource("9_qsgxr")]
-layout_mode = 2
-texture_normal = ExtResource("5_xd8mv")
-game_name = "Five Night's at Bulba's 2"
-game_file_display_names = PackedStringArray("Ambition Edition")
-game_file_names = PackedStringArray("FNAB2_Ambition_Edition")
+version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "FNAB1_Demo_Mac")
+version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
@@ -561,7 +559,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -579,6 +576,165 @@ vertical_scroll_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="Store/Area" unique_id=65950568]
 layout_mode = 2
+
+[node name="Featured (New)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=539921268]
+custom_minimum_size = Vector2(523, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Store/Area/GridContainer/Featured (New)" unique_id=1596539439]
+layout_mode = 2
+text = "Featured Games (New!)"
+horizontal_alignment = 1
+
+[node name="Line" type="Panel" parent="Store/Area/GridContainer/Featured (New)" unique_id=337541973]
+custom_minimum_size = Vector2(523, 4)
+layout_mode = 2
+theme_type_variation = &"Line"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Featured (New)/Line" unique_id=1467045413]
+position = Vector2(2, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Featured (New)/Line/StaticBody2D" unique_id=1165588495]
+position = Vector2(262, 7)
+shape = SubResource("RectangleShape2D_qp5pd")
+one_way_collision = true
+one_way_collision_margin = 19.0
+
+[node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Featured (New)" unique_id=302688164]
+layout_mode = 2
+alignment = 1
+
+[node name="Placeholder" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=418856906]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("10_iwt88")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=1735752461]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=1998218674]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+theme_override_font_sizes/font_size = 16
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=306306872]
+position = Vector2(60, 90)
+texture = ExtResource("11_rnd3n")
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(60, 90)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_iwt88")
+color = Color(1, 1, 0.75, 1)
+color_initial_ramp = SubResource("Gradient_ovdq3")
+
+[node name="Placeholder2" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1468752612]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("10_iwt88")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1944443117]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1812123914]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+theme_override_font_sizes/font_size = 16
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1139856737]
+position = Vector2(60, 90)
+texture = ExtResource("11_rnd3n")
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(60, 90)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_iwt88")
+color = Color(1, 0.75, 0.75, 1)
+color_initial_ramp = SubResource("Gradient_ovdq3")
+
+[node name="Placeholder3" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1027454196]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("10_iwt88")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=180475025]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=773538641]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+theme_override_font_sizes/font_size = 16
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=206073337]
+position = Vector2(60, 90)
+texture = ExtResource("11_rnd3n")
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(60, 90)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_iwt88")
+color = Color(0.75, 1, 0.92083335, 1)
+color_initial_ramp = SubResource("Gradient_ovdq3")
 
 [node name="Five Nights at Bulbas (FNAB, FNAB2)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
@@ -803,7 +959,7 @@ autowrap_mode = 3
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = SubResource("NoiseTexture2D_12ljg")
+texture_normal = ExtResource("10_iwt88")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
@@ -855,8 +1011,11 @@ rating = "Rated: T for Teen
 Difficulty: Normal"
 version_names = PackedStringArray("Ambition Edition", "DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip")
-version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux demo")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Mac.zip")
+version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux :(")
+version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "FNAB1_Demo_Mac")
+version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 cover = ExtResource("15_x7gk6")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
@@ -1816,6 +1975,7 @@ offset_right = 640.0
 offset_bottom = 360.0
 stream = ExtResource("20_gjwx3")
 expand = true
+metadata/_edit_lock_ = true
 
 [node name="Intro Audio" type="AudioStreamPlayer" parent="Intro" unique_id=912610543]
 stream = ExtResource("21_qsgxr")
@@ -2051,6 +2211,15 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_pressed"]
