@@ -544,7 +544,7 @@ layout_mode = 2
 game_name = "Five Night's at Bulba's"
 game_file_display_names = PackedStringArray("Ambition Edition", "DEMO")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "FNAB1_Demo_Mac")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
@@ -1011,10 +1011,10 @@ rating = "Rated: T for Teen
 Difficulty: Normal"
 version_names = PackedStringArray("Ambition Edition", "DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Mac.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.DEMO.Mac.zip")
 version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux :(")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "FNAB1_Demo_Mac")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 cover = ExtResource("15_x7gk6")
 

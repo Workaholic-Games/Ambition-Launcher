@@ -7,7 +7,6 @@ extends Panel
 
 func _ready():
 	$"../Intro".queue_free()
-	pass
 	if Main.launcher_data.just_installed == false:
 		$".".visible = true
 		

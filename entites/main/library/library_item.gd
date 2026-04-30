@@ -48,7 +48,7 @@ func _on_uninstall_pressed() -> void:
 		"Windows":
 			DirAccess.remove_absolute("user://" + version_file_names_windows.get(selected_version) + ".exe")
 		"macOS":
-			DirAccess.remove_absolute("user://" + version_file_names_windows.get(selected_version) + ".app")
+			DirAccess.remove_absolute("user://" + version_file_names_mac.get(selected_version) + ".app")
 	check()
 
 
