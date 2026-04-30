@@ -65,12 +65,14 @@ func check():
 					break
 		"macOS":
 			for i in $Versions.item_count:
-				var path = ProjectSettings.globalize_path("user://" + version_file_names_mac.get(i) + ".app")
-				if FileAccess.file_exists(path):
+				if DirAccess.dir_exists_absolute("user://" + version_file_names_mac.get(i) + ".app"):
 					visible = true
 					$Versions.select(i)
 					$Versions.emit_signal("item_selected", i)
 					break
+
+
+# demo is busted yay
 
 
 # Version Selector
