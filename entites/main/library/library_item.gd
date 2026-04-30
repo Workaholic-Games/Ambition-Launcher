@@ -36,7 +36,6 @@ func _on_pressed() -> void:
 			absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_mac.get(selected_version) + ".app")
 			OS.shell_open(absolute_path)
 	
-	
 	Main.launcher_data.last_played = self.name
 	get_parent().move_child(self, 0)
 
@@ -48,7 +47,6 @@ func _on_uninstall_pressed() -> void:
 	var list = version_file_names_windows if is_win else version_file_names_mac
 	var ext = ".exe" if is_win else ".app"
 	
-	# Ensure the index is valid before trying to access the array
 	if selected_version >= 0 and selected_version < list.size():
 		var file_name = list[selected_version] + ext
 		var full_path = ProjectSettings.globalize_path("user://" + file_name)
