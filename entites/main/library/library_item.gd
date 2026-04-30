@@ -44,11 +44,16 @@ func _on_pressed() -> void:
 
 # Uninstall Version of game
 func _on_uninstall_pressed() -> void:
-	match Main.operating_system:
-		"Windows":
-			DirAccess.remove_absolute("user://" + version_file_names_windows.get(selected_version) + ".exe")
-		"macOS":
-			DirAccess.remove_absolute("user://" + version_file_names_mac.get(selected_version) + ".app")
+	var is_win = Main.operating_system == "Windows"
+	var list = version_file_names_windows if is_win else version_file_names_mac
+	var ext = ".exe" if is_win else ".app"
+	
+	# Ensure the index is valid before trying to access the array
+	if selected_version >= 0 and selected_version < list.size():
+		var file_name = list[selected_version] + ext
+		var full_path = ProjectSettings.globalize_path("user://" + file_name)
+		OS.move_to_trash(full_path)
+	
 	check()
 
 

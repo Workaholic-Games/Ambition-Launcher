@@ -7,27 +7,27 @@ extends Panel
 
 func _ready():
 	$"../Intro".queue_free()
-	if Main.launcher_data.just_installed == false:
-		$".".visible = true
-		
-		if FileAccess.file_exists("user://installer" + Main.file_type):
-			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
-			OS.shell_open(absolute_path)
-			Main.launcher_data.just_installed = true
-			Main.save_data()
-			get_tree().quit()
-		else:
-			$"../HTTPRequest".download_file = "user://Package.zip"
-			match Main.operating_system:
-				"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
-				
-				"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
-				
-				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-	else:
-		Main.launcher_data.just_installed = false
-		$"../Intro".play()
-		$"../Intro/Intro Audio".play()
+	#if Main.launcher_data.just_installed == false:
+		#$".".visible = true
+		#
+		#if FileAccess.file_exists("user://installer" + Main.file_type):
+			#var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
+			#OS.shell_open(absolute_path)
+			#Main.launcher_data.just_installed = true
+			#Main.save_data()
+			#get_tree().quit()
+		#else:
+			#$"../HTTPRequest".download_file = "user://Package.zip"
+			#match Main.operating_system:
+				#"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
+				#
+				#"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
+				#
+				#"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
+	#else:
+		#Main.launcher_data.just_installed = false
+		#$"../Intro".play()
+		#$"../Intro/Intro Audio".play()
 
 
 
