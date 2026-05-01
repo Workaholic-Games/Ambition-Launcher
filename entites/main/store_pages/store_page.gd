@@ -44,6 +44,7 @@ func _on_versions_item_selected(index: int) -> void:
 
 
 func _on_install_pressed() -> void:
+	print("Install")
 	if can_download == true and $Install.text == "Install":
 		$HTTPRequest.download_file = "user://Package.zip"
 		match Main.operating_system:
@@ -58,10 +59,12 @@ func _on_install_pressed() -> void:
 
 # Download Complete code
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	print("https complete")
 	var reader := ZIPReader.new()
 	var err = reader.open("user://Package.zip")
 	
 	if err != OK:
+		print("err != ok")
 		return
 	var files := reader.get_files()
 	

@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -898,7 +898,7 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932]
+[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -906,6 +906,7 @@ texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/Scaryhead")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
 visible = false
@@ -1001,7 +1002,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.999, 1)
 
-[node name="FNAB1" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
+[node name="Scaryhead" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
+layout_mode = 0
+description = "demo"
+rating = "unrated"
+version_names = PackedStringArray("DEMO")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
+version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
+
+[node name="FNAB1" parent="Store Pages" unique_id=1824735666 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112114
