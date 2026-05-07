@@ -7,6 +7,7 @@ extends Panel
 
 func _ready():
 	$"../Intro".queue_free()
+	DisplayServer.window_set_min_size(Vector2(640, 360))
 	#if Main.launcher_data.just_installed == false:
 		#$".".visible = true
 		#
