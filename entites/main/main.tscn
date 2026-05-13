@@ -1307,7 +1307,6 @@ offset_bottom = -0.39284515
 theme_type_variation = &"Line"
 
 [node name="Avatar" type="Sprite2D" parent="Developers/Bulba/Portrait" unique_id=1028126795]
-texture_filter = 2
 position = Vector2(56.196426, 56.392838)
 scale = Vector2(0.18815771, 0.18815768)
 texture = ExtResource("20_qsgxr")
