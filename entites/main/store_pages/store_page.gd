@@ -19,6 +19,7 @@ extends Control
 var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
+var folder_path : String = "user://Test"
 
 
 
@@ -45,8 +46,13 @@ func _on_versions_item_selected(index: int) -> void:
 
 func _on_install_pressed() -> void:
 	print("Install")
+	
+	if not DirAccess.dir_exists_absolute(folder_path):
+		var err = DirAccess.make_dir_absolute(folder_path)
+		if err == OK:
+			pass
 	if can_download == true and $Install.text == "Install":
-		$HTTPRequest.download_file = "user://Package.zip"
+		$HTTPRequest.download_file = folder_path + "//Package.zip"
 		match Main.operating_system:
 			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
 			"macOS": $HTTPRequest.request(version_links_mac.get(selected_link))
@@ -61,7 +67,7 @@ func _on_install_pressed() -> void:
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	print("https complete")
 	var reader := ZIPReader.new()
-	var err = reader.open("user://Package.zip")
+	var err = reader.open(folder_path + "//Package.zip")
 	
 	if err != OK:
 		print("err != ok")
