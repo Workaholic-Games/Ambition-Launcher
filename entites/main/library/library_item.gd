@@ -68,6 +68,8 @@ func check():
 					$Versions.select(i)
 					$Versions.emit_signal("item_selected", i)
 					break
+				else:
+					DirAccess.remove_absolute(folder_path) 
 		"macOS":
 			for i in $Versions.item_count:
 				if DirAccess.dir_exists_absolute(folder_path + "//" + version_file_names_mac.get(i) + ".app"):
@@ -75,6 +77,8 @@ func check():
 					$Versions.select(i)
 					$Versions.emit_signal("item_selected", i)
 					break
+				else:
+					DirAccess.remove_absolute(folder_path) 
 
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
