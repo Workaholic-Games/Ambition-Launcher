@@ -1,11 +1,13 @@
 extends TextureButton
+
 @export var game_name : String
 @export var game_file_display_names : PackedStringArray
 @export var version_file_names_windows : PackedStringArray
 @export var version_file_names_mac : PackedStringArray
 @export var version_file_names_linux : PackedStringArray
-var selected_version : int = 0
 @export var folder_path : String = "user://Test"
+
+var selected_version : int = 0
 
 # make only versions you have installed appear
 # add checking if theres a new version of whatever app and a respective install button
