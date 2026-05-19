@@ -76,10 +76,6 @@ func check():
 					$Versions.emit_signal("item_selected", i)
 					break
 
-
-# demo is busted yay
-
-
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
 	selected_version = index
