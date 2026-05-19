@@ -1028,6 +1028,7 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 cover = ExtResource("15_x7gk6")
+folder_path = "user://FNAB"
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false

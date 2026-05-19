@@ -19,7 +19,7 @@ extends Control
 var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
-var folder_path : String = "user://Test"
+@export var folder_path : String = "user://Test//"
 
 
 
@@ -78,7 +78,8 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		if file_path.begins_with("__MACOSX") or file_path.get_file().begins_with("._"):
 			continue
 		
-		var full_path = "user://".path_join(file_path)
+		var full_path = folder_path.path_join(file_path)
+		print(full_path)
 		if file_path.ends_with("/"):
 			DirAccess.make_dir_recursive_absolute(full_path)
 			continue
@@ -100,8 +101,13 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		var app_bundle_name = version_file_names_mac.get(selected_link) + ".app"
 		var binary_name = version_file_names_mac.get(selected_link)
 		
-		var app_path_absolute = ProjectSettings.globalize_path("user://" + app_bundle_name)
+		var app_path_absolute = ProjectSettings.globalize_path(folder_path + "//" + app_bundle_name)
 		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
+		
+		print("app bundle: " + app_bundle_name)
+		print("binary name: " + binary_name)
+		print("app path: " + app_path_absolute)
+		print("binary path: " + binary_path_absolute)
 		
 		var chmod_err = OS.execute("chmod", ["+x", binary_path_absolute])
 		if chmod_err != 0:
@@ -111,7 +117,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		if xattr_err != 0:
 			print("Warning: xattr failed with code ", xattr_err)
 	
-	DirAccess.remove_absolute("user://Package.zip") 
+	DirAccess.remove_absolute(folder_path + "//Package.zip") 
 	
 	#var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
 	#match Main.operating_system:
