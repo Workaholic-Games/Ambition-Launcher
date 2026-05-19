@@ -5,7 +5,7 @@ extends TextureButton
 @export var version_file_names_mac : PackedStringArray
 @export var version_file_names_linux : PackedStringArray
 var selected_version : int = 0
-
+@export var folder_path : String = "user://Test"
 
 # make only versions you have installed appear
 # add checking if theres a new version of whatever app and a respective install button
@@ -27,13 +27,13 @@ func _ready() -> void:
 
 # Boot up version of game
 func _on_pressed() -> void:
-	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
+	var absolute_path = ProjectSettings.globalize_path(folder_path + "//Ambition_Installer_Windows.exe")
 	match Main.operating_system:
 		"Windows":
-			absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_windows.get(selected_version) + ".exe")
+			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_windows.get(selected_version) + ".exe")
 			OS.shell_open(absolute_path)
 		"macOS":
-			absolute_path = ProjectSettings.globalize_path("user://" + version_file_names_mac.get(selected_version) + ".app")
+			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_mac.get(selected_version) + ".app")
 			OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
@@ -49,7 +49,7 @@ func _on_uninstall_pressed() -> void:
 	
 	if selected_version >= 0 and selected_version < list.size():
 		var file_name = list[selected_version] + ext
-		var full_path = ProjectSettings.globalize_path("user://" + file_name)
+		var full_path = ProjectSettings.globalize_path(folder_path + "//" + file_name)
 		OS.move_to_trash(full_path)
 	
 	check()
@@ -61,14 +61,14 @@ func check():
 	match Main.operating_system:
 		"Windows":
 			for i in $Versions.item_count:
-				if FileAccess.file_exists("user://" + version_file_names_windows.get(i) + ".exe"):
+				if FileAccess.file_exists(folder_path + "//" + version_file_names_windows.get(i) + ".exe"):
 					visible = true
 					$Versions.select(i)
 					$Versions.emit_signal("item_selected", i)
 					break
 		"macOS":
 			for i in $Versions.item_count:
-				if DirAccess.dir_exists_absolute("user://" + version_file_names_mac.get(i) + ".app"):
+				if DirAccess.dir_exists_absolute(folder_path + "//" + version_file_names_mac.get(i) + ".app"):
 					visible = true
 					$Versions.select(i)
 					$Versions.emit_signal("item_selected", i)

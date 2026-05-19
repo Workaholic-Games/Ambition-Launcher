@@ -19,7 +19,7 @@ extends Control
 var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
-@export var folder_path : String = "user://Test//"
+@export var folder_path : String = "user://Test"
 
 
 

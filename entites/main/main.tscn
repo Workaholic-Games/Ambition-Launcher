@@ -546,6 +546,7 @@ game_file_display_names = PackedStringArray("Ambition Edition", "DEMO")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
+folder_path = "user://FNAB"
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
