@@ -101,7 +101,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		var app_bundle_name = version_file_names_mac.get(selected_link) + ".app"
 		var binary_name = version_file_names_mac.get(selected_link)
 		
-		var app_path_absolute = ProjectSettings.globalize_path(folder_path + "//" + app_bundle_name)
+		var app_path_absolute = ProjectSettings.globalize_path(folder_path + "/" + app_bundle_name)
 		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
 		
 		print("app bundle: " + app_bundle_name)

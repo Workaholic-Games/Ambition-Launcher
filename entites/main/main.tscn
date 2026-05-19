@@ -548,6 +548,15 @@ version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Editi
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 folder_path = "user://FNAB"
 
+[node name="FNAB2" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
+layout_mode = 2
+game_name = "Five Night's at Bulba's 2"
+game_file_display_names = PackedStringArray("Ambition Edition", "DEMO")
+version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows", "No Windows")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2", "No Mac")
+version_file_names_linux = PackedStringArray("FNAB2_Ambition_Edition_Linux", "no linux :(")
+folder_path = "user://FNAB"
+
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
 offset_left = 192.0
@@ -791,7 +800,7 @@ text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=1754228612]
+[node name="FNAB2" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=1754228612 node_paths=PackedStringArray("page")]
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -799,6 +808,7 @@ texture_normal = ExtResource("5_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/FNAB2")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" unique_id=1500190869]
 visible = false
@@ -1045,7 +1055,7 @@ version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/A
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip", "no mac")
 version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Linux.zip", "no linux :(")
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows", "")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2 Ambition Edition", "")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2", "")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
 cover = ExtResource("15_x7gk6")
 folder_path = "user://FNAB"
