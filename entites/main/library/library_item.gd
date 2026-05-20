@@ -20,7 +20,6 @@ func _ready() -> void:
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
 		#get_parent().move_child(self, 0)
-		
 	check()
 
 # Boot up version of game
@@ -75,20 +74,21 @@ func check():
 	
 	for i in range(game_file_display_names.size()):
 		var is_installed = false
-	
+		
 		match Main.operating_system:
 			"Windows":
 				if i < version_file_names_windows.size():
-					var path =  folder_path + "//" + version_file_names_windows[i] + ".exe"
-					is_installed = FileAccess.file_exists(path)
-	
+					var path = folder_path + "//" + version_file_names_windows[i] + ".exe"
+					is_installed = DirAccess.dir_exists_absolute(path)
 			"macOS":
 				if i < version_file_names_mac.size():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
-					is_installed = FileAccess.file_exists(path)
+					is_installed = DirAccess.dir_exists_absolute(path)
+
 		if is_installed:
 			$Versions.add_item(game_file_display_names[i])
 			ui_to_back.append(i)
+			print(ui_to_back)
 		
 	if $Versions.item_count > 0:
 		visible = true
