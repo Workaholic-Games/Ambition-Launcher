@@ -30,6 +30,7 @@ func _ready() -> void:
 	match Main.operating_system:
 		"Windows": 
 			$"Versions Windows".visible = true
+			$"Versions Windows".add_item(version_names)
 			os_name = "_Windows"
 		"macOS": 
 			$"Versions Mac".visible = true
@@ -98,15 +99,24 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	reader.close()
 	
 	if OS.get_name() == "macOS":
+		
 		var app_bundle_name = version_file_names_mac.get(selected_link) + ".app"
 		var binary_name = version_file_names_mac.get(selected_link)
 		
 		var app_path_absolute = ProjectSettings.globalize_path(folder_path + "//" + app_bundle_name)
+		
+		if binary_name == "Five Nights At Bulbas 1.0":
+			binary_name = "Five Nights At Bulbas"
+		
 		var binary_path_absolute = app_path_absolute.path_join("Contents/MacOS").path_join(binary_name)
 		
 		var chmod_err = OS.execute("chmod", ["+x", binary_path_absolute])
 		if chmod_err != 0:
 			print("Warning: chmod failed with code ", chmod_err)
+			print(binary_path_absolute)
+			print(app_path_absolute)
+			print(binary_name)
+			print(app_bundle_name)
 		
 		var xattr_err = OS.execute("xattr", ["-dr", "com.apple.quarantine", app_path_absolute])
 		if xattr_err != 0:
