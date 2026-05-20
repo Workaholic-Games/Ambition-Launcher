@@ -7,7 +7,8 @@ extends TextureButton
 @export var version_file_names_linux : PackedStringArray
 @export var folder_path : String = "user://Test"
 
-var selected_version : int = 0
+var selected_version : int = -1
+var ui_to_back : Array[int] = []
 
 # make only versions you have installed appear
 # add checking if theres a new version of whatever app and a respective install button
@@ -19,23 +20,23 @@ func _ready() -> void:
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
 		#get_parent().move_child(self, 0)
-	
-	for version: String in game_file_display_names:
-		$Versions.add_item(version)
-	
+		
 	check()
-
-
 
 # Boot up version of game
 func _on_pressed() -> void:
+	if selected_version == -1 or ui_to_back.is_empty():
+		return
+	
+	var actual_index = ui_to_back[selected_version]
 	var absolute_path = ProjectSettings.globalize_path(folder_path + "//Ambition_Installer_Windows.exe")
+	
 	match Main.operating_system:
 		"Windows":
-			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_windows.get(selected_version) + ".exe")
+			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_windows[actual_index] + ".exe")
 			OS.shell_open(absolute_path)
 		"macOS":
-			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_mac.get(selected_version) + ".app")
+			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_mac[actual_index] + ".app")
 			OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
@@ -45,40 +46,57 @@ func _on_pressed() -> void:
 
 # Uninstall Version of game
 func _on_uninstall_pressed() -> void:
-	var is_win = Main.operating_system == "Windows"
-	var list = version_file_names_windows if is_win else version_file_names_mac
-	var ext = ".exe" if is_win else ".app"
-	
-	if selected_version >= 0 and selected_version < list.size():
-		var file_name = list[selected_version] + ext
-		var full_path = ProjectSettings.globalize_path(folder_path + "//" + file_name)
-		OS.move_to_trash(full_path)
-	
+	if selected_version == -1 or ui_to_back.is_empty():
+		return 
+			
+	var actual_index = ui_to_back[selected_version]
+	var full_path = ""
+		
+	match Main.operating_system:
+		"Windows":
+			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_windows[actual_index] + ".exe")
+			OS.move_to_trash(full_path)
+		"macOS":
+			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_mac[actual_index] + ".app")
+			OS.move_to_trash(full_path)
+		"Linux":
+			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_linux[actual_index])
+			OS.move_to_trash(full_path)
+				
 	check()
 
 
 # Check if any versions of game exist
 func check():
+	$Versions.clear()
 	visible = false
-	match Main.operating_system:
-		"Windows":
-			for i in $Versions.item_count:
-				if FileAccess.file_exists(folder_path + "//" + version_file_names_windows.get(i) + ".exe"):
-					visible = true
-					$Versions.select(i)
-					$Versions.emit_signal("item_selected", i)
-					break
-				else:
-					DirAccess.remove_absolute(folder_path) 
-		"macOS":
-			for i in $Versions.item_count:
-				if DirAccess.dir_exists_absolute(folder_path + "//" + version_file_names_mac.get(i) + ".app"):
-					visible = true
-					$Versions.select(i)
-					$Versions.emit_signal("item_selected", i)
-					break
-				else:
-					DirAccess.remove_absolute(folder_path) 
+	ui_to_back.clear()
+	selected_version = -1
+	
+	for i in range(game_file_display_names.size()):
+		var is_installed = false
+
+		match Main.operating_system:
+			"Windows":
+				if i < version_file_names_windows.size():
+					var path =  folder_path + "//" + version_file_names_windows[i] + ".exe"
+					is_installed = FileAccess.file_exists(path)
+
+			"macOS":
+				if i < version_file_names_mac.size():
+					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
+					is_installed = FileAccess.file_exists(path)
+		if is_installed:
+			$Versions.add_item(game_file_display_names[i])
+			ui_to_back.append(i)
+		
+	if $Versions.item_count > 0:
+		visible = true
+		$Versions.select(0)
+		_on_versions_item_selected(0)
+	else:
+		if DirAccess.dir_exists_absolute(folder_path):
+			DirAccess.remove_absolute(folder_path)
 
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
