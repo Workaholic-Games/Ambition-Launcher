@@ -9,8 +9,6 @@ var cursors: Dictionary = {
 	"Sun": load("res://entites/cursors/sad_sun.png"),
 }
 
-
-
 # Applying of settings on startup
 func _ready():
 	fix_option_button_ui()
@@ -53,8 +51,6 @@ func _ready():
 	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
 	$Cursor.select(Main.launcher_data.cursor)
 
-
-
 # Window settings
 func _on_window_item_selected(index: int) -> void:
 	match index:
@@ -71,8 +67,6 @@ func _on_window_item_selected(index: int) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 			Main.launcher_data.window_mode = 3
 
-
-
 # Updating setting if you click F11 and such
 func _process(_delta: float) -> void:
 	var mode = DisplayServer.window_get_mode()
@@ -86,25 +80,19 @@ func _process(_delta: float) -> void:
 		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN: 
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			Main.launcher_data.window_mode = 0
-		elif mode != DisplayServer.WINDOW_MODE_FULLSCREEN: 
+		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			Main.launcher_data.window_mode = 3
-
-
 
 # Move user to Startup Location
 func _on_startup_location_item_selected(index: int) -> void:
 	Main.launcher_data.start_page = index
-
-
 
 # Fixes the stupid option buttons not being rendered properly
 func fix_option_button_ui():
 	var option_buttons = get_tree().get_root().find_children("*", "OptionButton", true, false)
 	for button in option_buttons:
 		button.get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
-
-
 
 # Custom Cursor Stuff
 func _on_cursor_item_selected(index: int) -> void:

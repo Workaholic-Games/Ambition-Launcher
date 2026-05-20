@@ -612,7 +612,7 @@ theme_type_variation = &"Line"
 [node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Featured (New)/Line" unique_id=1467045413]
 position = Vector2(2, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Featured (New)/Line/StaticBody2D" unique_id=1165588495]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Featured (New)/Line/StaticBody2D" unique_id=1165588495 groups=["Collision"]]
 position = Vector2(262, 7)
 shape = SubResource("RectangleShape2D_qp5pd")
 one_way_collision = true
@@ -771,7 +771,7 @@ theme_type_variation = &"Line"
 [node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Line" unique_id=1281986240]
 position = Vector2(2, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Line/StaticBody2D" unique_id=803637203]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Line/StaticBody2D" unique_id=803637203 groups=["Collision"]]
 position = Vector2(262, 7)
 shape = SubResource("RectangleShape2D_qp5pd")
 one_way_collision = true
@@ -853,7 +853,7 @@ theme_type_variation = &"Line"
 [node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Line" unique_id=1224939753]
 position = Vector2(2, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D" unique_id=765547953]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Line/StaticBody2D" unique_id=765547953 groups=["Collision"]]
 position = Vector2(262, 7)
 shape = SubResource("RectangleShape2D_qp5pd")
 one_way_collision = true
@@ -907,7 +907,7 @@ theme_type_variation = &"Line"
 [node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Coming Soon/Line" unique_id=470246366]
 position = Vector2(2, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Coming Soon/Line/StaticBody2D" unique_id=1743159470]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Coming Soon/Line/StaticBody2D" unique_id=1743159470 groups=["Collision"]]
 position = Vector2(262, 7)
 shape = SubResource("RectangleShape2D_qp5pd")
 one_way_collision = true
@@ -1047,8 +1047,8 @@ version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Amb
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_Demo_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
-cover = ExtResource("15_x7gk6")
 folder_path = "user://FNAB"
+cover = ExtResource("15_x7gk6")
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1065,8 +1065,8 @@ version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Amb
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows", "")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2", "")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(")
-cover = ExtResource("15_x7gk6")
 folder_path = "user://FNAB"
+cover = ExtResource("15_x7gk6")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false

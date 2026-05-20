@@ -1,11 +1,9 @@
 @icon("res://editor_icons/quit.png")
 extends Panel
 
-
 func _on_yes_pressed() -> void:
 	Main.save_data()
 	get_tree().quit()
-
 
 func _on_no_pressed() -> void:
 	self.visible = false
@@ -28,4 +26,5 @@ func _on_no_pressed() -> void:
 		5: 
 			$"../Panel/Tabs/Buttons/Settings".emit_signal("pressed")
 			$"../Panel/Tabs/Buttons/Settings".set_pressed_no_signal(true)
+			
 	$"../Panel/Tabs/Buttons/Quit Launcher".set_pressed_no_signal(false)

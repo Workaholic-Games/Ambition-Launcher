@@ -49,6 +49,10 @@ folder_colors={
 "res://themes/": "purple"
 }
 
+[global_group]
+
+Collision=""
+
 [gui]
 
 theme/default_font_antialiasing=0

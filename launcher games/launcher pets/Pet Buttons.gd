@@ -1,8 +1,6 @@
 extends Node
 var pet_spawned : bool = false
 
-
-
 func button_pressed():
 	if pet_spawned == false:
 		$"../../CharacterBody2D".position = Vector2(355, 34)
@@ -18,7 +16,6 @@ func button_pressed():
 		$"../../WalkTimer".stop()
 		$"../../JumpTimer".stop()
 		pet_spawned = false
-
 
 func _on_slime_button_pressed() -> void:
 	button_pressed()

@@ -1,10 +1,6 @@
 @icon("res://editor_icons/update.png")
 extends Panel
 
-## remind bulba he has to update the installer stuff now that this support all three core OS's
-## issue with overlapping store pages again
-
-
 func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
@@ -29,8 +25,6 @@ func _ready():
 		#Main.launcher_data.just_installed = false
 		#$"../Intro".play()
 		#$"../Intro/Intro Audio".play()
-
-
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
@@ -61,7 +55,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 			file.close()
 	reader.close()
 	
-	
 	if OS.get_name() == "macOS":
 		var app_bundle_name = "Ambition Installer.app" 
 		var binary_name = "Ambition Installer"
@@ -91,8 +84,6 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	Main.launcher_data.just_installed = true
 	Main.save_data()
 	get_tree().quit()
-
-
 
 func _on_intro_finished() -> void:
 	$"../Intro".queue_free()

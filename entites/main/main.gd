@@ -5,8 +5,6 @@ var launcher_data = data.new()
 var operating_system : String = OS.get_name()
 var file_type : String = ".exe"
 
-
-
 func _ready():
 	match operating_system:
 		"Windows": file_type = ".exe"
@@ -16,8 +14,6 @@ func _ready():
 	DirAccess.make_dir_absolute(file_path)
 	load_data()
 
-
-
 # Save Data related
 func load_data():
 	if (ResourceLoader.exists(file_path + file_name)):
@@ -25,7 +21,6 @@ func load_data():
 
 func save_data():
 	ResourceSaver.save(launcher_data, file_path + file_name)
-
 
 # Save game when you click X and I believe Alt-F4
 func _exit_tree() -> void:

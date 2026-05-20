@@ -1,13 +1,13 @@
 extends Node
 
-
-
 # Just a bunch of UI hiding then turning the Correct UI Visible.
 func _on_library_pressed() -> void:
 	hide_ui()
 	$"../../Library".visible = true
 func _on_store_pressed() -> void:
 	hide_ui()
+	for node in get_tree().get_nodes_in_group("Collision"):
+		node.set_deferred("disabled", false)
 	$"../../Store".visible = true
 func _on_community_pressed() -> void:
 	hide_ui()
@@ -25,8 +25,6 @@ func _on_quit_launcher_pressed() -> void:
 	hide_ui()
 	$"../../Quit".visible = true
 
-
-
 # UI hide function
 func hide_ui():
 	$"../../Library".visible = false
@@ -39,5 +37,5 @@ func hide_ui():
 	$"../../Quit".visible = false
 	for page in $"../../Store Pages".get_children():
 		page.visible = false
-
-# set up disabling of the collision lines properly later
+	for node in get_tree().get_nodes_in_group("Collision"):
+		node.set_deferred("disabled", true)

@@ -3,7 +3,6 @@ extends Control
 var matches : Array = []
 @export var items : GridContainer
 
-
 # Searchbar Functionality
 func _on_search_bar_text_changed(new_text: String) -> void:
 	new_text = new_text.to_lower()
@@ -17,8 +16,6 @@ func _on_search_bar_text_changed(new_text: String) -> void:
 	for i in items.get_children():
 		if new_text in i.name.to_lower():
 			matches.append(i)
-	
-	
 	
 	for i in items.get_children():
 		if i in matches:

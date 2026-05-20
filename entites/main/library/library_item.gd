@@ -10,16 +10,14 @@ extends TextureButton
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
 
-# make only versions you have installed appear
 # add checking if theres a new version of whatever app and a respective install button
-
 
 func _ready() -> void:
 	$"Game Label".text = game_name
 	
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
-		#get_parent().move_child(self, 0)
+		
 	check()
 
 # Boot up version of game
@@ -102,8 +100,6 @@ func check():
 func _on_versions_item_selected(index: int) -> void:
 	selected_version = index
 
-
-
 # Hover VFX
 func _on_mouse_entered() -> void:
 	$Hover.visible = true
@@ -111,6 +107,3 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	$Hover.visible = false
 	$"Game Label".visible = false
-
-
-# get rid of the stoopid Main.file_type just putting ".exe" would be more readable
