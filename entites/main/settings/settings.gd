@@ -77,12 +77,12 @@ func _process(_delta: float) -> void:
 	elif mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: $Window.select(3)
 	
 	if Input.is_action_just_pressed("fullscreen"):
-		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN: 
+		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN or mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: 
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			Main.launcher_data.window_mode = 0
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-			Main.launcher_data.window_mode = 3
+			Main.launcher_data.window_mode = 2
 
 # Move user to Startup Location
 func _on_startup_location_item_selected(index: int) -> void:

@@ -17,7 +17,6 @@ func _ready() -> void:
 	
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
-		
 	check()
 
 # Boot up version of game
@@ -69,6 +68,7 @@ func check():
 	visible = false
 	ui_to_back.clear()
 	selected_version = -1
+	$Update.visible = false
 	
 	for i in range(game_file_display_names.size()):
 		var is_installed = false
@@ -83,18 +83,22 @@ func check():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
 					is_installed = DirAccess.dir_exists_absolute(path)
 
-		if is_installed:
+		if is_installed == true:
 			$Versions.add_item(game_file_display_names[i])
 			ui_to_back.append(i)
-			print(ui_to_back)
+		
 		
 	if $Versions.item_count > 0:
 		visible = true
 		$Versions.select(0)
 		_on_versions_item_selected(0)
+		if $Versions.get_item_text(0) != game_file_display_names.get(0):
+			$Update.visible = true
 	else:
 		if DirAccess.dir_exists_absolute(folder_path):
 			DirAccess.remove_absolute(folder_path)
+
+
 
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
