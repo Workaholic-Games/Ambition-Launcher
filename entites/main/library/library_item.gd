@@ -79,7 +79,7 @@ func check():
 			"Windows":
 				if i < version_file_names_windows.size():
 					var path = folder_path + "//" + version_file_names_windows[i] + ".exe"
-					is_installed = DirAccess.dir_exists_absolute(path)
+					is_installed = FileAccess.file_exists(path)
 			"macOS":
 				if i < version_file_names_mac.size():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
