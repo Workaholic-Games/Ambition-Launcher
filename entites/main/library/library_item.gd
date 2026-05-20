@@ -78,15 +78,12 @@ func check():
 		match Main.operating_system:
 			"Windows":
 				if i < version_file_names_windows.size():
-					var path =  folder_path + "//" + version_file_names_windows[i] + ".exe"
-					is_installed = FileAccess.file_exists(path)
-
+					var path = folder_path + "//" + version_file_names_windows[i] + ".exe"
+					is_installed = DirAccess.dir_exists_absolute(path)
 			"macOS":
 				if i < version_file_names_mac.size():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
-					is_installed = FileAccess.file_exists(path)
-					print(path)
-					print(is_installed)
+					is_installed = DirAccess.dir_exists_absolute(path)
 
 		if is_installed:
 			$Versions.add_item(game_file_display_names[i])
