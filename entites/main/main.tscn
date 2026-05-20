@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
