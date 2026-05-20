@@ -75,13 +75,13 @@ func check():
 	
 	for i in range(game_file_display_names.size()):
 		var is_installed = false
-
+	
 		match Main.operating_system:
 			"Windows":
 				if i < version_file_names_windows.size():
 					var path =  folder_path + "//" + version_file_names_windows[i] + ".exe"
 					is_installed = FileAccess.file_exists(path)
-
+	
 			"macOS":
 				if i < version_file_names_mac.size():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
