@@ -27,17 +27,20 @@ func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
 	$Thumbnail.texture = cover
-	match Main.operating_system:
-		"Windows": 
-			$"Versions Windows".visible = true
-			$"Versions Windows".add_item(version_names)
-			os_name = "_Windows"
-		"macOS": 
-			$"Versions Mac".visible = true
-			os_name = "_Mac"
-		"Linux": 
-			$"Versions Linux".visible = true
-			os_name = "_Linux"
+	for i in range(version_names.size()):
+		match Main.operating_system:
+			"Windows": 
+				$"Versions Windows".visible = true
+				$"Versions Windows".add_item(version_names[i])
+				os_name = "_Windows"
+			"macOS": 
+				$"Versions Mac".visible = true
+				$"Versions Mac".add_item(version_names[i])
+				os_name = "_Mac"
+			"Linux": 
+				$"Versions Linux".visible = true
+				$"Versions Linux".add_item(version_names[i])
+				os_name = "_Linux"
 
 func _on_versions_item_selected(index: int) -> void:
 	selected_link = index
