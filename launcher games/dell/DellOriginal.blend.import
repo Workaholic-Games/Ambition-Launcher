@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://drqpkc0cxk3du"
-path="res://.godot/imported/Dell.blend-55cbd370473aac89e27a70d57fa57803.scn"
+path="res://.godot/imported/DellOriginal.blend-e77efac7fd93e04ea069e5a1de697662.scn"
 
 [deps]
 
-source_file="res://launcher games/dell/Dell.blend"
-dest_files=["res://.godot/imported/Dell.blend-55cbd370473aac89e27a70d57fa57803.scn"]
+source_file="res://launcher games/dell/DellOriginal.blend"
+dest_files=["res://.godot/imported/DellOriginal.blend-e77efac7fd93e04ea069e5a1de697662.scn"]
 
 [params]
 

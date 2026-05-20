@@ -1417,7 +1417,6 @@ offset_bottom = 135.99998
 theme_type_variation = &"Line"
 
 [node name="Avatar" type="Sprite2D" parent="Developers/Bulba Bio/Portrait" unique_id=1729857566]
-texture_filter = 2
 position = Vector2(56.196426, 56.392838)
 scale = Vector2(0.18815771, 0.18815768)
 texture = ExtResource("20_qsgxr")
@@ -2037,13 +2036,14 @@ offset_right = 46.0
 offset_bottom = 182.0
 
 [node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("24_6l2pj")
 
 [node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
-visible = false
+modulate = Color(0.49747366, 0.49747372, 0.49747354, 1)
 layout_mode = 0
 offset_left = -6.0
 offset_top = -2.0
@@ -2052,54 +2052,49 @@ offset_bottom = 218.0
 theme_type_variation = &"Line"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
-visible = false
+texture_filter = 2
 layout_mode = 0
-offset_left = -6.0
-offset_top = -2.0
-offset_right = 858.0
-offset_bottom = 1758.0
+offset_left = 2.0
+offset_top = 26.0
+offset_right = 770.0
+offset_bottom = 1434.0
 scale = Vector2(0.125, 0.125)
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Launcher Games/Dell/SubViewportContainer" unique_id=1108012191]
 transparent_bg = true
 handle_input_locally = false
-msaa_3d = 1
-size = Vector2i(864, 1760)
+snap_2d_transforms_to_pixel = true
+size = Vector2i(768, 1408)
 render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.711371, 7.303131, -0.5034995)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.303, 0)
 fov = 90.0
 
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
-transform = Transform3D(0.99731064, 0, 0.073290415, 0, 1, 0, -0.073290415, 0, 0.99731064, 0, 0, 0)
+transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, 0, 0)
 
 [node name="Input" type="LineEdit" parent="Launcher Games/Dell" unique_id=1326285556]
-visible = false
 layout_mode = 0
 offset_left = -3.0
-offset_top = 201.0
-offset_right = 104.0
+offset_top = 194.0
+offset_right = 102.0
 offset_bottom = 218.0
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 placeholder_text = "Ask Dell"
 alignment = 1
 context_menu_enabled = false
 emoji_menu_enabled = false
 
-[node name="Response" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=89382335]
-visible = false
+[node name="Response" type="Label" parent="Launcher Games/Dell" unique_id=275911843]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 58.0
-offset_right = 102.0
+offset_left = 2.0
+offset_top = 42.0
+offset_right = 98.0
 offset_bottom = 74.0
-theme_override_font_sizes/normal_font_size = 8
-fit_content = true
-scroll_active = false
-scroll_following_visible_characters = true
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
 visible_characters_behavior = 1
 
 [node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]

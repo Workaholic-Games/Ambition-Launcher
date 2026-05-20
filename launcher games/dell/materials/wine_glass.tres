@@ -2,9 +2,5 @@
 
 [resource]
 resource_name = "wine_glass"
-cull_mode = 2
-albedo_color = Color(0.9063476, 0.77168, 0.12944166, 1)
-metallic = 1.0
-metallic_specular = 1.0
-roughness = 0.63
+albedo_color = Color(0.91, 0.67522, 0.1274, 1)
 stencil_flags = 2
