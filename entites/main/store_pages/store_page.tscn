@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b86fteujc080h" path="res://entites/main/store_pages/store_page.gd" id="1_83v7k"]
 [ext_resource type="Script" uid="uid://bni7cgwh5uu0i" path="res://entites/main/carousel_container.gd" id="2_7fu70"]
-[ext_resource type="Theme" uid="uid://7wvlbsb0aabd" path="res://themes/default_dark_theme.tres" id="3_pmfxq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
 
@@ -155,14 +154,17 @@ offset_bottom = 128.0
 theme_type_variation = &"Image_Button"
 text = "→"
 
-[node name="CarouselContainer" type="Node2D" parent="." unique_id=27581149 node_paths=PackedStringArray("position_offset_node")]
-position = Vector2(350, 112)
+[node name="CarouselContainer" type="Control" parent="." unique_id=1532624400 node_paths=PackedStringArray("position_offset_node")]
+anchors_preset = 0
+offset_left = 350.0
+offset_top = 112.0
+offset_right = 390.0
+offset_bottom = 152.0
 script = ExtResource("2_7fu70")
 position_offset_node = NodePath("Control")
 metadata/_custom_type_script = "uid://bni7cgwh5uu0i"
 
 [node name="Control" type="Control" parent="CarouselContainer" unique_id=317272639]
-layout_mode = 3
 anchors_preset = 0
 offset_left = -172.0
 offset_right = -132.0
@@ -176,7 +178,6 @@ offset_right = 344.0
 offset_bottom = 104.174
 pivot_offset = Vector2(172, 104.174)
 focus_mode = 2
-theme = ExtResource("3_pmfxq")
 theme_type_variation = &"Line"
 
 [node name="Thumbnail" type="Sprite2D" parent="CarouselContainer/Control/Panel" unique_id=265515300]
@@ -184,38 +185,56 @@ position = Vector2(8, 8.000002)
 scale = Vector2(0.17083333, 0.17777777)
 centered = false
 
-[node name="Panel2" type="Panel" parent="CarouselContainer/Control" unique_id=1260136965]
+[node name="Panel2" type="Panel" parent="CarouselContainer/Control" unique_id=2056224395]
 modulate = Color(1, 1, 1, 0.75)
 z_index = -1
 layout_mode = 0
 offset_left = 364.0
-offset_top = -20.0
-offset_right = 403.99927
-offset_bottom = 20.0
-pivot_offset = Vector2(19.999634, 20)
+offset_top = -104.174
+offset_right = 708.0
+offset_bottom = 104.174
+pivot_offset = Vector2(172, 104.174)
 mouse_filter = 2
+theme_type_variation = &"Line"
 
-[node name="Panel3" type="Panel" parent="CarouselContainer/Control" unique_id=1713178069]
+[node name="Thumbnail" type="Sprite2D" parent="CarouselContainer/Control/Panel2" unique_id=1476578225]
+position = Vector2(8, 8.000002)
+scale = Vector2(0.17083333, 0.17777777)
+centered = false
+
+[node name="Panel3" type="Panel" parent="CarouselContainer/Control" unique_id=1911629586]
 modulate = Color(1, 1, 1, 0.5)
 z_index = -2
 layout_mode = 0
-offset_left = 423.99927
-offset_top = -20.0
-offset_right = 463.99872
-offset_bottom = 20.0
-pivot_offset = Vector2(19.999725, 20)
+offset_left = 728.0
+offset_top = -104.174
+offset_right = 1072.0
+offset_bottom = 104.174
+pivot_offset = Vector2(172, 104.174)
 mouse_filter = 2
+theme_type_variation = &"Line"
 
-[node name="Panel4" type="Panel" parent="CarouselContainer/Control" unique_id=808140151]
+[node name="Thumbnail" type="Sprite2D" parent="CarouselContainer/Control/Panel3" unique_id=1918600415]
+position = Vector2(8, 8.000002)
+scale = Vector2(0.17083333, 0.17777777)
+centered = false
+
+[node name="Panel4" type="Panel" parent="CarouselContainer/Control" unique_id=1458631003]
 modulate = Color(1, 1, 1, 0.25)
 z_index = -3
 layout_mode = 0
-offset_left = 483.99872
-offset_top = -20.0
-offset_right = 523.9989
-offset_bottom = 20.0
-pivot_offset = Vector2(20.000092, 20)
+offset_left = 1092.0
+offset_top = -104.174
+offset_right = 1436.0
+offset_bottom = 104.174
+pivot_offset = Vector2(172, 104.174)
 mouse_filter = 2
+theme_type_variation = &"Line"
+
+[node name="Thumbnail" type="Sprite2D" parent="CarouselContainer/Control/Panel4" unique_id=1465011186]
+position = Vector2(8, 8.000002)
+scale = Vector2(0.17083333, 0.17777777)
+centered = false
 
 [connection signal="item_selected" from="Versions Windows" to="." method="_on_versions_item_selected"]
 [connection signal="item_selected" from="Versions Mac" to="." method="_on_versions_item_selected"]
