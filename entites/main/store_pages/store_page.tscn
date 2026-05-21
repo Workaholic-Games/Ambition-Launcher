@@ -135,6 +135,25 @@ centered = false
 use_threads = true
 timeout = 60.0
 
+[node name="Left Button" type="Button" parent="." unique_id=2056085471]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 88.0
+offset_right = 218.0
+offset_bottom = 128.0
+theme_type_variation = &"Image_Button"
+text = "←"
+
+[node name="Right Button" type="Button" parent="." unique_id=362577562]
+visible = false
+layout_mode = 0
+offset_left = 485.0
+offset_top = 88.0
+offset_right = 525.0
+offset_bottom = 128.0
+theme_type_variation = &"Image_Button"
+text = "→"
+
 [connection signal="item_selected" from="Versions Windows" to="." method="_on_versions_item_selected"]
 [connection signal="item_selected" from="Versions Mac" to="." method="_on_versions_item_selected"]
 [connection signal="item_selected" from="Versions Linux" to="." method="_on_versions_item_selected"]

@@ -52,6 +52,12 @@ thickness = 8
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xc3v"]
 bg_color = Color(0.9428228, 0.94282264, 0.94282264, 0.68235296)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6g8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_86m3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug50d"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2k11"]
 bg_color = Color(0.13967147, 0.4887638, 0.71975696, 1)
 
@@ -148,6 +154,13 @@ Hover_Label/constants/shadow_offset_x = 0
 Hover_Label/constants/shadow_offset_y = 2
 Hover_Label/constants/shadow_outline_size = 0
 Hover_Label/styles/normal = SubResource("StyleBoxFlat_5xc3v")
+Image_Button/base_type = &"Button"
+Image_Button/colors/font_color = Color(1, 1, 1, 1)
+Image_Button/colors/font_hover_color = Color(0.91228896, 0.9122889, 0.91228884, 1)
+Image_Button/colors/font_pressed_color = Color(0.9275334, 0.92753345, 0.9275333, 1)
+Image_Button/styles/hover = SubResource("StyleBoxEmpty_y6g8n")
+Image_Button/styles/normal = SubResource("StyleBoxEmpty_86m3o")
+Image_Button/styles/pressed = SubResource("StyleBoxEmpty_ug50d")
 Label/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
