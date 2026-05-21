@@ -52,7 +52,20 @@ func _process(delta: float) -> void:
 			i.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			i.focus_mode = Control.FOCUS_NONE
 		
+		if follow_button_focus and i.has_focus():
+			selected_index = i.get_index()
+		
 	if wraparound_enabled:
 		position_offset_node.position.x = lerp(position_offset_node.position.x, 0.0, smoothing_speed*delta)
 	else:
 		position_offset_node.position.x = lerp(position_offset_node.position.x, -(position_offset_node.get_child(selected_index).size.x/2.0), smoothing_speed*delta)
+
+func _left():
+	selected_index -= 1
+	if selected_index < 0:
+		selected_index += 1
+		
+func _right():
+	selected_index += 1
+	if selected_index > position_offset_node.get_child_count()-1:
+		selected_index -= 1
