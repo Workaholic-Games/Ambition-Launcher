@@ -26,7 +26,7 @@ var can_download : bool = true
 func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
-	$Thumbnail.texture = cover
+	$CarouselContainer/Control/Panel/Thumbnail.texture = cover
 
 	for i in range(version_names.size()):
 		match Main.operating_system:
