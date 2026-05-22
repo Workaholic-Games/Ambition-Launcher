@@ -16,7 +16,8 @@ extends Control
 @export var version_file_names_linux : PackedStringArray
 
 @export var folder_path : String = "user://Test"
-@export var cover : Texture
+
+@export var Images : Array[Texture]
 
 var os_name : String = "Windows"
 var selected_link : int = 0
@@ -26,8 +27,9 @@ var can_download : bool = true
 func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
-	$CarouselContainer/Control/Panel/Thumbnail.texture = cover
-
+	$CarouselContainer/Control/Panel/Thumbnail.texture = Images.get(0)
+	$CarouselContainer/Control.add_child(Panel.new())
+	
 	for i in range(version_names.size()):
 		match Main.operating_system:
 			"Windows": 
@@ -142,7 +144,15 @@ func _physics_process(_delta: float) -> void:
 		var total = $HTTPRequest.get_body_size()
 		if total > 0:
 			$ProgressBar.value = (float(downloaded) / total) * 100
-
+	if $CarouselContainer.selected_index == 0:
+		$"Left Button".visible = false
+	else:
+		$"Left Button".visible = true
+		
+	if $CarouselContainer.selected_index == 4:
+		$"Right Button".visible = false
+	else:
+		$"Right Button".visible = true
 ## Developer @export variable setup example:
 # Version Name: Ambition Edition
 # Version Links Windows: (Windows Link)
@@ -153,3 +163,11 @@ func _physics_process(_delta: float) -> void:
 
 # Ensure on the github side the zip is called TITLEHERE_Windows/Mac/Linux 
 # and put them all under the same release for organization
+
+
+func _on_left_button_pressed() -> void:
+	$CarouselContainer._left()
+
+
+func _on_right_button_pressed() -> void:
+	$CarouselContainer._right()

@@ -1,6 +1,0 @@
-extends AnimatedSprite2D
-
-
-func _physics_process(delta: float) -> void:
-	g
-	pass

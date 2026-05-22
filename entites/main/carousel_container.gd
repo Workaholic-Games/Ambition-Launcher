@@ -48,7 +48,7 @@ func _process(delta: float) -> void:
 		i.modulate.a = lerp(i.modulate.a, target_opacity, smoothing_speed*delta)
 		
 		if i.get_index() == selected_index:
-			i.z_index = 1
+			i.z_index = -abs(i.get_index()-selected_index)
 			i.mouse_filter = Control.MOUSE_FILTER_STOP
 			i.focus_mode = Control.FOCUS_ALL
 		else:

@@ -52,6 +52,8 @@ func _on_uninstall_pressed() -> void:
 		"Windows":
 			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_windows[actual_index] + ".exe")
 			OS.move_to_trash(full_path)
+			if !str(DirAccess.open(folder_path).get_files()).contains(".exe"):
+				remove_recursive(folder_path)
 		"macOS":
 			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_mac[actual_index] + ".app")
 			OS.move_to_trash(full_path)
@@ -111,3 +113,16 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	$Hover.visible = false
 	$"Game Label".visible = false
+
+func remove_recursive(path: String) -> void:
+	var dir = DirAccess.open(path)
+	if dir:
+		for dir_name in DirAccess.get_directories_at(path):
+			remove_recursive(path.path_join(dir_name))
+
+		for file_name in DirAccess.get_files_at(path):
+			DirAccess.remove_absolute(path.path_join(file_name))
+		
+		DirAccess.remove_absolute(path)
+	else:
+		print("An error occurred when trying to access the path: ", path)
