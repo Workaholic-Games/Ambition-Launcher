@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://jaop0enpo2k4" path="res://game_assets/covers/placeholder_cover.png" id="10_iwt88"]
 [ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://entites/main/store/sparkle.png" id="11_rnd3n"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
+[ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
 [ext_resource type="Texture2D" uid="uid://0romx66k1h1p" path="res://game_assets/covers/cover.png" id="15_12ljg"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
@@ -60,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/vegetable_game.png" id="36_o22vj"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
@@ -598,6 +600,15 @@ game_file_display_names = PackedStringArray("1.25")
 version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
 folder_path = "user://Bitcoin Miner"
 
+[node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
+layout_mode = 2
+texture_normal = ExtResource("13_bjyjg")
+game_name = "The Vegetable Game"
+game_file_display_names = PackedStringArray("Regrown")
+version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
+version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
+folder_path = "user://Veg"
+
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
 offset_left = 192.0
@@ -982,7 +993,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="The Vegetable Game" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=56088225]
+[node name="The Vegetable Game" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=56088225 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -990,6 +1001,7 @@ texture_normal = ExtResource("15_12ljg")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/Veg")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" unique_id=420188677]
 visible = false
@@ -1118,6 +1130,22 @@ version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/A
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
 folder_path = "user://Bitcoin Miner"
 Images = Array[Texture]([ExtResource("21_hupd3"), ExtResource("36_bjyjg")])
+
+[node name="Veg" parent="Store Pages" unique_id=353762828 instance=ExtResource("12_5enwe")]
+visible = false
+layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
+description = "MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK"
+rating = "Rated: E for Everyone
+Difficulty: Normal"
+version_names = PackedStringArray("Regrown")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Mac.zip")
+version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
+version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
+folder_path = "user://Veg"
+Images = Array[Texture]([ExtResource("36_o22vj")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
