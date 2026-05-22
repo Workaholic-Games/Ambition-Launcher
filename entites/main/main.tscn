@@ -59,6 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
@@ -1109,13 +1110,14 @@ visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "demo"
-rating = "unrated"
+description = "\"Not a computer virus. I promise\" -Sawyer 2026"
+rating = "Rated: E for Everyone
+Difficulty: Easy"
 version_names = PackedStringArray("1.25")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
 folder_path = "user://Bitcoin Miner"
-Images = Array[Texture]([ExtResource("21_hupd3")])
+Images = Array[Texture]([ExtResource("21_hupd3"), ExtResource("36_bjyjg")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
