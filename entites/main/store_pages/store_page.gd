@@ -162,7 +162,7 @@ func _physics_process(_delta: float) -> void:
 	else:
 		$"Left Button".visible = true
 		
-	if $CarouselContainer.selected_index == Images.size() - 1:
+	if $CarouselContainer.selected_index == Images.size() - 1 or Images.size() == 0:
 		$"Right Button".visible = false
 	else:
 		$"Right Button".visible = true
