@@ -20,32 +20,46 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://entites/main/developers/jonathan.png" id="19_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="20_4u1yx"]
 [ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
 [ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="20_ovdq3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/bulba.png" id="20_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="21_7flok"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="21_hupd3"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="22_tipqc"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
+[ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="23_gtbh3"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
+[ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="24_j17j7"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
+[ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="25_pddd4"]
+[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="26_mc0d5"]
+[ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="27_0qt1k"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://entites/main/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://2onugyxkrv4u" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192855.png" id="28_o22vj"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
+[ext_resource type="Texture2D" uid="uid://x68uqkhq8i62" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192859.png" id="29_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://bf1wjlm60ph3" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192904.png" id="30_xaw78"]
+[ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="31_7divq"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
+[ext_resource type="Texture2D" uid="uid://baet03e2bwlqr" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193014.png" id="32_6d2a4"]
 [ext_resource type="Texture2D" uid="uid://b0j5v21ii750h" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
+[ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
@@ -576,6 +590,14 @@ version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 version_file_names_linux = PackedStringArray("NO")
 folder_path = "user://GFFA"
 
+[node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
+layout_mode = 2
+texture_normal = ExtResource("7_1dv2i")
+game_name = "Bitcoin Miner"
+game_file_display_names = PackedStringArray("1.25")
+version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
+folder_path = "user://Bitcoin Miner"
+
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
 offset_left = 192.0
@@ -588,7 +610,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1050,7 +1071,7 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
 folder_path = "user://FNAB"
-Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_ovdq3"), ExtResource("21_hupd3")])
+Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_4u1yx"), ExtResource("21_7flok"), ExtResource("22_tipqc"), ExtResource("23_gtbh3"), ExtResource("24_j17j7"), ExtResource("25_pddd4")])
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1068,6 +1089,7 @@ version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
 folder_path = "user://FNAB"
+Images = Array[Texture]([ExtResource("26_mc0d5"), ExtResource("27_0qt1k"), ExtResource("28_o22vj"), ExtResource("29_bjyjg"), ExtResource("30_xaw78"), ExtResource("31_7divq"), ExtResource("32_6d2a4"), ExtResource("33_uicw0")])
 
 [node name="GFFA" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1088,13 +1110,14 @@ visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "demo"
-rating = "unrated"
+description = "\"Not a computer virus. I promise\" -Sawyer 2026"
+rating = "Rated: E for Everyone
+Difficulty: Easy"
 version_names = PackedStringArray("1.25")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.exe")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
-folder_path = "user://GFFA"
-Images = Array[Texture]([ExtResource("21_hupd3")])
+folder_path = "user://Bitcoin Miner"
+Images = Array[Texture]([ExtResource("21_hupd3"), ExtResource("36_bjyjg")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false

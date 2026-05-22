@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddm7u73rt1602"
-path="res://.godot/imported/fnab2.png-b6128a4328eac1688b8dc327eb3d7b43.ctex"
+path="res://.godot/imported/fnab2.png-76342b7ca33e81edd88373bfc267e498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/thumbnails/fnab2.png"
-dest_files=["res://.godot/imported/fnab2.png-b6128a4328eac1688b8dc327eb3d7b43.ctex"]
+source_file="res://game_assets/thumbnails/fnab2/fnab2.png"
+dest_files=["res://.godot/imported/fnab2.png-76342b7ca33e81edd88373bfc267e498.ctex"]
 
 [params]
 
