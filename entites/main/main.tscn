@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -2055,6 +2055,7 @@ offset_bottom = 40.0
 script = ExtResource("24_6l2pj")
 
 [node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
+visible = false
 modulate = Color(0.49747366, 0.49747372, 0.49747354, 1)
 layout_mode = 0
 offset_left = -6.0
@@ -2064,6 +2065,7 @@ offset_bottom = 218.0
 theme_type_variation = &"Line"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
+visible = false
 texture_filter = 2
 layout_mode = 0
 offset_left = -6.0
@@ -2078,7 +2080,7 @@ transparent_bg = true
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
 size = Vector2i(864, 1472)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.1507115, 0)
@@ -2100,6 +2102,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
+visible = false
 layout_mode = 0
 offset_left = 104.0
 offset_top = -4.0

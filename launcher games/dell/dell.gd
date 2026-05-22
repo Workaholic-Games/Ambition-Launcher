@@ -7,6 +7,8 @@ func _on_dell_toggled(toggled_on: bool) -> void:
 		true:
 			$BG.visible = true
 			$SubViewportContainer.visible = true
+			$ScrollContainer.visible = true
 		false:
 			$BG.visible = false
 			$SubViewportContainer.visible = false
+			$ScrollContainer.visible = false
