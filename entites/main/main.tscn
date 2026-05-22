@@ -2043,6 +2043,7 @@ metadata/_edit_lock_ = true
 stream = ExtResource("21_qsgxr")
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
+z_index = 3
 anchors_preset = 0
 offset_left = 6.0
 offset_top = 142.0
