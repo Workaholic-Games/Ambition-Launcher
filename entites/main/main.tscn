@@ -61,8 +61,12 @@
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
-[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/vegetable_game.png" id="36_o22vj"]
+[ext_resource type="Texture2D" path="res://game_assets/thumbnails/vegetable_game.png" id="36_o22vj"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
+[ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="38_uicw0"]
+[ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
+[ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
+[ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
@@ -561,6 +565,7 @@ script = ExtResource("8_gjwx3")
 
 [node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
 layout_mode = 2
+theme_override_constants/v_separation = 50
 columns = 4
 
 [node name="FNAB" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
@@ -1145,7 +1150,7 @@ version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambit
 version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
-Images = Array[Texture]([ExtResource("36_o22vj")])
+Images = Array[Texture]([ExtResource("36_o22vj"), ExtResource("38_uicw0"), ExtResource("39_omfc6"), ExtResource("40_d2ack"), ExtResource("41_jltb6")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
