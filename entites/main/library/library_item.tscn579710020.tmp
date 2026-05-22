@@ -11,22 +11,25 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
 
-[node name="Library Item" type="TextureButton" unique_id=1778090871]
-custom_minimum_size = Vector2(120, 236)
+[node name="Panel" type="Panel" unique_id=823636312]
 offset_right = 120.0
-offset_bottom = 180.0
+offset_bottom = 236.0
+script = ExtResource("2_ybi6t")
+
+[node name="Library Item" type="TextureButton" parent="." unique_id=1778090871]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 0
 texture_normal = ExtResource("1_sit7t")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("2_ybi6t")
 
-[node name="Hover" type="Sprite2D" parent="." unique_id=1476178982]
+[node name="Hover" type="Sprite2D" parent="Library Item" unique_id=1476178982]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="." unique_id=1102608909]
+[node name="Game Label" type="Label" parent="Library Item" unique_id=1102608909]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -37,7 +40,7 @@ theme_type_variation = &"Hover_Label"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Uninstall" type="Button" parent="." unique_id=1635288642]
+[node name="Uninstall" type="Button" parent="Library Item" unique_id=1635288642]
 layout_mode = 0
 offset_top = 208.0
 offset_right = 120.0
@@ -45,7 +48,7 @@ offset_bottom = 236.0
 theme_type_variation = &"Close_Button"
 text = "Uninstall"
 
-[node name="Versions" type="OptionButton" parent="." unique_id=853332808]
+[node name="Versions" type="OptionButton" parent="Library Item" unique_id=853332808]
 layout_mode = 0
 offset_top = 180.0
 offset_right = 120.0
@@ -53,7 +56,7 @@ offset_bottom = 208.0
 clip_text = true
 fit_to_longest_item = false
 
-[node name="Update" type="Label" parent="." unique_id=1509434945]
+[node name="Update" type="Label" parent="Library Item" unique_id=1509434945]
 visible = false
 layout_mode = 0
 offset_left = 40.0
@@ -65,7 +68,7 @@ text = "↓"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="Update" unique_id=1586962885]
+[node name="Panel" type="Panel" parent="Library Item/Update" unique_id=1586962885]
 modulate = Color(1, 1, 1, 0.39215687)
 show_behind_parent = true
 layout_mode = 0
@@ -76,8 +79,8 @@ offset_bottom = 125.0
 mouse_filter = 2
 theme_type_variation = &"Line"
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="pressed" from="." to="." method="_on_pressed"]
-[connection signal="pressed" from="Uninstall" to="." method="_on_uninstall_pressed"]
-[connection signal="item_selected" from="Versions" to="." method="_on_versions_item_selected"]
+[connection signal="mouse_entered" from="Library Item" to="Library Item" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Library Item" to="Library Item" method="_on_mouse_exited"]
+[connection signal="pressed" from="Library Item" to="Library Item" method="_on_pressed"]
+[connection signal="pressed" from="Library Item/Uninstall" to="Library Item" method="_on_uninstall_pressed"]
+[connection signal="item_selected" from="Library Item/Versions" to="Library Item" method="_on_versions_item_selected"]

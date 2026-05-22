@@ -6,6 +6,7 @@ extends TextureButton
 @export var version_file_names_mac : PackedStringArray
 @export var version_file_names_linux : PackedStringArray
 @export var folder_path : String = "user://Test"
+@export var font_size : int = 16
 
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
@@ -14,6 +15,7 @@ var ui_to_back : Array[int] = []
 
 func _ready() -> void:
 	$"Game Label".text = game_name
+	$"Game Label".add_theme_font_size_override("font_size", font_size)
 	
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
