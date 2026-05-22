@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jcgo38mgojv3"
-path="res://.godot/imported/bitcoin_miner.png-e1d5a14d57ac19cf6729380d15eebd0f.ctex"
+path="res://.godot/imported/bitcoin_miner.png-dc786a825a710d8fd74d7f241d860aed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/thumbnails/bitcoin_miner.png"
-dest_files=["res://.godot/imported/bitcoin_miner.png-e1d5a14d57ac19cf6729380d15eebd0f.ctex"]
+source_file="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png"
+dest_files=["res://.godot/imported/bitcoin_miner.png-dc786a825a710d8fd74d7f241d860aed.ctex"]
 
 [params]
 
