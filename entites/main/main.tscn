@@ -875,7 +875,7 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376]
+[node name="Bitcoin Miner" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=219455376 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
@@ -883,6 +883,7 @@ texture_normal = ExtResource("7_1dv2i")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
 visible = false
@@ -1081,6 +1082,19 @@ version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambit
 version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
+
+[node name="Bitcoin Miner" parent="Store Pages" unique_id=1362500682 instance=ExtResource("12_5enwe")]
+visible = false
+layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
+description = "demo"
+rating = "unrated"
+version_names = PackedStringArray("1.25")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.exe")
+version_file_names_windows = PackedStringArray("Bitcoin Miner")
+folder_path = "user://GFFA"
+Images = Array[Texture]([ExtResource("21_hupd3")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
