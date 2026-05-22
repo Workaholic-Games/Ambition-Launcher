@@ -94,14 +94,6 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
-atlas = ExtResource("32_6vgeh")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7divq"]
-atlas = ExtResource("32_6vgeh")
-region = Rect2(16, 0, 16, 16)
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3gblu"]
@@ -388,6 +380,14 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
+atlas = ExtResource("32_6vgeh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7divq"]
+atlas = ExtResource("32_6vgeh")
+region = Rect2(16, 0, 16, 16)
+
 [sub_resource type="Curve" id="Curve_omfc6"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -576,7 +576,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -651,6 +650,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -661,7 +661,7 @@ items = NodePath("Area/GridContainer")
 layout_mode = 0
 offset_left = 110.0
 offset_top = 64.0
-offset_right = 642.24493
+offset_right = 642.0
 offset_bottom = 360.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
@@ -1058,7 +1058,7 @@ visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK
+description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK. ALSO THIS GAME IS ALSO VERY BUGGY.
 
 You were brought to this land of vegetables by a myserious entity to help defeat The Mold. Go forth young Seedling.
 "
@@ -1090,6 +1090,7 @@ theme_type_variation = &"Close_Button"
 text = "Featured Art"
 
 [node name="Install Mods" type="Button" parent="Community" unique_id=789851959]
+visible = false
 layout_mode = 0
 offset_left = 248.0
 offset_top = -40.0
@@ -1100,6 +1101,7 @@ text = "Install Mods
 "
 
 [node name="Modding Guide" type="Button" parent="Community" unique_id=307928120]
+visible = false
 layout_mode = 0
 offset_left = 368.0
 offset_top = -40.0
@@ -2049,6 +2051,7 @@ offset_right = 46.0
 offset_bottom = 182.0
 
 [node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -2078,7 +2081,7 @@ transparent_bg = true
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
 size = Vector2i(864, 1472)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.1507115, 0)
@@ -2087,45 +2090,202 @@ fov = 90.0
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
 transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, 0, 0)
 
-[node name="Dell" type="TextureButton" parent="Launcher Games/Dell" unique_id=94201817]
-layout_mode = 0
-offset_left = -2.0
-offset_top = 2.0
-offset_right = 22.0
-offset_bottom = 26.0
-toggle_mode = true
-texture_normal = SubResource("AtlasTexture_xaw78")
-texture_pressed = SubResource("AtlasTexture_7divq")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
 layout_mode = 0
 offset_left = 104.0
 offset_top = -4.0
-offset_right = 208.0
-offset_bottom = 140.0
+offset_right = 204.0
+offset_bottom = 142.0
 horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="Launcher Games/Dell/ScrollContainer" unique_id=856089306]
 layout_mode = 2
 theme_override_constants/v_separation = 1
 
+[node name="Who Dell" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=229488755]
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0, 0.60899985, 0.87, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.60784316, 0.87058824, 1)
+theme_override_colors/font_hover_color = Color(0, 0.60784316, 0.87058824, 1)
+theme_override_font_sizes/font_size = 8
+text = "Who are you?"
+alignment = 0
+
 [node name="Game Install" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=763852076]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0, 0.87, 0.10150011, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_colors/font_hover_color = Color(0, 0.87058824, 0.101960786, 1)
 theme_override_font_sizes/font_size = 8
 text = "How to install a game?"
 alignment = 0
 
-[node name="Game Install2" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=2078142516]
+[node name="Bug Report" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=288778384]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_colors/font_hover_color = Color(0, 0.87058824, 0.101960786, 1)
 theme_override_font_sizes/font_size = 8
+text = "How to report bugs?"
 alignment = 0
+
+[node name="Modding" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=2123250510]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_colors/font_hover_color = Color(0, 0.87058824, 0.101960786, 1)
+theme_override_font_sizes/font_size = 8
+text = "Will there be modding?"
+alignment = 0
+
+[node name="Community Tab" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1750117507]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87058824, 0.32941177, 0.69803923, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0.32941177, 0.69803923, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0.32941177, 0.69803923, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "How do I get my work in the community tab?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Games" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=455183601]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87, 0.3306, 0.69919, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0.32941177, 0.69803923, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0.32941177, 0.69803923, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "When will more games come out?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Project U" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1041782316]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.49416006, 0.24359998, 0.87, 1)
+theme_override_colors/font_pressed_color = Color(0.49411765, 0.24313726, 0.87058824, 1)
+theme_override_colors/font_hover_color = Color(0.49411765, 0.24313726, 0.87058824, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "What is Project U?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Veg" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=344736599]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.49411765, 0.24313726, 0.87058824, 1)
+theme_override_colors/font_pressed_color = Color(0.49411765, 0.24313726, 0.87058824, 1)
+theme_override_colors/font_hover_color = Color(0.49411765, 0.24313726, 0.87058824, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "Will Bulba ever finish the
+Vegetable Game?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Bulba" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1703189494]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87, 0.58000004, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "Who is Bulba/Gabriel?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Jonathan" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=942082253]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "Who is NinjaBot2010/Jonathan?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Sawyer" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1703949918]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0.5803922, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "Who is TheProOfFPS/Sawyer?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Join Us" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1125684500]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "How to join Workaholic Games?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Server" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1269484607]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "Can I share these creations with people outside of the Discord server?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Join Server" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=1990227833]
+custom_minimum_size = Vector2(90, 10)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_colors/font_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.87058824, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87058824, 0, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 8
+text = "How can I invite more people to the Discord Server?"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Yap" type="RichTextLabel" parent="Launcher Games/Dell" unique_id=759627845]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 30.0
+offset_right = 102.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 8
+text = "Ask me something."
+fit_content = true
+scroll_active = false
 
 [node name="Launcher Pets" type="Control" parent="Launcher Games" unique_id=564404724]
 anchors_preset = 0
@@ -2253,6 +2413,18 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(16, 16)
 
+[node name="Dell Button" type="TextureButton" parent="Launcher Games" unique_id=94201817]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 26.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_xaw78")
+texture_pressed = SubResource("AtlasTexture_7divq")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
 
@@ -2332,7 +2504,20 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
-[connection signal="toggled" from="Launcher Games/Dell/Dell" to="Launcher Games/Dell" method="_on_dell_toggled"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Who Dell" to="Launcher Games/Dell" method="_on_who_dell_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Game Install" to="Launcher Games/Dell" method="_on_game_install_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Bug Report" to="Launcher Games/Dell" method="_on_bug_report_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Modding" to="Launcher Games/Dell" method="_on_modding_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Community Tab" to="Launcher Games/Dell" method="_on_community_tab_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Games" to="Launcher Games/Dell" method="_on_games_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Project U" to="Launcher Games/Dell" method="_on_project_u_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Veg" to="Launcher Games/Dell" method="_on_veg_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Bulba" to="Launcher Games/Dell" method="_on_bulba_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Jonathan" to="Launcher Games/Dell" method="_on_jonathan_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Sawyer" to="Launcher Games/Dell" method="_on_sawyer_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Join Us" to="Launcher Games/Dell" method="_on_join_us_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Server" to="Launcher Games/Dell" method="_on_server_pressed"]
+[connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Join Server" to="Launcher Games/Dell" method="_on_join_server_pressed"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
@@ -2347,4 +2532,5 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="value_changed" from="Launcher Games/Launcher Pets/Launcher Pets/Size" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_size_value_changed"]
 [connection signal="mouse_entered" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_entered"]
 [connection signal="mouse_exited" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_exited"]
+[connection signal="toggled" from="Launcher Games/Dell Button" to="Launcher Games/Dell" method="_on_dell_toggled"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
