@@ -29,7 +29,6 @@ func _ready() -> void:
 	$"Age Rating".text = rating
 	
 	for image in Images.size():
-		print(image)
 		var new_image = Panel.new()
 		new_image.position.y = -104.174
 		new_image.size = Vector2(344, 208.348)
@@ -41,7 +40,6 @@ func _ready() -> void:
 		thumbnail.texture = Images.get(image)
 		thumbnail.position = Vector2(172.0, 104.0)
 		new_image.add_child(thumbnail)
-		print(new_image)
 	
 	for i in range(version_names.size()):
 		match Main.operating_system:
