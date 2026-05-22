@@ -59,7 +59,11 @@
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="34_qwxpq"]
+[ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="35_yoins"]
 [ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="36_d1j2r"]
+[ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="37_42eyl"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 [ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="37_uicw0"]
 [ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="38_uicw0"]
@@ -1039,6 +1043,7 @@ version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambit
 version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
+Images = Array[Texture]([ExtResource("34_qwxpq"), ExtResource("35_yoins"), ExtResource("36_d1j2r"), ExtResource("37_42eyl")])
 
 [node name="Bitcoin Miner" parent="Store Pages" unique_id=1362500682 instance=ExtResource("12_5enwe")]
 visible = false
