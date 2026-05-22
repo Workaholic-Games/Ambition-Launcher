@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ehdyilok003e"
-path="res://.godot/imported/fnab.png-772589545544311a6a1ad88160a32ba9.ctex"
+uid="uid://c2vftl5ks53dp"
+path="res://.godot/imported/Screenshot 2026-05-21 191700.png-5ca8db2ef7751a6e81d40e8b42c2d776.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/thumbnails/fnab.png"
-dest_files=["res://.godot/imported/fnab.png-772589545544311a6a1ad88160a32ba9.ctex"]
+source_file="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png"
+dest_files=["res://.godot/imported/Screenshot 2026-05-21 191700.png-5ca8db2ef7751a6e81d40e8b42c2d776.ctex"]
 
 [params]
 
