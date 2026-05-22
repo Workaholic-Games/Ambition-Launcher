@@ -16,12 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://entites/main/store/sparkle.png" id="11_rnd3n"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
-[ext_resource type="Texture2D" uid="uid://0romx66k1h1p" path="res://game_assets/covers/cover.png" id="15_12ljg"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -67,6 +66,8 @@
 [ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
+[ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://entites/main/event.gd" id="68_d2ack"]
+[ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
@@ -87,6 +88,11 @@ metadata/_snap_enabled = true
 [sub_resource type="Gradient" id="Gradient_ovdq3"]
 offsets = PackedFloat32Array(0, 0.0701107)
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_jltb6"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
 atlas = ExtResource("32_6vgeh")
@@ -382,6 +388,18 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Curve" id="Curve_omfc6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_d2ack"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_d2ack"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
 tonemap_mode = 1
@@ -492,38 +510,48 @@ horizontal_alignment = 2
 visible = false
 z_index = 15
 layout_mode = 0
-offset_left = 266.0
-offset_top = 136.0
-offset_right = 376.0
-offset_bottom = 248.0
+offset_left = 256.0
+offset_top = 120.0
+offset_right = 384.0
+offset_bottom = 240.0
 theme_type_variation = &"Quit"
 script = ExtResource("15_kxcgb")
 
+[node name="Panel" type="Panel" parent="Quit" unique_id=569989287]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 136.0
+offset_bottom = 128.0
+mouse_filter = 2
+theme_type_variation = &"Line"
+
 [node name="Yes" type="Button" parent="Quit" unique_id=772219974]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 74.0
-offset_right = 46.0
-offset_bottom = 94.0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 56.0
+offset_bottom = 96.0
 theme_type_variation = &"Close_Button"
 text = "Yes"
 
 [node name="No" type="Button" parent="Quit" unique_id=931617972]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 74.0
-offset_right = 104.0
-offset_bottom = 94.0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 120.0
+offset_bottom = 96.0
 theme_type_variation = &"Close_Button"
 text = "No"
 
 [node name="Are You Sure?" type="Label" parent="Quit" unique_id=1694044909]
 layout_mode = 0
-offset_left = 9.0
 offset_top = 24.0
-offset_right = 103.0
+offset_right = 128.0
 offset_bottom = 42.0
 text = "Are you sure?"
+horizontal_alignment = 1
 
 [node name="Update" type="Panel" parent="." unique_id=1089150131]
 visible = false
@@ -548,6 +576,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -558,7 +587,7 @@ items = NodePath("Area/GridContainer")
 layout_mode = 0
 offset_left = 112.0
 offset_top = 64.0
-offset_right = 624.0
+offset_right = 640.0
 offset_bottom = 352.0
 script = ExtResource("8_gjwx3")
 
@@ -622,7 +651,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -668,22 +696,23 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="Placeholder" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=418856906]
+[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1288352932 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("10_iwt88")
+texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/GFFA")
 
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=1735752461]
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=1251014016]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=1998218674]
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=101408882]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -691,13 +720,14 @@ offset_top = 141.0
 offset_right = 120.0
 offset_bottom = 180.0
 theme_type_variation = &"Hover_Label"
-theme_override_font_sizes/font_size = 16
-text = "PLACEHOLDER"
+theme_override_font_sizes/font_size = 12
+text = "Gavin's Fantastically
+Fun Adventure"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder" unique_id=306306872]
+[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=306306872]
 position = Vector2(60, 90)
 texture = ExtResource("11_rnd3n")
 local_coords = true
@@ -709,96 +739,11 @@ gravity = Vector2(0, 0)
 scale_amount_min = 2.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_iwt88")
-color = Color(1, 1, 0.75, 1)
+color = Color(1, 0.20999998, 0.20999998, 1)
 color_initial_ramp = SubResource("Gradient_ovdq3")
-
-[node name="Placeholder2" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1468752612]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("10_iwt88")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1944443117]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1812123914]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-theme_override_font_sizes/font_size = 16
-text = "PLACEHOLDER"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" unique_id=1139856737]
-position = Vector2(60, 90)
-texture = ExtResource("11_rnd3n")
-local_coords = true
-emission_shape = 3
-emission_rect_extents = Vector2(60, 90)
-direction = Vector2(0, 0)
-spread = 180.0
-gravity = Vector2(0, 0)
-scale_amount_min = 2.0
-scale_amount_max = 2.0
-scale_amount_curve = SubResource("Curve_iwt88")
-color = Color(1, 0.75, 0.75, 1)
-color_initial_ramp = SubResource("Gradient_ovdq3")
-
-[node name="Placeholder3" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1027454196]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("10_iwt88")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=180475025]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=773538641]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-theme_override_font_sizes/font_size = 16
-text = "PLACEHOLDER"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" unique_id=206073337]
-position = Vector2(60, 90)
-texture = ExtResource("11_rnd3n")
-local_coords = true
-emission_shape = 3
-emission_rect_extents = Vector2(60, 90)
-direction = Vector2(0, 0)
-spread = 180.0
-gravity = Vector2(0, 0)
-scale_amount_min = 2.0
-scale_amount_max = 2.0
-scale_amount_curve = SubResource("Curve_iwt88")
-color = Color(0.75, 1, 0.92083335, 1)
-color_initial_ramp = SubResource("Gradient_ovdq3")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_jltb6")
 
 [node name="Five Nights at Bulbas (FNAB, FNAB2)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
@@ -937,6 +882,34 @@ text = "Bitcoin Miner"
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="The Vegetable Game" type="TextureButton" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games" unique_id=56088225 node_paths=PackedStringArray("page")]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("13_bjyjg")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/Veg")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" unique_id=420188677]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" unique_id=1239195966]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+text = "The Vegetable Game"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Coming Soon" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=1289074799]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
@@ -963,65 +936,6 @@ one_way_collision_margin = 19.0
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Coming Soon" unique_id=770636206]
 layout_mode = 2
 alignment = 1
-
-[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932 node_paths=PackedStringArray("page")]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("21_gtc6m")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/GFFA")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=101408882]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-theme_override_font_sizes/font_size = 12
-text = "Gavin's Fantastically
-Fun Adventure"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="The Vegetable Game" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=56088225 node_paths=PackedStringArray("page")]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("15_12ljg")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/Veg")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" unique_id=420188677]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" unique_id=1239195966]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-text = "The Vegetable Game"
-horizontal_alignment = 1
-autowrap_mode = 3
 
 [node name="Whatever" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1209658610]
 texture_filter = 1
@@ -1111,8 +1025,13 @@ visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "demo"
-rating = "unrated"
+description = "DISCLAIMER: This is an unfinished DEMO.
+
+A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical Marsh of Mortisha under the watch of the Sad Sun.
+
+"
+rating = "Rated: T for Teen
+Difficulty: Newborn"
 version_names = PackedStringArray("DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
@@ -1139,7 +1058,10 @@ visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK"
+description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK
+
+You were brought to this land of vegetables by a myserious entity to help defeat The Mold. Go forth young Seedling.
+"
 rating = "Rated: E for Everyone
 Difficulty: Normal"
 version_names = PackedStringArray("Regrown")
@@ -1400,6 +1322,8 @@ offset_top = -44.0
 offset_right = 616.0
 offset_bottom = 284.0
 text = "Released the launcher"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
 visible = false
@@ -1561,6 +1485,12 @@ expand_mode = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 texture = ExtResource("5_xd8mv")
+expand_mode = 1
+
+[node name="Veg" type="TextureRect" parent="Developers/Bulba Bio/Portrait/ScrollContainer/GridContainer" unique_id=1310063473]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture = ExtResource("13_bjyjg")
 expand_mode = 1
 
 [node name="Close" type="Button" parent="Developers/Bulba Bio/Portrait" unique_id=1128827625]
@@ -2119,7 +2049,6 @@ offset_right = 46.0
 offset_bottom = 182.0
 
 [node name="Dell" type="Control" parent="Launcher Games" unique_id=1420285637]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -2137,10 +2066,10 @@ theme_type_variation = &"Line"
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
 texture_filter = 2
 layout_mode = 0
-offset_left = 2.0
-offset_top = 26.0
-offset_right = 770.0
-offset_bottom = 1434.0
+offset_left = -6.0
+offset_top = 34.0
+offset_right = 858.0
+offset_bottom = 1506.0
 scale = Vector2(0.125, 0.125)
 stretch = true
 
@@ -2148,40 +2077,15 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
-size = Vector2i(768, 1408)
-render_target_update_mode = 0
+size = Vector2i(864, 1472)
+render_target_update_mode = 4
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.303, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.1507115, 0)
 fov = 90.0
 
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
 transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, 0, 0)
-
-[node name="Input" type="LineEdit" parent="Launcher Games/Dell" unique_id=1326285556]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 194.0
-offset_right = 102.0
-offset_bottom = 218.0
-theme_override_font_sizes/font_size = 12
-placeholder_text = "Ask Dell"
-alignment = 1
-context_menu_enabled = false
-emoji_menu_enabled = false
-
-[node name="Response" type="Label" parent="Launcher Games/Dell" unique_id=275911843]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 42.0
-offset_right = 98.0
-offset_bottom = 74.0
-theme_override_font_sizes/font_size = 12
-horizontal_alignment = 1
-visible_characters_behavior = 1
-
-[node name="Yap Timer" type="Timer" parent="Launcher Games/Dell" unique_id=1904828088]
-wait_time = 0.06
 
 [node name="Dell" type="TextureButton" parent="Launcher Games/Dell" unique_id=94201817]
 layout_mode = 0
@@ -2194,6 +2098,34 @@ texture_normal = SubResource("AtlasTexture_xaw78")
 texture_pressed = SubResource("AtlasTexture_7divq")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
+layout_mode = 0
+offset_left = 104.0
+offset_top = -4.0
+offset_right = 208.0
+offset_bottom = 140.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Launcher Games/Dell/ScrollContainer" unique_id=856089306]
+layout_mode = 2
+theme_override_constants/v_separation = 1
+
+[node name="Game Install" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=763852076]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_font_sizes/font_size = 8
+text = "How to install a game?"
+alignment = 0
+
+[node name="Game Install2" type="Button" parent="Launcher Games/Dell/ScrollContainer/GridContainer" unique_id=2078142516]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+theme_override_font_sizes/font_size = 8
+alignment = 0
 
 [node name="Launcher Pets" type="Control" parent="Launcher Games" unique_id=564404724]
 anchors_preset = 0
@@ -2324,6 +2256,33 @@ pivot_offset = Vector2(16, 16)
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
 
+[node name="Event" type="Node2D" parent="." unique_id=628519764]
+script = ExtResource("68_d2ack")
+
+[node name="Snow" type="CPUParticles2D" parent="Event" unique_id=1278912574]
+visible = false
+z_index = 5
+position = Vector2(320, 176)
+amount = 30
+texture = ExtResource("68_omfc6")
+lifetime = 7.0
+randomness = 1.0
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(320, 184.68)
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_omfc6")
+color_ramp = SubResource("Gradient_d2ack")
+hue_variation_min = -0.1
+hue_variation_curve = SubResource("Curve_d2ack")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
 environment = SubResource("Environment_3a0l5")
 
@@ -2338,15 +2297,9 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder2" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" to="Store/Area/GridContainer/Featured (New)/Games/Placeholder3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_pressed"]
@@ -2356,12 +2309,9 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" to="Store/Area/GridContainer/Coming Soon/Games/The Vegetable Game" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_pressed"]
@@ -2382,9 +2332,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
-[connection signal="text_changed" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_changed"]
-[connection signal="text_submitted" from="Launcher Games/Dell/Input" to="Launcher Games/Dell" method="_on_input_text_submitted"]
-[connection signal="timeout" from="Launcher Games/Dell/Yap Timer" to="Launcher Games/Dell" method="_on_yap_timer_timeout"]
 [connection signal="toggled" from="Launcher Games/Dell/Dell" to="Launcher Games/Dell" method="_on_dell_toggled"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
