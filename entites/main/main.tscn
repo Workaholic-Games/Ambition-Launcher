@@ -17,9 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://0romx66k1h1p" path="res://game_assets/covers/cover.png" id="15_12ljg"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -27,8 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
 [ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
+[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2.png" id="20_ovdq3"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://entites/main/developers/bulba.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
+[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin_miner.png" id="21_hupd3"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://entites/main/tos.gd" id="21_p0fg6"]
 [ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
@@ -934,7 +937,7 @@ texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/Scaryhead")
+page = NodePath("../../../../../../Store Pages/GFFA")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
 visible = false
@@ -1031,20 +1034,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.999, 1)
 
-[node name="Scaryhead" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
-visible = false
-layout_mode = 0
-offset_left = 112.112
-offset_right = 112.112
-description = "demo"
-rating = "unrated"
-version_names = PackedStringArray("DEMO")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
-version_file_names_windows = PackedStringArray("FirstPerson")
-version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
-folder_path = "user://GFFA"
-
 [node name="FNAB1" parent="Store Pages" unique_id=1824735666 instance=ExtResource("12_5enwe")]
 layout_mode = 0
 offset_left = 112.112114
@@ -1060,6 +1049,7 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
 folder_path = "user://FNAB"
+Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_ovdq3"), ExtResource("21_hupd3")])
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1077,6 +1067,20 @@ version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
 folder_path = "user://FNAB"
+
+[node name="GFFA" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
+visible = false
+layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
+description = "demo"
+rating = "unrated"
+version_names = PackedStringArray("DEMO")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
+version_file_names_windows = PackedStringArray("FirstPerson")
+version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
+folder_path = "user://GFFA"
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false

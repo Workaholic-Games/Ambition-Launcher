@@ -27,8 +27,21 @@ var can_download : bool = true
 func _ready() -> void:
 	$"Game Description".text = description
 	$"Age Rating".text = rating
-	$CarouselContainer/Control/Panel/Thumbnail.texture = Images.get(0)
-	$CarouselContainer/Control.add_child(Panel.new())
+	
+	for image in Images.size():
+		print(image)
+		var new_image = Panel.new()
+		new_image.position.y = -104.174
+		new_image.size = Vector2(344, 208.348)
+		new_image.theme_type_variation = "Line"
+		$CarouselContainer/Control.add_child(new_image)
+		
+		var thumbnail = Sprite2D.new()
+		thumbnail.scale = Vector2(0.171, 0.178)
+		thumbnail.texture = Images.get(image)
+		thumbnail.position = Vector2(172.0, 104.0)
+		new_image.add_child(thumbnail)
+		print(new_image)
 	
 	for i in range(version_names.size()):
 		match Main.operating_system:
@@ -149,7 +162,7 @@ func _physics_process(_delta: float) -> void:
 	else:
 		$"Left Button".visible = true
 		
-	if $CarouselContainer.selected_index == 4:
+	if $CarouselContainer.selected_index == Images.size() - 1:
 		$"Right Button".visible = false
 	else:
 		$"Right Button".visible = true
@@ -167,7 +180,6 @@ func _physics_process(_delta: float) -> void:
 
 func _on_left_button_pressed() -> void:
 	$CarouselContainer._left()
-
 
 func _on_right_button_pressed() -> void:
 	$CarouselContainer._right()
