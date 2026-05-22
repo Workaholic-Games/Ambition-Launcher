@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm66fueikdp7g"
-path="res://.godot/imported/vegetable_game.png-11e1969311ff7217db44083b1e7177de.ctex"
+path="res://.godot/imported/vegetable_game.png-71ae777048ad2541648d17685ade2d5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/thumbnails/vegetable_game.png"
-dest_files=["res://.godot/imported/vegetable_game.png-11e1969311ff7217db44083b1e7177de.ctex"]
+source_file="res://game_assets/thumbnails/veg/vegetable_game.png"
+dest_files=["res://.godot/imported/vegetable_game.png-71ae777048ad2541648d17685ade2d5c.ctex"]
 
 [params]
 
