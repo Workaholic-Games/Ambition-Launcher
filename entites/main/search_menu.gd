@@ -9,16 +9,22 @@ func _on_search_bar_text_changed(new_text: String) -> void:
 	
 	if new_text == "":
 		for i in items.get_children():
-			i.show()
+			for j in i.get_children():
+				for k in j.get_children():
+					k.show()
 		return
 	matches.clear()
 	
 	for i in items.get_children():
-		if new_text in i.name.to_lower():
-			matches.append(i)
+		for j in i.get_children():
+			for k in j.get_children():
+				if new_text in k.name.to_lower():
+					matches.append(k)
 	
 	for i in items.get_children():
-		if i in matches:
-			i.show()
-		else:
-			i.hide()
+		for j in i.get_children():
+			for k in j.get_children():
+				if k in matches:
+					k.show()
+				else:
+					k.hide()
