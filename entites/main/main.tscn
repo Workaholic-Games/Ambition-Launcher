@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -997,7 +997,8 @@ offset_left = 112.112114
 offset_right = 112.112114
 description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
 rating = "Rated: T for Teen
-Difficulty: Normal"
+Difficulty: Normal
+Stability: Good"
 version_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.DEMO.Mac.zip")
@@ -1015,7 +1016,8 @@ offset_left = 112.112114
 offset_right = 112.112114
 description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
 rating = "Rated: T for Teen
-Difficulty: Hard"
+Difficulty: Hard
+Stability: Great"
 version_names = PackedStringArray("Ambition Edition")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip")
@@ -1037,7 +1039,8 @@ A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical
 
 "
 rating = "Rated: T for Teen
-Difficulty: Newborn"
+Difficulty: Newborn
+Stability: Varies"
 version_names = PackedStringArray("DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
@@ -1053,7 +1056,8 @@ offset_left = 112.112
 offset_right = 112.112
 description = "\"Not a computer virus. I promise\" -Sawyer 2026"
 rating = "Rated: E for Everyone
-Difficulty: Easy"
+Difficulty: Easy
+Stability: Fantastic"
 version_names = PackedStringArray("1.25")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
@@ -1070,7 +1074,8 @@ description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK. ALSO
 You were brought to this land of vegetables by a myserious entity to help defeat The Mold. Go forth young Seedling.
 "
 rating = "Rated: E for Everyone
-Difficulty: Normal"
+Difficulty: Normal
+Stability: Terrible"
 version_names = PackedStringArray("Regrown")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Mac.zip")
