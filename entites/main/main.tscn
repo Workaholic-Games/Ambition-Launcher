@@ -73,6 +73,8 @@
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://entites/main/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yoins"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
 
@@ -495,6 +497,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
 
 [node name="Line" type="Panel" parent="Panel/Tabs" unique_id=459346034]
+material = SubResource("ShaderMaterial_yoins")
 layout_mode = 0
 offset_left = 108.0
 offset_right = 110.0
@@ -1040,7 +1043,7 @@ A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical
 "
 rating = "Rated: T for Teen
 Difficulty: Newborn
-Stability: Varies"
+Stability: Unoptimized"
 version_names = PackedStringArray("DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")

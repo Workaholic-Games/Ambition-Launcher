@@ -62,7 +62,6 @@ func _on_uninstall_pressed() -> void:
 		"Linux":
 			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_linux[actual_index])
 			OS.move_to_trash(full_path)
-				
 	check()
 
 

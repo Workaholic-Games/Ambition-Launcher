@@ -23,4 +23,3 @@ func _on_option_button_item_selected(index: int) -> void:
 	var option: String = $Settings/Themes.get_item_text(index)
 	theme = themes[option]
 	Main.launcher_data.theme = index
-	
