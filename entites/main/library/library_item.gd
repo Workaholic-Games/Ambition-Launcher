@@ -7,6 +7,7 @@ extends TextureButton
 @export var version_file_names_linux : PackedStringArray
 @export var folder_path : String = "user://Test"
 @export var font_size : int = 16
+var installed : bool = false
 
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
@@ -62,6 +63,7 @@ func _on_uninstall_pressed() -> void:
 		"Linux":
 			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_linux[actual_index])
 			OS.move_to_trash(full_path)
+	installed = false
 	check()
 
 
@@ -92,6 +94,7 @@ func check():
 		
 		
 	if $Versions.item_count > 0:
+		installed = true
 		visible = true
 		$Versions.select(0)
 		_on_versions_item_selected(0)

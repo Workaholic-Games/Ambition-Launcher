@@ -6,6 +6,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+border_width_left = 2
 border_width_bottom = 2
 border_color = Color(0, 0.79, 0.3423334, 1)
 
@@ -170,6 +171,8 @@ Line/base_type = &"Panel"
 Line/styles/panel = SubResource("StyleBoxFlat_xvamo")
 LineEdit/colors/caret_color = Color(0.79493165, 0.97802013, 0.865452, 1)
 LineEdit/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)
+LineEdit/colors/font_placeholder_color = Color(0.5985, 0.95, 0.7508167, 0.6)
+LineEdit/colors/selection_color = Color(0.6, 0.9490196, 0.7490196, 0.6)
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_ogguv")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_otj2g")
 OptionButton/colors/font_color = Color(0.6, 0.9490196, 0.7490196, 1)

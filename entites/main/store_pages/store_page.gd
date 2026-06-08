@@ -16,8 +16,8 @@ extends Control
 @export var version_file_names_linux : PackedStringArray
 
 @export var folder_path : String = "user://Test"
-
 @export var Images : Array[Texture]
+@export var installable : bool = true
 
 var os_name : String = "Windows"
 var selected_link : int = 0
@@ -25,6 +25,10 @@ var can_download : bool = true
 
 
 func _ready() -> void:
+	if installable == false:
+		$"Install or Back/Install".visible = false
+	
+	
 	$"Game Description".text = description
 	$"Age Rating".text = rating
 	
@@ -68,7 +72,7 @@ func _on_install_pressed() -> void:
 		if err == OK:
 			pass
 			
-	if can_download == true and $Install.text == "Install":
+	if can_download == true and $"Install or Back/Install".text == "Install":
 		$HTTPRequest.download_file = folder_path + "//Package.zip"
 		match Main.operating_system:
 			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))

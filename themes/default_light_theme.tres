@@ -4,7 +4,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
-border_width_right = 2
+border_width_left = 2
 border_width_bottom = 2
 border_color = Color(0.15249151, 0.49447626, 0.68883556, 1)
 
@@ -97,6 +97,8 @@ bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldlso"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+border_width_left = 2
+border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v14gr"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
@@ -167,6 +169,7 @@ Line/styles/panel = SubResource("StyleBoxFlat_u2k11")
 LineEdit/colors/caret_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 LineEdit/colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 LineEdit/colors/font_placeholder_color = Color(0.07450981, 0.07450981, 0.07450981, 0.6)
+LineEdit/colors/selection_color = Color(0.07450981, 0.07450981, 0.07450981, 0.6)
 LineEdit/icons/clear = null
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_u2k11")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_nqxr6")

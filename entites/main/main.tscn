@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://entites/main/library/library.gd" id="8_gjwx3"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://entites/main/library/library_item.tscn" id="9_qsgxr"]
-[ext_resource type="Texture2D" uid="uid://jaop0enpo2k4" path="res://game_assets/covers/placeholder_cover.png" id="10_iwt88"]
 [ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://entites/main/store/sparkle.png" id="11_rnd3n"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
@@ -589,6 +588,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_l7kjj")
 items = NodePath("Area/GridContainer")
+search = "library"
 
 [node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
 layout_mode = 0
@@ -602,7 +602,7 @@ script = ExtResource("8_gjwx3")
 layout_mode = 2
 columns = 4
 
-[node name="FNAB" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
+[node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game_name = "Five Night's at Bulba's"
 game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
@@ -610,7 +610,7 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 folder_path = "user://FNAB"
 
-[node name="FNAB2" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
+[node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("5_xd8mv")
 game_name = "Five Night's at Bulba's 2"
@@ -619,7 +619,7 @@ version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 folder_path = "user://FNAB"
 
-[node name="GFFA" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
+[node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("21_gtc6m")
 game_name = "Gavin's Fantastically Fun Adventure"
@@ -651,7 +651,6 @@ layout_mode = 0
 offset_left = 192.0
 offset_right = 576.0
 offset_bottom = 32.0
-mouse_default_cursor_shape = 0
 placeholder_text = "Search your Library..."
 context_menu_enabled = false
 emoji_menu_enabled = false
@@ -663,6 +662,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_l7kjj")
 items = NodePath("Area/GridContainer")
+search = "store"
 
 [node name="Area" type="ScrollContainer" parent="Store" unique_id=639740205]
 layout_mode = 0
@@ -686,7 +686,7 @@ text = "Featured Games (New!)"
 horizontal_alignment = 1
 
 [node name="Line" type="Panel" parent="Store/Area/GridContainer/Featured (New)" unique_id=337541973]
-custom_minimum_size = Vector2(523, 4)
+custom_minimum_size = Vector2(523, 2)
 layout_mode = 2
 theme_type_variation = &"Line"
 
@@ -704,55 +704,6 @@ custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 alignment = 1
 
-[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=1288352932 node_paths=PackedStringArray("page")]
-texture_filter = 1
-custom_minimum_size = Vector2(120, 180)
-layout_mode = 2
-texture_normal = ExtResource("21_gtc6m")
-ignore_texture_size = true
-stretch_mode = 4
-script = ExtResource("4_2dgon")
-page = NodePath("../../../../../../Store Pages/GFFA")
-
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=1251014016]
-visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
-
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=101408882]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-theme_override_font_sizes/font_size = 12
-text = "Gavin's Fantastically
-Fun Adventure"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Featured (New)/Games/GFFA" unique_id=306306872]
-position = Vector2(60, 90)
-texture = ExtResource("11_rnd3n")
-local_coords = true
-emission_shape = 3
-emission_rect_extents = Vector2(60, 90)
-direction = Vector2(0, 0)
-spread = 180.0
-gravity = Vector2(0, 0)
-scale_amount_min = 2.0
-scale_amount_max = 2.0
-scale_amount_curve = SubResource("Curve_iwt88")
-color = Color(1, 0.20999998, 0.20999998, 1)
-color_initial_ramp = SubResource("Gradient_ovdq3")
-hue_variation_min = -1.0
-hue_variation_max = 1.0
-hue_variation_curve = SubResource("Curve_jltb6")
-
 [node name="Five Nights at Bulbas (FNAB, FNAB2)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
@@ -763,7 +714,7 @@ text = "Five Night's at Bulba's"
 horizontal_alignment = 1
 
 [node name="Line" type="Panel" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)" unique_id=893160749]
-custom_minimum_size = Vector2(523, 4)
+custom_minimum_size = Vector2(523, 2)
 layout_mode = 2
 theme_type_variation = &"Line"
 
@@ -845,7 +796,7 @@ text = "Other Games"
 horizontal_alignment = 1
 
 [node name="Line" type="Panel" parent="Store/Area/GridContainer/Other (Bitcoin Miner)" unique_id=5009249]
-custom_minimum_size = Vector2(523, 4)
+custom_minimum_size = Vector2(523, 2)
 layout_mode = 2
 theme_type_variation = &"Line"
 
@@ -928,7 +879,7 @@ text = "Coming Soon"
 horizontal_alignment = 1
 
 [node name="Line" type="Panel" parent="Store/Area/GridContainer/Coming Soon" unique_id=1935351013]
-custom_minimum_size = Vector2(523, 4)
+custom_minimum_size = Vector2(523, 2)
 layout_mode = 2
 theme_type_variation = &"Line"
 
@@ -945,23 +896,23 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
-[node name="Whatever" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1209658610]
-visible = false
+[node name="GFFA" type="TextureButton" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=1288352932 node_paths=PackedStringArray("page")]
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("10_iwt88")
+texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/GFFA")
 
-[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/Whatever" unique_id=926007471]
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
 visible = false
 position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/Whatever" unique_id=449110319]
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=101408882]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -970,17 +921,35 @@ offset_right = 120.0
 offset_bottom = 180.0
 theme_type_variation = &"Hover_Label"
 theme_override_font_sizes/font_size = 12
-text = "Whatever The Heck Sawyer's Making"
+text = "Gavin's Fantastically
+Fun Adventure"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=306306872]
+position = Vector2(60, 90)
+texture = ExtResource("11_rnd3n")
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(60, 90)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_iwt88")
+color = Color(1, 0.20999998, 0.20999998, 1)
+color_initial_ramp = SubResource("Gradient_ovdq3")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_jltb6")
 
 [node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
 layout_mode = 0
 offset_left = 192.0
 offset_right = 576.0
 offset_bottom = 32.0
-mouse_default_cursor_shape = 0
 placeholder_text = "Search the Store..."
 context_menu_enabled = false
 emoji_menu_enabled = false
@@ -1051,6 +1020,7 @@ version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
 Images = Array[Texture]([ExtResource("34_qwxpq"), ExtResource("35_yoins"), ExtResource("36_d1j2r"), ExtResource("37_42eyl")])
+installable = false
 
 [node name="Bitcoin Miner" parent="Store Pages" unique_id=1362500682 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1338,7 +1308,7 @@ offset_left = 136.0
 offset_top = -44.0
 offset_right = 616.0
 offset_bottom = 284.0
-text = "Released the launcher"
+text = "Released the launcher. It's in Beta so there may be some bugs and such."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1368,10 +1338,15 @@ offset_right = 112.0
 offset_bottom = -0.39284515
 theme_type_variation = &"Line"
 
-[node name="Avatar" type="Sprite2D" parent="Developers/Bulba/Portrait" unique_id=1028126795]
-position = Vector2(56.196426, 56.392838)
-scale = Vector2(0.18815771, 0.18815768)
+[node name="Avatar" type="TextureRect" parent="Developers/Bulba/Portrait" unique_id=2089802167]
+layout_mode = 0
+offset_left = 2.3265088
+offset_top = 2.3928516
+offset_right = 260.71902
+offset_bottom = 260.78537
+scale = Vector2(0.41796878, 0.41796872)
 texture = ExtResource("20_qsgxr")
+expand_mode = 1
 
 [node name="Jonathan" type="Button" parent="Developers" unique_id=29423572]
 layout_mode = 0
@@ -1391,12 +1366,15 @@ offset_right = 112.0
 offset_bottom = -0.39283752
 theme_type_variation = &"Line"
 
-[node name="Avatar" type="Sprite2D" parent="Developers/Jonathan/Portrait" unique_id=754863309]
+[node name="Avatar" type="TextureRect" parent="Developers/Jonathan/Portrait" unique_id=490460202]
 texture_filter = 2
-position = Vector2(56.196445, 56.392826)
+layout_mode = 0
+offset_left = 1.8775454
+offset_top = 2.3928404
+offset_right = 3391.9858
+offset_bottom = 3404.393
 scale = Vector2(0.031857383, 0.03174603)
 texture = ExtResource("19_qsgxr")
-region_rect = Rect2(0, 0, 3024, 4032)
 
 [node name="Sawyer" type="Button" parent="Developers" unique_id=748983614]
 layout_mode = 0
@@ -1416,9 +1394,13 @@ offset_right = 112.0
 offset_bottom = -0.39283752
 theme_type_variation = &"Line"
 
-[node name="Avatar" type="Sprite2D" parent="Developers/Sawyer/Portrait" unique_id=139294516]
+[node name="Avatar" type="TextureRect" parent="Developers/Sawyer/Portrait" unique_id=1438994435]
 texture_filter = 2
-position = Vector2(56.266632, 56.294594)
+layout_mode = 0
+offset_left = 2.428547
+offset_top = 2.392838
+offset_right = 92.244736
+offset_bottom = 92.20904
 scale = Vector2(1.2024559, 1.2024556)
 texture = ExtResource("19_gjwx3")
 
@@ -2484,9 +2466,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/GFFA" to="Store/Area/GridContainer/Featured (New)/Games/GFFA" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_pressed"]
@@ -2499,9 +2478,9 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" to="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" method="_on_pressed"]
-[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_mouse_exited"]
-[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/Whatever" to="Store/Area/GridContainer/Coming Soon/Games/Whatever" method="_on_pressed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
 [connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
