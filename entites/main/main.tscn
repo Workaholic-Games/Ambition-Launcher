@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -657,6 +657,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1313,7 +1314,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
-visible = false
 anchors_preset = 0
 offset_top = 80.0
 offset_right = 40.0
@@ -1405,7 +1405,6 @@ scale = Vector2(1.2024559, 1.2024556)
 texture = ExtResource("19_gjwx3")
 
 [node name="Bulba Bio" type="Panel" parent="Developers" unique_id=911267021]
-visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 112.0
@@ -1422,8 +1421,8 @@ offset_bottom = 135.99998
 theme_type_variation = &"Line"
 
 [node name="Avatar" type="Sprite2D" parent="Developers/Bulba Bio/Portrait" unique_id=1729857566]
-position = Vector2(56.196426, 56.392838)
-scale = Vector2(0.18815771, 0.18815768)
+position = Vector2(56.00003, 56)
+scale = Vector2(0.37923276, 0.37846547)
 texture = ExtResource("20_qsgxr")
 
 [node name="Rank" type="Label" parent="Developers/Bulba Bio/Portrait" unique_id=933113928]
