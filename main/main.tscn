@@ -73,6 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://editor_icons/lock.png" id="51_lc78y"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
+[ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://seasonal/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
 [ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://avatars/avatar.gd" id="73_d1j2r"]
@@ -1741,6 +1742,7 @@ theme_type_variation = &"Close_Button"
 text = "Back"
 
 [node name="Settings" type="Control" parent="." unique_id=841640467]
+visible = false
 anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
@@ -1871,6 +1873,15 @@ offset_bottom = 256.0
 theme_type_variation = &"Close_Button"
 toggle_mode = true
 text = "Change Avatar"
+
+[node name="Button2" type="Button" parent="User" unique_id=1939437075]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 72.0
+offset_right = 568.0
+offset_bottom = 112.0
+theme_type_variation = &"Close_Button"
+text = "Change Username"
 
 [node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
 visible = false
@@ -2153,6 +2164,28 @@ offset_right = 496.0
 offset_bottom = 360.0
 theme_type_variation = &"Close_Button"
 text = "I Accept"
+
+[node name="Reloading" type="Panel" parent="." unique_id=1769899324]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("61_twbhu")
+
+[node name="Label" type="Label" parent="Reloading" unique_id=1351337179]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+theme_type_variation = &"Store_Page"
+theme_override_font_sizes/font_size = 24
+text = "Reloading..."
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Timer" type="Timer" parent="Reloading" unique_id=1834441183]
+wait_time = 0.25
 
 [node name="Username" type="Panel" parent="." unique_id=130943005]
 visible = false
@@ -2682,8 +2715,10 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
 [connection signal="toggled" from="User/Button" to="User" method="_on_button_toggled"]
+[connection signal="pressed" from="User/Button2" to="User" method="_on_button_2_pressed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
+[connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]
 [connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Username/Button" to="Username" method="_on_button_pressed"]
 [connection signal="pressed" from="Avatar/Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]
