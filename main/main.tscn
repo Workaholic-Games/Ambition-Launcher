@@ -712,13 +712,14 @@ custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 alignment = 1
 
-[node name="BATG" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=445528086]
+[node name="BATG" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=445528086 node_paths=PackedStringArray("page")]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 texture_normal = ExtResource("14_8gen5")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("4_2dgon")
+page = NodePath("../../../../../../Store Pages/BATG")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/BATG" unique_id=2062021473]
 visible = false
@@ -1091,6 +1092,11 @@ version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
 Images = Array[Texture]([ExtResource("37_uicw0"), ExtResource("38_uicw0"), ExtResource("39_omfc6"), ExtResource("40_d2ack"), ExtResource("41_jltb6")])
+
+[node name="BATG" parent="Store Pages" unique_id=433374860 instance=ExtResource("12_5enwe")]
+layout_mode = 0
+offset_left = 110.11011
+offset_right = 110.11011
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
