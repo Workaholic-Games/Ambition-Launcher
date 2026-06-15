@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt8bggeblm3di"
-path="res://.godot/imported/lock.png-fbfb38ecad61200331a5fb15105c971e.ctex"
+uid="uid://d4ngd64jt2egq"
+path="res://.godot/imported/fry_cursor.png-9b7bd2db3eb0bf761019d0d92c833e7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/main/lock.png"
-dest_files=["res://.godot/imported/lock.png-fbfb38ecad61200331a5fb15105c971e.ctex"]
+source_file="res://main/settings/cursors/fry_cursor.png"
+dest_files=["res://.godot/imported/fry_cursor.png-9b7bd2db3eb0bf761019d0d92c833e7c.ctex"]
 
 [params]
 

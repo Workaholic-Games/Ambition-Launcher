@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blt4uae33xe6y"
-path="res://.godot/imported/jonathan.png-84db11efe436b55526f6a0cf202bdfa7.ctex"
+uid="uid://uuunfouo0p1x"
+path="res://.godot/imported/seedling_cursor.png-7233ee95c7268fde0e9fe9f3eec48fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/main/developers/jonathan.png"
-dest_files=["res://.godot/imported/jonathan.png-84db11efe436b55526f6a0cf202bdfa7.ctex"]
+source_file="res://main/settings/cursors/seedling_cursor.png"
+dest_files=["res://.godot/imported/seedling_cursor.png-7233ee95c7268fde0e9fe9f3eec48fc1.ctex"]
 
 [params]
 

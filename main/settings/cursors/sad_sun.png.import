@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxmncr1my2obb"
-path="res://.godot/imported/dark_cursor.png-14fe09989d106ac04b8aa1adb89dcfb1.ctex"
+uid="uid://1q2k63dd51wx"
+path="res://.godot/imported/sad_sun.png-bbc08aed1ef07a9df786e4c2b5c89722.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/cursors/dark_cursor.png"
-dest_files=["res://.godot/imported/dark_cursor.png-14fe09989d106ac04b8aa1adb89dcfb1.ctex"]
+source_file="res://main/settings/cursors/sad_sun.png"
+dest_files=["res://.godot/imported/sad_sun.png-bbc08aed1ef07a9df786e4c2b5c89722.ctex"]
 
 [params]
 

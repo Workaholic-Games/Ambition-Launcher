@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://deak5q2x3tsk1"]
 
-[ext_resource type="Script" uid="uid://dgn3tajc38yt5" path="res://avatar_instance.gd" id="1_2x4iy"]
+[ext_resource type="Script" uid="uid://dgn3tajc38yt5" path="res://avatars/avatar_instance.gd" id="1_2x4iy"]
 
 [node name="AvatarInstance" type="TextureButton" unique_id=1229918592]
 custom_minimum_size = Vector2(32, 32)

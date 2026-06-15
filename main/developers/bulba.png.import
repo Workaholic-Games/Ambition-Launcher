@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmx6j0vr0sxqe"
-path="res://.godot/imported/white_cursor.png-484d8b513099b02071207abbdf92466d.ctex"
+uid="uid://0sl1cn2mobgv"
+path="res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/cursors/white_cursor.png"
-dest_files=["res://.godot/imported/white_cursor.png-484d8b513099b02071207abbdf92466d.ctex"]
+source_file="res://main/developers/bulba.png"
+dest_files=["res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"]
 
 [params]
 

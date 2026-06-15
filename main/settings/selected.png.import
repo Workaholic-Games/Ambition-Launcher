@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtu0cbenpihok"
-path="res://.godot/imported/sparkle.png-620293b68ecfbf0e8f5436c0af9f038f.ctex"
+uid="uid://bflq6aolwj8c7"
+path="res://.godot/imported/selected.png-b67cc0e1a349a54b5fcae17422e35d7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/main/store/sparkle.png"
-dest_files=["res://.godot/imported/sparkle.png-620293b68ecfbf0e8f5436c0af9f038f.ctex"]
+source_file="res://main/settings/selected.png"
+dest_files=["res://.godot/imported/selected.png-b67cc0e1a349a54b5fcae17422e35d7a.ctex"]
 
 [params]
 

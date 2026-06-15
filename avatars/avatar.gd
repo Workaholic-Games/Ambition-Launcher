@@ -1,6 +1,6 @@
 extends Panel
 
-var avatar_instance = load("res://entites/main/avatar_instance.tscn")
+var avatar_instance = load("res://avatars/avatar_instance.tscn")
 var default_avatars = [
 	load("res://avatars/fnab1_arthur.png"),
 	load("res://avatars/fnab1_bulba.png"),

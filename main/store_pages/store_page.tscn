@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pyf70rc5r3m7"]
 
-[ext_resource type="Script" uid="uid://b86fteujc080h" path="res://entites/main/store_pages/store_page.gd" id="1_83v7k"]
-[ext_resource type="Script" uid="uid://bni7cgwh5uu0i" path="res://entites/main/carousel_container.gd" id="2_7fu70"]
+[ext_resource type="Script" uid="uid://b86fteujc080h" path="res://main/store_pages/store_page.gd" id="1_83v7k"]
+[ext_resource type="Script" uid="uid://bni7cgwh5uu0i" path="res://main/store_pages/carousel_container.gd" id="2_7fu70"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
 

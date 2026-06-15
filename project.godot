@@ -40,12 +40,11 @@ folder_colors={
 "res://branding/": "yellow",
 "res://community/": "pink",
 "res://editor_icons/": "green",
-"res://entites/": "blue",
-"res://entites/cursors/": "gray",
-"res://entites/main/": "purple",
 "res://fonts/": "gray",
 "res://game_assets/": "red",
 "res://launcher games/": "orange",
+"res://main/": "purple",
+"res://main/settings/cursors/": "gray",
 "res://themes/": "purple"
 }
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1q2k63dd51wx"
-path="res://.godot/imported/sad_sun.png-88c20b083ea0bb2a58206c53cc35b64b.ctex"
+uid="uid://cs5fgploubgfl"
+path="res://.godot/imported/sawyer.webp-f5ee1ca6209032752e724455d4a33efa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/cursors/sad_sun.png"
-dest_files=["res://.godot/imported/sad_sun.png-88c20b083ea0bb2a58206c53cc35b64b.ctex"]
+source_file="res://main/developers/sawyer.webp"
+dest_files=["res://.godot/imported/sawyer.webp-f5ee1ca6209032752e724455d4a33efa.ctex"]
 
 [params]
 

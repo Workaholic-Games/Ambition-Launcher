@@ -1,82 +1,82 @@
-[gd_scene format=3 uid="uid://duaq5lq8vuwp7"]
+[gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
-[ext_resource type="Script" path="res://main/settings/themes.gd" id="1_gx4rg"]
-[ext_resource type="Script" path="res://main/tab_buttons/tab_buttons.gd" id="2_5dllo"]
-[ext_resource type="ButtonGroup" path="res://main/tab_buttons/main_buttons.tres" id="3_phcyf"]
-[ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="4_birbe"]
-[ext_resource type="Script" path="res://main/tab_buttons/quit_launcher.gd" id="5_f1p13"]
-[ext_resource type="Script" path="res://main/update.gd" id="6_4obbf"]
-[ext_resource type="Script" path="res://main/search_menu.gd" id="7_ovcoh"]
-[ext_resource type="Script" path="res://main/library/library.gd" id="8_ppx11"]
-[ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://entites/main/library/library_item.tscn" id="9_1yv1y"]
-[ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="10_5yh34"]
-[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="11_pjuso"]
-[ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="12_23xmf"]
-[ext_resource type="Texture2D" uid="uid://doiwvp57g8tl7" path="res://game_assets/covers/bulba_and_the_gang.png" id="13_swlj1"]
-[ext_resource type="Script" path="res://main/store/store_item.gd" id="14_yysqy"]
-[ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="15_n5t1e"]
-[ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="16_h6isl"]
-[ext_resource type="Texture2D" path="res://main/store/sparkle.png" id="17_53bls"]
-[ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="18_lwnsi"]
-[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="19_41lik"]
-[ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="20_jbvwl"]
-[ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="21_sn1fb"]
-[ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="22_yvsr8"]
-[ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="23_vieuh"]
-[ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="24_yjja3"]
-[ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="25_l0gw7"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="26_inymm"]
-[ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="27_jcxqu"]
-[ext_resource type="Texture2D" uid="uid://2onugyxkrv4u" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192855.png" id="28_0arob"]
-[ext_resource type="Texture2D" uid="uid://x68uqkhq8i62" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192859.png" id="29_dij0e"]
-[ext_resource type="Texture2D" uid="uid://bf1wjlm60ph3" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192904.png" id="30_k1udn"]
-[ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="31_wat4s"]
-[ext_resource type="Texture2D" uid="uid://baet03e2bwlqr" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193014.png" id="32_ywjan"]
-[ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_m74q3"]
-[ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="34_tko6h"]
-[ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="35_am8a1"]
-[ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="36_8dc3g"]
-[ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="37_htgcl"]
-[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="38_smeu8"]
-[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="39_f3y11"]
-[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="40_cpm2s"]
-[ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="41_u81y6"]
-[ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="42_rt5wr"]
-[ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="43_mnw77"]
-[ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="44_vjgyh"]
-[ext_resource type="Script" path="res://main/community.gd" id="45_d5iia"]
-[ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="46_asu84"]
-[ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="47_qwt6e"]
-[ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="48_off2o"]
-[ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="49_tttfs"]
-[ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="50_1iygd"]
-[ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="51_g5xqc"]
-[ext_resource type="Texture2D" path="res://main/lock.png" id="52_s4o1y"]
-[ext_resource type="Script" path="res://main/developers.gd" id="53_7mmqq"]
-[ext_resource type="Texture2D" path="res://main/developers/bulba.png" id="54_3exxq"]
-[ext_resource type="Texture2D" path="res://main/developers/jonathan.png" id="55_5aa3q"]
-[ext_resource type="Texture2D" path="res://main/developers/sawyer.webp" id="56_bmvma"]
-[ext_resource type="Script" path="res://main/settings/settings.gd" id="57_shlp4"]
-[ext_resource type="Script" path="res://main/user.gd" id="58_2n44k"]
-[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="59_86lig"]
-[ext_resource type="Script" path="res://main/tos.gd" id="60_ldnlw"]
-[ext_resource type="Script" path="res://main/username.gd" id="61_qe8ju"]
-[ext_resource type="Script" path="res://main/avatar.gd" id="62_bnk2o"]
-[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="63_oosfy"]
-[ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="64_nf4f2"]
-[ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="65_xkvoa"]
-[ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="66_t5kpo"]
-[ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="67_pw0td"]
-[ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="68_37eu1"]
-[ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="69_0wkqm"]
-[ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="70_ve5sr"]
-[ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="71_5s44m"]
-[ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="72_ibca3"]
-[ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="73_g3y5b"]
-[ext_resource type="Script" path="res://main/Launcher Pets.gd" id="74_1slqb"]
-[ext_resource type="Texture2D" uid="uid://b0j5v21ii750h" path="res://launcher games/dell/dell.png" id="75_uo83y"]
-[ext_resource type="Script" path="res://main/event.gd" id="76_y0aao"]
-[ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="77_wm5rm"]
+[ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://main/settings/themes.gd" id="1_p0fg6"]
+[ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
+[ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
+[ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://main/tab_buttons/main_buttons.tres" id="3_bfcn8"]
+[ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://main/store/store_item.gd" id="4_2dgon"]
+[ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="4_akru0"]
+[ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://main/search_menu.gd" id="4_l7kjj"]
+[ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
+[ext_resource type="Script" uid="uid://dxuwvtpiouklv" path="res://main/update.gd" id="6_fl0aj"]
+[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
+[ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://main/library/library.gd" id="8_gjwx3"]
+[ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library/library_item.tscn" id="9_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://main/store/sparkle.png" id="11_rnd3n"]
+[ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
+[ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://doiwvp57g8tl7" path="res://game_assets/covers/bulba_and_the_gang.png" id="14_8gen5"]
+[ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
+[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
+[ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://main/settings/settings.gd" id="16_3a0l5"]
+[ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://main/developers/developers.gd" id="17_5enwe"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://main/community.gd" id="17_j32lm"]
+[ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
+[ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
+[ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://main/developers/sawyer.webp" id="19_gjwx3"]
+[ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://main/developers/jonathan.png" id="19_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="20_4u1yx"]
+[ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
+[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
+[ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://main/developers/bulba.png" id="20_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="21_7flok"]
+[ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
+[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="21_hupd3"]
+[ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
+[ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
+[ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="22_tipqc"]
+[ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
+[ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="23_gtbh3"]
+[ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
+[ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="24_j17j7"]
+[ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
+[ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="25_pddd4"]
+[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="26_mc0d5"]
+[ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="27_0qt1k"]
+[ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
+[ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://launcher games/launcher pets/Launcher Pets.gd" id="27_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://2onugyxkrv4u" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192855.png" id="28_o22vj"]
+[ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
+[ext_resource type="Texture2D" uid="uid://x68uqkhq8i62" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192859.png" id="29_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://bf1wjlm60ph3" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192904.png" id="30_xaw78"]
+[ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="31_7divq"]
+[ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
+[ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
+[ext_resource type="Texture2D" uid="uid://baet03e2bwlqr" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193014.png" id="32_6d2a4"]
+[ext_resource type="Texture2D" uid="uid://b0j5v21ii750h" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
+[ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
+[ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
+[ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="34_qwxpq"]
+[ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="35_yoins"]
+[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="36_d1j2r"]
+[ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="37_42eyl"]
+[ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
+[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="37_uicw0"]
+[ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="38_uicw0"]
+[ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
+[ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
+[ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
+[ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://editor_icons/lock.png" id="51_lc78y"]
+[ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
+[ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
+[ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://seasonal/event.gd" id="68_d2ack"]
+[ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
+[ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://avatars/avatar.gd" id="73_d1j2r"]
+[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="73_yoins"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yoins"]
 
@@ -110,150 +110,150 @@ point_count = 2
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3gblu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
-atlas = ExtResource("67_pw0td")
+atlas = ExtResource("32_lbrtn")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjyjg"]
-atlas = ExtResource("67_pw0td")
+atlas = ExtResource("32_lbrtn")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ei0e"]
-atlas = ExtResource("70_ve5sr")
+atlas = ExtResource("31_w8nh6")
 region = Rect2(0, 0, 16.289528, 16.39955)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lero"]
-atlas = ExtResource("70_ve5sr")
+atlas = ExtResource("31_w8nh6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 0, 16.289528, 16.39955)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u1yx"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ttif"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
 size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7flok"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tipqc"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtbh3"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j17j7"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pddd4"]
-atlas = ExtResource("73_g3y5b")
+atlas = ExtResource("33_xn47k")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mp0f"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gblu"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp5pd"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fqae6"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8nh6"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn47k"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgps4"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86ang"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgucs"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13033"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7gk6"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbrtn"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vgeh"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j32lm"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5kpq"]
-atlas = ExtResource("71_5s44m")
+atlas = ExtResource("28_5mp0f")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tn814"]
-atlas = ExtResource("70_ve5sr")
+atlas = ExtResource("31_w8nh6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ylro"]
-atlas = ExtResource("70_ve5sr")
+atlas = ExtResource("31_w8nh6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwt88"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovdq3"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ovnf"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mc0d5"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0qt1k"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o22vj"]
-atlas = ExtResource("72_ibca3")
+atlas = ExtResource("31_fqae6")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gblu"]
@@ -392,11 +392,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
-atlas = ExtResource("75_uo83y")
+atlas = ExtResource("32_6vgeh")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7divq"]
-atlas = ExtResource("75_uo83y")
+atlas = ExtResource("32_6vgeh")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="Curve" id="Curve_omfc6"]
@@ -419,7 +419,7 @@ adjustment_enabled = true
 [node name="Main" type="Control" unique_id=1449737561]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_gx4rg")
+script = ExtResource("1_p0fg6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -435,7 +435,7 @@ z_index = 2
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("2_5dllo")
+script = ExtResource("2_exgh8")
 
 [node name="Panel" type="Panel" parent="Panel/Tabs" unique_id=634576089]
 layout_mode = 0
@@ -455,50 +455,50 @@ theme_override_constants/v_separation = 0
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Library"
 
 [node name="Store" type="Button" parent="Panel/Tabs/Buttons" unique_id=940841122]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Store"
 
 [node name="Community" type="Button" parent="Panel/Tabs/Buttons" unique_id=791475924]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_birbe")
+theme_override_fonts/font = ExtResource("2_rvqcv")
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Community"
 
 [node name="Changelog" type="Button" parent="Panel/Tabs/Buttons" unique_id=608995006]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Changelog"
 
 [node name="Developers" type="Button" parent="Panel/Tabs/Buttons" unique_id=1211144331]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Developers"
 
 [node name="Settings" type="Button" parent="Panel/Tabs/Buttons" unique_id=576620853]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Settings"
 
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 toggle_mode = true
-button_group = ExtResource("3_phcyf")
+button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
 
 [node name="Line" type="Panel" parent="Panel/Tabs" unique_id=459346034]
@@ -528,7 +528,7 @@ offset_top = 120.0
 offset_right = 384.0
 offset_bottom = 240.0
 theme_type_variation = &"Quit"
-script = ExtResource("5_f1p13")
+script = ExtResource("15_kxcgb")
 
 [node name="Panel" type="Panel" parent="Quit" unique_id=569989287]
 show_behind_parent = true
@@ -573,7 +573,7 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 theme_type_variation = &"Quit"
-script = ExtResource("6_4obbf")
+script = ExtResource("6_fl0aj")
 
 [node name="Update Text" type="Label" parent="Update" unique_id=1188462879]
 layout_mode = 0
@@ -593,7 +593,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("7_ovcoh")
+script = ExtResource("4_l7kjj")
 items = NodePath("Area/GridContainer")
 search = "library"
 
@@ -603,13 +603,13 @@ offset_left = 112.0
 offset_top = 64.0
 offset_right = 640.0
 offset_bottom = 352.0
-script = ExtResource("8_ppx11")
+script = ExtResource("8_gjwx3")
 
 [node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
 layout_mode = 2
 columns = 4
 
-[node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_1yv1y")]
+[node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game_name = "Five Night's at Bulba's"
 game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
@@ -617,19 +617,18 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 folder_path = "user://FNAB"
 
-[node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=802839377 instance=ExtResource("9_1yv1y")]
+[node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("10_5yh34")
+texture_normal = ExtResource("5_xd8mv")
 game_name = "Five Night's at Bulba's 2"
 game_file_display_names = PackedStringArray("Ambition Edition")
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
-folder_path = "user://GFFA"
-font_size = 12
+folder_path = "user://FNAB"
 
-[node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=749553062 instance=ExtResource("9_1yv1y")]
+[node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("10_5yh34")
+texture_normal = ExtResource("21_gtc6m")
 game_name = "Gavin's Fantastically Fun Adventure"
 game_file_display_names = PackedStringArray("DEMO")
 version_file_names_windows = PackedStringArray("FirstPerson")
@@ -637,17 +636,17 @@ version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
 font_size = 12
 
-[node name="Bitcoin" parent="Library/Area/GridContainer" unique_id=337709024 instance=ExtResource("9_1yv1y")]
+[node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("11_pjuso")
+texture_normal = ExtResource("7_1dv2i")
 game_name = "Bitcoin Miner"
 game_file_display_names = PackedStringArray("1.25")
 version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
 folder_path = "user://Bitcoin Miner"
 
-[node name="Veg" parent="Library/Area/GridContainer" unique_id=751533020 instance=ExtResource("9_1yv1y")]
+[node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("12_23xmf")
+texture_normal = ExtResource("13_bjyjg")
 game_name = "The Vegetable Game"
 game_file_display_names = PackedStringArray("Regrown")
 version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
@@ -669,7 +668,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("7_ovcoh")
+script = ExtResource("4_l7kjj")
 items = NodePath("Area/GridContainer")
 search = "store"
 
@@ -716,10 +715,10 @@ alignment = 1
 [node name="BATG" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=445528086]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("13_swlj1")
+texture_normal = ExtResource("14_8gen5")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/BATG" unique_id=2062021473]
 visible = false
@@ -769,10 +768,10 @@ alignment = 1
 [node name="FNAB" type="TextureButton" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=989411366 node_paths=PackedStringArray("page")]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("15_n5t1e")
+texture_normal = ExtResource("4_akru0")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/FNAB1")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" unique_id=769458817]
@@ -797,10 +796,10 @@ autowrap_mode = 3
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("16_h6isl")
+texture_normal = ExtResource("5_xd8mv")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/FNAB2")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB2" unique_id=1500190869]
@@ -852,10 +851,10 @@ alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("11_pjuso")
+texture_normal = ExtResource("7_1dv2i")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/Bitcoin Miner" unique_id=1378670383]
@@ -880,10 +879,10 @@ autowrap_mode = 3
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("12_23xmf")
+texture_normal = ExtResource("13_bjyjg")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/Veg")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Other (Bitcoin Miner)/Games/The Vegetable Game" unique_id=420188677]
@@ -935,10 +934,10 @@ alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture_normal = ExtResource("10_5yh34")
+texture_normal = ExtResource("21_gtc6m")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("14_yysqy")
+script = ExtResource("4_2dgon")
 page = NodePath("../../../../../../Store Pages/GFFA")
 
 [node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=1251014016]
@@ -965,7 +964,7 @@ autowrap_mode = 3
 [node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=306306872]
 visible = false
 position = Vector2(60, 90)
-texture = ExtResource("17_53bls")
+texture = ExtResource("11_rnd3n")
 local_coords = true
 emission_shape = 3
 emission_rect_extents = Vector2(60, 90)
@@ -999,8 +998,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.999, 1)
 
-[node name="FNAB1" parent="Store Pages" unique_id=1882300884 instance=ExtResource("18_lwnsi")]
+[node name="FNAB1" parent="Store Pages" unique_id=1824735666 instance=ExtResource("12_5enwe")]
 layout_mode = 0
+offset_left = 112.112114
+offset_right = 112.112114
 description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
 rating = "Rated: T for Teen
 Difficulty: Normal
@@ -1013,10 +1014,13 @@ version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows",
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
 folder_path = "user://FNAB"
-Images = Array[Texture]([ExtResource("19_41lik"), ExtResource("20_jbvwl"), ExtResource("21_sn1fb"), ExtResource("22_yvsr8"), ExtResource("23_vieuh"), ExtResource("24_yjja3"), ExtResource("25_l0gw7")])
+Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_4u1yx"), ExtResource("21_7flok"), ExtResource("22_tipqc"), ExtResource("23_gtbh3"), ExtResource("24_j17j7"), ExtResource("25_pddd4")])
 
-[node name="FNAB2" parent="Store Pages" unique_id=1832620541 instance=ExtResource("18_lwnsi")]
+[node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
+offset_left = 112.112114
+offset_right = 112.112114
 description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
 rating = "Rated: T for Teen
 Difficulty: Hard
@@ -1029,10 +1033,13 @@ version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
 folder_path = "user://FNAB"
-Images = Array[Texture]([ExtResource("26_inymm"), ExtResource("27_jcxqu"), ExtResource("28_0arob"), ExtResource("29_dij0e"), ExtResource("30_k1udn"), ExtResource("31_wat4s"), ExtResource("32_ywjan"), ExtResource("33_m74q3")])
+Images = Array[Texture]([ExtResource("26_mc0d5"), ExtResource("27_0qt1k"), ExtResource("28_o22vj"), ExtResource("29_bjyjg"), ExtResource("30_xaw78"), ExtResource("31_7divq"), ExtResource("32_6d2a4"), ExtResource("33_uicw0")])
 
-[node name="GFFA" parent="Store Pages" unique_id=1833493794 instance=ExtResource("18_lwnsi")]
+[node name="GFFA" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
 description = "DISCLAIMER: This is an unfinished DEMO.
 
 A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical Marsh of Mortisha under the watch of the Sad Sun.
@@ -1047,11 +1054,14 @@ version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambit
 version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
-Images = Array[Texture]([ExtResource("34_tko6h"), ExtResource("35_am8a1"), ExtResource("36_8dc3g"), ExtResource("37_htgcl")])
+Images = Array[Texture]([ExtResource("34_qwxpq"), ExtResource("35_yoins"), ExtResource("36_d1j2r"), ExtResource("37_42eyl")])
 installable = false
 
-[node name="Bitcoin Miner" parent="Store Pages" unique_id=1818220405 instance=ExtResource("18_lwnsi")]
+[node name="Bitcoin Miner" parent="Store Pages" unique_id=1362500682 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
 description = "\"Not a computer virus. I promise\" -Sawyer 2026"
 rating = "Rated: E for Everyone
 Difficulty: Easy
@@ -1060,10 +1070,13 @@ version_names = PackedStringArray("1.25")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
 folder_path = "user://Bitcoin Miner"
-Images = Array[Texture]([ExtResource("38_smeu8"), ExtResource("39_f3y11")])
+Images = Array[Texture]([ExtResource("21_hupd3"), ExtResource("36_bjyjg")])
 
-[node name="Veg" parent="Store Pages" unique_id=198476819 instance=ExtResource("18_lwnsi")]
+[node name="Veg" parent="Store Pages" unique_id=353762828 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
+offset_left = 112.112
+offset_right = 112.112
 description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK. ALSO THIS GAME IS ALSO VERY BUGGY.
 
 You were brought to this land of vegetables by a myserious entity to help defeat The Mold. Go forth young Seedling.
@@ -1077,7 +1090,7 @@ version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambit
 version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
-Images = Array[Texture]([ExtResource("40_cpm2s"), ExtResource("41_u81y6"), ExtResource("42_rt5wr"), ExtResource("43_mnw77"), ExtResource("44_vjgyh")])
+Images = Array[Texture]([ExtResource("37_uicw0"), ExtResource("38_uicw0"), ExtResource("39_omfc6"), ExtResource("40_d2ack"), ExtResource("41_jltb6")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -1085,7 +1098,7 @@ anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 80.0
-script = ExtResource("45_d5iia")
+script = ExtResource("17_j32lm")
 
 [node name="Featured Art" type="Button" parent="Community" unique_id=1639509894]
 layout_mode = 0
@@ -1162,7 +1175,7 @@ offset_left = 32.0
 offset_top = 32.0
 offset_right = 128.0
 offset_bottom = 128.0
-texture = ExtResource("46_asu84")
+texture = ExtResource("19_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Bulba Art" unique_id=1850589535]
@@ -1181,7 +1194,7 @@ offset_left = 192.0
 offset_top = 32.0
 offset_right = 288.0
 offset_bottom = 128.0
-texture = ExtResource("47_qwt6e")
+texture = ExtResource("23_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Jonathan Art" unique_id=794045597]
@@ -1200,7 +1213,7 @@ offset_left = 368.0
 offset_top = 32.0
 offset_right = 464.0
 offset_bottom = 128.0
-texture = ExtResource("48_off2o")
+texture = ExtResource("20_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Sawyer Art" unique_id=2082768414]
@@ -1256,7 +1269,7 @@ offset_left = 32.0
 offset_top = 32.0
 offset_right = 128.0
 offset_bottom = 128.0
-texture = ExtResource("49_tttfs")
+texture = ExtResource("37_j17j7")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Bulba Meme" unique_id=1641051508]
@@ -1275,7 +1288,7 @@ offset_left = 192.0
 offset_top = 32.0
 offset_right = 288.0
 offset_bottom = 128.0
-texture = ExtResource("50_1iygd")
+texture = ExtResource("18_13033")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Jonathan Meme" unique_id=64430464]
@@ -1294,7 +1307,7 @@ offset_left = 368.0
 offset_top = 32.0
 offset_right = 464.0
 offset_bottom = 128.0
-texture = ExtResource("51_g5xqc")
+texture = ExtResource("20_n5kpq")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Sawyer Meme" unique_id=399822536]
@@ -1310,12 +1323,12 @@ horizontal_alignment = 1
 [node name="Lock" type="Sprite2D" parent="Community" unique_id=1207621899]
 position = Vector2(296, -22)
 scale = Vector2(2, 2)
-texture = ExtResource("52_s4o1y")
+texture = ExtResource("51_lc78y")
 
 [node name="Lock2" type="Sprite2D" parent="Community" unique_id=634005068]
 position = Vector2(418, -22)
 scale = Vector2(2, 2)
-texture = ExtResource("52_s4o1y")
+texture = ExtResource("51_lc78y")
 
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
 visible = false
@@ -1365,7 +1378,7 @@ anchors_preset = 0
 offset_top = 80.0
 offset_right = 40.0
 offset_bottom = 120.0
-script = ExtResource("53_7mmqq")
+script = ExtResource("17_5enwe")
 
 [node name="Bulba" type="Button" parent="Developers" unique_id=397892755]
 layout_mode = 0
@@ -1392,7 +1405,7 @@ offset_top = 2.3928516
 offset_right = 260.71902
 offset_bottom = 260.78537
 scale = Vector2(0.41796878, 0.41796872)
-texture = ExtResource("54_3exxq")
+texture = ExtResource("20_qsgxr")
 expand_mode = 1
 
 [node name="Jonathan" type="Button" parent="Developers" unique_id=29423572]
@@ -1421,7 +1434,7 @@ offset_top = 2.3928404
 offset_right = 3391.9858
 offset_bottom = 3404.393
 scale = Vector2(0.031857383, 0.03174603)
-texture = ExtResource("55_5aa3q")
+texture = ExtResource("19_qsgxr")
 
 [node name="Sawyer" type="Button" parent="Developers" unique_id=748983614]
 layout_mode = 0
@@ -1449,7 +1462,7 @@ offset_top = 2.392838
 offset_right = 92.244736
 offset_bottom = 92.20904
 scale = Vector2(1.2024559, 1.2024556)
-texture = ExtResource("56_bmvma")
+texture = ExtResource("19_gjwx3")
 
 [node name="Bulba Bio" type="Panel" parent="Developers" unique_id=911267021]
 visible = false
@@ -1471,7 +1484,7 @@ theme_type_variation = &"Line"
 [node name="Avatar" type="Sprite2D" parent="Developers/Bulba Bio/Portrait" unique_id=1729857566]
 position = Vector2(56.00003, 56)
 scale = Vector2(0.37923276, 0.37846547)
-texture = ExtResource("54_3exxq")
+texture = ExtResource("20_qsgxr")
 
 [node name="Rank" type="Label" parent="Developers/Bulba Bio/Portrait" unique_id=933113928]
 layout_mode = 0
@@ -1524,19 +1537,19 @@ theme_override_constants/separation = 9
 [node name="FNAB" type="TextureRect" parent="Developers/Bulba Bio/Portrait/ScrollContainer/GridContainer" unique_id=1158201706]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture = ExtResource("15_n5t1e")
+texture = ExtResource("4_akru0")
 expand_mode = 1
 
 [node name="FNAB2" type="TextureRect" parent="Developers/Bulba Bio/Portrait/ScrollContainer/GridContainer" unique_id=2017639874]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture = ExtResource("16_h6isl")
+texture = ExtResource("5_xd8mv")
 expand_mode = 1
 
 [node name="Veg" type="TextureRect" parent="Developers/Bulba Bio/Portrait/ScrollContainer/GridContainer" unique_id=1310063473]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture = ExtResource("12_23xmf")
+texture = ExtResource("13_bjyjg")
 expand_mode = 1
 
 [node name="Close" type="Button" parent="Developers/Bulba Bio/Portrait" unique_id=1128827625]
@@ -1617,14 +1630,14 @@ theme_override_constants/separation = 9
 texture_filter = 2
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture = ExtResource("10_5yh34")
+texture = ExtResource("21_gtc6m")
 expand_mode = 1
 
 [node name="Avatar" type="Sprite2D" parent="Developers/Jonathan Bio/Portrait" unique_id=140432234]
 texture_filter = 2
 position = Vector2(56.196426, 56.000008)
 scale = Vector2(0.031857383, 0.03174603)
-texture = ExtResource("55_5aa3q")
+texture = ExtResource("19_qsgxr")
 
 [node name="Close" type="Button" parent="Developers/Jonathan Bio/Portrait" unique_id=1055333855]
 layout_mode = 0
@@ -1703,14 +1716,14 @@ theme_override_constants/separation = 9
 [node name="Scaryhead" type="TextureRect" parent="Developers/Sawyer Bio/Portrait/ScrollContainer/GridContainer" unique_id=2021189446]
 custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
-texture = ExtResource("11_pjuso")
+texture = ExtResource("7_1dv2i")
 expand_mode = 1
 
 [node name="Avatar" type="Sprite2D" parent="Developers/Sawyer Bio/Portrait" unique_id=1243063594]
 texture_filter = 2
 position = Vector2(56.196465, 56)
 scale = Vector2(1.20421, 1.2)
-texture = ExtResource("56_bmvma")
+texture = ExtResource("19_gjwx3")
 
 [node name="Close" type="Button" parent="Developers/Sawyer Bio/Portrait" unique_id=1106612467]
 layout_mode = 0
@@ -1726,7 +1739,7 @@ anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 60.0
-script = ExtResource("57_shlp4")
+script = ExtResource("16_3a0l5")
 
 [node name="Window" type="OptionButton" parent="Settings" unique_id=2136730873]
 layout_mode = 0
@@ -1816,7 +1829,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("58_2n44k")
+script = ExtResource("56_42eyl")
 
 [node name="Avatar" type="Panel" parent="User" unique_id=848339665]
 layout_mode = 0
@@ -1831,7 +1844,7 @@ theme_type_variation = &"Line"
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("59_86lig")
+texture = ExtResource("73_yoins")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="User" unique_id=1757473915]
@@ -1879,7 +1892,7 @@ z_index = 20
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
-script = ExtResource("60_ldnlw")
+script = ExtResource("21_p0fg6")
 
 [node name="TOS" type="RichTextLabel" parent="TOS" unique_id=1147520963]
 layout_mode = 0
@@ -2144,7 +2157,7 @@ offset_right = 499.0
 offset_bottom = 216.0
 mouse_filter = 2
 theme_type_variation = &"Quit"
-script = ExtResource("61_qe8ju")
+script = ExtResource("57_qwxpq")
 
 [node name="LineEdit" type="LineEdit" parent="Username" unique_id=254969524]
 layout_mode = 0
@@ -2181,7 +2194,7 @@ offset_top = 4.0
 offset_right = 636.0
 offset_bottom = 40.0
 theme_type_variation = &"Line"
-script = ExtResource("62_bnk2o")
+script = ExtResource("73_d1j2r")
 
 [node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
 layout_mode = 0
@@ -2189,7 +2202,7 @@ offset_left = 2.0
 offset_top = 2.0
 offset_right = 34.0
 offset_bottom = 34.0
-texture_normal = ExtResource("59_86lig")
+texture_normal = ExtResource("73_yoins")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2198,12 +2211,12 @@ z_index = 20
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
-stream = ExtResource("63_oosfy")
+stream = ExtResource("20_gjwx3")
 expand = true
 metadata/_edit_lock_ = true
 
 [node name="Intro Audio" type="AudioStreamPlayer" parent="Intro" unique_id=912610543]
-stream = ExtResource("64_nf4f2")
+stream = ExtResource("21_qsgxr")
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
 z_index = 3
@@ -2218,7 +2231,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("65_xkvoa")
+script = ExtResource("24_6l2pj")
 
 [node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
 modulate = Color(0.49747366, 0.49747372, 0.49747354, 1)
@@ -2250,7 +2263,7 @@ render_target_update_mode = 0
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.1507115, 0)
 fov = 90.0
 
-[node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("66_t5kpo")]
+[node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
 transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, 0, 0)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
@@ -2494,7 +2507,7 @@ texture_normal = SubResource("AtlasTexture_hupd3")
 texture_pressed = SubResource("AtlasTexture_bjyjg")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("68_37eu1")
+script = ExtResource("27_3gblu")
 
 [node name="GridContainer" type="GridContainer" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=1391015889]
 visible = false
@@ -2505,7 +2518,7 @@ offset_top = 8.0
 offset_right = 68.0
 offset_bottom = 44.0
 columns = 2
-script = ExtResource("69_0wkqm")
+script = ExtResource("28_xn47k")
 
 [node name="Snail Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=1671665789]
 custom_minimum_size = Vector2(16, 16)
@@ -2552,7 +2565,7 @@ value = 1.0
 process_mode = 4
 visible = false
 position = Vector2(365, 27)
-script = ExtResource("74_1slqb")
+script = ExtResource("27_5mp0f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher Games/Launcher Pets/CharacterBody2D" unique_id=910393911]
 shape = SubResource("RectangleShape2D_3gblu")
@@ -2592,14 +2605,14 @@ stretch_mode = 0
 use_threads = true
 
 [node name="Event" type="Node2D" parent="." unique_id=628519764]
-script = ExtResource("76_y0aao")
+script = ExtResource("68_d2ack")
 
 [node name="Snow" type="CPUParticles2D" parent="Event" unique_id=1278912574]
 visible = false
 z_index = 5
 position = Vector2(320, 176)
 amount = 30
-texture = ExtResource("77_wm5rm")
+texture = ExtResource("68_omfc6")
 lifetime = 7.0
 randomness = 1.0
 lifetime_randomness = 1.0

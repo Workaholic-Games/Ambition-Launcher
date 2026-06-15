@@ -2,11 +2,11 @@
 extends Control
 var cursors: Dictionary = {
 	"None": null,
-	"White": load("res://entites/cursors/white_cursor.png"),
-	"Dark": load("res://entites/cursors/dark_cursor.png"),
-	"Fry": load("res://entites/cursors/fry_cursor.png"),
-	"Seedling": load("res://entites/cursors/seedling_cursor.png"),
-	"Sun": load("res://entites/cursors/sad_sun.png"),
+	"White": load("res://main/settings/cursors/white_cursor.png"),
+	"Dark": load("res://main/settings/cursors/dark_cursor.png"),
+	"Fry": load("res://main/settings/cursors/fry_cursor.png"),
+	"Seedling": load("res://main/settings/cursors/seedling_cursor.png"),
+	"Sun": load("res://main/settings/cursors/sad_sun.png"),
 }
 
 # Applying of settings on startup

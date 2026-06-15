@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5fgploubgfl"
-path="res://.godot/imported/sawyer.webp-9de8daf2996b005fd1c477d481f5763b.ctex"
+uid="uid://bxhd6s7pjw5ml"
+path="res://.godot/imported/progress_bar.png-74b1712d92fbeb67090f92e2c4a2d63d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/main/developers/sawyer.webp"
-dest_files=["res://.godot/imported/sawyer.webp-9de8daf2996b005fd1c477d481f5763b.ctex"]
+source_file="res://main/store_pages/progress_bar.png"
+dest_files=["res://.godot/imported/progress_bar.png-74b1712d92fbeb67090f92e2c4a2d63d.ctex"]
 
 [params]
 

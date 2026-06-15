@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://cihgarrvpnrkw"]
 
-[ext_resource type="Texture2D" uid="uid://ur2ei3ao5bnq" path="res://entites/main/settings/scroll.png" id="1_f16gj"]
+[ext_resource type="Texture2D" uid="uid://ur2ei3ao5bnq" path="res://main/settings/scroll.png" id="1_f16gj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.9669389, 0.96693903, 0.96693903, 1)
