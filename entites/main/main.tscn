@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
 [ext_resource type="Script" uid="uid://cx2x3r0rpu7lb" path="res://entites/main/developers.gd" id="17_5enwe"]
-[ext_resource type="Script" path="res://entites/main/community.gd" id="17_j32lm"]
+[ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://entites/main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Texture2D" uid="uid://cs5fgploubgfl" path="res://entites/main/developers/sawyer.webp" id="19_gjwx3"]
@@ -1812,18 +1812,24 @@ theme_type_variation = &"Close_Button"
 text = "Change Avatar"
 
 [node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
+visible = false
 layout_mode = 0
 offset_left = 328.0
 offset_top = 43.0
-offset_right = 600.0
-offset_bottom = 323.0
+offset_right = 598.0
+offset_bottom = 313.0
 theme_type_variation = &"Quit"
 
-[node name="GridContainer" type="GridContainer" parent="User/Avatar Selection" unique_id=1324893963]
+[node name="ScrollContainer" type="ScrollContainer" parent="User/Avatar Selection" unique_id=418275279]
 layout_mode = 0
-offset_top = 5.0
-offset_right = 40.0
-offset_bottom = 45.0
+offset_right = 270.0
+offset_bottom = 270.0
+
+[node name="GridContainer" type="GridContainer" parent="User/Avatar Selection/ScrollContainer" unique_id=1324893963]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 8
 
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
 visible = false
@@ -2128,17 +2134,17 @@ theme_type_variation = &"Line"
 
 [node name="Avatar" type="Panel" parent="." unique_id=529804441]
 layout_mode = 0
-offset_left = 592.0
+offset_left = 600.0
 offset_top = 8.0
 offset_right = 632.0
-offset_bottom = 48.0
+offset_bottom = 40.0
 theme_type_variation = &"Line"
 script = ExtResource("73_d1j2r")
 
 [node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 32.0
+offset_bottom = 32.0
 texture_normal = ExtResource("73_yoins")
 ignore_texture_size = true
 stretch_mode = 0
