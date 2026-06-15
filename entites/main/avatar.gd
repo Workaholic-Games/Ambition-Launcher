@@ -24,6 +24,8 @@ var default_avatars = [
 	load("res://avatars/moon_motivational.png"),
 	load("res://avatars/scaryhead_icon.png"),
 	load("res://avatars/sad_sun.png"),
+	load("res://avatars/the_mold.png"),
+	load("res://avatars/the_carrots.png")
 	]
 
 

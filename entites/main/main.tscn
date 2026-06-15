@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dtu0cbenpihok" path="res://entites/main/store/sparkle.png" id="11_rnd3n"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://entites/main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
+[ext_resource type="Texture2D" uid="uid://doiwvp57g8tl7" path="res://game_assets/covers/bulba_and_the_gang.png" id="14_8gen5"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://entites/main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://entites/main/settings/settings.gd" id="16_3a0l5"]
@@ -69,6 +70,7 @@
 [ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
+[ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://entites/main/lock.png" id="51_lc78y"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://entites/main/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://entites/main/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://entites/main/event.gd" id="68_d2ack"]
@@ -710,6 +712,32 @@ custom_minimum_size = Vector2(120, 180)
 layout_mode = 2
 alignment = 1
 
+[node name="BATG" type="TextureButton" parent="Store/Area/GridContainer/Featured (New)/Games" unique_id=445528086]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture_normal = ExtResource("14_8gen5")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_2dgon")
+
+[node name="Hover" type="Sprite2D" parent="Store/Area/GridContainer/Featured (New)/Games/BATG" unique_id=2062021473]
+visible = false
+position = Vector2(60, 89.992004)
+scale = Vector2(1.8750001, 2.8127503)
+texture = SubResource("GradientTexture2D_kicgq")
+
+[node name="Game Label" type="Label" parent="Store/Area/GridContainer/Featured (New)/Games/BATG" unique_id=1859728195]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 141.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_type_variation = &"Hover_Label"
+text = "Bulba and The Gang (FNAB -1)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Five Nights at Bulbas (FNAB, FNAB2)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=526257688]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
@@ -1082,25 +1110,22 @@ theme_type_variation = &"Close_Button"
 text = "Featured Art"
 
 [node name="Install Mods" type="Button" parent="Community" unique_id=789851959]
-visible = false
 layout_mode = 0
-offset_left = 248.0
-offset_top = -40.0
-offset_right = 360.0
-offset_bottom = -16.0
+offset_left = 240.0
+offset_top = -32.0
+offset_right = 352.0
+offset_bottom = -8.0
 theme_type_variation = &"Close_Button"
-text = "Install Mods
+text = "
 "
 
 [node name="Modding Guide" type="Button" parent="Community" unique_id=307928120]
-visible = false
 layout_mode = 0
-offset_left = 368.0
-offset_top = -40.0
-offset_right = 480.0
-offset_bottom = -16.0
+offset_left = 360.0
+offset_top = -32.0
+offset_right = 472.0
+offset_bottom = -8.0
 theme_type_variation = &"Close_Button"
-text = "Modding Guide"
 
 [node name="Featured" type="Control" parent="Community" unique_id=1648727257]
 anchors_preset = 0
@@ -1295,6 +1320,16 @@ theme_override_font_sizes/font_size = 12
 text = "GigaAdam64"
 horizontal_alignment = 1
 
+[node name="Lock" type="Sprite2D" parent="Community" unique_id=1207621899]
+position = Vector2(296, -22)
+scale = Vector2(2, 2)
+texture = ExtResource("51_lc78y")
+
+[node name="Lock2" type="Sprite2D" parent="Community" unique_id=634005068]
+position = Vector2(418, -22)
+scale = Vector2(2, 2)
+texture = ExtResource("51_lc78y")
+
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
 visible = false
 anchors_preset = 0
@@ -1311,13 +1346,31 @@ offset_bottom = 300.0
 
 [node name="Changelog" type="RichTextLabel" parent="Changelog" unique_id=430924224]
 layout_mode = 0
-offset_left = 136.0
+offset_left = 120.0
 offset_top = -44.0
-offset_right = 616.0
+offset_right = 560.0
 offset_bottom = 284.0
-text = "Released the launcher. It's in Beta so there may be some bugs and such."
-horizontal_alignment = 1
-vertical_alignment = 1
+text = "Released the launcher. It's in Beta so there may be some bugs and such 
+
+However our auto updating system should make fixes much easier to obtain. 
+
+Unless our auto updating breaks on us then things are going to be rough.
+
+Thanks for using the launcher! :}
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
 visible = false
@@ -1682,7 +1735,6 @@ theme_type_variation = &"Close_Button"
 text = "Back"
 
 [node name="Settings" type="Control" parent="." unique_id=841640467]
-visible = false
 anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
@@ -1691,10 +1743,10 @@ script = ExtResource("16_3a0l5")
 
 [node name="Window" type="OptionButton" parent="Settings" unique_id=2136730873]
 layout_mode = 0
-offset_left = 128.449
-offset_top = 6.0
-offset_right = 305.06635
-offset_bottom = 32.0
+offset_left = 120.449005
+offset_top = 4.000004
+offset_right = 297.06635
+offset_bottom = 30.000004
 selected = 0
 item_count = 4
 popup/item_0/text = "Windowed"
@@ -1715,10 +1767,10 @@ vertical_alignment = 2
 
 [node name="Themes" type="OptionButton" parent="Settings" unique_id=563725016]
 layout_mode = 0
-offset_left = 313.09445
-offset_top = 5.9999967
-offset_right = 440.75436
-offset_bottom = 32.714306
+offset_left = 305.09445
+offset_top = 4.0000005
+offset_right = 432.75436
+offset_bottom = 30.71431
 scale = Vector2(1.0061805, 0.9732614)
 alignment = 1
 
@@ -1732,10 +1784,10 @@ vertical_alignment = 2
 
 [node name="Startup Location" type="OptionButton" parent="Settings" unique_id=1787472182]
 layout_mode = 0
-offset_left = 449.0
-offset_top = 6.0
-offset_right = 625.61707
-offset_bottom = 32.0
+offset_left = 441.0
+offset_top = 4.000004
+offset_right = 592.0
+offset_bottom = 30.000004
 selected = 0
 item_count = 6
 popup/item_0/text = "Library                   "
@@ -1760,10 +1812,10 @@ vertical_alignment = 2
 
 [node name="Cursor" type="OptionButton" parent="Settings" unique_id=2072359811]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 60.0
-offset_right = 304.61728
-offset_bottom = 86.0
+offset_left = 120.0
+offset_top = 58.000004
+offset_right = 296.61728
+offset_bottom = 84.0
 
 [node name="Label" type="Label" parent="Settings/Cursor" unique_id=1203996602]
 layout_mode = 0
@@ -1773,6 +1825,7 @@ text = "Cursor Theme"
 vertical_alignment = 2
 
 [node name="User" type="Control" parent="." unique_id=1895220794]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -2137,16 +2190,18 @@ theme_type_variation = &"Line"
 [node name="Avatar" type="Panel" parent="." unique_id=529804441]
 layout_mode = 0
 offset_left = 600.0
-offset_top = 8.0
-offset_right = 632.0
+offset_top = 4.0
+offset_right = 636.0
 offset_bottom = 40.0
 theme_type_variation = &"Line"
 script = ExtResource("73_d1j2r")
 
 [node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
 layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 34.0
 texture_normal = ExtResource("73_yoins")
 ignore_texture_size = true
 stretch_mode = 0
@@ -2590,6 +2645,9 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
+[connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/BATG" to="Store/Area/GridContainer/Featured (New)/Games/BATG" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Store/Area/GridContainer/Featured (New)/Games/BATG" to="Store/Area/GridContainer/Featured (New)/Games/BATG" method="_on_mouse_exited"]
+[connection signal="pressed" from="Store/Area/GridContainer/Featured (New)/Games/BATG" to="Store/Area/GridContainer/Featured (New)/Games/BATG" method="_on_pressed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_mouse_exited"]
 [connection signal="pressed" from="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" to="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games/FNAB" method="_on_pressed"]
@@ -2607,8 +2665,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/GFFA" to="Store/Area/GridContainer/Coming Soon/Games/GFFA" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
-[connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
-[connection signal="pressed" from="Community/Modding Guide" to="Community" method="_on_modding_guide_pressed"]
 [connection signal="pressed" from="Developers/Bulba" to="Developers" method="_on_bulba_pressed"]
 [connection signal="pressed" from="Developers/Jonathan" to="Developers" method="_on_jonathan_pressed"]
 [connection signal="pressed" from="Developers/Sawyer" to="Developers" method="_on_sawyer_pressed"]
