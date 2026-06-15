@@ -1,7 +1,7 @@
 extends Panel
 
 var avatar_instance = load("res://entites/main/avatar_instance.tscn")
-var default_avatars =  [
+var default_avatars = [
 	load("res://avatars/fnab1_arthur.png"),
 	load("res://avatars/fnab1_bulba.png"),
 	load("res://avatars/fnab1_charlie.png"),
@@ -21,7 +21,10 @@ var default_avatars =  [
 	load("res://avatars/fnab2_theoriginal.png"),
 	load("res://avatars/seedling.png"),
 	load("res://avatars/tater.png"),
-]
+	load("res://avatars/moon_motivational.png"),
+	load("res://avatars/scaryhead_icon.png"),
+	load("res://avatars/sad_sun.png"),
+	]
 
 
 
@@ -30,7 +33,7 @@ func _ready() -> void:
 		var random_avatar = randi_range(0, default_avatars.size()-1)
 		Main.launcher_data.avatar = random_avatar
 	
-	for i in default_avatars.size() - 1:
+	for i in default_avatars.size():
 		var new_avatar = avatar_instance.instantiate()
 		new_avatar.index = i
 		new_avatar.menu = self

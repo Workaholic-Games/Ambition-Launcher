@@ -934,6 +934,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Sparkles" type="CPUParticles2D" parent="Store/Area/GridContainer/Coming Soon/Games/GFFA" unique_id=306306872]
+visible = false
 position = Vector2(60, 90)
 texture = ExtResource("11_rnd3n")
 local_coords = true
@@ -1809,6 +1810,7 @@ offset_top = 216.0
 offset_right = 309.0
 offset_bottom = 256.0
 theme_type_variation = &"Close_Button"
+toggle_mode = true
 text = "Change Avatar"
 
 [node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
@@ -2617,7 +2619,7 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
-[connection signal="pressed" from="User/Button" to="User" method="_on_change_avatar_pressed"]
+[connection signal="toggled" from="User/Button" to="User" method="_on_button_toggled"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]

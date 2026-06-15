@@ -6,6 +6,8 @@ func _ready() -> void:
 	$Label.text = "Hello " + Main.launcher_data.username
 
 
-func _on_change_avatar_pressed() -> void:
-	$"Avatar Selection".visible = true
-	pass # Replace with function body.
+
+func _on_button_toggled(toggled_on: bool) -> void:
+	match toggled_on:
+		true: $"Avatar Selection".show()
+		false: $"Avatar Selection".hide()

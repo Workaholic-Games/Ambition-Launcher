@@ -3,8 +3,8 @@ extends Panel
 var username : String = "" 
 
 func _ready() -> void:
-	if Main.launcher_data.username != "":
-		hide()
+	if Main.launcher_data.username == "":
+		show()
 
 func _on_line_edit_text_changed(new_text: String) -> void:
 	username = new_text
