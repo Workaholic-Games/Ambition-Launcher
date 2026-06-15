@@ -9,3 +9,5 @@ class_name data
 @export var tos : bool = false
 @export var pet_spawned : bool = false
 @export var played_order = null
+@export var username : String = ""
+@export var avatar : int = 0

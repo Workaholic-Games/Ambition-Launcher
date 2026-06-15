@@ -69,8 +69,12 @@
 [ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
+[ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://entites/main/user.gd" id="56_42eyl"]
+[ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://entites/main/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://entites/main/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
+[ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://entites/main/avatar.gd" id="73_d1j2r"]
+[ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="73_yoins"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yoins"]
 
@@ -504,11 +508,12 @@ offset_bottom = 360.0
 theme_type_variation = &"Line"
 
 [node name="Label" type="Label" parent="Panel" unique_id=420621463]
+z_index = 2
 layout_mode = 0
-offset_left = 606.0
-offset_top = 1.0
-offset_right = 638.0
-offset_bottom = 19.0
+offset_left = 9.0
+offset_top = 338.0
+offset_right = 41.0
+offset_bottom = 356.0
 text = "Beta"
 horizontal_alignment = 2
 
@@ -1068,10 +1073,10 @@ script = ExtResource("17_j32lm")
 
 [node name="Featured Art" type="Button" parent="Community" unique_id=1639509894]
 layout_mode = 0
-offset_left = 128.0
-offset_top = -40.0
-offset_right = 240.0
-offset_bottom = -16.0
+offset_left = 120.0
+offset_top = -32.0
+offset_right = 232.0
+offset_bottom = -8.0
 theme_type_variation = &"Close_Button"
 text = "Featured Art"
 
@@ -1103,10 +1108,10 @@ offset_bottom = 40.0
 
 [node name="Best Artwork" type="Label" parent="Community/Featured" unique_id=338952825]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 8.0
-offset_right = 624.0
-offset_bottom = 152.0
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 632.0
+offset_bottom = 160.0
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Art"
@@ -1197,10 +1202,10 @@ horizontal_alignment = 1
 
 [node name="Best Memes" type="Label" parent="Community/Featured" unique_id=197830391]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 160.0
-offset_right = 624.0
-offset_bottom = 304.0
+offset_left = 120.0
+offset_top = 168.0
+offset_right = 632.0
+offset_bottom = 312.0
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Memes"
@@ -1314,6 +1319,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
+visible = false
 anchors_preset = 0
 offset_top = 80.0
 offset_right = 40.0
@@ -1405,6 +1411,7 @@ scale = Vector2(1.2024559, 1.2024556)
 texture = ExtResource("19_gjwx3")
 
 [node name="Bulba Bio" type="Panel" parent="Developers" unique_id=911267021]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 112.0
@@ -1764,6 +1771,60 @@ offset_right = 40.0
 text = "Cursor Theme"
 vertical_alignment = 2
 
+[node name="User" type="Control" parent="." unique_id=1895220794]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("56_42eyl")
+
+[node name="Avatar" type="Panel" parent="User" unique_id=848339665]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 44.0
+offset_right = 194.0
+offset_bottom = 84.0
+scale = Vector2(4, 4)
+theme_type_variation = &"Line"
+
+[node name="Avatar" type="TextureRect" parent="User/Avatar" unique_id=2028838953]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("73_yoins")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="User" unique_id=1757473915]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 44.0
+offset_right = 568.0
+offset_bottom = 62.0
+theme_type_variation = &"Store_Page"
+text = "Hello User"
+
+[node name="Button" type="Button" parent="User" unique_id=1408166701]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 216.0
+offset_right = 309.0
+offset_bottom = 256.0
+theme_type_variation = &"Close_Button"
+text = "Change Avatar"
+
+[node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 43.0
+offset_right = 600.0
+offset_bottom = 323.0
+theme_type_variation = &"Quit"
+
+[node name="GridContainer" type="GridContainer" parent="User/Avatar Selection" unique_id=1324893963]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 40.0
+offset_bottom = 45.0
+
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
 visible = false
 z_index = 20
@@ -2025,6 +2086,62 @@ offset_right = 496.0
 offset_bottom = 360.0
 theme_type_variation = &"Close_Button"
 text = "I Accept"
+
+[node name="Username" type="Panel" parent="." unique_id=130943005]
+visible = false
+layout_mode = 0
+offset_left = 251.0
+offset_top = 144.0
+offset_right = 499.0
+offset_bottom = 216.0
+mouse_filter = 2
+theme_type_variation = &"Quit"
+script = ExtResource("57_qwxpq")
+
+[node name="LineEdit" type="LineEdit" parent="Username" unique_id=254969524]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 240.0
+offset_bottom = 41.0
+placeholder_text = "Username..."
+
+[node name="Button" type="Button" parent="Username" unique_id=1041139814]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 47.0
+offset_right = 160.0
+offset_bottom = 65.0
+theme_type_variation = &"Close_Button"
+text = "Apply
+"
+
+[node name="Panel" type="Panel" parent="Username" unique_id=1264892127]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 252.0
+offset_bottom = 76.0
+mouse_filter = 2
+theme_type_variation = &"Line"
+
+[node name="Avatar" type="Panel" parent="." unique_id=529804441]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 48.0
+theme_type_variation = &"Line"
+script = ExtResource("73_d1j2r")
+
+[node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("73_yoins")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Intro" type="VideoStreamPlayer" parent="." unique_id=1260205218]
 z_index = 20
@@ -2494,8 +2611,12 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
+[connection signal="pressed" from="User/Button" to="User" method="_on_change_avatar_pressed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
+[connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="Username/Button" to="Username" method="_on_button_pressed"]
+[connection signal="pressed" from="Avatar/Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Who Dell" to="Launcher Games/Dell" method="_on_who_dell_pressed"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Game Install" to="Launcher Games/Dell" method="_on_game_install_pressed"]

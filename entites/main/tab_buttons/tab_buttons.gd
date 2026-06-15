@@ -24,7 +24,10 @@ func _on_settings_pressed() -> void:
 func _on_quit_launcher_pressed() -> void:
 	hide_ui()
 	$"../../Quit".visible = true
-
+func _on_avatar_pressed() -> void:
+	hide_ui()
+	$"../../User".visible = true
+	$"../../Avatar".visible = false
 # UI hide function
 func hide_ui():
 	$"../../Library".visible = false
@@ -35,6 +38,8 @@ func hide_ui():
 	$"../../Developers".visible = false
 	$"../../Settings".visible = false
 	$"../../Quit".visible = false
+	$"../../User".visible = false
+	$"../../Avatar".visible = true
 	for page in $"../../Store Pages".get_children():
 		page.visible = false
 	for node in get_tree().get_nodes_in_group("Collision"):
