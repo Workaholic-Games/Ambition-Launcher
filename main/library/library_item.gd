@@ -8,13 +8,22 @@ extends TextureButton
 @export var folder_path : String = "user://Test"
 @export var save_data : String = "Test"
 @export var font_size : int = 16
-var save_path = ProjectSettings.globalize_path("user://" + save_data)
+
+@onready var save_path = get_root_userdata_path() + "/" + save_data
 var installed : bool = false
 
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
 
-# add checking if theres a new version of whatever app and a respective install button
+func get_root_userdata_path() -> String:
+	var path = ProjectSettings.globalize_path("user://")
+	
+	var target = "app_userdata"
+	var index = path.find(target)
+	
+	if index != -1:
+		return path.substr(0, index + target.length())
+	return path
 
 func _ready() -> void:
 	$"Game Label".text = game_name
@@ -136,5 +145,3 @@ func remove_recursive(path: String) -> void:
 
 func _on_texture_button_pressed() -> void:
 	OS.shell_open(save_path)
-	print(save_path)
-	pass # Replace with function body.

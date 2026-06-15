@@ -616,7 +616,7 @@ game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_1.0_Windows", "FNAB1_Demo_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 folder_path = "user://FNAB"
-save_data = "Five Nights At Bulbas"
+save_data = "1"
 
 [node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -626,6 +626,7 @@ game_file_display_names = PackedStringArray("Ambition Edition")
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 folder_path = "user://FNAB"
+save_data = "1"
 
 [node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -635,6 +636,7 @@ game_file_display_names = PackedStringArray("DEMO")
 version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
+save_data = "1"
 font_size = 12
 
 [node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
@@ -644,6 +646,7 @@ game_name = "Bitcoin Miner"
 game_file_display_names = PackedStringArray("1.25")
 version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
 folder_path = "user://Bitcoin Miner"
+save_data = "1"
 
 [node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
