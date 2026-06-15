@@ -6,7 +6,9 @@ extends TextureButton
 @export var version_file_names_mac : PackedStringArray
 @export var version_file_names_linux : PackedStringArray
 @export var folder_path : String = "user://Test"
+@export var save_data : String = ""
 @export var font_size : int = 16
+var save_path = ProjectSettings.globalize_path("user://" + save_data)
 var installed : bool = false
 
 var selected_version : int = -1
@@ -130,3 +132,8 @@ func remove_recursive(path: String) -> void:
 		DirAccess.remove_absolute(path)
 	else:
 		print("An error occurred when trying to access the path: ", path)
+
+
+func _on_texture_button_pressed() -> void:
+	OS.shell_open(save_path)
+	pass # Replace with function body.

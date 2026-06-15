@@ -590,7 +590,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -617,6 +616,7 @@ game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_1.0_Windows", "FNAB1_Demo_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
 folder_path = "user://FNAB"
+save_data = "Five Nights At Bulbas"
 
 [node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -653,6 +653,7 @@ game_file_display_names = PackedStringArray("Regrown")
 version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
+save_data = "The Vegetable Game Regrown"
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
