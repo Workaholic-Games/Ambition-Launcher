@@ -582,12 +582,13 @@ offset_right = 640.0
 offset_bottom = 360.0
 theme_override_constants/line_spacing = -20
 theme_override_font_sizes/font_size = 32
-text = "Updating..."
+text = "Updating Launcher..."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="Update" unique_id=619512341]
+wait_time = 0.25
 
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
 visible = false
@@ -670,7 +671,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -998,6 +998,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
+visible = false
 z_index = 1
 anchors_preset = 0
 offset_right = 40.0

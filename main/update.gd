@@ -1,12 +1,34 @@
 @icon("res://editor_icons/update.png")
 extends Panel
 
+var i : int = 0
+var j : int = 0
+var text : Array = [
+	"Updating Launcher",
+	"Updating Launcher.",
+	"Updating Launcher..",
+	"Updating Launcher..."
+]
+
+func _on_timer_timeout() -> void:
+	$"Update Text".text = text[i]
+	print(i)
+	if i == 3:
+		i = 0
+		#j += 1
+		#if j == 2:
+			#$Timer.stop()
+			#hide()
+			#j = 0
+	else:
+		i += 1
+
 func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	if Main.launcher_data.just_installed == false:
-		show()
 		$Timer.start()
+		show()
 		if FileAccess.file_exists("user://installer" + Main.file_type):
 			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
 			OS.shell_open(absolute_path)
@@ -87,24 +109,3 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 
 func _on_intro_finished() -> void:
 	$"../Intro".queue_free()
-
-var i : int = 0
-var j : int = 0
-var text : Array = [
-	"Updating Launcher",
-	"Updating Launcher.",
-	"Updating Launcher..",
-	"Updating Launcher..."
-]
-
-func _on_timer_timeout() -> void:
-	$"Update Text".text = text[i]
-	if i == 3:
-		i = 0
-		j += 1
-		if j == 2:
-			$Timer.stop()
-			hide()
-			j = 0
-	else:
-		i += 1
