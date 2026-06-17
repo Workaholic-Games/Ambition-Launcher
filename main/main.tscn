@@ -581,6 +581,7 @@ offset_right = 640.0
 offset_bottom = 360.0
 theme_override_constants/line_spacing = -20
 theme_override_font_sizes/font_size = 32
+text = "Updating..."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
