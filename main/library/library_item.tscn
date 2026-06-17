@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="1_sit7t"]
 [ext_resource type="Script" uid="uid://bbd6lkldu0a4i" path="res://main/library/library_item.gd" id="2_ybi6t"]
-[ext_resource type="Texture2D" uid="uid://dwjs8ob8qkgok" path="res://editor_icons/dev.png" id="3_h0j4e"]
+[ext_resource type="Texture2D" uid="uid://h4f8yh4vh4bu" path="res://main/library/folder.png" id="3_h0j4e"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -11,6 +11,18 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxfku"]
+atlas = ExtResource("3_h0j4e")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jjqb"]
+atlas = ExtResource("3_h0j4e")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3uow"]
+atlas = ExtResource("3_h0j4e")
+region = Rect2(8, 0, 8, 8)
 
 [node name="Library Item" type="TextureButton" unique_id=1778090871]
 custom_minimum_size = Vector2(120, 236)
@@ -83,7 +95,9 @@ offset_left = 104.0
 offset_top = 164.0
 offset_right = 120.0
 offset_bottom = 180.0
-texture_normal = ExtResource("3_h0j4e")
+texture_normal = SubResource("AtlasTexture_fxfku")
+texture_pressed = SubResource("AtlasTexture_1jjqb")
+texture_hover = SubResource("AtlasTexture_o3uow")
 ignore_texture_size = true
 stretch_mode = 0
 

@@ -9,7 +9,7 @@ extends TextureButton
 @export var save_data : PackedStringArray
 @export var font_size : int = 16
 
-@onready var save_path = get_root_userdata_path() + "/" + save_data[0]
+@onready var save_path = get_root_userdata_path() + "/" + save_data[selected_version]
 
 var installed : bool = false
 
@@ -145,5 +145,8 @@ func remove_recursive(path: String) -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	
+	save_path = get_root_userdata_path() + "/" + save_data[selected_version]
 	OS.shell_open(save_path)
+	print(save_data)
+	print(save_path)
+	print(selected_version)
