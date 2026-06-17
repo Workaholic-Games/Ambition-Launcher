@@ -615,10 +615,8 @@ game_name = "Five Night's at Bulba's"
 game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
 version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "Five Nights At Bulbas (Windows)", "FNAB1_Demo_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
-version_file_names_linux = null
 folder_path = "user://FNAB"
 save_data = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas")
-font_size = null
 
 [node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -627,10 +625,7 @@ game_name = "Five Night's at Bulba's 2"
 game_file_display_names = PackedStringArray("Ambition Edition")
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
-version_file_names_linux = null
 folder_path = "user://FNAB"
-save_data = null
-font_size = null
 
 [node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -639,9 +634,7 @@ game_name = "Gavin's Fantastically Fun Adventure"
 game_file_display_names = PackedStringArray("DEMO")
 version_file_names_windows = PackedStringArray("FirstPerson")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
-version_file_names_linux = null
 folder_path = "user://GFFA"
-save_data = null
 font_size = 12
 
 [node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
@@ -650,11 +643,7 @@ texture_normal = ExtResource("7_1dv2i")
 game_name = "Bitcoin Miner"
 game_file_display_names = PackedStringArray("1.25")
 version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
-version_file_names_mac = null
-version_file_names_linux = null
 folder_path = "user://Bitcoin Miner"
-save_data = null
-font_size = null
 
 [node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -663,10 +652,7 @@ game_name = "The Vegetable Game"
 game_file_display_names = PackedStringArray("Regrown")
 version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
-version_file_names_linux = null
 folder_path = "user://Veg"
-save_data = null
-font_size = null
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
