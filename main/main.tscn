@@ -568,6 +568,7 @@ text = "Are you sure?"
 horizontal_alignment = 1
 
 [node name="Update" type="Panel" parent="." unique_id=1089150131]
+visible = false
 z_index = 15
 layout_mode = 0
 offset_right = 640.0
