@@ -4,27 +4,27 @@ extends Panel
 func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
-	#if Main.launcher_data.just_installed == false:
-		#$".".visible = true
-		#
-		#if FileAccess.file_exists("user://installer" + Main.file_type):
-			#var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
-			#OS.shell_open(absolute_path)
-			#Main.launcher_data.just_installed = true
-			#Main.save_data()
-			#get_tree().quit()
-		#else:
-			#$"../HTTPRequest".download_file = "user://Package.zip"
-			#match Main.operating_system:
-				#"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
-				#
-				#"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
-				#
-				#"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-	#else:
-		#Main.launcher_data.just_installed = false
-		#$"../Intro".play()
-		#$"../Intro/Intro Audio".play()
+	if Main.launcher_data.just_installed == false:
+		show()
+		$Timer.start()
+		if FileAccess.file_exists("user://installer" + Main.file_type):
+			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
+			OS.shell_open(absolute_path)
+			Main.launcher_data.just_installed = true
+			Main.save_data()
+			get_tree().quit()
+		else:
+			$"../HTTPRequest".download_file = "user://Package.zip"
+			match Main.operating_system:
+				"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
+				
+				"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
+				
+				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
+	else:
+		Main.launcher_data.just_installed = false
+		$"../Intro".play()
+		$"../Intro/Intro Audio".play()
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
@@ -87,3 +87,24 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 
 func _on_intro_finished() -> void:
 	$"../Intro".queue_free()
+
+var i : int = 0
+var j : int = 0
+var text : Array = [
+	"Updating Launcher",
+	"Updating Launcher.",
+	"Updating Launcher..",
+	"Updating Launcher..."
+]
+
+func _on_timer_timeout() -> void:
+	$"Update Text".text = text[i]
+	if i == 3:
+		i = 0
+		j += 1
+		if j == 2:
+			$Timer.stop()
+			hide()
+			j = 0
+	else:
+		i += 1

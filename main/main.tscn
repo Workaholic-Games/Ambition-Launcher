@@ -568,7 +568,6 @@ text = "Are you sure?"
 horizontal_alignment = 1
 
 [node name="Update" type="Panel" parent="." unique_id=1089150131]
-visible = false
 z_index = 15
 layout_mode = 0
 offset_right = 640.0
@@ -582,14 +581,14 @@ offset_right = 640.0
 offset_bottom = 360.0
 theme_override_constants/line_spacing = -20
 theme_override_font_sizes/font_size = 32
-text = "Updating Launcher...
-
-Please Wait."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="Timer" type="Timer" parent="Update" unique_id=619512341]
+
 [node name="Library" type="Control" parent="." unique_id=337733771 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1104,7 +1103,6 @@ offset_left = 110.11011
 offset_right = 110.11011
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
-visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
@@ -2686,6 +2684,7 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Panel/Tabs/Buttons/Quit Launcher" to="Panel/Tabs" method="_on_quit_launcher_pressed"]
 [connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
+[connection signal="timeout" from="Update/Timer" to="Update" method="_on_timer_timeout"]
 [connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
 [connection signal="mouse_entered" from="Store/Area/GridContainer/Featured (New)/Games/BATG" to="Store/Area/GridContainer/Featured (New)/Games/BATG" method="_on_mouse_entered"]
