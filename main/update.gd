@@ -72,10 +72,10 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	DirAccess.remove_absolute("user://Package.zip") 
 	
-	var absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
+	var absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.exe")
 	match Main.operating_system:
 		"Windows": 
-			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Windows.exe")
+			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.exe")
 			OS.shell_open(absolute_path)
 		"macOS": 
 			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")

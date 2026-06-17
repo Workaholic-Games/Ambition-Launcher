@@ -998,7 +998,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
-visible = false
 z_index = 1
 anchors_preset = 0
 offset_right = 40.0
@@ -1022,6 +1021,7 @@ version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Editi
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
 folder_path = "user://FNAB"
 Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_4u1yx"), ExtResource("21_7flok"), ExtResource("22_tipqc"), ExtResource("23_gtbh3"), ExtResource("24_j17j7"), ExtResource("25_pddd4")])
+Videos = Array[VideoStream]([ExtResource("20_gjwx3")])
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1105,6 +1105,7 @@ offset_left = 110.11011
 offset_right = 110.11011
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
+visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0

@@ -17,6 +17,7 @@ extends Control
 
 @export var folder_path : String = "user://Test"
 @export var Images : Array[Texture]
+@export var Videos: Array[VideoStream]
 @export var installable : bool = true
 
 var os_name : String = "Windows"
