@@ -47,6 +47,7 @@ thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_78kbg"]
+color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
 thickness = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xc3v"]
@@ -123,6 +124,25 @@ color = Color(0.851769, 0.8517689, 0.85176885, 1)
 thickness = 9
 vertical = true
 
+[sub_resource type="DPITexture" id="DPITexture_f16gj"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_otj2g"]
+color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_j0g8s"]
+color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_svek6"]
+color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
+thickness = 8
+vertical = true
+
 [resource]
 resource_name = "Default (Dark)"
 Button/colors/font_color = Color(0.072842844, 0.072842546, 0.072842605, 1)
@@ -195,3 +215,9 @@ VScrollBar/styles/grabber = SubResource("StyleBoxLine_u2k11")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_f16gj")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_p32uf")
 VScrollBar/styles/scroll = SubResource("StyleBoxLine_nqxr6")
+VSlider/icons/grabber = ExtResource("1_f16gj")
+VSlider/icons/grabber_highlight = ExtResource("1_f16gj")
+VSlider/icons/tick = SubResource("DPITexture_f16gj")
+VSlider/styles/grabber_area = SubResource("StyleBoxLine_otj2g")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_j0g8s")
+VSlider/styles/slider = SubResource("StyleBoxLine_svek6")

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cbgr61lcxu86q"]
+
+[ext_resource type="Script" uid="uid://dlv5nepxh5ymv" path="res://main/store_pages/videos/video_player.gd" id="1_1ks8k"]
+[ext_resource type="VideoStream" uid="uid://bqugsbqbk1qhw" path="res://branding/intro.ogv" id="1_tlqx1"]
+[ext_resource type="Texture2D" uid="uid://bibw1pfsgk3xf" path="res://main/store_pages/videos/assets/play_button.png" id="3_q28cp"]
+[ext_resource type="Texture2D" uid="uid://41trsbwg5m8r" path="res://main/store_pages/videos/assets/pause.png" id="4_c8dor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w1fa"]
+atlas = ExtResource("3_q28cp")
+region = Rect2(4, 3, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q28cp"]
+atlas = ExtResource("3_q28cp")
+region = Rect2(20, 3, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p73wk"]
+atlas = ExtResource("4_c8dor")
+region = Rect2(3, 3, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26eag"]
+atlas = ExtResource("3_q28cp")
+region = Rect2(3, 2, 11, 11)
+
+[node name="Panel" type="Panel" unique_id=509022307]
+offset_right = 344.0
+offset_bottom = 208.348
+theme_type_variation = &"Line"
+script = ExtResource("1_1ks8k")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1181984356]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 336.0
+offset_bottom = 200.0
+stream = ExtResource("1_tlqx1")
+expand = true
+
+[node name="Start Button" type="TextureButton" parent="." unique_id=1325689813]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 92.0
+offset_right = 184.0
+offset_bottom = 116.0
+texture_normal = SubResource("AtlasTexture_1w1fa")
+texture_hover = SubResource("AtlasTexture_q28cp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Playback Position" type="HSlider" parent="." unique_id=1490772833]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 187.0
+offset_right = 524.4036
+offset_bottom = 203.0
+scale = Vector2(0.545, 0.545)
+scrollable = false
+
+[node name="Play_Pause" type="TextureButton" parent="." unique_id=1125620092]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 185.0
+offset_right = 28.0
+offset_bottom = 197.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_p73wk")
+texture_pressed = SubResource("AtlasTexture_26eag")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Volume Toggle" type="Button" parent="." unique_id=275165152]
+visible = false
+layout_mode = 0
+offset_left = 314.0
+offset_top = 181.0
+offset_right = 354.0
+offset_bottom = 221.0
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Image_Button"
+toggle_mode = true
+text = "↑"
+
+[node name="Volume" type="VSlider" parent="." unique_id=1567404328]
+visible = false
+layout_mode = 0
+offset_left = 319.0
+offset_top = 146.0
+offset_right = 335.0
+offset_bottom = 218.0
+scale = Vector2(0.545, 0.545)
+min_value = -20.0
+max_value = 20.0
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="mouse_entered" from="VideoStreamPlayer" to="." method="_on_video_stream_player_mouse_entered"]
+[connection signal="mouse_exited" from="VideoStreamPlayer" to="." method="_on_video_stream_player_mouse_exited"]
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="drag_ended" from="Playback Position" to="." method="_on_playback_position_drag_ended"]
+[connection signal="drag_started" from="Playback Position" to="." method="_on_playback_position_drag_started"]
+[connection signal="mouse_entered" from="Playback Position" to="." method="_on_playback_position_mouse_entered"]
+[connection signal="mouse_entered" from="Play_Pause" to="." method="_on_play_pause_mouse_entered"]
+[connection signal="toggled" from="Play_Pause" to="." method="_on_play_pause_toggled"]
+[connection signal="mouse_entered" from="Volume Toggle" to="." method="_on_volume_toggle_mouse_entered"]
+[connection signal="toggled" from="Volume Toggle" to="." method="_on_volume_toggle_toggled"]
+[connection signal="mouse_entered" from="Volume" to="." method="_on_volume_mouse_entered"]
+[connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]

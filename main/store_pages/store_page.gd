@@ -23,6 +23,7 @@ extends Control
 var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
+#var video_player = 
 
 
 func _ready() -> void:
@@ -32,6 +33,13 @@ func _ready() -> void:
 	
 	$"Game Description".text = description
 	$"Age Rating".text = rating
+	
+	for v in Videos.size():
+		var new_video = load("res://main/store_pages/videos/video_player.tscn").instantiate()
+		new_video.scale = Vector2(0.171, 0.178)
+		new_video.video = Videos[v]
+		
+		$CarouselContainer/Control.add_child(new_video)
 	
 	for image in Images.size():
 		var new_image = Panel.new()
@@ -45,7 +53,7 @@ func _ready() -> void:
 		thumbnail.texture = Images.get(image)
 		thumbnail.position = Vector2(172.0, 104.0)
 		new_image.add_child(thumbnail)
-	
+		
 	for i in range(version_names.size()):
 		match Main.operating_system:
 			"Windows": 
@@ -169,6 +177,14 @@ func _physics_process(_delta: float) -> void:
 		$"Right Button".visible = false
 	else:
 		$"Right Button".visible = true
+
+func _on_left_button_pressed() -> void:
+	$CarouselContainer._left()
+
+func _on_right_button_pressed() -> void:
+	$CarouselContainer._right()
+
+
 ## Developer @export variable setup example:
 # Version Name: Ambition Edition
 # Version Links Windows: (Windows Link)
@@ -179,10 +195,3 @@ func _physics_process(_delta: float) -> void:
 
 # Ensure on the github side the zip is called TITLEHERE_Windows/Mac/Linux 
 # and put them all under the same release for organization
-
-
-func _on_left_button_pressed() -> void:
-	$CarouselContainer._left()
-
-func _on_right_button_pressed() -> void:
-	$CarouselContainer._right()

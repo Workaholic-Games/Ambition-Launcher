@@ -27,14 +27,13 @@
 [ext_resource type="Texture2D" uid="uid://blt4uae33xe6y" path="res://main/developers/jonathan.png" id="19_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="20_4u1yx"]
 [ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
-[ext_resource type="VideoStream" uid="uid://dl5oiant8pvff" path="res://branding/intro.ogv" id="20_gjwx3"]
+[ext_resource type="VideoStream" uid="uid://bqugsbqbk1qhw" path="res://branding/intro.ogv" id="20_gjwx3"]
 [ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
 [ext_resource type="Texture2D" uid="uid://0sl1cn2mobgv" path="res://main/developers/bulba.png" id="20_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="21_7flok"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="21_hupd3"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
-[ext_resource type="AudioStream" uid="uid://da3q6bg3k8jt8" path="res://branding/intro.mp3" id="21_qsgxr"]
 [ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="22_tipqc"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
 [ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="23_gtbh3"]
@@ -42,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="24_j17j7"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
 [ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="25_pddd4"]
+[ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="26_gpx50"]
 [ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="26_mc0d5"]
 [ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="27_0qt1k"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
@@ -60,9 +60,11 @@
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="34_qwxpq"]
+[ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="35_571ru"]
 [ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="35_yoins"]
 [ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
 [ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="36_d1j2r"]
+[ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/videos/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
 [ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="37_42eyl"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
 [ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="37_uicw0"]
@@ -70,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
+[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="48_uv824"]
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://editor_icons/lock.png" id="51_lc78y"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
@@ -671,6 +674,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -998,7 +1002,6 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
-visible = false
 z_index = 1
 anchors_preset = 0
 offset_right = 40.0
@@ -1006,13 +1009,15 @@ offset_bottom = 40.0
 scale = Vector2(0.999, 1)
 
 [node name="FNAB1" parent="Store Pages" unique_id=1824735666 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
 offset_left = 112.112114
 offset_right = 112.112114
 description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
 rating = "Rated: T for Teen
 Difficulty: Normal
-Stability: Good"
+Stability: Good
+Release Date: 11/27/2024"
 version_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.DEMO.Mac.zip")
@@ -1022,7 +1027,7 @@ version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Editi
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
 folder_path = "user://FNAB"
 Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_4u1yx"), ExtResource("21_7flok"), ExtResource("22_tipqc"), ExtResource("23_gtbh3"), ExtResource("24_j17j7"), ExtResource("25_pddd4")])
-Videos = Array[VideoStream]([ExtResource("20_gjwx3")])
+Videos = Array[VideoStream]([ExtResource("26_gpx50")])
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1032,7 +1037,8 @@ offset_right = 112.112114
 description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
 rating = "Rated: T for Teen
 Difficulty: Hard
-Stability: Great"
+Stability: Great
+Release Date: 4/18/2025"
 version_names = PackedStringArray("Ambition Edition")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip")
@@ -1042,6 +1048,7 @@ version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
 folder_path = "user://FNAB"
 Images = Array[Texture]([ExtResource("26_mc0d5"), ExtResource("27_0qt1k"), ExtResource("28_o22vj"), ExtResource("29_bjyjg"), ExtResource("30_xaw78"), ExtResource("31_7divq"), ExtResource("32_6d2a4"), ExtResource("33_uicw0")])
+Videos = Array[VideoStream]([ExtResource("36_gmy4t"), ExtResource("35_571ru")])
 
 [node name="GFFA" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
 visible = false
@@ -1073,7 +1080,8 @@ offset_right = 112.112
 description = "\"Not a computer virus. I promise\" -Sawyer 2026"
 rating = "Rated: E for Everyone
 Difficulty: Easy
-Stability: Fantastic"
+Stability: Fantastic
+Release Date: Sometime 2024"
 version_names = PackedStringArray("1.25")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
 version_file_names_windows = PackedStringArray("Bitcoin Miner")
@@ -1091,7 +1099,8 @@ You were brought to this land of vegetables by a myserious entity to help defeat
 "
 rating = "Rated: E for Everyone
 Difficulty: Normal
-Stability: Terrible"
+Stability: Terrible
+Release Date: 11/22/2025"
 version_names = PackedStringArray("Regrown")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Mac.zip")
@@ -1099,11 +1108,13 @@ version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
 version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
 Images = Array[Texture]([ExtResource("37_uicw0"), ExtResource("38_uicw0"), ExtResource("39_omfc6"), ExtResource("40_d2ack"), ExtResource("41_jltb6")])
+Videos = Array[VideoStream]([ExtResource("48_uv824")])
 
 [node name="BATG" parent="Store Pages" unique_id=433374860 instance=ExtResource("12_5enwe")]
+visible = false
 layout_mode = 0
-offset_left = 110.11011
-offset_right = 110.11011
+offset_left = 112.11211
+offset_right = 112.11211
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -2259,9 +2270,6 @@ offset_bottom = 360.0
 stream = ExtResource("20_gjwx3")
 expand = true
 metadata/_edit_lock_ = true
-
-[node name="Intro Audio" type="AudioStreamPlayer" parent="Intro" unique_id=912610543]
-stream = ExtResource("21_qsgxr")
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
 z_index = 3

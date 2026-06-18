@@ -156,8 +156,8 @@ metadata/_custom_type_script = "uid://bni7cgwh5uu0i"
 
 [node name="Control" type="Control" parent="CarouselContainer" unique_id=317272639]
 anchors_preset = 0
-offset_left = -172.0
-offset_right = -132.0
+offset_left = -174.22223
+offset_right = -134.22223
 offset_bottom = 40.0
 
 [node name="Left Button" type="Button" parent="." unique_id=2056085471]
