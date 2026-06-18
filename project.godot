@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Ambition"
 run/main_scene="uid://d1iglidor7ls3"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/use_filter=false
 boot_splash/image="uid://b7oibf3rr4d01"

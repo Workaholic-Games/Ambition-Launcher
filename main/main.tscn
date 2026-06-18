@@ -269,7 +269,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tipqc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"blueguy_idle",
 "speed": 3.0
 }, {
@@ -286,7 +286,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pddd4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"blueguy_walk",
 "speed": 8.0
 }, {
@@ -297,7 +297,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3gblu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"slime_idle",
 "speed": 1.0
 }, {
@@ -317,7 +317,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sgps4")
 }],
-"loop": false,
+"loop": 0,
 "name": &"slime_jump",
 "speed": 5.0
 }, {
@@ -346,7 +346,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n5kpq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"slime_walk",
 "speed": 5.0
 }, {
@@ -354,7 +354,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tn814")
 }],
-"loop": false,
+"loop": 0,
 "name": &"snail_idle",
 "speed": 1.0
 }, {
@@ -362,7 +362,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1ylro")
 }],
-"loop": false,
+"loop": 0,
 "name": &"snail_walk",
 "speed": 1.0
 }, {
@@ -373,7 +373,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ovdq3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"square_idle",
 "speed": 3.0
 }, {
@@ -390,7 +390,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o22vj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"square_walk",
 "speed": 7.0
 }]
