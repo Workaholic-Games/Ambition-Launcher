@@ -663,6 +663,16 @@ version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
 folder_path = "user://Veg"
 save_data = PackedStringArray("The Vegetable Game Regrown")
 
+[node name="BATG" parent="Library/Area/GridContainer" unique_id=345981631 instance=ExtResource("9_qsgxr")]
+layout_mode = 2
+texture_normal = ExtResource("14_8gen5")
+game_name = "Bulba and The Gang"
+game_file_display_names = PackedStringArray("playtest")
+version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
+version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
+folder_path = "user://Bulba and The Gang (FNAB -1)"
+save_data = PackedStringArray("Bulba and The Gang (FNAB -1)")
+
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
 offset_left = 192.0
@@ -1115,6 +1125,10 @@ visible = false
 layout_mode = 0
 offset_left = 112.11211
 offset_right = 112.11211
+version_names = PackedStringArray("playtest")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/batg/Bulba.and.The.Gang.FNAB.-1.zip")
+version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
+folder_path = "user://Bulba and The Gang (FNAB -1)"
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
