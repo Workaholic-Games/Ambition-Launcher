@@ -73,7 +73,11 @@
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
 [ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="48_uv824"]
+[ext_resource type="Texture2D" uid="uid://bxfmqi1lh611f" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230114.png" id="49_snp3r"]
+[ext_resource type="Texture2D" uid="uid://dqq3ob7wikh5y" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230122.png" id="50_46muq"]
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://editor_icons/lock.png" id="51_lc78y"]
+[ext_resource type="Texture2D" uid="uid://jk5y815kwo7o" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230154.png" id="51_wbtys"]
+[ext_resource type="Texture2D" uid="uid://b37hw75f1qv5o" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230353.png" id="52_nelid"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
@@ -1125,10 +1129,16 @@ visible = false
 layout_mode = 0
 offset_left = 112.11211
 offset_right = 112.11211
+description = "Join Bulba and The Gang on this Remaster of the Five Night's at Bulba's 2 Minigame: Bulba's Adventure on a mission to kill The Nightguard to obtain WORLD DOMINATION!"
+rating = "Rated: T for Teen
+Difficulty: Hard
+Stability: Great
+Release Date: 11/7/2026"
 version_names = PackedStringArray("playtest")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/batg/Bulba.and.The.Gang.FNAB.-1.zip")
 version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
 folder_path = "user://Bulba and The Gang (FNAB -1)"
+Images = Array[Texture]([ExtResource("49_snp3r"), ExtResource("50_46muq"), ExtResource("51_wbtys"), ExtResource("52_nelid")])
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
