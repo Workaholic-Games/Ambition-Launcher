@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm3bi27f4scut"
-path="res://.godot/imported/fnab2_bobbleheads.png-042241df0a65233ad6802208dfe55c55.ctex"
+uid="uid://dof4s2dp85q3k"
+path="res://.godot/imported/fnab1_nightgigabot.png-78976505918ad7427357935eb9acd562.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://avatars/fnab2_bobbleheads.png"
-dest_files=["res://.godot/imported/fnab2_bobbleheads.png-042241df0a65233ad6802208dfe55c55.ctex"]
+source_file="res://avatars/fnab1_nightgigabot.png"
+dest_files=["res://.godot/imported/fnab1_nightgigabot.png-78976505918ad7427357935eb9acd562.ctex"]
 
 [params]
 

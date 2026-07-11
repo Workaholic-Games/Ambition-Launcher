@@ -11,3 +11,4 @@ class_name data
 @export var played_order = null
 @export var username : String = ""
 @export var avatar : int = 0
+@export var last_changelog : String

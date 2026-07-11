@@ -50,6 +50,13 @@ func _ready():
 	var cursor : String = $Cursor.get_item_text(Main.launcher_data.cursor)
 	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
 	$Cursor.select(Main.launcher_data.cursor)
+	
+	if Main.launcher_data.last_changelog != $"../Changelog/Changelog".text:
+		$"../Panel/Tabs/Buttons/Changelog".emit_signal("pressed")
+		$"../Panel/Tabs/Buttons/Changelog".button_pressed = true
+		Main.launcher_data.last_changelog = $"../Changelog/Changelog".text
+		$"../Changelog/NEW".show()
+		$"../Changelog/Label".hide()
 
 # Window settings
 func _on_window_item_selected(index: int) -> void:

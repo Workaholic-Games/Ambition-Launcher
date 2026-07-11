@@ -27,6 +27,8 @@ func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	
+	return # skip the intro lol
+	@warning_ignore("unreachable_code") # leave this so return doesn't error us
 	
 	if Main.launcher_data.just_installed == false:
 		$Timer.start()

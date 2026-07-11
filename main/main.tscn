@@ -81,10 +81,64 @@
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
+[ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://rgb.gdshader" id="61_w2e2n"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://seasonal/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
+[ext_resource type="Texture2D" uid="uid://dpbl3yw6410wp" path="res://avatars/batg_bulba.png" id="72_46muq"]
+[ext_resource type="Texture2D" uid="uid://blumq4hl87ls1" path="res://avatars/fnab1_bulba.png" id="72_ljnho"]
 [ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://avatars/avatar.gd" id="73_d1j2r"]
+[ext_resource type="Texture2D" uid="uid://dtm0lklnc5egb" path="res://avatars/fnab1_charlie.png" id="73_mk0oj"]
 [ext_resource type="Texture2D" uid="uid://b4a4tfw78i630" path="res://branding/gobletv2_upscaled.png" id="73_yoins"]
+[ext_resource type="Texture2D" uid="uid://dp05lahxa8xhn" path="res://avatars/fnab1_mark.png" id="74_vyb7n"]
+[ext_resource type="Texture2D" uid="uid://0fob8me6jxp0" path="res://avatars/fnab1_gigabot.png" id="75_bfdoy"]
+[ext_resource type="Texture2D" uid="uid://dxgx8bj1covpv" path="res://avatars/fnab1_claire.png" id="76_p66im"]
+[ext_resource type="Texture2D" uid="uid://bjeinip4nu1x2" path="res://avatars/fnab1_nightbulba.png" id="77_v6wbg"]
+[ext_resource type="Texture2D" uid="uid://dkskfu7fnf66j" path="res://avatars/fnab1_nightcharlie.png" id="78_0yfeg"]
+[ext_resource type="Texture2D" uid="uid://u3t8y51thvd0" path="res://avatars/fnab1_nightmark.png" id="79_v8baf"]
+[ext_resource type="Texture2D" uid="uid://dof4s2dp85q3k" path="res://avatars/fnab1_nightgigabot.png" id="80_3bgud"]
+[ext_resource type="Texture2D" uid="uid://ubtefpuajdxi" path="res://avatars/fnab1_nightcc.png" id="81_pc78h"]
+[ext_resource type="Texture2D" uid="uid://etv0k4wvos3f" path="res://avatars/fnab2_bulba.png" id="82_pc78h"]
+[ext_resource type="Texture2D" uid="uid://cww8r8dofdwbu" path="res://avatars/fnab2_charlie.png" id="83_ts2mh"]
+[ext_resource type="Texture2D" uid="uid://fiuqcoxmd5l" path="res://avatars/fnab2_mark.png" id="84_mmxjx"]
+[ext_resource type="Texture2D" uid="uid://d3k3y1s84f5bv" path="res://avatars/fnab2_gigabot.png" id="85_7s7fj"]
+[ext_resource type="Texture2D" uid="uid://bmo2ot2gbo2f1" path="res://avatars/fnab2_claire.png" id="86_42ldh"]
+[ext_resource type="Texture2D" uid="uid://cefe1no8kxnof" path="res://avatars/fnab2_gavin.png" id="87_aw48e"]
+[ext_resource type="Texture2D" uid="uid://djp5qxj5xe5fb" path="res://avatars/fnab2_gavin_jumpscare.png" id="88_678nm"]
+[ext_resource type="Texture2D" uid="uid://c8has3iuc6hwd" path="res://avatars/fnab2_ninjabot.png" id="88_vmwr3"]
+[ext_resource type="Texture2D" uid="uid://b6fgay5wqvgf6" path="res://avatars/fnab2_sawyer.png" id="89_oipmw"]
+[ext_resource type="Texture2D" uid="uid://bejwgmhjjh322" path="res://avatars/fnab2_theoriginal.png" id="90_sdt21"]
+[ext_resource type="Texture2D" uid="uid://btu4vmgm82xg6" path="res://avatars/fnab1_arthur.png" id="91_ktvun"]
+[ext_resource type="Texture2D" uid="uid://bjkrfnv07b35w" path="res://avatars/fnab2_nightguard.png" id="92_dfxco"]
+[ext_resource type="Texture2D" uid="uid://bunmnxgbi4adp" path="res://avatars/batg_charles.png" id="94_th44a"]
+[ext_resource type="Texture2D" uid="uid://bfwbgmk331fot" path="res://avatars/batg_mark.png" id="95_nrk8p"]
+[ext_resource type="Texture2D" uid="uid://bknni413cj364" path="res://avatars/batg_gigabot.png" id="96_n7cka"]
+[ext_resource type="Texture2D" uid="uid://demlrmls7kd5k" path="res://avatars/batg_claire.png" id="97_b7rj1"]
+[ext_resource type="Texture2D" uid="uid://c4vv8met0pjjm" path="res://avatars/batg_gavin.png" id="98_x50uf"]
+[ext_resource type="Texture2D" uid="uid://stjw4n4mn0wc" path="res://avatars/batg_ninjabot.png" id="99_702jf"]
+[ext_resource type="Texture2D" uid="uid://nd57g5xxg18l" path="res://avatars/batg_sawyer.png" id="100_u3ta2"]
+[ext_resource type="Texture2D" uid="uid://dv3a0nridagcc" path="res://avatars/batg_robert.png" id="101_ugik1"]
+[ext_resource type="Texture2D" uid="uid://bgvcfer6i8tte" path="res://avatars/batg_diego.png" id="102_jqfxn"]
+[ext_resource type="Texture2D" uid="uid://b4lnr3gcq0eoq" path="res://avatars/esf.png" id="103_n7cka"]
+[ext_resource type="Texture2D" uid="uid://c14empw7o4sbn" path="res://avatars/fsf.png" id="104_b7rj1"]
+[ext_resource type="Texture2D" uid="uid://xmrawr6jdkj3" path="res://avatars/psf.png" id="105_x50uf"]
+[ext_resource type="Texture2D" uid="uid://lenogn7ak3j4" path="res://avatars/ssf.png" id="106_702jf"]
+[ext_resource type="Texture2D" uid="uid://duylbfct4dqex" path="res://avatars/blue_guy.png" id="107_jqfxn"]
+[ext_resource type="Texture2D" uid="uid://5i777253m6i" path="res://avatars/green_guy.png" id="108_ebf3y"]
+[ext_resource type="Texture2D" uid="uid://coks1k37j5cet" path="res://avatars/yellow_guy.png" id="109_kuktk"]
+[ext_resource type="Texture2D" uid="uid://dps2coxgxip0e" path="res://avatars/orange_guy.png" id="110_sl5vs"]
+[ext_resource type="Texture2D" uid="uid://cgi4dyg7aqdaf" path="res://avatars/red_guy.png" id="111_cvllj"]
+[ext_resource type="Texture2D" uid="uid://dvu2gdkenqe63" path="res://avatars/pink_girl.png" id="112_jyo0q"]
+[ext_resource type="Texture2D" uid="uid://n04fykkhu2wc" path="res://avatars/scaryhead_icon.png" id="113_sl5vs"]
+[ext_resource type="Texture2D" uid="uid://cepd4nkk8t0ea" path="res://avatars/sad_sun.png" id="114_cvllj"]
+[ext_resource type="Texture2D" uid="uid://bbvkqpjsubtrr" path="res://avatars/moon_motivational.png" id="115_jyo0q"]
+[ext_resource type="Texture2D" uid="uid://d0m5uh1bt4jgt" path="res://avatars/bitcoin.png" id="116_k0vy6"]
+[ext_resource type="Texture2D" uid="uid://cpi65hwpmo3eb" path="res://avatars/seedling_sprout.png" id="117_678nm"]
+[ext_resource type="Texture2D" uid="uid://de46allombf80" path="res://avatars/seedling.png" id="118_w2e2n"]
+[ext_resource type="Texture2D" uid="uid://dhn4bejgoecm6" path="res://avatars/tater.png" id="119_o7yem"]
+[ext_resource type="Texture2D" uid="uid://cqw2mbp5huxwi" path="res://avatars/king_carrot.png" id="120_mef85"]
+[ext_resource type="Texture2D" uid="uid://h57oht8er7rl" path="res://avatars/princess_carrotene.png" id="121_g4og3"]
+[ext_resource type="Texture2D" uid="uid://j6kgonh7d6l3" path="res://avatars/nippy.png" id="122_oui53"]
+[ext_resource type="Texture2D" uid="uid://ck7w2nxp1m5c3" path="res://avatars/the_mold.png" id="123_qngap"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yoins"]
 
@@ -112,6 +166,12 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o7yem"]
+shader = ExtResource("61_w2e2n")
+shader_parameter/strength = 0.50000002375
+shader_parameter/speed = 1.0000000475
+shader_parameter/angle = 0.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
@@ -1076,7 +1136,8 @@ A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical
 "
 rating = "Rated: T for Teen
 Difficulty: Newborn
-Stability: Unoptimized"
+Stability: Unoptimized
+Release Date: Unknown"
 version_names = PackedStringArray("DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
 version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
@@ -1133,8 +1194,8 @@ description = "Join Bulba and The Gang on this Remaster of the Five Night's at B
 rating = "Rated: T for Teen
 Difficulty: Hard
 Stability: Great
-Release Date: 11/7/2026"
-version_names = PackedStringArray("playtest")
+Release Date: Unknown"
+version_names = PackedStringArray("FNAB -1")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/batg/Bulba.and.The.Gang.FNAB.-1.zip")
 version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
 folder_path = "user://Bulba and The Gang (FNAB -1)"
@@ -1380,7 +1441,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("51_lc78y")
 
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
-visible = false
 anchors_preset = 0
 offset_top = 60.0
 offset_right = 40.0
@@ -1396,30 +1456,37 @@ offset_bottom = 300.0
 [node name="Changelog" type="RichTextLabel" parent="Changelog" unique_id=430924224]
 layout_mode = 0
 offset_left = 120.0
-offset_top = -44.0
-offset_right = 560.0
+offset_top = -36.0
+offset_right = 590.0
 offset_bottom = 284.0
+bbcode_enabled = true
 text = "Released the launcher. It's in Beta so there may be some bugs and such 
 
 However our auto updating system should make fixes much easier to obtain. 
 
 Unless our auto updating breaks on us then things are going to be rough.
 
-Thanks for using the launcher! :}
+Thanks for using the launcher! :}"
 
+[node name="NEW" type="Label" parent="Changelog" unique_id=1038032721]
+visible = false
+material = SubResource("ShaderMaterial_o7yem")
+layout_mode = 0
+offset_left = 120.0
+offset_top = -60.0
+offset_right = 232.0
+offset_bottom = -36.0
+text = "NEW UPDATE!"
+vertical_alignment = 1
 
-
-
-
-
-
-
-
-
-
-
-
-"
+[node name="Label" type="Label" parent="Changelog" unique_id=792667778]
+layout_mode = 0
+offset_left = 120.0
+offset_top = -60.0
+offset_right = 224.0
+offset_bottom = -36.0
+text = "Changelog"
+vertical_alignment = 1
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
 visible = false
@@ -1601,12 +1668,18 @@ layout_mode = 2
 texture = ExtResource("13_bjyjg")
 expand_mode = 1
 
+[node name="BATG" type="TextureRect" parent="Developers/Bulba Bio/Portrait/ScrollContainer/GridContainer" unique_id=244753905]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 2
+texture = ExtResource("14_8gen5")
+expand_mode = 1
+
 [node name="Close" type="Button" parent="Developers/Bulba Bio/Portrait" unique_id=1128827625]
 layout_mode = 0
-offset_left = 24.08421
-offset_top = 119.99999
-offset_right = 88.3087
-offset_bottom = 144.0
+offset_left = -72.000015
+offset_top = 63.999992
+offset_right = -7.775528
+offset_bottom = 88.0
 theme_type_variation = &"Close_Button"
 text = "Back"
 
@@ -1690,10 +1763,10 @@ texture = ExtResource("19_qsgxr")
 
 [node name="Close" type="Button" parent="Developers/Jonathan Bio/Portrait" unique_id=1055333855]
 layout_mode = 0
-offset_left = 24.08421
-offset_top = 119.99999
-offset_right = 88.3087
-offset_bottom = 144.0
+offset_left = -72.0
+offset_top = 64.0
+offset_right = -7.7755127
+offset_bottom = 88.00001
 theme_type_variation = &"Close_Button"
 text = "Back"
 
@@ -1776,10 +1849,10 @@ texture = ExtResource("19_gjwx3")
 
 [node name="Close" type="Button" parent="Developers/Sawyer Bio/Portrait" unique_id=1106612467]
 layout_mode = 0
-offset_left = 24.08421
-offset_top = 119.99999
-offset_right = 88.3087
-offset_bottom = 144.0
+offset_left = -72.0
+offset_top = 64.0
+offset_right = -7.7755127
+offset_bottom = 88.00001
 theme_type_variation = &"Close_Button"
 text = "Back"
 
@@ -1873,77 +1946,6 @@ offset_top = -23.999996
 offset_right = 40.0
 text = "Cursor Theme"
 vertical_alignment = 2
-
-[node name="User" type="Control" parent="." unique_id=1895220794]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("56_42eyl")
-
-[node name="Avatar" type="Panel" parent="User" unique_id=848339665]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 44.0
-offset_right = 194.0
-offset_bottom = 84.0
-scale = Vector2(4, 4)
-theme_type_variation = &"Line"
-
-[node name="Avatar" type="TextureRect" parent="User/Avatar" unique_id=2028838953]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("73_yoins")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="User" unique_id=1757473915]
-layout_mode = 0
-offset_left = 352.0
-offset_top = 44.0
-offset_right = 568.0
-offset_bottom = 62.0
-theme_type_variation = &"Store_Page"
-text = "Hello User"
-
-[node name="Button" type="Button" parent="User" unique_id=1408166701]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 216.0
-offset_right = 309.0
-offset_bottom = 256.0
-theme_type_variation = &"Close_Button"
-toggle_mode = true
-text = "Change Avatar"
-
-[node name="Button2" type="Button" parent="User" unique_id=1939437075]
-layout_mode = 0
-offset_left = 352.0
-offset_top = 72.0
-offset_right = 568.0
-offset_bottom = 112.0
-theme_type_variation = &"Close_Button"
-text = "Change Username"
-
-[node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
-visible = false
-layout_mode = 0
-offset_left = 328.0
-offset_top = 43.0
-offset_right = 598.0
-offset_bottom = 313.0
-theme_type_variation = &"Quit"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="User/Avatar Selection" unique_id=418275279]
-layout_mode = 0
-offset_right = 270.0
-offset_bottom = 270.0
-
-[node name="GridContainer" type="GridContainer" parent="User/Avatar Selection/ScrollContainer" unique_id=1324893963]
-layout_mode = 2
-theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = 2
-columns = 8
 
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
 visible = false
@@ -2229,6 +2231,77 @@ uppercase = true
 [node name="Timer" type="Timer" parent="Reloading" unique_id=1834441183]
 wait_time = 0.25
 
+[node name="User" type="Control" parent="." unique_id=1895220794]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("56_42eyl")
+
+[node name="Avatar" type="Panel" parent="User" unique_id=848339665]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 44.0
+offset_right = 194.0
+offset_bottom = 84.0
+scale = Vector2(4, 4)
+theme_type_variation = &"Line"
+
+[node name="Avatar" type="TextureRect" parent="User/Avatar" unique_id=2028838953]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("73_yoins")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="User" unique_id=1757473915]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 44.0
+offset_right = 568.0
+offset_bottom = 62.0
+theme_type_variation = &"Store_Page"
+text = "Hello User"
+
+[node name="Button" type="Button" parent="User" unique_id=1408166701]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 216.0
+offset_right = 309.0
+offset_bottom = 256.0
+theme_type_variation = &"Close_Button"
+toggle_mode = true
+text = "Change Avatar"
+
+[node name="Button2" type="Button" parent="User" unique_id=1939437075]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 72.0
+offset_right = 568.0
+offset_bottom = 112.0
+theme_type_variation = &"Close_Button"
+text = "Change Username"
+
+[node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
+visible = false
+layout_mode = 0
+offset_left = 328.0
+offset_top = 43.0
+offset_right = 598.0
+offset_bottom = 313.0
+theme_type_variation = &"Quit"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="User/Avatar Selection" unique_id=418275279]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 270.0
+
+[node name="GridContainer" type="GridContainer" parent="User/Avatar Selection/ScrollContainer" unique_id=1324893963]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 8
+
 [node name="Username" type="Panel" parent="." unique_id=130943005]
 visible = false
 layout_mode = 0
@@ -2276,6 +2349,7 @@ offset_right = 636.0
 offset_bottom = 40.0
 theme_type_variation = &"Line"
 script = ExtResource("73_d1j2r")
+default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("91_ktvun"), ExtResource("92_dfxco"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("107_jqfxn"), ExtResource("108_ebf3y"), ExtResource("109_kuktk"), ExtResource("110_sl5vs"), ExtResource("111_cvllj"), ExtResource("112_jyo0q"), ExtResource("114_cvllj"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("122_oui53"), ExtResource("123_qngap")])
 
 [node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
 layout_mode = 0
@@ -2754,11 +2828,11 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
-[connection signal="toggled" from="User/Button" to="User" method="_on_button_toggled"]
-[connection signal="pressed" from="User/Button2" to="User" method="_on_button_2_pressed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]
+[connection signal="toggled" from="User/Button" to="User" method="_on_button_toggled"]
+[connection signal="pressed" from="User/Button2" to="User" method="_on_button_2_pressed"]
 [connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Username/Button" to="Username" method="_on_button_pressed"]
 [connection signal="pressed" from="Avatar/Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://umoxlb5y8fsu"
-path="res://.godot/imported/the_carrots.png-88e63b218326e28b10dcf122c335dddd.ctex"
+uid="uid://j6kgonh7d6l3"
+path="res://.godot/imported/nippy.png-8684f37e92612e6314112d65f82fe916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://avatars/the_carrots.png"
-dest_files=["res://.godot/imported/the_carrots.png-88e63b218326e28b10dcf122c335dddd.ctex"]
+source_file="res://avatars/nippy.png"
+dest_files=["res://.godot/imported/nippy.png-8684f37e92612e6314112d65f82fe916.ctex"]
 
 [params]
 
