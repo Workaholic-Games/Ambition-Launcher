@@ -748,6 +748,7 @@ emoji_menu_enabled = false
 clear_button_enabled = true
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1203,7 +1204,6 @@ Images = Array[Texture]([ExtResource("49_snp3r"), ExtResource("50_46muq"), ExtRe
 installable = false
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
-visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
@@ -2818,6 +2818,8 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Store/Area/GridContainer/Coming Soon/Games/BATG" to="Store/Area/GridContainer/Coming Soon/Games/BATG" method="_on_pressed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
+[connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
+[connection signal="pressed" from="Community/Modding Guide" to="Community" method="_on_modding_guide_pressed"]
 [connection signal="pressed" from="Developers/Bulba" to="Developers" method="_on_bulba_pressed"]
 [connection signal="pressed" from="Developers/Jonathan" to="Developers" method="_on_jonathan_pressed"]
 [connection signal="pressed" from="Developers/Sawyer" to="Developers" method="_on_sawyer_pressed"]
