@@ -19,11 +19,9 @@ func _ready():
 func load_data():
 	if (ResourceLoader.exists(file_path + file_name)):
 		launcher_data = ResourceLoader.load(file_path + file_name).duplicate(true)
-	print("Load Data")
 
 func save_data():
 	ResourceSaver.save(launcher_data, file_path + file_name)
-	print("Save Data")
 
 # Save game when you click X and I believe Alt-F4
 func _exit_tree() -> void:

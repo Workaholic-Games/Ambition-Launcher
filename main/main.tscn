@@ -1441,6 +1441,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("51_lc78y")
 
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
+visible = false
 anchors_preset = 0
 offset_top = 60.0
 offset_right = 40.0
