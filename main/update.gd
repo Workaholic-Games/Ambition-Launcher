@@ -10,6 +10,8 @@ var text : Array = [
 	"Updating Launcher..."
 ]
 
+
+
 func _on_timer_timeout() -> void:
 	$"Update Text".text = text[i]
 	print(i)
@@ -24,10 +26,10 @@ func _on_timer_timeout() -> void:
 		i += 1
 
 func _ready():
-	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	
 	update_check()
+	$"../Panel/Label".text = current_version
 
 func update_check():
 	$"../HTTPRequest".download_file = "user://Version.txt"
@@ -37,13 +39,14 @@ func update_check():
 		"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
 		
 		"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
-
+	
+	await $"../HTTPRequest".request_completed
 	var file = FileAccess.open("user://Version.txt", FileAccess.READ)
 	var version = file.get_as_text()
 	if version != current_version:
 		$Timer.start()
 		show()
-		await $"../HTTPRequest".request_completed
+		
 		if FileAccess.file_exists("user://installer" + Main.file_type):
 			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
 			OS.shell_open(absolute_path)
@@ -61,7 +64,6 @@ func update_check():
 	else:
 		Main.launcher_data.just_installed = false
 		$"../Intro".play()
-		pass
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()

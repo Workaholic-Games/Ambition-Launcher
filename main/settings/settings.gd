@@ -167,3 +167,10 @@ func _on_music_item_selected(index: int) -> void:
 	else:
 		$"../Music".stream = music[index - 2]
 		$"../Music".play()
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+	elif what == NOTIFICATION_APPLICATION_FOCUS_IN:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)

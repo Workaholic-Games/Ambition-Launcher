@@ -144,6 +144,7 @@
 [ext_resource type="Texture2D" uid="uid://j6kgonh7d6l3" path="res://avatars/nippy.png" id="122_oui53"]
 [ext_resource type="Texture2D" uid="uid://ck7w2nxp1m5c3" path="res://avatars/the_mold.png" id="123_qngap"]
 [ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="140_o7yem"]
+[ext_resource type="Texture2D" uid="uid://0kooaiihhq6h" path="res://launcher games/drops/drops.png" id="142_pixlj"]
 [ext_resource type="PackedScene" uid="uid://bltepr85ikmy8" path="res://launcher games/drops/drops.tscn" id="143_mer5n"]
 [ext_resource type="Texture2D" uid="uid://buw1de3m1wgra" path="res://community/drops/image (1).jpg" id="143_vc7ud"]
 [ext_resource type="Texture2D" uid="uid://brnk3yh8vcq62" path="res://community/drops/image (1).png" id="144_pixlj"]
@@ -528,6 +529,14 @@ region = Rect2(0, 0, 16, 16)
 atlas = ExtResource("32_6vgeh")
 region = Rect2(16, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc7ud"]
+atlas = ExtResource("142_pixlj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pixlj"]
+atlas = ExtResource("142_pixlj")
+region = Rect2(16, 0, 16, 16)
+
 [sub_resource type="Curve" id="Curve_omfc6"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -649,12 +658,11 @@ theme_type_variation = &"Line"
 [node name="Label" type="Label" parent="Panel" unique_id=420621463]
 z_index = 2
 layout_mode = 0
-offset_left = 9.0
-offset_top = 338.0
-offset_right = 41.0
-offset_bottom = 356.0
-text = "Beta"
-horizontal_alignment = 2
+offset_left = 3.0
+offset_top = 343.0
+offset_right = 102.0
+offset_bottom = 361.0
+text = "Beta 1.1.0"
 
 [node name="Quit" type="Panel" parent="." unique_id=1799576681]
 visible = false
@@ -1522,11 +1530,16 @@ offset_top = -36.0
 offset_right = 590.0
 offset_bottom = 284.0
 bbcode_enabled = true
-text = "Released the launcher. It's in Beta so there may be some bugs and such 
+text = "Added \"Drops\" Launcher Game
+Added Background Music
+Added UI Sound
+Added Version Indicator
+Improved Updating System
+Improved Avatar System (may reset your avatar mb) and added a bunch of new avatars
+Updated Dell Model
+Fixed Launcher Pet collision bug
+AND MORE!
 
-However our auto updating system should make fixes much easier to obtain. 
-
-Unless our auto updating breaks on us then things are going to be rough.
 
 Thanks for using the launcher! :}"
 
@@ -2908,6 +2921,18 @@ texture_pressed = SubResource("AtlasTexture_7divq")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Drops Button" type="TextureButton" parent="Launcher Games" unique_id=977492925]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 2.0
+offset_right = 60.0
+offset_bottom = 26.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_vc7ud")
+texture_pressed = SubResource("AtlasTexture_pixlj")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Drops" parent="Launcher Games" unique_id=854953616 instance=ExtResource("143_mer5n")]
 visible = false
 layout_mode = 0
@@ -2916,6 +2941,7 @@ offset_top = 29.0
 offset_right = 102.0
 offset_bottom = 218.0
 drops = Array[Texture2D]([ExtResource("143_vc7ud"), ExtResource("144_pixlj"), ExtResource("145_iwk0j"), ExtResource("146_i5yhr"), ExtResource("147_yucq5"), ExtResource("148_3i2d3"), ExtResource("149_8lxvq"), ExtResource("150_2aps0"), ExtResource("151_6e7ex"), ExtResource("152_0job1"), ExtResource("153_n1olx"), ExtResource("154_6du4a"), ExtResource("155_jlel5"), ExtResource("156_25cuu"), ExtResource("157_tqfxx"), ExtResource("158_dxsmq"), ExtResource("159_qguvw"), ExtResource("160_m55g0"), ExtResource("161_2v6jo"), ExtResource("162_er31x"), ExtResource("163_225bh"), ExtResource("164_bp8ya"), ExtResource("165_7gy4k"), ExtResource("166_dwcwd"), ExtResource("167_0wqly"), ExtResource("168_20f0n"), ExtResource("169_aeq82"), ExtResource("170_ac5b7"), ExtResource("171_neeuf"), ExtResource("172_6frxn"), ExtResource("173_v5wfq"), ExtResource("174_syvus"), ExtResource("175_oymnj"), ExtResource("176_fgfkr"), ExtResource("177_dij6t"), ExtResource("178_ek2bi"), ExtResource("179_vyxbw"), ExtResource("180_dv4h0"), ExtResource("181_uquvt"), ExtResource("182_68tyb"), ExtResource("183_25tof"), ExtResource("184_l41q5"), ExtResource("185_5jcnj"), ExtResource("186_k2fn6"), ExtResource("187_a21g3"), ExtResource("188_3o0h7"), ExtResource("189_l5nu6"), ExtResource("190_q3xpv"), ExtResource("191_wnceq"), ExtResource("192_5313l"), ExtResource("193_f77vw"), ExtResource("194_0gr68"), ExtResource("195_43mne")])
+ads = Array[VideoStreamTheora]([ExtResource("36_gmy4t"), ExtResource("26_gpx50"), ExtResource("35_571ru"), ExtResource("48_uv824")])
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -3051,6 +3077,7 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="mouse_entered" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_entered"]
 [connection signal="mouse_exited" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_exited"]
 [connection signal="toggled" from="Launcher Games/Dell Button" to="Launcher Games/Dell" method="_on_dell_toggled"]
+[connection signal="toggled" from="Launcher Games/Drops Button" to="Launcher Games/Drops" method="_on_drops_button_toggled"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="Shuffle" to="." method="_on_shuffle_finished"]

@@ -27,7 +27,6 @@ general/text_to_speech=true
 [autoload]
 
 Main="*uid://hki2er1uwscs"
-DiscordRPCLoader="*uid://cq101hgkk1du5"
 
 [display]
 
@@ -36,10 +35,6 @@ window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [file_customization]
 

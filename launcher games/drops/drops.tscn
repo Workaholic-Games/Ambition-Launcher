@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bltepr85ikmy8"]
 
 [ext_resource type="Script" uid="uid://da6rpnrhf54e5" path="res://launcher games/drops/drops.gd" id="1_0y47j"]
-[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="2_s81ju"]
 
 [node name="Drops" type="Panel" unique_id=854953616]
 script = ExtResource("1_0y47j")
-drops = Array[Texture2D]([ExtResource("2_s81ju")])
 
 [node name="Panel" type="Panel" parent="." unique_id=793458484]
 custom_minimum_size = Vector2(108, 189)
@@ -24,3 +22,30 @@ vertical_scroll_mode = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=530962041]
 layout_mode = 2
 theme_override_constants/separation = 0
+
+[node name="Ads" type="VideoStreamPlayer" parent="." unique_id=1497071076]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 108.0
+offset_bottom = 124.0
+expand = true
+
+[node name="Panel2" type="Panel" parent="Ads" unique_id=1267524511]
+show_behind_parent = true
+custom_minimum_size = Vector2(108, 189)
+layout_mode = 0
+offset_top = -64.0
+offset_right = 108.0
+offset_bottom = 125.0
+theme_type_variation = &"Quit"
+
+[node name="Label" type="Label" parent="Ads" unique_id=1892227989]
+layout_mode = 0
+offset_left = 88.0
+offset_top = -66.0
+offset_right = 108.0
+offset_bottom = -48.0
+text = "AD"
+
+[connection signal="finished" from="Ads" to="." method="_on_ads_finished"]
