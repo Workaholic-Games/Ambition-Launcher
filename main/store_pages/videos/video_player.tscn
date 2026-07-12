@@ -4,6 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bqugsbqbk1qhw" path="res://branding/intro.ogv" id="1_tlqx1"]
 [ext_resource type="Texture2D" uid="uid://bibw1pfsgk3xf" path="res://main/store_pages/videos/assets/play_button.png" id="3_q28cp"]
 [ext_resource type="Texture2D" uid="uid://41trsbwg5m8r" path="res://main/store_pages/videos/assets/pause.png" id="4_c8dor"]
+[ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="5_q28cp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1w1fa"]
 atlas = ExtResource("3_q28cp")
@@ -20,6 +21,11 @@ region = Rect2(3, 3, 10, 10)
 [sub_resource type="AtlasTexture" id="AtlasTexture_26eag"]
 atlas = ExtResource("3_q28cp")
 region = Rect2(3, 2, 11, 11)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1w1fa"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("5_q28cp")
 
 [node name="Panel" type="Panel" unique_id=509022307]
 offset_right = 344.0
@@ -93,6 +99,11 @@ offset_bottom = 218.0
 scale = Vector2(0.545, 0.545)
 min_value = -20.0
 max_value = 20.0
+
+[node name="Tap" type="AudioStreamPlayer" parent="." unique_id=418301019]
+stream = SubResource("AudioStreamRandomizer_1w1fa")
+volume_db = -12.0
+pitch_scale = 1.54
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="mouse_entered" from="VideoStreamPlayer" to="." method="_on_video_stream_player_mouse_entered"]

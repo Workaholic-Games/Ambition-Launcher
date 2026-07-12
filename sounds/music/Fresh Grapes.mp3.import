@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwap8x08hljxx"
+path="res://.godot/imported/Fresh Grapes.mp3-5518480dd0d0ac4fc595ef889f6868cc.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/Fresh Grapes.mp3"
+dest_files=["res://.godot/imported/Fresh Grapes.mp3-5518480dd0d0ac4fc595ef889f6868cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

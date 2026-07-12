@@ -2,5 +2,6 @@
 
 [resource]
 resource_name = "skin"
-albedo_color = Color(1, 0.83, 0.65999997, 1)
-stencil_flags = 2
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.93, 0.71424, 0.4836, 1)

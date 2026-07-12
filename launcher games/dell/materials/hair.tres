@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ydgbdskbcme6"]
+
+[resource]
+resource_name = "hair"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.020043464, 0.018153261, 0.020819727, 1)

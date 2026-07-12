@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp4a32x11sqbw"]
+
+[resource]
+resource_name = "dress_2"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.07431606, 0.065309435, 0.08332432, 1)

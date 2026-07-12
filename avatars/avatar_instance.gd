@@ -11,3 +11,4 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	Main.launcher_data.avatar = index
 	menu.update_avatar()
+	$Tap.play()

@@ -2,3 +2,6 @@
 
 [resource]
 resource_name = "eye"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)

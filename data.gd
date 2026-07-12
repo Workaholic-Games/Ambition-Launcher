@@ -12,3 +12,8 @@ class_name data
 @export var username : String = ""
 @export var avatar : int = 0
 @export var last_changelog : String
+@export var volumes : Dictionary = {
+	"UI": 0,
+	"Music": 0,
+	}
+@export var current_song : int = 0

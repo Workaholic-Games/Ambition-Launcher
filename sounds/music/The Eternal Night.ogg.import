@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d0sh0xu5o6kta"
+path="res://.godot/imported/The Eternal Night.ogg-683309e75950a1396e02d188001515ce.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/music/The Eternal Night.ogg"
+dest_files=["res://.godot/imported/The Eternal Night.ogg-683309e75950a1396e02d188001515ce.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

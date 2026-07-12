@@ -8,6 +8,9 @@ var cursors: Dictionary = {
 	"Seedling": load("res://main/settings/cursors/seedling_cursor.png"),
 	"Sun": load("res://main/settings/cursors/sad_sun.png"),
 }
+@export var music : Array[AudioStream]
+
+
 
 # Applying of settings on startup
 func _ready():
@@ -57,9 +60,30 @@ func _ready():
 		Main.launcher_data.last_changelog = $"../Changelog/Changelog".text
 		$"../Changelog/NEW".show()
 		$"../Changelog/Label".hide()
+	
+	$"UI Volume".value = Main.launcher_data.volumes["UI"]
+	AudioServer.set_bus_volume_db(1, Main.launcher_data.volumes["UI"])
+	$"Music Volume".value = Main.launcher_data.volumes["Music"]
+	AudioServer.set_bus_volume_db(2, Main.launcher_data.volumes["Music"])
+	
+	for song in music:
+		$"../Shuffle".stream.add_stream(-1, song, 1.0)
+	
+	
+	$Music.select(Main.launcher_data.current_song)
+	$"../Music".stop()
+	$"../Shuffle".stop()
+	if Main.launcher_data.current_song == 0:
+		return
+	if Main.launcher_data.current_song == 1:
+		$"../Shuffle".play()
+	else:
+		$"../Music".stream = music[Main.launcher_data.current_song - 2]
+		$"../Music".play()
 
 # Window settings
 func _on_window_item_selected(index: int) -> void:
+	$"../Tap".play()
 	match index:
 		0: 
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
@@ -93,6 +117,7 @@ func _process(_delta: float) -> void:
 
 # Move user to Startup Location
 func _on_startup_location_item_selected(index: int) -> void:
+	$"../Tap".play()
 	Main.launcher_data.start_page = index
 
 # Fixes the stupid option buttons not being rendered properly
@@ -103,7 +128,42 @@ func fix_option_button_ui():
 
 # Custom Cursor Stuff
 func _on_cursor_item_selected(index: int) -> void:
+	$"../Tap".play()
 	var cursor : String = $Cursor.get_item_text(index)
 	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
 	Main.launcher_data.cursor = index
 	Main.save_data()
+
+
+func _on_ui_volume_value_changed(value: float) -> void:
+	Main.launcher_data.volumes["UI"] = value
+	AudioServer.set_bus_volume_db(1, Main.launcher_data.volumes["UI"])
+	
+	if Main.launcher_data.volumes["UI"] == 0:
+		AudioServer.set_bus_mute(1, true)
+	else:
+		AudioServer.set_bus_mute(1, false)
+
+
+func _on_music_volume_value_changed(value: float) -> void:
+	Main.launcher_data.volumes["Music"] = value
+	AudioServer.set_bus_volume_db(2, Main.launcher_data.volumes["Music"])
+	
+	if Main.launcher_data.volumes["Music"] == 0:
+		AudioServer.set_bus_mute(1, true)
+	else:
+		AudioServer.set_bus_mute(1, false)
+
+
+
+func _on_music_item_selected(index: int) -> void:
+	Main.launcher_data.current_song = index
+	$"../Music".stop()
+	$"../Shuffle".stop()
+	if index == 0:
+		return
+	if index == 1:
+		$"../Shuffle".play()
+	else:
+		$"../Music".stream = music[index - 2]
+		$"../Music".play()

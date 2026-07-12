@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgkeao7fgx2f0"]
+
+[resource]
+resource_name = "eye3"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.2792068, 0.07425995, 0.5416588, 1)

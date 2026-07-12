@@ -1,5 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://1g8bn7punmtn"]
-
-[resource]
-resource_name = "eye_color"
-albedo_color = Color(0.44792718, 0.014078052, 0.776635, 1)

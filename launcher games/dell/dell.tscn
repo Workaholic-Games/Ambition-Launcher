@@ -1,16 +1,19 @@
 [gd_scene format=4 uid="uid://dl7a0bfmrnoob"]
 
-[ext_resource type="Material" uid="uid://cp4jdaqw0guli" path="res://launcher games/dell/materials/shirt.tres" id="1_v7yw3"]
-[ext_resource type="Material" uid="uid://c5iuwdsdqh71r" path="res://launcher games/dell/materials/pants.tres" id="2_7bw83"]
-[ext_resource type="Material" uid="uid://cqjhx1swado3w" path="res://launcher games/dell/materials/skin.tres" id="3_p64v8"]
-[ext_resource type="Material" uid="uid://d17hobsd5ueyn" path="res://launcher games/dell/materials/boot.tres" id="4_rlp2m"]
-[ext_resource type="Material" uid="uid://wp1mvpr1ls5j" path="res://launcher games/dell/materials/beard.tres" id="5_h4xc4"]
-[ext_resource type="Material" uid="uid://cx2fq0lawbmge" path="res://launcher games/dell/materials/eye.tres" id="6_pw67o"]
-[ext_resource type="Material" uid="uid://dx23uonnlytw5" path="res://launcher games/dell/materials/black.tres" id="7_q5tlv"]
-[ext_resource type="Material" uid="uid://1g8bn7punmtn" path="res://launcher games/dell/materials/eye_color.tres" id="8_b6ka2"]
-[ext_resource type="Material" uid="uid://b2haaum0ukj6j" path="res://launcher games/dell/materials/lips.tres" id="9_lav81"]
-[ext_resource type="Material" uid="uid://b6te5uthacp22" path="res://launcher games/dell/materials/wine_glass.tres" id="10_26ed8"]
-[ext_resource type="Material" uid="uid://dow35v32evqso" path="res://launcher games/dell/materials/wine.tres" id="11_ppimn"]
+[ext_resource type="PackedScene" uid="uid://b0rkykocxkt0m" path="res://launcher games/dell/dell_2.0.glb" id="1_smc08"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic5bg"]
+resource_name = "shirt"
+albedo_color = Color(0.094334535, 0.08227456, 0.1419343, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smc08"]
+resource_name = "pants"
+albedo_color = Color(1, 0.83137256, 0.65882355, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnmi6"]
+resource_name = "skin"
+albedo_color = Color(1, 0.83, 0.65999997, 1)
+stencil_flags = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_87jjk"]
 _surfaces = [{
@@ -57,7 +60,7 @@ _surfaces = [{
 "index_count": 660,
 "index_data": PackedByteArray("pgABAKcApgAAAAEAqAAFAKkAqAAEAAUAqgBvAKsAqgBxAG8ArAALAK0ArAAKAAsArgCsAAwArgAMAA0ArwASABAArwARABIAsABoAGcAsACxAGgAsgCxALMAsgC0ALEAtQC0ALIAtQC2ALQAZQC2ALUAZQBmALYAtwAXALgAtwC5ABcAugC7ALgAugC4ALwAvQBiAL4AvQC/AGIAwADBAL4AwAC+AMIAwwDAAMIAwwDCAMQAxQCDAMYAxQDHAIMAyADJAMYAyADGAMoAywBcAMwAywDNAFwAzgDPAMwAzgDMANAA0QDOANAA0QDQANIAGQAaABsAGQAcABoAHQAeAB8AHQAgAB4A0wBZAFcA0wDUAFkA1QDUANYA1QDXANQA2ADXANUA2ADZANcAWgDZANgAWgBYANkAIQAiACMAIQDaACIALADbANwALAAqANsAKAAqACwAKAAmACoA3QAmACgA3QDeACYANgA0ADMANgDfADQAKwDgAOEAKwAtAOAALwAtACsALwAxAC0A4gAxAC8A4gDjADEA5ADlAOYA5ADnAOUA6ADkAOYA6ADmAOkA6gDnAOQA6wDkAOgA6wDqAOQA6gDsAOcA7QDrAOgA7gDqAOsA7wDsAOoA7gDvAOoA7wDwAOwA8QDuAPIA8QDyAPMA9AD1APMA9ADzAPYA7QDoAPcA9wDoAOkA+ADtAPcA9wDpAPkA+AD3APoA+gD3APkA+gD5APsA/AA5ADcA/AA4ADkA/QA+ADwA/QA9AD4A/gBEAEIA/gD/AEQASABJAAABSABMAEkAOgABAQIBOgA7AAEBAwFPAE0AAwFOAE8AVQADAU0AVQBNAFYAVAADAVUABAFOAAMBVAAEAQMBUAAEAVQABAFRAE4AUABSAAQBUgBRAAQBUgBTAFEAMAAFATIAMAAuAAUBNQAGAQcBNQAIAQYBCQEIATUACQEKAQgBKQALASUAKQAnAAsBJAAMAQ0BJAAOAQwBDwEOASQADwEQAQ4BEQESAV0AEQETARIBFAEVAWAAFAEWARUBaQBqABcBaQBtAGoAEwAYARkBEwAUABgBbgAaAXAAbgAbARoBHAEdARoBHAEeAR0BHgEfASABHgEhAR8BAwAiAQIAAwAjASIBJAElASIBJAEmASUBJwEoASkBJwEqASgBKwFsAGsAKwEsAWwALQFLAEoALQEuAUsARgBFAC8BRgBHAEUAMAFDADEBMAEyAUMAPwAzATQBPwBBADMBNQE2ATcBNQFAADYBcgBzAHQAcgB1AHMAdgB3AHgAdgB5AHcAegB7AHwAegB9AHsAfgB/AIAAfgCBAH8AOAE5AYQAOAE6ATkBOwE8ARgAOwE9ATwBDgA+AQ8ADgA/AT4BCABAAQkACABBAUABQgEGAAcAQgFDAQYAhgCHAIgAhgCJAIcAigCLAIwAigCNAIsAjgCPAJAAjgCRAI8AkgCTAJQAkgCVAJMAlgCXAJgAlgCZAJcAmgCbAJwAmgCdAJsAngCfAKAAngChAJ8AogCjAKQAogClAKMARAFFAUYBRAFHAUUBFQBIAUkBFQBKAUgBSwFMAU0BSwFOAUwBggBPAVABggBRAU8BUgFTAVQBUgFVAVMBVgFXAVgBVgFjAFcBWQFaAVsBWQFcAVoBZABdAV4BZABfAV0BXwBgAWEBXwBiAWABWwBjAWQBWwBlAWMBZgFnAWgBZgFeAGcBaQFqAWsBaQGFAGoBbAFtAW4BbAFhAG0BbwFwAXEBbwEWAHAB"),
 "lods": [0.87124854, PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABAAGAAcACAAEAAcACAAHAAkACgALAAwACgAMAA0ADgAKAA0ADgANAA8AEAARABIAEwARABAAEwAUABEAFQAWABcAFQAXABgAGQAaABsAGQAcABoAHQAeAB8AHQAgAB4AIQAiACMAJAAiACEAJQAiACQAIwAiACYAJQAnACIAIwAmACgAKQAnACUAKAAmACoAKwAnACkAKAAqACwAKwAtACcALAAqAC4ALwAtACsALAAuADAALwAxAC0AMAAuADIAMwAxAC8AMgAuADQAMwA0ADEAMgA0ADUANgA0ADMANQA0ADYANwA4ADkAOgA4ADcAOgA7ADgAPAA9AD4APwA9ADwAPwBAAD0APwBBAEAAQgBDAEQAQgBFAEMARgBFAEIARgBHAEUASABJAEoASgBJAEsASABMAEkATQBOAE8AUABOAE0AUABRAE4AUgBRAFAAUgBTAFEAVABQAE0AVABNAFUAVQBNAFYAVwBYAFkAWgBYAFcAWwBcAF0AWwBeAFwAXwBeAFsAYABhAGIAYwBhAGAAZABjAGAAZQBmAGcAZwBmAGgAaQBqAGsAawBqAGwAaQBtAGoAbgBvAHAAbgBxAG8AcgBzAHQAcgB1AHMAdgB3AHgAdgB5AHcAegB7AHwAegB9AHsAfgB/AIAAfgCBAH8AggCDAIQAhQCDAIIAhgCHAIgAhgCJAIcAigCLAIwAigCNAIsAjgCPAJAAjgCRAI8AkgCTAJQAkgCVAJMAlgCXAJgAlgCZAJcAmgCbAJwAmgCdAJsAngCfAKAAngChAJ8AogCjAKQAogClAKMA")],
-"material": ExtResource("1_v7yw3"),
+"material": SubResource("StandardMaterial3D_ic5bg"),
 "name": "shirt",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -70,7 +73,7 @@ _surfaces = [{
 "index_count": 132,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAwAAUABwAwAAQABwAxADAACQAxAAcACQAIADEAMgAtAC4AMgAzAC0ANAAzADIANAA1ADMALAA1ADQALAAvADUANgApACoANgA3ACkAOAA3ADYAOAA5ADcAKAA5ADgAKAArADkACgALAAwACgA6AAsADQA6AAoADQA7ADoADwA7AA0ADwAOADsAEAARABIAEAATABEAFAAVABYAFAA8ABUAFwA8ABQAFwA9ADwAGQA9ABcAGQAYAD0AGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgA+ACMAJQA+ACIAJQA/AD4AJwA/ACUAJwAmAD8A"),
 "lods": [0.00031467766, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAFAAQABwAIAAUACQAIAAcACgALAAwADQALAAoADQAOAAsADwAOAA0AEAARABIAEAATABEAFAAVABYAFwAVABQAFwAYABUAGQAYABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAJQAjACIAJQAmACMAJwAmACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A")],
-"material": ExtResource("2_7bw83"),
+"material": SubResource("StandardMaterial3D_smc08"),
 "name": "pants",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -82,7 +85,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 84,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAAABAAGAAUABwAIAAkABwAKAAgACwAMAAcACwANAAwADgANAAsADgAPAA0AEAAPABEAEAASAA8AEwAUABUAEwAWABQAFwAYABkAFwAaABgAGwAcABcAGwAdABwAHgAfACAAHgAhAB8AIAAiACMAIAAjACQAJQAmACcAJQAoACYAKQAqACsAKQAsACoALQAuAC8ALQAwAC4A"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -91,6 +94,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_87jjk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pr5nx"]
+resource_name = "boot"
+albedo_color = Color(0.15277001, 0.14852291, 0.14852291, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2xtvr"]
 _surfaces = [{
@@ -124,7 +131,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 30,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -136,7 +143,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 126,
 "index_data": PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAAAFAAEAAAAGAAUAAAAHAAYACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0A"),
-"material": ExtResource("4_rlp2m"),
+"material": SubResource("StandardMaterial3D_pr5nx"),
 "name": "boot",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -168,7 +175,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("2_7bw83"),
+"material": SubResource("StandardMaterial3D_smc08"),
 "name": "pants",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -202,7 +209,7 @@ _surfaces = [{
 "index_count": 60,
 "index_data": PackedByteArray("GAABABkAGAADAAEABAAFAAYABAAHAAUAGgAVABsAGgAXABUACAAJAAoACAALAAkAHAARAB0AHAATABEAHgANAB8AHgAPAA0ADAAgAA4ADAAhACAAEAAiABIAEAAjACIAFAAkABYAFAAlACQAAAAmAAIAAAAnACYA"),
 "lods": [0.072895415, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA")],
-"material": ExtResource("1_v7yw3"),
+"material": SubResource("StandardMaterial3D_ic5bg"),
 "name": "shirt",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -246,7 +253,7 @@ _surfaces = [{
 "index_count": 72,
 "index_data": PackedByteArray("GAACAAAAGAABAAIAAwABABgAAwAEAAEABQAGAAcABQAZAAYACAAZAAUACAAJABkAGgAXABsAGgAcABcAHQAaABsAHQAbABYAFAAaAB0AFAAeABoAHgAcABoAHgAVABwACgALAAwACgAfAAsADgAfAAoADgANAB8ADwAQABEADwAgABAAEwAgAA8AEwASACAA"),
 "lods": [0.00047068676, PackedByteArray("AAABAAIAAwABAAAAAwAEAAEABQAGAAcACAAGAAUACAAJAAYACgALAAwACgANAAsADgANAAoADwAQABEADwASABAAEwASAA8AFAAVABYAFQAXABYA")],
-"material": ExtResource("1_v7yw3"),
+"material": SubResource("StandardMaterial3D_ic5bg"),
 "name": "shirt",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -258,7 +265,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -267,6 +274,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_da14g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2ipb"]
+resource_name = "beard"
+albedo_color = Color(0.004159649, 0, 0.048603628, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xgalc"]
 _surfaces = [{
@@ -292,7 +303,7 @@ _surfaces = [{
 "index_count": 168,
 "index_data": PackedByteArray("SAACAEkASAABAAIAAABIAEkAAABJAAMABAAAAAMABAADAAUABgAHAAgABgAJAAcACgALAAwACgANAAsASgAKAAwASgAMAEsADgBKAEsADgBLAA8AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHABMAB4AHABNAEwATgAfAE8ATgAdAB8AIABQACIAIABRAFAAUgAjAFMAUgAhACMAVAAlACYAVABVACUAJABVAFQAJAAnAFUAKAAnACQAKAApACcAKgArACwAKgAtACsALgAvADAALgAxAC8AVgAxAC4AVgBXADEAMgBXAFYAMgAzAFcANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABYAFkAQABBAFgAWgBDAEIAWgBbAEMARABcAF0ARABFAFwAXgBHAEYAXgBfAEcA"),
 "lods": [0.037383992, PackedByteArray("AAABAAIAAAACAAMABAAAAAMABAADAAUABgAHAAgABgAJAAcACgALAAwACgANAAsADgAKAAwADgAMAA8AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHQAfAB4AIAAhACIAIQAjACIAJAAlACYAJAAnACUAKAAnACQAKAApACcAKgArACwAKgAtACsALgAvADAALgAxAC8AMgAxAC4AMgAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQgBBAEMARABFAEYARgBFAEcA")],
-"material": ExtResource("5_h4xc4"),
+"material": SubResource("StandardMaterial3D_u2ipb"),
 "name": "beard",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -301,6 +312,17 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xgalc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwk3k"]
+resource_name = "eye"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qyvd5"]
+resource_name = "black"
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4bow"]
+resource_name = "eye_color"
+albedo_color = Color(0.44792718, 0.014078052, 0.776635, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fv4sh"]
 _surfaces = [{
@@ -346,7 +368,7 @@ _surfaces = [{
 "index_count": 972,
 "index_data": PackedByteArray("0gBOAE8A0gBRAE4A0wBRANIA0wDUAFEA1QDTANIA1gDUANMA1gDXANQA2ADWANMA2ADTANUA2QDXANYA2QDaANcA1QDSANsA2wDcAE8A2wBPAN0A3gDaANkA3gBQANoA3gBUAFAAVQBUAN4A3wBVAN4A3wDeAOAA4ADeANkA4QDfAOAA4ADZAOIA4gDZANYA4QDgAOMA4wDgAOIA5ADhAOMA4gDWANgA5ADjAOUA4wDiAOYA5gDiANgA5QDjAOYAUwDkAOUA5gDYAOcA5wDYANUA5QDmAOgA6ADmAOcAUwDlAOkA6QDlAOgAUgBTAOkAUgDpAFYA6QDoAOoA6ADnAOsA6gDoAOsA5wDVAOwA6wDnAOwA7ADVANsA7QDuAOoA7QDqAO8A7wDqAPAA6gDrAPAA7wDwAPEA7ADbAPIA8gDbAN0A8gDdAPMA6wDsAPQA9ADsAPIA8ADrAPQA9QDyAPMA9ADyAPUA9QDzAPYA8AD0APcA9wD0APUA8QDwAPcA8QD3APgA+AD3APkA+AD5APoA9wD1APsA+wD1APYA+wD2AE0AVwD7AE0AWAD7AFcAAAD8AAIAAAADAPwA/QAIAP4A/QD/AAgALAAtAAABLAAvAC0AMwA0ADUAMwA2ADQAMAAxADIAMAAuADEAAQAFAAYAAQAEAAUAOgABATwAOgA9AAEBPQACAQEBPQADAQIBAwEEAQIBAwE+AAQBPgA7AAQBPgA/ADsAQABBAEIAQABDAEEARwBIAEkARwAFAUgABQEGAUgABQEHAQYBBwFLAAYBBwEIAUsACAFMAEsACAFKAEwACQEKARkAGQAKAQsBDAENARgADAEOAQ0BEwAPAREAEwAPAA8BDwANAA8BDwALAA0AEAEJABEBEAESAQkAEwEUARUBEwEpABQBFgEnACYAFgEoACcAJQAWASYAJQAmACQAWQBaAFsAWQBcAFoAIwAXARgBIwAZARcBIgAaARsBIgAcARoBIAAdAR4BIAAhAB0BHQAeAB8BHQAfAB4AHwEeABwAHwEcABsAIAEWABoAIAEhARYAIgE4ADkAIgE3ADgAXQAjAV8AXQBeACMBXwAjASQBXwAkAWAAYAAkASUBYAAlAWEAYQAlAWIAYQBiAGMAJgEqACcBJwEqACgBFwApASoBFwArACkBFAASABAAFAAVABIAEAASAA4AEAAOAAwAKwEKAAcAKwEsAQoARABFAEYARAAtAUUAZABmAC4BZABlAGYALgFmAC8BLgEvATABMAEvAWcAMAFnADEBMQFnAGkAMQFpAGgAMgG9AL4AMgG4AL0AMwG4ADIBMwE0AbgANQE0ATMBNQE2ATQBNwE2ATUBNwE4ATYBOQE1ATMBOgE4ATcBOgG3ADgBOgG2ALcAugC2ADoBOwG6ADoBOwE6ATwBPAE9ATcBPgE7ATwBPwE3ATUBPAE3AT8BPwE1ATkBPgE8AUABQAE8AT8BQQE+AUABQgE/ATkBQAE/AUIBQQFAAUMBQwFAAUIBRAFBAUMBRAFDAUUBQwFCAUYBRQFDAUYBQgE5AUcBRgFCAUcBRQFGAUgBwQBFAUgBwQBIAUkBuQBKAcEAuQC7AEoBSAFGAUsBRgFHAUsBSQFIAUwBSAFLAUwBSQFMAU0BTQFMAU4BTQFOAU8BTAFLAVABTAFQAU4BSwFHAVEBSwFRAVABRwFSAVEBRwE5AVIBOQEzAVIBUgEzAVMBUgFTAVQBUQFSAVQBVAFTAVUBVAFVAVYBUQFUAVcBVwFUAVYBUAFRAVcBVwFWAVgBUAFXAVkBWQFXAVgBTgFQAVkBTgFZAVoBWQFYAVsBXAFZAVsBTwFOAVwBXAFbAbwATwFcAcAAvwBcAbwAwABcAb8AagBdAWwAagBtAF0BXgFyAF8BXgFgAXIAlQCWAJcAlQBhAZYAnACdAJ4AnACfAJ0AmQCaAJgAmQCbAJoAawBvAHAAawBuAG8AowBiAaUAowCkAGIBpQBiAWMBpQBjAWQBZAFjAWUBZAFlAaYApgBlAacApgCnAKgAqQCqAKsAqQCsAKoAsACyAGYBsACxALIAZgGyAGcBZgFnAWgBaAFnAbMAaAGzAGkBaQGzALUAaQG1ALQAagGTAGsBawGTAGwBbQFuAW8BbQGUAG4BfgBwAXoAfgB8AHABegBwAXgAegB4AHYAcQF0AHIBcQFzAXQAdAF1AYMAdAF2AXUBdwGFAIQAdwGGAIUAhwCGAHcBhwCIAIYAwgDDAMQAwgDFAMMAiQB4AXkBiQB6AXgBiwB7AXwBiwB9AXsBjAB+AYoAjAB/AX4BjgCPAI0AjgCAAY8AgAGQAI8AgAGRAJAAgQGAAIIBgQGSAIAAgwGhAKIAgwGgAKEAxgCEAcgAxgDHAIQBxwCFAYQBxwCGAYUBhgGHAYUBhgHKAIcBygDJAIcBygDLAMkAiAGJAYIAggCJAYoBfwCLAYEAfwCMAYsBfQCNAXsAfQB5AI0BeQB3AI0BeQB1AHcAjgFzAI8BjgFxAHMArQCuAJABrQCvAK4AzADNAM4AzACRAc0AkQGSAc0AkQGTAZIBkwHPAJIBkwGUAc8AlAHQAM8AlAHRANAA"),
 "lods": [0.0009898111, PackedByteArray("AAABAAIAAAADAAEAAQAEAAUAAQAFAAYABwAIAAkABwAKAAgACwAHAAkADAAKAAcACwAJAA0ADAAOAAoADwALAA0AEAAOAAwADwANABEAEAASAA4AEwAPABEAFAASABAAFAAVABIAFgATABEAFwAVABQAFgARABgAGQAWABgAGgAWABkAGwAWABoAGwAcABYAHQAcABsAHQAeABwAHQAfAB4AIAAfAB0AIAAhAB8AIgAhACAAIgAjACEAIwAkACEAIwAlACQAJQAmACQAJQAnACYAJQAoACcAKAAXACcAKAApABcAKQAqABcAFwAqACsAFwArABUALAAtAC4ALAAvAC0AMAAuADEAMAAxADIAMwA0ADUAMwA2ADQANAA3ADgANAA4ADkAOgA7ADwAOgA9ADsAPQA+ADsAPgA/ADsAQABBAEIAQABDAEEARABCAEUARABFAEYARwBIAEkARwBKAEgASgBLAEgASgBMAEsATQBOAE8AUABOAE0AUABRAE4AUgBQAE0AUgBTAFAAUwBUAFAAUwBVAFQAVgBSAE0AVgBNAFcAVgBXAFgAWQBaAFsAWQBcAFoAXQBeAF8AXwBeAGAAYABeAGEAYQBeAGIAYQBiAGMAZABlAGYAZABmAGcAZABnAGgAaABnAGkAagBrAGwAagBtAGsAawBuAG8AawBvAHAAcQByAHMAcQB0AHIAdQBxAHMAdgB0AHEAdQBzAHcAdgB4AHQAeQB1AHcAegB4AHYAeQB3AHsAegB8AHgAfQB5AHsAfgB8AHoAfwB9AHsAgAB8AH4AfwB7AIEAggB/AIEAgwB/AIIAhAB/AIMAhACFAH8AhACGAIUAhwCGAIQAhwCIAIYAiQCIAIcAiQCKAIgAiwCKAIkAiwCMAIoAjACNAIoAjACOAI0AjgCPAI0AjgCQAI8AjgCRAJAAkQCAAJAAkQCSAIAAkgCTAIAAgACTAJQAgACUAHwAlQCWAJcAlQCYAJYAmQCaAJgAmQCbAJoAnACdAJ4AnACfAJ0AnQCgAKEAnQChAKIAowCkAKUApQCkAKYApgCkAKcApgCnAKgAqQCqAKsAqQCsAKoArQCuAKwArQCvAK4AsACxALIAsACyALMAsACzALQAtACzALUAtgC3ALgAuQC2ALgAugC2ALkAuwC6ALkAuQC4ALwAvAC4AL0AvAC9AL4AuQC8AL8AwAC5AL8AwQC5AMAAwgDDAMQAwgDFAMMAxgDHAMgAxwDJAMgAxwDKAMkAygDLAMkAzADNAM4AzADPAM0AzADQAM8AzADRANAA")],
-"material": ExtResource("6_pw67o"),
+"material": SubResource("StandardMaterial3D_gwk3k"),
 "name": "eye",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -358,7 +380,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAgAEAAUABgACAAUABgAFAAcACAAJAAoACAALAAkACwAMAAkACwANAAwADgANAAsADgAPAA0A"),
-"material": ExtResource("7_q5tlv"),
+"material": SubResource("StandardMaterial3D_qyvd5"),
 "name": "black",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -370,7 +392,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 144,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUABgAFAAgABgAIAAkACgALAAQACgAEAAwADQAKAAwADQAMAA4ADwAJABAADwAQABEAEgAPABEAEgARABMAFAAOABUAFAAVABYAFgAVABIAFgASABcAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkAKwAsACkAKwAtACwALgAoAC8ALgAwACgAMQAwAC4AMQAyADAAMwA0AC0AMwA1ADQANgA1ADMANgA3ADUAOAA5ADIAOAA6ADkAOgA2ADkAOgA7ADYAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUA"),
-"material": ExtResource("8_b6ka2"),
+"material": SubResource("StandardMaterial3D_p4bow"),
 "name": "eye_color",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -402,7 +424,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 582,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAgAEAAUABQAEAAYABQAGAAcACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUANwA0ADgAOAA0ADkANwA4ADoANwA6ADsAPAA9AD4APAA/AD0APgA9AEAAPgBAAEEAQQBAAEIAQQBCAEMARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATgBNAE8AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0AgACBAIIAgACDAIEAhACFAIYAhACHAIUAiACJAIoAigCJAIsAiwCJAIwAiACNAIkAjgCNAIgAjgCPAI0AkACRAJIAkACTAJEAlACVAJYAlACXAJUAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0AoAChAKIAoACjAKEApAClAKYApACnAKUAqACpAKoAqACrAKkArACtAK4ArACvAK0AsACxALIAsACzALEAsgCxALQAsgC0ALUAtgC3ALgAtgC5ALcAugC7ALwAugC9ALsAvgC/AMAAvgDBAL8AwgDDAMQAwgDFAMMAxgDHAMgAxgDJAMcAygDLAMwAygDNAMsAzgDPANAAzgDRAM8A0gDTANQA0gDVANMA1gDXANgA1gDZANcA2gDbANwA2gDdANsA3gDfAOAA3gDhAN8A4gDjAOQA4gDlAOMA5gDnAOgA5gDpAOcA6gDrAOwA6gDtAOsA7gDvAPAA7gDxAO8A8gDzAPQA8gD1APMA9gD3APgA9gD5APcA+gD7APwA+gD9APsA/gD/AAAB/gABAf8AAgEDAQQBAgEFAQMBAwEFAQYBBQECAQcBBwECAQgBBQEHAQkBCQEHAQoBBQEJAQsBDAENAQ4BDAEPAQ0BEAERARIBEAETAREBFAEVARYBFAEXARUBGAEZARoBGAEbARkBHAEdAR4BHAEfAR0BIAEhASIBIAEjASEBJAElASYBJAEnASUBJwEoASUBJwEpASgBKgErASwBKgEtASsBLgEvATABMAEvATEBMgEzATQBMgE1ATMBNgE3ATgBNgE5ATcBOgE7ATwBOgE9ATsBPgE/AUABPgFBAT8BQgFDAUQBQgFFAUMBQwFFAUYBQgFHAUUBRQFHAUgBRwFCAUkBSgFLAUwBSgFNAUsBTgFPAVABTgFRAU8BUgFTAVQBUwFSAVUBUwFVAVYBVwFYAVkBVwFaAVgBWwFcAV0BXAFbAV4BXAFeAV8BYAFhAWIBYAFjAWEB"),
-"material": ExtResource("5_h4xc4"),
+"material": SubResource("StandardMaterial3D_u2ipb"),
 "name": "beard",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -434,7 +456,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 192,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0A"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -443,6 +465,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f5ss5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1aws3"]
+resource_name = "lips"
+albedo_color = Color(0.85, 0.46750003, 0.588625, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mvviv"]
 _surfaces = [{
@@ -468,7 +494,7 @@ _surfaces = [{
 "index_count": 96,
 "index_data": PackedByteArray("HgANAA4AHgAfAA0AIAAeAA4AIAAOABAADAAeACAADAAhAB4AIQAfAB4AIQAPAB8AIgACAAAAIgAjAAIAJAATABQAJAAlABMAJgAGAAQAJgAnAAYAKAAbACkAKAAdABsAGgAoACkAGgApABwACAAJAAoACAALAAkABwAqACsABwAFACoALAAtAC4ALAASAC0AEQAsAC4AEQAuAC8AAwAwADEAAwABADAAFgAXABgAFgAZABcAMgAzABUAMgA0ADMA"),
 "lods": [0.2615173, PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQACAAJAAoACAALAAkADAANAA4ADAAPAA0ADAAOABAAEQASABMAEQATABQAEQAUABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsA")],
-"material": ExtResource("9_lav81"),
+"material": SubResource("StandardMaterial3D_1aws3"),
 "name": "lips",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -510,7 +536,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 30,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -522,7 +548,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 126,
 "index_data": PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAAAFAAEAAAAGAAUAAAAHAAYACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0A"),
-"material": ExtResource("4_rlp2m"),
+"material": SubResource("StandardMaterial3D_pr5nx"),
 "name": "boot",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -554,7 +580,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("2_7bw83"),
+"material": SubResource("StandardMaterial3D_smc08"),
 "name": "pants",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -588,7 +614,7 @@ _surfaces = [{
 "index_count": 60,
 "index_data": PackedByteArray("GAABABkAGAADAAEABAAFAAYABAAHAAUAGgAVABsAGgAXABUACAAJAAoACAALAAkAHAARAB0AHAATABEAHgANAB8AHgAPAA0ADAAgAA4ADAAhACAAEAAiABIAEAAjACIAFAAkABYAFAAlACQAAAAmAAIAAAAnACYA"),
 "lods": [0.072895415, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA")],
-"material": ExtResource("1_v7yw3"),
+"material": SubResource("StandardMaterial3D_ic5bg"),
 "name": "shirt",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -632,7 +658,7 @@ _surfaces = [{
 "index_count": 72,
 "index_data": PackedByteArray("GAACAAAAGAABAAIAAwABABgAAwAEAAEABQAGAAcABQAZAAYACAAZAAUACAAJABkAGgAXABsAGgAcABcAHQAaABsAHQAbABYAFAAaAB0AFAAeABoAHgAcABoAHgAVABwACgALAAwACgAfAAsADgAfAAoADgANAB8ADwAQABEADwAgABAAEwAgAA8AEwASACAA"),
 "lods": [0.00047068676, PackedByteArray("AAABAAIAAwABAAAAAwAEAAEABQAGAAcACAAGAAUACAAJAAYACgALAAwACgANAAsADgANAAoADwAQABEADwASABAAEwASAA8AFAAVABYAFQAXABYA")],
-"material": ExtResource("1_v7yw3"),
+"material": SubResource("StandardMaterial3D_ic5bg"),
 "name": "shirt",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -644,7 +670,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
-"material": ExtResource("3_p64v8"),
+"material": SubResource("StandardMaterial3D_wnmi6"),
 "name": "skin",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -653,6 +679,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qh7d1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wmcf"]
+resource_name = "wine_glass"
+albedo_color = Color(0.91, 0.67522, 0.1274, 1)
+stencil_flags = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdpg2"]
+resource_name = "wine"
+albedo_color = Color(0.5277682, 0, 0.01248983, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1e676"]
 _surfaces = [{
@@ -686,7 +721,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 126,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEA"),
-"material": ExtResource("10_26ed8"),
+"material": SubResource("StandardMaterial3D_1wmcf"),
 "name": "wine_glass",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -698,7 +733,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 30,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
-"material": ExtResource("11_ppimn"),
+"material": SubResource("StandardMaterial3D_bdpg2"),
 "name": "wine",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -713,74 +748,74 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Dell - Default/Core/Right Leg:rotation")
+tracks/0/path = NodePath("../dell_2_0/right_shoulder:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0.9247853, 0.7262785, 0.83855534)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Dell - Default/Core/Left Leg:rotation")
+tracks/1/path = NodePath("../dell_2_0/left_shoulder:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0.9247853, 0.7262785, 0.83855534)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Dell - Default/Core/Chest:rotation")
+tracks/2/path = NodePath("../dell_2_0/neck:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, -0.13870181)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Dell - Default/Core/Left Shoulder:rotation")
+tracks/3/path = NodePath("../dell_2_0/base:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1.323169, 0, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Dell - Default/Core/Right Shoulder:rotation")
+tracks/4/path = NodePath("../dell_2_0/left_leg:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.3253964, 1.2250425, -1.5832303)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../Dell - Default/Core/Neck:rotation")
+tracks/5/path = NodePath("../dell_2_0/right_leg:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.020179361, 0.04001404, -0.1267745)]
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_7bw83"]
@@ -790,74 +825,74 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Dell - Default/Core/Right Leg:rotation")
+tracks/0/path = NodePath("../dell_2_0/right_shoulder:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.034906585, -0.05235988, -0.05235988), Vector3(0, 0, 0)]
+"values": [Vector3(-0.20769419, -1.4852751, -0.23911011), Vector3(-0.2268928, -1.5707964, -0.2617994), Vector3(-0.20769419, -1.4852751, -0.23911011)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Dell - Default/Core/Left Leg:rotation")
+tracks/1/path = NodePath("../dell_2_0/left_shoulder:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.034906585, 0.05235988, 0.05235988), Vector3(0, 0, 0)]
+"values": [Vector3(0.9247853, 0.7262785, 0.83855534), Vector3(1.0471976, 0.87266463, 0.9075712), Vector3(0.9247853, 0.7262785, 0.83855534)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Dell - Default/Core/Chest:rotation")
+tracks/2/path = NodePath("../dell_2_0/neck:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.034906585, 0.08726646, 0.08726646), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, -0.2617994), Vector3(0.034906585, 0.17453292, -0.17453292), Vector3(0, 0, -0.2617994)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Dell - Default/Core/Right Shoulder:rotation")
+tracks/3/path = NodePath("../dell_2_0/base:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.3253964, 1.2250425, -1.5832303), Vector3(0.34906584, 1.2601277, -1.6179202), Vector3(0.3253964, 1.2250425, -1.5832303)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.17453292, 0), Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Dell - Default/Core/Left Shoulder:rotation")
+tracks/4/path = NodePath("../dell_2_0/left_leg:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(1.323169, 0, 0), Vector3(1.3753195, 0, 0), Vector3(1.323169, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0.034906585, -0.17453292, 0), Vector3(0, 0, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../Dell - Default/Core/Neck:rotation")
+tracks/5/path = NodePath("../dell_2_0/right_leg:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.02094395, 0.17453292, -0.12740904), Vector3(0.099483766, 0.06981317, -0.13962634), Vector3(0.02094395, 0.17453292, -0.12740904)]
+"values": [Vector3(0, 0, 0), Vector3(-0.034906585, -0.17453292, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p64v8"]
@@ -866,14 +901,11 @@ _data = {
 &"idle": SubResource("Animation_7bw83")
 }
 
-[sub_resource type="Environment" id="Environment_v7yw3"]
-background_mode = 3
-tonemap_mode = 1
-
 [node name="Dell" type="Node3D" unique_id=1716658321]
 
 [node name="Dell - Default" type="Node3D" parent="." unique_id=1099842728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+visible = false
 
 [node name="Core" type="Node3D" parent="Dell - Default" unique_id=621598794]
 
@@ -882,7 +914,7 @@ transform = Transform3D(0.54258424, 0, 0, 0, 1.2868313, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_vmvfq")
 
 [node name="Left Leg" type="Node3D" parent="Dell - Default/Core" unique_id=2018033723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.90824, 0.42838)
+transform = Transform3D(-0.5519739, 0.6461198, 0.5271186, 0.8284813, 0.35324612, 0.43455252, 0.09457037, 0.6765696, -0.7302808, 0, -1.90824, 0.42838)
 
 [node name="Knee" type="Node3D" parent="Dell - Default/Core/Left Leg" unique_id=1631454344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3319429, 0)
@@ -947,7 +979,7 @@ transform = Transform3D(0.2919057, 0, 0, 0, 1.3901193, 0, 0, 0, 0.3056649, 0, -0
 mesh = SubResource("ArrayMesh_rbr31")
 
 [node name="Right Shoulder" type="Node3D" parent="Dell - Default/Core" unique_id=2055415268]
-transform = Transform3D(-0.30495614, 0.3351402, 0.89144975, -0.9474508, -0.011781144, -0.31968436, -0.096636795, -0.9420945, 0.32112157, 0, 1.18796, -1.27723)
+transform = Transform3D(-0.30495614, 0.33514017, 0.89144963, -0.9474508, -0.011781143, -0.31968433, -0.096636795, -0.9420944, 0.32112154, 0, 1.18796, -1.27723)
 
 [node name="Arm_001" type="MeshInstance3D" parent="Dell - Default/Core/Right Shoulder" unique_id=534090976]
 transform = Transform3D(-0.30442515, 0, 0, 0, -0.36666143, 0, 0, 0, -1.2222723, 0, -0.003255844, 0.7782209)
@@ -964,14 +996,10 @@ mesh = SubResource("ArrayMesh_ytyl1")
 transform = Transform3D(-0.010357592, -0.12402513, -0.012083672, 0.041154448, 0.008040403, -0.11780148, 0.11762037, -0.013734868, 0.04015371, -0.0370636, 0.042595863, 2.8129528)
 mesh = SubResource("ArrayMesh_ldyi6")
 
-[node name="Sun" type="DirectionalLight3D" parent="." unique_id=2024449423]
-transform = Transform3D(-0.0663088, -0.16791251, 0.98356926, -7.931729e-09, 0.9857387, 0.16828288, -0.99779916, 0.01115863, -0.06536317, 9, 5.7745376, 0)
+[node name="dell_2_0" parent="." unique_id=1491778471 instance=ExtResource("1_smc08")]
 
 [node name="Animations" type="Node" parent="." unique_id=1289162820]
 
-[node name="Idle" type="AnimationPlayer" parent="Animations" unique_id=1341903069]
+[node name="Idle" type="AnimationPlayer" parent="Animations" unique_id=198323252]
 libraries/ = SubResource("AnimationLibrary_p64v8")
 autoplay = &"idle"
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1615121076]
-environment = SubResource("Environment_v7yw3")

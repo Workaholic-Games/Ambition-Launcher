@@ -1,5 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp4jdaqw0guli"]
-
-[resource]
-resource_name = "shirt"
-albedo_color = Color(0.094334535, 0.08227456, 0.1419343, 1)

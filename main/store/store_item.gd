@@ -12,6 +12,7 @@ func _on_mouse_exited() -> void:
 	$"Game Label".visible = false
 
 func _on_pressed() -> void:
+	$"../../../../../../Tap".play()
 	$"../../../../../../Store Pages".visible = true
 	page.visible = true
 

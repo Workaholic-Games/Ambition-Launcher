@@ -12,7 +12,6 @@ extends TextureButton
 @onready var save_path = get_root_userdata_path() + "/" + save_data[selected_version]
 
 var installed : bool = false
-
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
 
@@ -27,8 +26,8 @@ func get_root_userdata_path() -> String:
 	return path
 
 func _ready() -> void:
-	$"Game Label".text = game_name
-	$"Game Label".add_theme_font_size_override("font_size", font_size)
+	$"VBoxContainer/Game Label".text = game_name
+	$"VBoxContainer/Game Label".add_theme_font_size_override("font_size", font_size)
 	
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
@@ -85,7 +84,7 @@ func check():
 	visible = false
 	ui_to_back.clear()
 	selected_version = -1
-	$Update.visible = false
+	$VBoxContainer/Update.visible = false
 	
 	for i in range(game_file_display_names.size()):
 		var is_installed = false
@@ -111,7 +110,7 @@ func check():
 		$Versions.select(0)
 		_on_versions_item_selected(0)
 		if $Versions.get_item_text(0) != game_file_display_names.get(0):
-			$Update.visible = true
+			$VBoxContainer/Update.visible = true
 	else:
 		if DirAccess.dir_exists_absolute(folder_path):
 			DirAccess.remove_absolute(folder_path)
@@ -125,10 +124,10 @@ func _on_versions_item_selected(index: int) -> void:
 # Hover VFX
 func _on_mouse_entered() -> void:
 	$Hover.visible = true
-	$"Game Label".visible = true
+	$"VBoxContainer/Game Label".visible = true
 func _on_mouse_exited() -> void:
 	$Hover.visible = false
-	$"Game Label".visible = false
+	$"VBoxContainer/Game Label".visible = false
 
 func remove_recursive(path: String) -> void:
 	var dir = DirAccess.open(path)

@@ -28,6 +28,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
+	$Tap.play()
 	if is_finished == true:
 		$VideoStreamPlayer.play()
 	$VideoStreamPlayer.paused = false
@@ -47,6 +48,7 @@ func _on_playback_position_drag_ended(_value_changed: bool) -> void:
 
 
 func _on_play_pause_toggled(toggled_on: bool) -> void:
+	$Tap.play()
 	if toggled_on == true:
 		$VideoStreamPlayer.paused = true
 	else:
@@ -63,6 +65,7 @@ func _on_video_stream_player_finished() -> void:
 
 
 func _on_volume_toggle_toggled(toggled_on: bool) -> void:
+	$Tap.play()
 	if toggled_on == true:
 		$"Volume Toggle".text = "↓"
 		$Volume.show()

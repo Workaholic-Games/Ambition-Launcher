@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bltepr85ikmy8"]
+
+[ext_resource type="Script" uid="uid://da6rpnrhf54e5" path="res://launcher games/drops/drops.gd" id="1_0y47j"]
+[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="2_s81ju"]
+
+[node name="Drops" type="Panel" unique_id=854953616]
+script = ExtResource("1_0y47j")
+drops = Array[Texture2D]([ExtResource("2_s81ju")])
+
+[node name="Panel" type="Panel" parent="." unique_id=793458484]
+custom_minimum_size = Vector2(108, 189)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_type_variation = &"Quit"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=291168313]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 189.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=530962041]
+layout_mode = 2
+theme_override_constants/separation = 0

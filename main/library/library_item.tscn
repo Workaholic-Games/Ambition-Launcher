@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="1_sit7t"]
 [ext_resource type="Script" uid="uid://bbd6lkldu0a4i" path="res://main/library/library_item.gd" id="2_ybi6t"]
+[ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://rgb.gdshader" id="3_fxfku"]
 [ext_resource type="Texture2D" uid="uid://h4f8yh4vh4bu" path="res://main/library/folder.png" id="3_h0j4e"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
@@ -11,6 +12,12 @@ colors = PackedColorArray(1, 1, 1, 0.11764706)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
 gradient = SubResource("Gradient_mh5tx")
 fill_from = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1jjqb"]
+shader = ExtResource("3_fxfku")
+shader_parameter/strength = 0.50000002375
+shader_parameter/speed = 1.0000000475
+shader_parameter/angle = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxfku"]
 atlas = ExtResource("3_h0j4e")
@@ -39,17 +46,6 @@ position = Vector2(60, 89.992004)
 scale = Vector2(1.8750001, 2.8127503)
 texture = SubResource("GradientTexture2D_kicgq")
 
-[node name="Game Label" type="Label" parent="." unique_id=1102608909]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_top = 141.0
-offset_right = 120.0
-offset_bottom = 180.0
-theme_type_variation = &"Hover_Label"
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="Uninstall" type="Button" parent="." unique_id=1635288642]
 layout_mode = 0
 offset_top = 208.0
@@ -57,6 +53,39 @@ offset_right = 120.0
 offset_bottom = 236.0
 theme_type_variation = &"Close_Button"
 text = "Uninstall"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=341214878]
+layout_mode = 0
+offset_top = 97.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="Game Label" type="Label" parent="VBoxContainer" unique_id=1102608909]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_type_variation = &"Hover_Label"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Update" type="Label" parent="VBoxContainer" unique_id=1509434945]
+visible = false
+material = SubResource("ShaderMaterial_1jjqb")
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+theme_override_font_sizes/font_size = 16
+text = "  New Update!"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Update" unique_id=926866433]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 18.0
+theme_type_variation = &"Quit"
 
 [node name="Versions" type="OptionButton" parent="." unique_id=853332808]
 layout_mode = 0
@@ -66,35 +95,12 @@ offset_bottom = 208.0
 clip_text = true
 fit_to_longest_item = false
 
-[node name="Update" type="Label" parent="." unique_id=1509434945]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 55.0
-offset_right = 88.0
-offset_bottom = 127.0
-theme_override_font_sizes/font_size = 64
-text = "↓"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Panel" type="Panel" parent="Update" unique_id=1586962885]
-modulate = Color(1, 1, 1, 0.39215687)
-show_behind_parent = true
-layout_mode = 0
-offset_left = -40.0
-offset_top = -55.0
-offset_right = 80.0
-offset_bottom = 125.0
-mouse_filter = 2
-theme_type_variation = &"Line"
-
 [node name="Folder" type="TextureButton" parent="." unique_id=1457020943]
 layout_mode = 0
 offset_left = 104.0
-offset_top = 164.0
+offset_top = 163.0
 offset_right = 120.0
-offset_bottom = 180.0
+offset_bottom = 179.0
 texture_normal = SubResource("AtlasTexture_fxfku")
 texture_pressed = SubResource("AtlasTexture_1jjqb")
 texture_hover = SubResource("AtlasTexture_o3uow")

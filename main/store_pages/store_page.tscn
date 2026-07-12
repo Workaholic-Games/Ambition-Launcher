@@ -105,7 +105,7 @@ layout_mode = 0
 offset_left = 10.0
 offset_top = 8.0
 offset_right = 170.0
-offset_bottom = 216.0
+offset_bottom = 217.0
 bbcode_enabled = true
 text = "Edit Description in Inspector"
 

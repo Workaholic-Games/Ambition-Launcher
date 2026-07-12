@@ -30,7 +30,6 @@ func _ready() -> void:
 	if installable == false:
 		$"Install or Back/Install".visible = false
 	
-	
 	$"Game Description".text = description
 	$"Age Rating".text = rating
 	
@@ -68,12 +67,17 @@ func _ready() -> void:
 				$"Versions Linux".visible = true
 				$"Versions Linux".add_item(version_names[i])
 				os_name = "_Linux"
+	
+	check_for_reinstall()
 
 func _on_versions_item_selected(index: int) -> void:
+	$"../../Tap".play()
 	selected_link = index
+	check_for_reinstall()
 
 func _on_install_pressed() -> void:
 	print("Install")
+	$"../../Tap".play()
 	
 	if not DirAccess.dir_exists_absolute(folder_path):
 		var err = DirAccess.make_dir_absolute(folder_path)
@@ -81,7 +85,7 @@ func _on_install_pressed() -> void:
 		if err == OK:
 			pass
 			
-	if can_download == true and $"Install or Back/Install".text == "Install":
+	if can_download == true:
 		$HTTPRequest.download_file = folder_path + "//Package.zip"
 		match Main.operating_system:
 			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
@@ -99,8 +103,10 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	if err != OK:
 		print("err != ok")
+		$"Install or Back/Install".show()
+		$ProgressBar.hide()
 		return
-
+	
 	var files := reader.get_files()
 	
 	for file_path in files:
@@ -156,8 +162,22 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	$ProgressBar.visible = false
 	can_download = true
+	check_for_reinstall()
+
+func check_for_reinstall():
+	var is_installed = false
+	
+	var path = folder_path + "//" + version_file_names_windows[selected_link] + ".exe"
+	is_installed = FileAccess.file_exists(path)
+	
+	if is_installed != false:
+		$"Install or Back/Install".text = "Reinstall"
+	else:
+		$"Install or Back/Install".text = "Install"
+
 
 func _on_back_pressed() -> void:
+	$"../../Tap".play()
 	visible = false
 
 # Progress Bar function
@@ -179,10 +199,13 @@ func _physics_process(_delta: float) -> void:
 		$"Right Button".visible = true
 
 func _on_left_button_pressed() -> void:
+	$"../../Tap".play()
 	$CarouselContainer._left()
 
 func _on_right_button_pressed() -> void:
+	$"../../Tap".play()
 	$CarouselContainer._right()
+
 
 
 ## Developer @export variable setup example:

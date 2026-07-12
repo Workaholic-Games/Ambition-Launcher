@@ -82,8 +82,12 @@
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
 [ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://rgb.gdshader" id="61_w2e2n"]
+[ext_resource type="AudioStream" uid="uid://cwap8x08hljxx" path="res://sounds/music/Fresh Grapes.mp3" id="67_qngap"]
+[ext_resource type="AudioStream" uid="uid://hkxpixr8kor3" path="res://sounds/music/Vineyard Vibes.mp3" id="68_26tnx"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://seasonal/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://seasonal/snowflake.png" id="68_omfc6"]
+[ext_resource type="AudioStream" uid="uid://d3e5m04gsryh" path="res://sounds/music/Sober Serenity.mp3" id="69_26tnx"]
+[ext_resource type="AudioStream" uid="uid://d0sh0xu5o6kta" path="res://sounds/music/The Eternal Night.ogg" id="69_mer5n"]
 [ext_resource type="Texture2D" uid="uid://dpbl3yw6410wp" path="res://avatars/batg_bulba.png" id="72_46muq"]
 [ext_resource type="Texture2D" uid="uid://blumq4hl87ls1" path="res://avatars/fnab1_bulba.png" id="72_ljnho"]
 [ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://avatars/avatar.gd" id="73_d1j2r"]
@@ -139,6 +143,61 @@
 [ext_resource type="Texture2D" uid="uid://h57oht8er7rl" path="res://avatars/princess_carrotene.png" id="121_g4og3"]
 [ext_resource type="Texture2D" uid="uid://j6kgonh7d6l3" path="res://avatars/nippy.png" id="122_oui53"]
 [ext_resource type="Texture2D" uid="uid://ck7w2nxp1m5c3" path="res://avatars/the_mold.png" id="123_qngap"]
+[ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="140_o7yem"]
+[ext_resource type="PackedScene" uid="uid://bltepr85ikmy8" path="res://launcher games/drops/drops.tscn" id="143_mer5n"]
+[ext_resource type="Texture2D" uid="uid://buw1de3m1wgra" path="res://community/drops/image (1).jpg" id="143_vc7ud"]
+[ext_resource type="Texture2D" uid="uid://brnk3yh8vcq62" path="res://community/drops/image (1).png" id="144_pixlj"]
+[ext_resource type="Texture2D" uid="uid://dydn31rbfounv" path="res://community/drops/image (2).png" id="145_iwk0j"]
+[ext_resource type="Texture2D" uid="uid://rqqhbefk1tnl" path="res://community/drops/image (3).png" id="146_i5yhr"]
+[ext_resource type="Texture2D" uid="uid://b6v6swx4ilnar" path="res://community/drops/image (4).png" id="147_yucq5"]
+[ext_resource type="Texture2D" uid="uid://cf0k5a37yqyi8" path="res://community/drops/image (5).png" id="148_3i2d3"]
+[ext_resource type="Texture2D" uid="uid://dg6kwhh80etl7" path="res://community/drops/image (6).png" id="149_8lxvq"]
+[ext_resource type="Texture2D" uid="uid://bpe1g11n3p72q" path="res://community/drops/image (7).png" id="150_2aps0"]
+[ext_resource type="Texture2D" uid="uid://bxtsv3shc0icq" path="res://community/drops/image (8).png" id="151_6e7ex"]
+[ext_resource type="Texture2D" uid="uid://03g8vmnlghlh" path="res://community/drops/image (9).png" id="152_0job1"]
+[ext_resource type="Texture2D" uid="uid://2ny2rxpnclue" path="res://community/drops/image (10).png" id="153_n1olx"]
+[ext_resource type="Texture2D" uid="uid://cgrakei1237yp" path="res://community/drops/image (11).png" id="154_6du4a"]
+[ext_resource type="Texture2D" uid="uid://bncyagtq66ily" path="res://community/drops/image (12).png" id="155_jlel5"]
+[ext_resource type="Texture2D" uid="uid://c8unfhwep5qhe" path="res://community/drops/image (13).png" id="156_25cuu"]
+[ext_resource type="Texture2D" uid="uid://cei2ls0l5kur7" path="res://community/drops/image (14).png" id="157_tqfxx"]
+[ext_resource type="Texture2D" uid="uid://b0hldkcaamy7i" path="res://community/drops/image (15).png" id="158_dxsmq"]
+[ext_resource type="Texture2D" uid="uid://dmnvta4cuc2rf" path="res://community/drops/image (16).png" id="159_qguvw"]
+[ext_resource type="Texture2D" uid="uid://bl43w72dpx3m3" path="res://community/drops/image (17).png" id="160_m55g0"]
+[ext_resource type="Texture2D" uid="uid://c3s2ibw8kpymv" path="res://community/drops/image (18).png" id="161_2v6jo"]
+[ext_resource type="Texture2D" uid="uid://cue0wyym03umn" path="res://community/drops/image (19).png" id="162_er31x"]
+[ext_resource type="Texture2D" uid="uid://cq7c7rq0m5a8" path="res://community/drops/image (20).png" id="163_225bh"]
+[ext_resource type="Texture2D" uid="uid://brc8kfhqjesyd" path="res://community/drops/image (21).png" id="164_bp8ya"]
+[ext_resource type="Texture2D" uid="uid://cfj35rbp18hrd" path="res://community/drops/image (22).png" id="165_7gy4k"]
+[ext_resource type="Texture2D" uid="uid://cmsn4ej6wmtmx" path="res://community/drops/image (23).png" id="166_dwcwd"]
+[ext_resource type="Texture2D" uid="uid://bnqm5083enut" path="res://community/drops/image (24).png" id="167_0wqly"]
+[ext_resource type="Texture2D" uid="uid://030rryx00onk" path="res://community/drops/image (25).png" id="168_20f0n"]
+[ext_resource type="Texture2D" uid="uid://eegj4cagv32m" path="res://community/drops/image (26).png" id="169_aeq82"]
+[ext_resource type="Texture2D" uid="uid://dfm4bkmmywxse" path="res://community/drops/image (27).png" id="170_ac5b7"]
+[ext_resource type="Texture2D" uid="uid://bawpv66mwg2cq" path="res://community/drops/image (28).png" id="171_neeuf"]
+[ext_resource type="Texture2D" uid="uid://r2ohymane5nu" path="res://community/drops/image (29).png" id="172_6frxn"]
+[ext_resource type="Texture2D" uid="uid://bsw5bom7ctytg" path="res://community/drops/image (30).png" id="173_v5wfq"]
+[ext_resource type="Texture2D" uid="uid://bjohgyam2loct" path="res://community/drops/image (31).png" id="174_syvus"]
+[ext_resource type="Texture2D" uid="uid://cis5gh4xp65y3" path="res://community/drops/image (32).png" id="175_oymnj"]
+[ext_resource type="Texture2D" uid="uid://c86361p8y3xpn" path="res://community/drops/image (33).png" id="176_fgfkr"]
+[ext_resource type="Texture2D" uid="uid://cdidgw36xg4wh" path="res://community/drops/image (34).png" id="177_dij6t"]
+[ext_resource type="Texture2D" uid="uid://b20rs4rqv4v17" path="res://community/drops/image (35).png" id="178_ek2bi"]
+[ext_resource type="Texture2D" uid="uid://cye0i12k5u18a" path="res://community/drops/image (36).png" id="179_vyxbw"]
+[ext_resource type="Texture2D" uid="uid://cmdar08287apt" path="res://community/drops/image (37).png" id="180_dv4h0"]
+[ext_resource type="Texture2D" uid="uid://dgee6vgnrbabi" path="res://community/drops/image (38).png" id="181_uquvt"]
+[ext_resource type="Texture2D" uid="uid://bnvbffv1ovd48" path="res://community/drops/image (39).png" id="182_68tyb"]
+[ext_resource type="Texture2D" uid="uid://d0waxvw738023" path="res://community/drops/image (40).png" id="183_25tof"]
+[ext_resource type="Texture2D" uid="uid://c24prht4uprve" path="res://community/drops/image (41).png" id="184_l41q5"]
+[ext_resource type="Texture2D" uid="uid://crefgsi031frj" path="res://community/drops/image (42).png" id="185_5jcnj"]
+[ext_resource type="Texture2D" uid="uid://ddj5fg6a0v5hx" path="res://community/drops/image (43).png" id="186_k2fn6"]
+[ext_resource type="Texture2D" uid="uid://d2x0g62tfglfe" path="res://community/drops/image (44).png" id="187_a21g3"]
+[ext_resource type="Texture2D" uid="uid://5suirk3vsmcu" path="res://community/drops/image (45).png" id="188_3o0h7"]
+[ext_resource type="Texture2D" uid="uid://bcbv46ukbmi3x" path="res://community/drops/image (46).png" id="189_l5nu6"]
+[ext_resource type="Texture2D" uid="uid://c3o2rjmepuucv" path="res://community/drops/image (47).png" id="190_q3xpv"]
+[ext_resource type="Texture2D" uid="uid://fqox5h4meyoo" path="res://community/drops/image (48).png" id="191_wnceq"]
+[ext_resource type="Texture2D" uid="uid://bsltwo88fxqrg" path="res://community/drops/image (49).png" id="192_5313l"]
+[ext_resource type="Texture2D" uid="uid://c025rh8kctmwl" path="res://community/drops/image (50).png" id="193_f77vw"]
+[ext_resource type="Texture2D" uid="uid://dyag4a3w2n3n4" path="res://community/drops/image (51).png" id="194_0gr68"]
+[ext_resource type="Texture2D" uid="uid://bguahav254x0t" path="res://community/drops/image (52).png" id="195_43mne"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yoins"]
 
@@ -172,6 +231,8 @@ shader = ExtResource("61_w2e2n")
 shader_parameter/strength = 0.50000002375
 shader_parameter/speed = 1.0000000475
 shader_parameter/angle = 0.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o7yem"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mp0f"]
 
@@ -479,6 +540,13 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_o7yem"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("140_o7yem")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mef85"]
+
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
 tonemap_mode = 1
@@ -488,6 +556,7 @@ adjustment_enabled = true
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_p0fg6")
+splashes = Array[String](["Stop reading this and install bro.", "Give us your money.", "Mining their Bitcoin.", "Tell Sawyer to get back to work.", "W rizz.", "AFK...", "https://sites.google.com/view/workaholic-games?usp=sharing", "Project U coming soon!", "Commiting war crimes.", "Bulba was here.", "Jonathan was here.", "Sawyer was here.", "Still standing."])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -782,15 +851,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(523, 2)
 layout_mode = 2
 theme_type_variation = &"Line"
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Store/Area/GridContainer/Featured (New)/Line" unique_id=1467045413]
-position = Vector2(2, -2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Store/Area/GridContainer/Featured (New)/Line/StaticBody2D" unique_id=1165588495 groups=["Collision"]]
-position = Vector2(262, 7)
-shape = SubResource("RectangleShape2D_qp5pd")
-one_way_collision = true
-one_way_collision_margin = 19.0
 
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Featured (New)" unique_id=302688164]
 custom_minimum_size = Vector2(120, 180)
@@ -1204,6 +1264,7 @@ Images = Array[Texture]([ExtResource("49_snp3r"), ExtResource("50_46muq"), ExtRe
 installable = false
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
+visible = false
 anchors_preset = 0
 offset_top = 40.0
 offset_right = 40.0
@@ -1858,12 +1919,12 @@ theme_type_variation = &"Close_Button"
 text = "Back"
 
 [node name="Settings" type="Control" parent="." unique_id=841640467]
-visible = false
 anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 60.0
 script = ExtResource("16_3a0l5")
+music = Array[AudioStream]([ExtResource("67_qngap"), ExtResource("68_26tnx"), ExtResource("69_26tnx"), ExtResource("69_mer5n")])
 
 [node name="Window" type="OptionButton" parent="Settings" unique_id=2136730873]
 layout_mode = 0
@@ -1946,6 +2007,73 @@ layout_mode = 0
 offset_top = -23.999996
 offset_right = 40.0
 text = "Cursor Theme"
+vertical_alignment = 2
+
+[node name="Music" type="OptionButton" parent="Settings" unique_id=1279101931]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 58.000004
+offset_right = 479.61728
+offset_bottom = 84.0
+selected = 1
+item_count = 6
+popup/item_0/text = "None"
+popup/item_0/icon = SubResource("CompressedTexture2D_o7yem")
+popup/item_0/id = 0
+popup/item_1/text = "Shuffle"
+popup/item_1/id = 1
+popup/item_2/text = "Fresh Grapes - Jonathan"
+popup/item_2/id = 2
+popup/item_3/text = "Vineyard Vibes - Jonathan"
+popup/item_3/id = 5
+popup/item_4/text = "Sober Serenity - Jonathan"
+popup/item_4/id = 5
+popup/item_5/text = "The Eternal Night - FNAB"
+popup/item_5/id = 4
+
+[node name="Label" type="Label" parent="Settings/Music" unique_id=1371097041]
+layout_mode = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Background Music"
+vertical_alignment = 2
+
+[node name="Music Volume" type="HSlider" parent="Settings" unique_id=1301522824]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 109.0
+offset_right = 249.0
+offset_bottom = 135.0
+min_value = -20.0
+max_value = 20.0
+
+[node name="Label" type="Label" parent="Settings/Music Volume" unique_id=142191052]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -19.0
+offset_right = 131.0
+offset_bottom = -1.0
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="UI Volume" type="HSlider" parent="Settings" unique_id=2087683768]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 109.0
+offset_right = 386.0
+offset_bottom = 135.0
+min_value = -20.0
+max_value = 20.0
+
+[node name="Label" type="Label" parent="Settings/UI Volume" unique_id=767791568]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -19.0
+offset_right = 131.0
+offset_bottom = -1.0
+text = "UI Volumes"
+horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
@@ -2239,6 +2367,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("56_42eyl")
 
+[node name="Panel" type="Panel" parent="User" unique_id=1231205471]
+layout_mode = 0
+offset_left = 110.0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+
 [node name="Avatar" type="Panel" parent="User" unique_id=848339665]
 layout_mode = 0
 offset_left = 154.0
@@ -2258,13 +2393,14 @@ expand_mode = 1
 [node name="Label" type="Label" parent="User" unique_id=1757473915]
 layout_mode = 0
 offset_left = 352.0
-offset_top = 44.0
+offset_top = 40.0
 offset_right = 568.0
-offset_bottom = 62.0
+offset_bottom = 64.0
 theme_type_variation = &"Store_Page"
 text = "Hello User"
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="User" unique_id=1408166701]
+[node name="Change Avatar" type="Button" parent="User" unique_id=1408166701]
 layout_mode = 0
 offset_left = 159.0
 offset_top = 216.0
@@ -2274,14 +2410,23 @@ theme_type_variation = &"Close_Button"
 toggle_mode = true
 text = "Change Avatar"
 
-[node name="Button2" type="Button" parent="User" unique_id=1939437075]
+[node name="Change Username" type="Button" parent="User" unique_id=1939437075]
 layout_mode = 0
 offset_left = 352.0
 offset_top = 72.0
 offset_right = 568.0
-offset_bottom = 112.0
+offset_bottom = 96.0
 theme_type_variation = &"Close_Button"
 text = "Change Username"
+
+[node name="Back" type="Button" parent="User" unique_id=1379773490]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 104.0
+offset_right = 568.0
+offset_bottom = 128.0
+theme_type_variation = &"Close_Button"
+text = "Exit Account Menu"
 
 [node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
 visible = false
@@ -2305,7 +2450,7 @@ columns = 8
 
 [node name="Username" type="Panel" parent="." unique_id=130943005]
 visible = false
-layout_mode = 0
+layout_mode = 1
 offset_left = 251.0
 offset_top = 144.0
 offset_right = 499.0
@@ -2341,6 +2486,16 @@ offset_right = 252.0
 offset_bottom = 76.0
 mouse_filter = 2
 theme_type_variation = &"Line"
+
+[node name="Close" type="Button" parent="Username" unique_id=1973291473]
+visible = false
+layout_mode = 0
+offset_left = 240.0
+offset_top = -3.0
+offset_right = 248.0
+offset_bottom = 17.0
+theme_type_variation = &"Image_Button"
+text = "X"
 
 [node name="Avatar" type="Panel" parent="." unique_id=529804441]
 layout_mode = 0
@@ -2387,21 +2542,20 @@ offset_bottom = 40.0
 script = ExtResource("24_6l2pj")
 
 [node name="BG" type="Panel" parent="Launcher Games/Dell" unique_id=1732417775]
-modulate = Color(0.49747366, 0.49747372, 0.49747354, 1)
+modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 layout_mode = 0
 offset_left = -6.0
 offset_top = -2.0
 offset_right = 102.0
 offset_bottom = 218.0
-theme_type_variation = &"Line"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Launcher Games/Dell" unique_id=381719285]
 texture_filter = 2
 layout_mode = 0
 offset_left = -6.0
-offset_top = 34.0
+offset_top = 39.0
 offset_right = 858.0
-offset_bottom = 1506.0
+offset_bottom = 1471.0
 scale = Vector2(0.125, 0.125)
 stretch = true
 
@@ -2409,15 +2563,15 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
-size = Vector2i(864, 1472)
+size = Vector2i(864, 1432)
 render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.776, 7.1507115, 0)
+transform = Transform3D(-4.3711385e-08, -2.9802322e-08, 1, 1.7460929e-15, 1, 2.9802322e-08, -1, 3.0487937e-15, -4.3711385e-08, 7.643097, 0.75570416, 0)
 fov = 90.0
 
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
-transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, 0, 0)
+transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, -1.0104165, 0)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
 layout_mode = 0
@@ -2754,6 +2908,14 @@ texture_pressed = SubResource("AtlasTexture_7divq")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Drops" parent="Launcher Games" unique_id=854953616 instance=ExtResource("143_mer5n")]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 29.0
+offset_right = 102.0
+offset_bottom = 218.0
+drops = Array[Texture2D]([ExtResource("143_vc7ud"), ExtResource("144_pixlj"), ExtResource("145_iwk0j"), ExtResource("146_i5yhr"), ExtResource("147_yucq5"), ExtResource("148_3i2d3"), ExtResource("149_8lxvq"), ExtResource("150_2aps0"), ExtResource("151_6e7ex"), ExtResource("152_0job1"), ExtResource("153_n1olx"), ExtResource("154_6du4a"), ExtResource("155_jlel5"), ExtResource("156_25cuu"), ExtResource("157_tqfxx"), ExtResource("158_dxsmq"), ExtResource("159_qguvw"), ExtResource("160_m55g0"), ExtResource("161_2v6jo"), ExtResource("162_er31x"), ExtResource("163_225bh"), ExtResource("164_bp8ya"), ExtResource("165_7gy4k"), ExtResource("166_dwcwd"), ExtResource("167_0wqly"), ExtResource("168_20f0n"), ExtResource("169_aeq82"), ExtResource("170_ac5b7"), ExtResource("171_neeuf"), ExtResource("172_6frxn"), ExtResource("173_v5wfq"), ExtResource("174_syvus"), ExtResource("175_oymnj"), ExtResource("176_fgfkr"), ExtResource("177_dij6t"), ExtResource("178_ek2bi"), ExtResource("179_vyxbw"), ExtResource("180_dv4h0"), ExtResource("181_uquvt"), ExtResource("182_68tyb"), ExtResource("183_25tof"), ExtResource("184_l41q5"), ExtResource("185_5jcnj"), ExtResource("186_k2fn6"), ExtResource("187_a21g3"), ExtResource("188_3o0h7"), ExtResource("189_l5nu6"), ExtResource("190_q3xpv"), ExtResource("191_wnceq"), ExtResource("192_5313l"), ExtResource("193_f77vw"), ExtResource("194_0gr68"), ExtResource("195_43mne")])
+
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
 
@@ -2783,6 +2945,20 @@ scale_amount_curve = SubResource("Curve_omfc6")
 color_ramp = SubResource("Gradient_d2ack")
 hue_variation_min = -0.1
 hue_variation_curve = SubResource("Curve_d2ack")
+
+[node name="Tap" type="AudioStreamPlayer" parent="." unique_id=986102170]
+stream = SubResource("AudioStreamRandomizer_o7yem")
+volume_db = -12.0
+pitch_scale = 1.54
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=940842863]
+volume_db = -5.0
+bus = &"Music"
+
+[node name="Shuffle" type="AudioStreamPlayer" parent="." unique_id=923977971]
+stream = SubResource("AudioStreamRandomizer_mef85")
+volume_db = -5.0
+bus = &"Music"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
 environment = SubResource("Environment_3a0l5")
@@ -2831,13 +3007,18 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
+[connection signal="item_selected" from="Settings/Music" to="Settings" method="_on_music_item_selected"]
+[connection signal="value_changed" from="Settings/Music Volume" to="Settings" method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="Settings/UI Volume" to="Settings" method="_on_ui_volume_value_changed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]
-[connection signal="toggled" from="User/Button" to="User" method="_on_button_toggled"]
-[connection signal="pressed" from="User/Button2" to="User" method="_on_button_2_pressed"]
+[connection signal="toggled" from="User/Change Avatar" to="User" method="_on_button_toggled"]
+[connection signal="pressed" from="User/Change Username" to="User" method="_on_button_2_pressed"]
+[connection signal="pressed" from="User/Back" to="User" method="_on_back_pressed"]
 [connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Username/Button" to="Username" method="_on_button_pressed"]
+[connection signal="pressed" from="Username/Close" to="Username" method="_on_close_pressed"]
 [connection signal="pressed" from="Avatar/Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]
 [connection signal="finished" from="Intro" to="Update" method="_on_intro_finished"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Who Dell" to="Launcher Games/Dell" method="_on_who_dell_pressed"]
@@ -2870,3 +3051,5 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="mouse_exited" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_exited"]
 [connection signal="toggled" from="Launcher Games/Dell Button" to="Launcher Games/Dell" method="_on_dell_toggled"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="finished" from="Shuffle" to="." method="_on_shuffle_finished"]

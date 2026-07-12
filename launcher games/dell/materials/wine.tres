@@ -2,4 +2,6 @@
 
 [resource]
 resource_name = "wine"
-albedo_color = Color(0.5277682, 0, 0.01248983, 1)
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.9166641, 0.032397646, 0, 1)

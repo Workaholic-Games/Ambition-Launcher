@@ -1,0 +1,108 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b0rkykocxkt0m"
+path="res://.godot/imported/dell_2.0.glb-0e1dbfef470dea08ebb8897282b51a4a.scn"
+
+[deps]
+
+source_file="res://launcher games/dell/dell_2.0.glb"
+dest_files=["res://.godot/imported/dell_2.0.glb-0e1dbfef470dea08ebb8897282b51a4a.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"dress": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/dress.tres",
+"use_external/path": "uid://c2vub4clk8rv2"
+},
+"dress_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/dress_2.tres",
+"use_external/path": "uid://cp4a32x11sqbw"
+},
+"eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/eye.tres",
+"use_external/path": "uid://cx2fq0lawbmge"
+},
+"eye2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/eye2.tres",
+"use_external/path": "uid://dictjkvkohxeq"
+},
+"eye3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/eye3.tres",
+"use_external/path": "uid://dgkeao7fgx2f0"
+},
+"gold": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/gold.tres",
+"use_external/path": "uid://bxlkd8q27au3r"
+},
+"gold_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/gold_2.tres",
+"use_external/path": "uid://ryd1g12r806r"
+},
+"hair": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/hair.tres",
+"use_external/path": "uid://ydgbdskbcme6"
+},
+"lips": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/lips.tres",
+"use_external/path": "uid://b2haaum0ukj6j"
+},
+"skin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/skin.tres",
+"use_external/path": "uid://cqjhx1swado3w"
+},
+"skin_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/skin_2.tres",
+"use_external/path": "uid://blrf0vftyocof"
+},
+"wine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://launcher games/dell/materials/wine.tres",
+"use_external/path": "uid://dow35v32evqso"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

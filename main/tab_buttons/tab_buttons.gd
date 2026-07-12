@@ -1,31 +1,41 @@
 extends Node
 
+
+
 # Just a bunch of UI hiding then turning the Correct UI Visible.
 func _on_library_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Library".visible = true
 func _on_store_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	for node in get_tree().get_nodes_in_group("Collision"):
 		node.set_deferred("disabled", false)
 	$"../../Store".visible = true
 func _on_community_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Community".visible = true
 func _on_changelog_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Changelog".visible = true
 func _on_developers_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Developers".visible = true
 func _on_settings_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Settings".visible = true
 func _on_quit_launcher_pressed() -> void:
+	$"../../Tap".play()
 	hide_ui()
 	$"../../Quit".visible = true
 func _on_avatar_pressed() -> void:
-	hide_ui()
+	$"../../Tap".play()
+	#hide_ui()
 	$"../../User".visible = true
 	$"../../Avatar".visible = false
 # UI hide function

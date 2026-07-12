@@ -6,9 +6,11 @@ func _ready() -> void:
 		visible = true
 
 func _on_deny_pressed() -> void:
+	$"../Tap".play()
 	get_tree().quit()
 
 func _on_accept_pressed() -> void:
+	$"../Tap".play()
 	visible = false
 	Main.launcher_data.tos = true
 	Main.save_data()

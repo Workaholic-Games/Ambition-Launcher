@@ -17,14 +17,17 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/use_filter=false
 boot_splash/image="uid://b7oibf3rr4d01"
 config/icon="uid://b4a4tfw78i630"
+config/mode=5
 
 [audio]
 
+buses/default_bus_layout="uid://dsqlbqwssrfo7"
 general/text_to_speech=true
 
 [autoload]
 
 Main="*uid://hki2er1uwscs"
+DiscordRPCLoader="*uid://cq101hgkk1du5"
 
 [display]
 
@@ -33,6 +36,10 @@ window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [file_customization]
 
@@ -45,6 +52,7 @@ folder_colors={
 "res://launcher games/": "orange",
 "res://main/": "purple",
 "res://main/settings/cursors/": "gray",
+"res://seasonal/": "teal",
 "res://themes/": "purple"
 }
 
@@ -85,6 +93,16 @@ flip={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(357, 11),"global_position":Vector2(366, 59),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+scroll_up={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":8,"position":Vector2(499, 18),"global_position":Vector2(508, 66),"factor":1.0,"button_index":4,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+scroll_down={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(251, 15),"global_position":Vector2(260, 63),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [physics]
 
@@ -94,6 +112,5 @@ flip={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

@@ -2,10 +2,12 @@
 extends Panel
 
 func _on_yes_pressed() -> void:
+	$"../Tap".play()
 	Main.save_data()
 	get_tree().quit()
 
 func _on_no_pressed() -> void:
+	$"../Tap".play()
 	self.visible = false
 	match Main.launcher_data.start_page:
 		0: 

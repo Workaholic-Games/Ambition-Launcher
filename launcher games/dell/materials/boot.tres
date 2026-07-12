@@ -1,5 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://d17hobsd5ueyn"]
-
-[resource]
-resource_name = "boot"
-albedo_color = Color(0.15277001, 0.14852291, 0.14852291, 1)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hkxpixr8kor3"
+path="res://.godot/imported/Vineyard Vibes.mp3-a686f1bf50b4546c4b4082c33a93f048.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/Vineyard Vibes.mp3"
+dest_files=["res://.godot/imported/Vineyard Vibes.mp3-a686f1bf50b4546c4b4082c33a93f048.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
