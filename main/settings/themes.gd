@@ -1,13 +1,14 @@
 extends Control
 @export var splashes : Array[String]
-
 var themes: Dictionary[String, Theme] = {
 	"Default (Dark)": load("res://themes/default_dark_theme.tres"),
 	"Default (Light)": load("res://themes/default_light_theme.tres"),
 	"Fresh Mint": load("res://themes/fresh_mint.tres"),
 	"Grape": load("res://themes/grape.tres")
 	# REMEMBER TO USE PALETTE FOR NEXT THEME
-}
+	}
+
+
 
 func _ready() -> void:
 	for option: String in themes.keys():
@@ -19,7 +20,8 @@ func _ready() -> void:
 		2: theme = themes["Fresh Mint"]
 		3: theme = themes["Grape"]
 	$Settings/Themes.select(Main.launcher_data.theme)
-	discord_setup()
+	
+	#discord_setup()
 
 func _on_option_button_item_selected(index: int) -> void:
 	$Tap.play()

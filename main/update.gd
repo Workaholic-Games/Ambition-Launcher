@@ -27,6 +27,8 @@ func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	
+	
+	update_check()
 	return # skip the intro lol
 	@warning_ignore("unreachable_code") # leave this so return doesn't error us
 	
@@ -50,6 +52,17 @@ func _ready():
 	else:
 		Main.launcher_data.just_installed = false
 		$"../Intro".play()
+
+
+
+func update_check():
+	match Main.operating_system:
+		"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
+		
+		"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
+		
+		"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
+
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
