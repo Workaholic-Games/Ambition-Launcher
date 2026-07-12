@@ -1,6 +1,6 @@
 @icon("res://editor_icons/update.png")
 extends Panel
-
+var current_version : String = "Beta 1.0.0"
 var i : int = 0
 var j : int = 0
 var text : Array = [
@@ -27,14 +27,23 @@ func _ready():
 	$"../Intro".queue_free()
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	
-	
 	update_check()
-	return # skip the intro lol
-	@warning_ignore("unreachable_code") # leave this so return doesn't error us
-	
-	if Main.launcher_data.just_installed == false:
+
+func update_check():
+	$"../HTTPRequest".download_file = "user://Version.txt"
+	match Main.operating_system:
+		"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
+		
+		"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
+		
+		"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
+
+	var file = FileAccess.open("user://Version.txt", FileAccess.READ)
+	var version = file.get_as_text()
+	if version != current_version:
 		$Timer.start()
 		show()
+		await $"../HTTPRequest".request_completed
 		if FileAccess.file_exists("user://installer" + Main.file_type):
 			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
 			OS.shell_open(absolute_path)
@@ -52,17 +61,7 @@ func _ready():
 	else:
 		Main.launcher_data.just_installed = false
 		$"../Intro".play()
-
-
-
-func update_check():
-	match Main.operating_system:
-		"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Windows.zip")
-		
-		"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
-		
-		"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-
+		pass
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
