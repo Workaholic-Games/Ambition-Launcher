@@ -1530,15 +1530,8 @@ offset_top = -36.0
 offset_right = 590.0
 offset_bottom = 284.0
 bbcode_enabled = true
-text = "Added \"Drops\" Launcher Game
-Added Background Music
-Added UI Sound
-Added Version Indicator
-Improved Updating System
-Improved Avatar System (may reset your avatar mb) and added a bunch of new avatars
-Updated Dell Model
-Fixed Launcher Pet collision bug
-AND MORE!
+text = "Removed Intro
+Removed Herobrine
 
 
 Thanks for using the launcher! :}"

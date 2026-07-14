@@ -1,6 +1,6 @@
 @icon("res://editor_icons/update.png")
 extends Panel
-var current_version : String = "Beta 1.1.0"
+var current_version : String = "Beta 1.1.1"
 var i : int = 0
 var j : int = 0
 var text : Array = [
@@ -32,6 +32,7 @@ func _ready():
 	$"../Panel/Label".text = current_version
 
 func update_check():
+	$"../Intro".queue_free()
 	$"../HTTPRequest".download_file = "user://Version.txt"
 	match Main.operating_system:
 		"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
@@ -46,7 +47,6 @@ func update_check():
 	if version != current_version:
 		$Timer.start()
 		show()
-		
 		if FileAccess.file_exists("user://installer" + Main.file_type):
 			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
 			OS.shell_open(absolute_path)
@@ -63,7 +63,6 @@ func update_check():
 				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
 	else:
 		Main.launcher_data.just_installed = false
-		$"../Intro".play()
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
