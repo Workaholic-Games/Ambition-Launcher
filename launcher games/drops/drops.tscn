@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bltepr85ikmy8"]
 
 [ext_resource type="Script" uid="uid://da6rpnrhf54e5" path="res://launcher games/drops/drops.gd" id="1_0y47j"]
+[ext_resource type="Texture2D" uid="uid://ur2ei3ao5bnq" path="res://main/settings/scroll.png" id="2_s81ju"]
 
 [node name="Drops" type="Panel" unique_id=854953616]
 script = ExtResource("1_0y47j")
@@ -48,4 +49,27 @@ offset_right = 108.0
 offset_bottom = -48.0
 text = "AD"
 
+[node name="AD_Time" type="HSlider" parent="Ads" unique_id=1268813941]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 104.0
+offset_right = 103.0
+offset_bottom = 120.0
+theme_override_icons/grabber_disabled = ExtResource("2_s81ju")
+max_value = 5.0
+editable = false
+scrollable = false
+
+[node name="Skip" type="Button" parent="Ads" unique_id=613802229]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 88.0
+offset_right = 104.0
+offset_bottom = 106.0
+theme_type_variation = &"Image_Button"
+text = "SKIP"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="finished" from="Ads" to="." method="_on_ads_finished"]
+[connection signal="value_changed" from="Ads/AD_Time" to="." method="_on_ad_time_value_changed"]
+[connection signal="pressed" from="Ads/Skip" to="." method="_on_skip_pressed"]

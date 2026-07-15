@@ -7,7 +7,8 @@ func _ready() -> void:
 		show()
 
 func _on_line_edit_text_changed(new_text: String) -> void:
-	username = new_text
+	if new_text != "":
+		username = new_text
 
 func _on_button_pressed() -> void:
 	$"../Tap".play()

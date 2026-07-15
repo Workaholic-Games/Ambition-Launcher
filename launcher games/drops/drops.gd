@@ -56,6 +56,10 @@ func ad_check():
 		$Ads.show()
 		playing_ad = true
 		can_skip_ad = false
+		$Ads.stream_position = 0.01
+		$Ads/AD_Time.step = $Ads.get_stream_length() * 0.0001
+		$Ads/Skip.hide()
+		
 		await get_tree().create_timer(5.0).timeout
 		can_skip_ad = true
 
@@ -64,6 +68,10 @@ func _on_ads_finished() -> void:
 	$Ads.hide()
 	playing_ad = false
 
+func _on_skip_pressed() -> void:
+	$Ads.stop()
+	$Ads.hide()
+	playing_ad = false
 
 func _on_drops_button_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
@@ -71,3 +79,22 @@ func _on_drops_button_toggled(toggled_on: bool) -> void:
 		$"../../Tap".play()
 	else:
 		hide()
+
+
+func _on_visibility_changed() -> void:
+	if visible == false:
+		$Ads.paused = true
+	else:
+		$Ads.paused = false
+
+
+
+func _physics_process(_delta: float) -> void:
+	if playing_ad == true:
+		$Ads/AD_Time.value = $Ads.stream_position
+
+
+func _on_ad_time_value_changed(value: float) -> void:
+	if value == 5:
+		$Ads/Skip.show()
+		

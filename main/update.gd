@@ -32,7 +32,6 @@ func _ready():
 	$"../Panel/Label".text = current_version
 
 func update_check():
-	$"../Intro".queue_free()
 	$"../HTTPRequest".download_file = "user://Version.txt"
 	match Main.operating_system:
 		"Windows": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/version/Version.txt")
