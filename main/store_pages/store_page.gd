@@ -90,6 +90,7 @@ func _on_install_pressed() -> void:
 		match Main.operating_system:
 			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
 			"macOS": $HTTPRequest.request(version_links_mac.get(selected_link))
+			"Linux": $HTTPRequest.request(version_links_linux.get(selected_link))
 		
 		can_download = false
 		$ProgressBar.visible = false

@@ -48,6 +48,9 @@ func _on_pressed() -> void:
 		"macOS":
 			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_mac[actual_index] + ".app")
 			OS.shell_open(absolute_path)
+		"Linux":
+			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_linux[actual_index])
+			OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
 	get_parent().move_child(self, 0)
@@ -97,6 +100,11 @@ func check():
 			"macOS":
 				if i < version_file_names_mac.size():
 					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
+					is_installed = DirAccess.dir_exists_absolute(path)
+					
+			"Linux":
+				if i < version_file_names_mac.size():
+					var path = folder_path + "//" + version_file_names_mac[i]
 					is_installed = DirAccess.dir_exists_absolute(path)
 
 		if is_installed == true:

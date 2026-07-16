@@ -1,6 +1,6 @@
 @icon("res://editor_icons/update.png")
 extends Panel
-var current_version : String = "Beta 1.1.1"
+var current_version : String = "Beta 1.1.2"
 var i : int = 0
 var j : int = 0
 var text : Array = [
@@ -27,7 +27,6 @@ func _on_timer_timeout() -> void:
 
 func _ready():
 	DisplayServer.window_set_min_size(Vector2(640, 360))
-	
 	update_check()
 	$"../Panel/Label".text = current_version
 
@@ -49,7 +48,6 @@ func update_check():
 		if FileAccess.file_exists("user://installer" + Main.file_type):
 			var absolute_path = ProjectSettings.globalize_path("user://installer" + Main.file_type)
 			OS.shell_open(absolute_path)
-			Main.launcher_data.just_installed = true
 			Main.save_data()
 			get_tree().quit()
 		else:
@@ -60,8 +58,6 @@ func update_check():
 				"macOS": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Mac.zip")
 				
 				"Linux": $"../HTTPRequest".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/installer/Ambition_Installer_Linux.zip")
-	else:
-		Main.launcher_data.just_installed = false
 
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	var reader := ZIPReader.new()
@@ -117,8 +113,10 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		"macOS": 
 			absolute_path = ProjectSettings.globalize_path("user://Ambition Installer.app")
 			OS.shell_open("file://" + absolute_path)
+		"Linux":
+			absolute_path = ProjectSettings.globalize_path("user://Ambition_Installer_Linux")
+			OS.shell_open("file://" + absolute_path)
 	
-	Main.launcher_data.just_installed = true
 	Main.save_data()
 	get_tree().quit()
 
