@@ -1,6 +1,6 @@
 @icon("res://editor_icons/update.png")
 extends Panel
-var current_version : String = "Beta 1.1.2"
+var current_version : String = "Beta 1.1.3"
 var i : int = 0
 var j : int = 0
 var text : Array = [

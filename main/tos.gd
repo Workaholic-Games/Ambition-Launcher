@@ -3,7 +3,7 @@ extends Panel
 
 func _ready() -> void:
 	if Main.launcher_data.tos == false:
-		visible = true
+		show()
 
 func _on_deny_pressed() -> void:
 	$"../Tap".play()
@@ -11,6 +11,7 @@ func _on_deny_pressed() -> void:
 
 func _on_accept_pressed() -> void:
 	$"../Tap".play()
-	visible = false
+	hide()
 	Main.launcher_data.tos = true
 	Main.save_data()
+	$"../Username".show()
