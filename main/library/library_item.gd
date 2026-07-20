@@ -104,7 +104,7 @@ func check():
 					
 			"Linux":
 				if i < version_file_names_mac.size():
-					var path = folder_path + "//" + version_file_names_mac[i]
+					var path = folder_path + "//" + version_file_names_linux[i]
 					is_installed = DirAccess.dir_exists_absolute(path)
 
 		if is_installed == true:
