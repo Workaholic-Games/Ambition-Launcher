@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5fgploubgfl"
-path="res://.godot/imported/sawyer.webp-f5ee1ca6209032752e724455d4a33efa.ctex"
+uid="uid://bp8xhfvkxpa0o"
+path="res://.godot/imported/sawyer.png-2899734974fb540c346394478ecc6ff9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/developers/sawyer.webp"
-dest_files=["res://.godot/imported/sawyer.webp-f5ee1ca6209032752e724455d4a33efa.ctex"]
+source_file="res://main/developers/sawyer.png"
+dest_files=["res://.godot/imported/sawyer.png-2899734974fb540c346394478ecc6ff9.ctex"]
 
 [params]
 

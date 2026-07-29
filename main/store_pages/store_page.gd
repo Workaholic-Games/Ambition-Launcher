@@ -1,5 +1,6 @@
 @icon("res://editor_icons/shop_item.png")
 extends Control
+class_name StorePage
 @export_multiline var description : String
 @export_multiline var rating : String
 

@@ -6,6 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkre5"]
 
 [node name="Store Page" type="Control" unique_id=1882300884]
+z_index = 2
 layout_mode = 3
 anchors_preset = 0
 offset_left = 110.0

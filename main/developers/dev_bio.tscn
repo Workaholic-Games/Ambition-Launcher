@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dgo0swgxvrraq"]
+
+[ext_resource type="Script" uid="uid://d1tjjw61pxkm8" path="res://main/developers/dev_bio.gd" id="1_462m2"]
+[ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="2_i2ily"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bdy8o"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("2_i2ily")
+
+[node name="Dev Bio" type="Panel" unique_id=1142850733]
+z_index = 1
+offset_right = 530.2449
+offset_bottom = 359.99997
+script = ExtResource("1_462m2")
+
+[node name="Info" type="VBoxContainer" parent="." unique_id=84273634]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 3.9999924
+offset_right = 391.0
+offset_bottom = 132.0
+
+[node name="Name" type="Label" parent="Info" unique_id=42689134]
+custom_minimum_size = Vector2(90, 16)
+layout_mode = 2
+theme_type_variation = &"Store_Page"
+text = "Bulba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank" type="Label" parent="Info" unique_id=322858324]
+custom_minimum_size = Vector2(90, 16)
+layout_mode = 2
+theme_type_variation = &"Store_Page"
+text = "Rank: C.E.O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pronoun" type="Label" parent="Info" unique_id=1189374022]
+custom_minimum_size = Vector2(90, 16)
+layout_mode = 2
+theme_type_variation = &"Store_Page"
+text = "He/Him"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="Info" unique_id=1236954610]
+custom_minimum_size = Vector2(90, 16)
+layout_mode = 2
+theme_type_variation = &"Close_Button"
+text = "Back"
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=1884718808]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.9999924
+offset_right = 298.0
+offset_bottom = 132.0
+text = "Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series and The Vegetable Game and Head Developer of the Ambition Launcher."
+
+[node name="GridContainer" type="HBoxContainer" parent="." unique_id=1571649916]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 168.0
+offset_right = 517.0
+offset_bottom = 348.0
+theme_override_constants/separation = 10
+
+[node name="Featured Games" type="Label" parent="." unique_id=943853791]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 149.0
+offset_right = 517.0
+offset_bottom = 168.0
+text = "Featured Games"
+horizontal_alignment = 1
+
+[node name="Portrait Border" type="Panel" parent="." unique_id=1255918374]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 3.9999924
+offset_right = 525.00006
+offset_bottom = 136.0
+theme_type_variation = &"Line"
+
+[node name="Portrait" type="TextureRect" parent="." unique_id=1728388593]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 395.0
+offset_top = 5.9999924
+offset_right = 523.0
+offset_bottom = 134.0
+expand_mode = 1
+
+[node name="Tap" type="AudioStreamPlayer" parent="." unique_id=1571722049]
+stream = SubResource("AudioStreamRandomizer_bdy8o")
+volume_db = -12.0
+pitch_scale = 1.54
+
+[connection signal="pressed" from="Info/Close" to="." method="_on_close_pressed"]

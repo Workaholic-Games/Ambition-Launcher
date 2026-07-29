@@ -4,9 +4,7 @@ extends Control
 
 
 func _on_close_pressed() -> void:
-	$"Bulba Bio".visible = false
-	$"Jonathan Bio".visible = false
-	$"Sawyer Bio".visible = false
+	$"Bulba Bio".hide()
 
 
 

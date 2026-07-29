@@ -6,37 +6,38 @@ extends Node
 func _on_library_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Library".visible = true
+	$"../../Library".show()
 func _on_store_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
 	for node in get_tree().get_nodes_in_group("Collision"):
 		node.set_deferred("disabled", false)
-	$"../../Store".visible = true
+	$"../../Store".show()
 func _on_community_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Community".visible = true
+	$"../../Community".show()
 func _on_changelog_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Changelog".visible = true
+	$"../../Changelog".show()
 func _on_developers_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Developers".visible = true
+	$"../../Developers".show()
+	$"../../Store Pages".show()
 func _on_settings_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Settings".visible = true
+	$"../../Settings".show()
 func _on_quit_launcher_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
-	$"../../Quit".visible = true
+	$"../../Quit".show()
 func _on_avatar_pressed() -> void:
 	$"../../Tap".play()
 	#hide_ui()
-	$"../../User".visible = true
+	$"../../User".show()
 	$"../../Avatar".visible = false
 # UI hide function
 func hide_ui():
@@ -49,7 +50,7 @@ func hide_ui():
 	$"../../Settings".visible = false
 	$"../../Quit".visible = false
 	$"../../User".visible = false
-	$"../../Avatar".visible = true
+	$"../../Avatar".show()
 	for page in $"../../Store Pages".get_children():
 		page.visible = false
 	for node in get_tree().get_nodes_in_group("Collision"):
