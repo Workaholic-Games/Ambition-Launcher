@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://boivsvlnsewke"]
 
+[ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://main/store/store_item.gd" id="1_vbu4v"]
 [ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="2_6erqr"]
-[ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://main/store/store_item.gd" id="2_ujogu"]
 
 [sub_resource type="Gradient" id="Gradient_mh5tx"]
 offsets = PackedFloat32Array(0)
@@ -20,8 +20,7 @@ stream_0/stream = ExtResource("2_6erqr")
 custom_minimum_size = Vector2(120, 180)
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("2_ujogu")
-from_dev = true
+script = ExtResource("1_vbu4v")
 
 [node name="Hover" type="Sprite2D" parent="." unique_id=1991008879]
 visible = false

@@ -1,25 +1,19 @@
 [gd_resource type="Theme" format=3 uid="uid://7wvlbsb0aabd"]
 
-[ext_resource type="Texture2D" uid="uid://ur2ei3ao5bnq" path="res://main/settings/scroll.png" id="1_y6g8n"]
-[ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://main/settings/selected.png" id="2_86m3o"]
-[ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://main/settings/unselected.png" id="3_ug50d"]
+[ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_3pocd"]
+[ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://main/settings/selected.png" id="2_1j5qc"]
+[ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://main/settings/unselected.png" id="3_2pcmr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.09, 0.09, 0.09, 1)
 border_width_left = 2
-border_width_bottom = 2
-border_color = Color(0.76862746, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
 bg_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
-border_width_bottom = 2
-border_color = Color(0.47843137, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
 bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
-border_width_left = 4
-border_width_bottom = 2
-border_color = Color(1, 0, 0, 1)
+border_width_left = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
 bg_color = Color(0.14, 0.14, 0.14, 1)
@@ -31,15 +25,15 @@ bg_color = Color(0.1, 0.1, 0.1, 1)
 bg_color = Color(0.25, 0.25, 0.25, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_86m3o"]
-color = Color(0.48, 0, 0, 1)
+color = Color(0.48, 0.48, 0.48, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ug50d"]
-color = Color(0.77, 0, 0, 1)
+color = Color(0.77, 0.77, 0.77, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_m2m0a"]
-color = Color(1, 0, 0, 1)
+color = Color(1, 1, 1, 1)
 thickness = 9
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xvamo"]
@@ -59,7 +53,7 @@ bg_color = Color(0, 0, 0, 0.68235296)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug50d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvamo"]
-bg_color = Color(0.47843137, 0, 0, 1)
+bg_color = Color(0.48, 0.48, 0.48, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogguv"]
 
@@ -109,17 +103,17 @@ border_width_left = 2
 border_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ogguv"]
-color = Color(0.47843137, 0, 0, 1)
+color = Color(0.48, 0.48, 0.48, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5p1rt"]
-color = Color(0.76862746, 0, 0, 1)
+color = Color(0.77, 0.77, 0.77, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_10o2q"]
-color = Color(1, 0, 0, 1)
+color = Color(1, 1, 1, 1)
 thickness = 9
 vertical = true
 
@@ -164,8 +158,8 @@ HScrollBar/styles/grabber = SubResource("StyleBoxLine_86m3o")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_ug50d")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_m2m0a")
 HScrollBar/styles/scroll = SubResource("StyleBoxLine_xvamo")
-HSlider/icons/grabber = ExtResource("1_y6g8n")
-HSlider/icons/grabber_highlight = ExtResource("1_y6g8n")
+HSlider/icons/grabber = ExtResource("1_3pocd")
+HSlider/icons/grabber_highlight = ExtResource("1_3pocd")
 HSlider/styles/grabber_area = SubResource("StyleBoxLine_78kbg")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_78kbg")
 HSlider/styles/slider = SubResource("StyleBoxLine_78kbg")
@@ -202,8 +196,8 @@ OptionButton/styles/pressed = SubResource("StyleBoxFlat_yjti2")
 Panel/styles/panel = SubResource("StyleBoxFlat_ogguv")
 PopupMenu/colors/font_color = Color(0.7529412, 0.75686276, 0.76862746, 1)
 PopupMenu/colors/font_hover_color = Color(0.7529412, 0.75686276, 0.76862746, 1)
-PopupMenu/icons/radio_checked = ExtResource("2_86m3o")
-PopupMenu/icons/radio_unchecked = ExtResource("3_ug50d")
+PopupMenu/icons/radio_checked = ExtResource("2_1j5qc")
+PopupMenu/icons/radio_unchecked = ExtResource("3_2pcmr")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_2nlnu")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_dh3ls")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_78kbg")
@@ -218,8 +212,8 @@ VScrollBar/styles/grabber = SubResource("StyleBoxLine_ogguv")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_5p1rt")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_10o2q")
 VScrollBar/styles/scroll = SubResource("StyleBoxLine_y6g8n")
-VSlider/icons/grabber = ExtResource("1_y6g8n")
-VSlider/icons/grabber_highlight = ExtResource("1_y6g8n")
+VSlider/icons/grabber = ExtResource("1_3pocd")
+VSlider/icons/grabber_highlight = ExtResource("1_3pocd")
 VSlider/icons/tick = null
 VSlider/styles/grabber_area = SubResource("StyleBoxLine_otj2g")
 VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_j0g8s")

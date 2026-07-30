@@ -1,5 +1,5 @@
+@icon("res://editor_icons/account.png")
 extends Panel
-
 var username : String = "" 
 
 func _ready() -> void:
@@ -18,7 +18,6 @@ func _on_button_pressed() -> void:
 	$"../Reloading/Timer".start()
 	Main.save_data()
 	$LineEdit.text = ""
-
 
 func _on_close_pressed() -> void:
 	$"../Tap".play()

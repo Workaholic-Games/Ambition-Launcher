@@ -7,7 +7,7 @@ var cursors: Dictionary = {
 	"Fry": load("res://main/settings/cursors/fry_cursor.png"),
 	"Seedling": load("res://main/settings/cursors/seedling_cursor.png"),
 	"Sun": load("res://main/settings/cursors/sad_sun.png"),
-}
+	}
 @export var music : Array[AudioStream]
 
 

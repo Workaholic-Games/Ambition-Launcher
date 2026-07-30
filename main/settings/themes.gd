@@ -1,11 +1,9 @@
 extends Control
-@export var splashes : Array[String]
 var themes: Dictionary[String, Theme] = {
-	"Default (Dark)": load("res://themes/default_dark_theme.tres"),
-	"Default (Light)": load("res://themes/default_light_theme.tres"),
-	"Fresh Mint": load("res://themes/fresh_mint.tres"),
-	"Grape": load("res://themes/grape.tres")
-	# REMEMBER TO USE PALETTE FOR NEXT THEME
+	"Default (Dark)": load("res://ui/themes/default_dark_theme.tres"),
+	"Default (Light)": load("res://ui/themes/default_light_theme.tres"),
+	"Fresh Mint": load("res://ui/themes/fresh_mint.tres"),
+	"Grape": load("res://ui/themes/grape.tres")
 	}
 
 
@@ -26,7 +24,6 @@ func _on_option_button_item_selected(index: int) -> void:
 	var option: String = $Settings/Themes.get_item_text(index)
 	theme = themes[option]
 	Main.launcher_data.theme = index
-
 
 func _on_music_finished() -> void:
 	$Music.play()

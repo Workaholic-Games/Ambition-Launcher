@@ -1,7 +1,7 @@
+@icon("res://editor_icons/account.png")
 extends Panel
-
-var avatar_instance = load("res://avatars/avatar_instance.tscn")
 @export var default_avatars : Array[Texture2D]
+var avatar_instance = load("res://avatars/avatar_instance.tscn")
 
 
 

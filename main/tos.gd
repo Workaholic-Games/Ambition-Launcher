@@ -1,6 +1,8 @@
 @icon("res://editor_icons/tos.png")
 extends Panel
 
+
+
 func _ready() -> void:
 	if Main.launcher_data.tos == false:
 		show()

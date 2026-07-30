@@ -1,6 +1,8 @@
 @icon("res://editor_icons/quit.png")
 extends Panel
 
+
+
 func _on_yes_pressed() -> void:
 	$"../Tap".play()
 	Main.save_data()

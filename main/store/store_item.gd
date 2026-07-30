@@ -17,7 +17,6 @@ func _ready() -> void:
 func _on_mouse_entered() -> void:
 	$Hover.visible = true
 	$"Game Label".visible = true
-
 func _on_mouse_exited() -> void:
 	$Hover.visible = false
 	$"Game Label".visible = false

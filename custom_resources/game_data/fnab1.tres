@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://chvernrw33afx"]
+
+[ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_elm2x"]
+[ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="1_ofu32"]
+[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="2_j5nu2"]
+[ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="3_i0148"]
+[ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="4_wkwuy"]
+[ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="5_r4usm"]
+[ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="6_bag78"]
+[ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="7_mp1pi"]
+[ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="8_fs03y"]
+[ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="10_a5n6o"]
+
+[resource]
+script = ExtResource("1_elm2x")
+name = "Five Night's at Bulba's"
+description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
+age_rating = "Rated: T for Teen"
+difficulty = "Difficulty: Normal"
+stability = "Stability: Good"
+release_data = "Release Date: 11/27/2024"
+cover = ExtResource("1_ofu32")
+images = Array[Texture2D]([ExtResource("2_j5nu2"), ExtResource("3_i0148"), ExtResource("4_wkwuy"), ExtResource("5_r4usm"), ExtResource("6_bag78"), ExtResource("7_mp1pi"), ExtResource("8_fs03y")])
+videos = Array[VideoStream]([ExtResource("10_a5n6o")])
+version_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.DEMO.Mac.zip")
+version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux :(", "no linux")
+version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_1.0_Windows", "FNAB1_Demo_Windows")
+version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
+version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
+folder_path = "user://FNAB"
+save_data_folder_name = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas", "Five Nights At Bulbas")
+metadata/_custom_type_script = "uid://dk1pj38x77q1e"

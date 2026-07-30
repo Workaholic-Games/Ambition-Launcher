@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 @export var drops : Array[Texture2D]
 @export var ads : Array[VideoStreamTheora]
 var can_scroll : bool = true
@@ -6,16 +6,16 @@ var playing_ad : bool = false
 var can_skip_ad : bool = true
 var on_drops : bool = false
 
+
+
 func _ready() -> void:
 	for i in drops:
 		var new_drop = TextureRect.new()
 		new_drop.texture = i
 		new_drop.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		new_drop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		new_drop.custom_minimum_size = Vector2(108, 189)
+		new_drop.custom_minimum_size = Vector2(108, 232)
 		$ScrollContainer/VBoxContainer.add_child(new_drop)
-
-
 
 func _input(_event: InputEvent) -> void:
 	if visible == false:
@@ -29,7 +29,7 @@ func _input(_event: InputEvent) -> void:
 		
 		if can_scroll == true and playing_ad == false and can_skip_ad == true:
 			var tween = create_tween()
-			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical - 189, 0.2)
+			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical - 232, 0.2)
 			can_scroll = false
 			ad_check()
 			await get_tree().create_timer(0.2).timeout
@@ -42,15 +42,15 @@ func _input(_event: InputEvent) -> void:
 		
 		if can_scroll == true and playing_ad == false and can_skip_ad == true:
 			var tween = create_tween()
-			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical + 189, 0.2)
+			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical + 232, 0.2)
 			can_scroll = false
 			ad_check()
 			await get_tree().create_timer(0.2).timeout
 			can_scroll = true
 
 func ad_check():
-	var ad = randi_range(0, 8)
-	if ad == 8:
+	var ad = randi_range(0, 20)
+	if ad == 20:
 		$Ads.stream = ads.pick_random()
 		$Ads.play()
 		$Ads.show()
@@ -80,21 +80,16 @@ func _on_drops_button_toggled(toggled_on: bool) -> void:
 	else:
 		hide()
 
-
 func _on_visibility_changed() -> void:
 	if visible == false:
 		$Ads.paused = true
 	else:
 		$Ads.paused = false
 
-
-
 func _physics_process(_delta: float) -> void:
 	if playing_ad == true:
 		$Ads/AD_Time.value = $Ads.stream_position
 
-
 func _on_ad_time_value_changed(value: float) -> void:
 	if value == 5:
 		$Ads/Skip.show()
-		

@@ -1,3 +1,4 @@
+@icon("res://editor_icons/account.png")
 extends Control
 
 
@@ -11,12 +12,10 @@ func _on_button_toggled(toggled_on: bool) -> void:
 		true: $"Avatar Selection".show()
 		false: $"Avatar Selection".hide()
 
-
 func _on_button_2_pressed() -> void:
 	$"../Tap".play()
 	$"../Username".show()
 	$"../Username/Close".show()
-
 
 func _on_back_pressed() -> void:
 	$"../Tap".play()

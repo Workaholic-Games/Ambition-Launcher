@@ -8,7 +8,7 @@ class_name DevBio
 @export var featured_covers : Array[Texture2D]
 @export var featured_names : Array[String]
 @export var featured_font_sizes : Array[int]
-var featured_item_scene : Resource = load("res://main/store_item.tscn")
+var featured_item_scene : Resource = load("res://main/store/store_item.tscn")
 
 
 
@@ -17,7 +17,6 @@ func _ready() -> void:
 	$Info/Name.text = dev_name
 	$Info/Rank.text = rank
 	$Info/Pronoun.text = pronoun
-	
 	for i in featured.size():
 		print(i)
 		var new_featured = featured_item_scene.instantiate()
@@ -27,7 +26,6 @@ func _ready() -> void:
 		new_featured.from_dev = true
 		$GridContainer.add_child(new_featured)
 		new_featured.page = featured[i]
-
 
 func _on_close_pressed() -> void:
 	hide()

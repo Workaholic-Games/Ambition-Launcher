@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cd4mi3tlyre0h"]
+
+[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="1_8q7hh"]
+[ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_w6mor"]
+[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="2_g8e7t"]
+[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="3_7dp26"]
+
+[resource]
+script = ExtResource("1_w6mor")
+name = "Bitcoin Miner"
+description = "\"Not a computer virus. I promise\" -Sawyer 2026"
+age_rating = "Rated: E for Everyone"
+difficulty = "Difficulty: Easy"
+stability = "Stability: Fantastic"
+release_data = "Release Date: Sometime 2024"
+cover = ExtResource("1_8q7hh")
+images = Array[Texture2D]([ExtResource("2_g8e7t"), ExtResource("3_7dp26")])
+version_names = PackedStringArray("1.25")
+version_links_windows = PackedStringArray("Bitcoin.Miner.1.25")
+folder_path = "user://Bitcoin Miner"
+save_data_folder_name = PackedStringArray("Bitcoin Miner")
+metadata/_custom_type_script = "uid://dk1pj38x77q1e"

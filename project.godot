@@ -35,20 +35,23 @@ window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [file_customization]
 
 folder_colors={
 "res://branding/": "yellow",
 "res://community/": "pink",
-"res://editor_icons/": "green",
-"res://fonts/": "gray",
+"res://custom_resources/": "green",
 "res://game_assets/": "red",
 "res://launcher games/": "orange",
 "res://main/": "purple",
 "res://main/settings/cursors/": "gray",
-"res://seasonal/": "teal",
-"res://themes/": "purple"
+"res://ui/": "gray",
+"res://ui/custom_styleboxes/": "blue",
+"res://ui/fonts/": "gray",
+"res://ui/seasonal/": "teal",
+"res://ui/shaders/": "yellow"
 }
 
 [global_group]

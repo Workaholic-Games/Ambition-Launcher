@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6nxarvt15iye"
-path="res://.godot/imported/shop_icon.png-f90124c4e99f8fc777347924bfe0be8d.ctex"
+uid="uid://ba0nx0iwqq1j3"
+path="res://.godot/imported/stylebox_negative.png-59928906b3ea5515cb616cb91aa900f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/shop_icon.png"
-dest_files=["res://.godot/imported/shop_icon.png-f90124c4e99f8fc777347924bfe0be8d.ctex"]
+source_file="res://ui/custom_styleboxes/stylebox_negative.png"
+dest_files=["res://.godot/imported/stylebox_negative.png-59928906b3ea5515cb616cb91aa900f2.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

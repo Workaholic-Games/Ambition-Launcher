@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cvbj2852nsd4e"]
+
+[ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_awsiy"]
+[ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="1_hitgi"]
+[ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="2_lqgvf"]
+[ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="3_pq0vu"]
+[ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="4_wyt8q"]
+[ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="5_i57ym"]
+
+[resource]
+script = ExtResource("1_awsiy")
+name = "Gavin's Fantastically Fun "
+description = "DISCLAIMER: This is an unfinished DEMO.
+
+A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical Marsh of Mortisha under the watch of the Sad Sun.
+"
+age_rating = "Rated: T for Teen"
+difficulty = "Difficulty: Newborn"
+stability = "Stability: Unoptimized"
+release_data = "Release Date: Unknown"
+cover = ExtResource("1_hitgi")
+images = Array[Texture2D]([ExtResource("2_lqgvf"), ExtResource("3_pq0vu"), ExtResource("4_wyt8q"), ExtResource("5_i57ym")])
+version_names = PackedStringArray("DEMO")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
+version_file_names_windows = PackedStringArray("DEMO")
+version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
+folder_path = "user://GFFA"
+save_data_folder_name = PackedStringArray("Ambition/GFFA")
+metadata/_custom_type_script = "uid://dk1pj38x77q1e"

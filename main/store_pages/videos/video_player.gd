@@ -1,5 +1,4 @@
 extends Panel
-
 var is_dragged : bool = false
 var is_finished : bool = false
 var started : bool = false
@@ -26,7 +25,6 @@ func _process(_delta: float) -> void:
 		$VideoStreamPlayer.stream_position = $"Playback Position".value
 	pass
 
-
 func _on_start_button_pressed() -> void:
 	$Tap.play()
 	if is_finished == true:
@@ -37,50 +35,27 @@ func _on_start_button_pressed() -> void:
 	pass # Replace with function body.
 
 
+# Drag Related
 func _on_playback_position_drag_started() -> void:
 	is_dragged = true
-	pass # Replace with function body.
-
 
 func _on_playback_position_drag_ended(_value_changed: bool) -> void:
 	is_dragged = false
-	pass # Replace with function body.
 
 
+# Video Player Related
 func _on_play_pause_toggled(toggled_on: bool) -> void:
 	$Tap.play()
 	if toggled_on == true:
 		$VideoStreamPlayer.paused = true
 	else:
 		$VideoStreamPlayer.paused = false
-	pass # Replace with function body.
-
 
 func _on_video_stream_player_finished() -> void:
 	is_finished = true
 	$"Start Button".show()
 	$"Start Button".texture_normal = load("res://main/store_pages/videos/assets/loop.tres")
 	$"Start Button".texture_hover = load("res://main/store_pages/videos/assets/loop_hover.tres")
-	pass # Replace with function body.
-
-
-func _on_volume_toggle_toggled(toggled_on: bool) -> void:
-	$Tap.play()
-	if toggled_on == true:
-		$"Volume Toggle".text = "↓"
-		$Volume.show()
-	else:
-		$"Volume Toggle".text = "↑"
-		$Volume.hide()
-	pass # Replace with function body.
-
-
-func _on_volume_value_changed(value: float) -> void:
-	$VideoStreamPlayer.volume_db = value
-	if value == -20:
-		$VideoStreamPlayer.volume = 0
-	pass # Replace with function body.
-
 
 func _on_video_stream_player_mouse_entered() -> void:
 	if started == true:
@@ -93,17 +68,31 @@ func _on_video_stream_player_mouse_exited() -> void:
 	$Play_Pause.hide()
 	$"Volume Toggle".hide()
 
-
 func _on_playback_position_mouse_entered() -> void:
 	$"Playback Position".show()
 	$Play_Pause.show()
 	$"Volume Toggle".show()
 
-
 func _on_play_pause_mouse_entered() -> void:
 	$"Playback Position".show()
 	$Play_Pause.show()
 	$"Volume Toggle".show()
+
+
+# Video Player Volume Related
+func _on_volume_toggle_toggled(toggled_on: bool) -> void:
+	$Tap.play()
+	if toggled_on == true:
+		$"Volume Toggle".text = "↓"
+		$Volume.show()
+	else:
+		$"Volume Toggle".text = "↑"
+		$Volume.hide()
+
+func _on_volume_value_changed(value: float) -> void:
+	$VideoStreamPlayer.volume_db = value
+	if value == -20:
+		$VideoStreamPlayer.volume = 0
 
 func _on_volume_toggle_mouse_entered() -> void:
 	$"Playback Position".show()

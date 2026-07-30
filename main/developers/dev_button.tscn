@@ -3,24 +3,24 @@
 [ext_resource type="Script" uid="uid://d1kdd2jogb5r" path="res://main/developers/dev_button.gd" id="1_m31bu"]
 
 [node name="Bulba" type="Button" unique_id=961799538]
-offset_right = 132.0
-offset_bottom = 48.0
+offset_right = 84.0
+offset_bottom = 32.0
 theme_type_variation = &"Close_Button"
 theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 12
 script = ExtResource("1_m31bu")
 
 [node name="Portrait" type="Panel" parent="." unique_id=1434140097]
 layout_mode = 0
-offset_top = -132.0
-offset_right = 132.0
-offset_bottom = 0.39285278
+offset_top = -84.0
+offset_right = 84.0
 theme_type_variation = &"Line"
 
 [node name="Avatar" type="TextureRect" parent="." unique_id=1238957271]
 layout_mode = 0
 offset_left = 2.0
-offset_top = -130.0
-offset_right = 130.0
+offset_top = -82.0
+offset_right = 82.0
 offset_bottom = -2.0
 expand_mode = 1
 

@@ -1,7 +1,6 @@
 @tool
 extends Control
 class_name CarouselContainer
-
 @export var spacing: float = 20.0
 
 @export var wraparound_enabled: bool = false
@@ -15,8 +14,9 @@ class_name CarouselContainer
 @export var smoothing_speed: float = 6.5
 @export var selected_index: int = 0
 @export var follow_button_focus: bool = false
-
 @export var position_offset_node: Control = null
+
+
 
 func _process(delta: float) -> void:
 	if !position_offset_node or position_offset_node.get_child_count() == 0:
@@ -68,7 +68,6 @@ func _left():
 	selected_index -= 1
 	if selected_index < 0:
 		selected_index += 1
-		
 func _right():
 	selected_index += 1
 	if selected_index > position_offset_node.get_child_count()-1:

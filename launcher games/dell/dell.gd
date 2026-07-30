@@ -5,8 +5,8 @@ extends Control
 func _on_dell_toggled(toggled_on: bool) -> void:
 	$"../../Tap".play()
 	match toggled_on:
-		true: $".".visible = true
-		false: $".".visible = false
+		true: $".".show()
+		false: $".".hide()
 
 
 

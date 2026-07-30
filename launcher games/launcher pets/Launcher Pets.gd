@@ -11,6 +11,8 @@ var idle_animation = "slime_idle"
 var walk_animation = "slime_walk"
 var jump_animation = "slime_jump"
 
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -91,7 +93,6 @@ func _on_blue_guy_button_pressed() -> void:
 
 func _on_container_mouse_entered() -> void:
 	can_grab = true
-	
 func _on_container_mouse_exited() -> void:
 	can_grab = false
 

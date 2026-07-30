@@ -15,6 +15,8 @@ var installed : bool = false
 var selected_version : int = -1
 var ui_to_back : Array[int] = []
 
+
+
 func get_root_userdata_path() -> String:
 	var path = ProjectSettings.globalize_path("user://")
 	
@@ -54,7 +56,6 @@ func _on_pressed() -> void:
 	
 	Main.launcher_data.last_played = self.name
 	get_parent().move_child(self, 0)
-
 
 
 # Uninstall Version of game
@@ -124,7 +125,6 @@ func check():
 			DirAccess.remove_absolute(folder_path)
 
 
-
 # Version Selector
 func _on_versions_item_selected(index: int) -> void:
 	selected_version = index
@@ -142,14 +142,12 @@ func remove_recursive(path: String) -> void:
 	if dir:
 		for dir_name in DirAccess.get_directories_at(path):
 			remove_recursive(path.path_join(dir_name))
-
 		for file_name in DirAccess.get_files_at(path):
 			DirAccess.remove_absolute(path.path_join(file_name))
 		
 		DirAccess.remove_absolute(path)
 	else:
 		print("An error occurred when trying to access the path: ", path)
-
 
 func _on_texture_button_pressed() -> void:
 	save_path = get_root_userdata_path() + "/" + save_data[selected_version]

@@ -5,6 +5,8 @@ var launcher_data = data.new()
 var operating_system : String = OS.get_name()
 var file_type : String = ".exe"
 
+
+
 func _ready():
 	match operating_system:
 		"Windows": file_type = ".exe"

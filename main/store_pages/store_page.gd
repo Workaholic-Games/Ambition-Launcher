@@ -24,7 +24,7 @@ class_name StorePage
 var os_name : String = "Windows"
 var selected_link : int = 0
 var can_download : bool = true
-#var video_player = 
+
 
 
 func _ready() -> void:
@@ -176,7 +176,6 @@ func check_for_reinstall():
 		$"Install or Back/Install".text = "Reinstall"
 	else:
 		$"Install or Back/Install".text = "Install"
-
 
 func _on_back_pressed() -> void:
 	$"../../Tap".play()

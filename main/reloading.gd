@@ -1,5 +1,5 @@
+@icon("res://editor_icons/loading.png")
 extends Panel
-
 var i : int = 0
 var j : int = 0
 var text : Array = [
@@ -7,7 +7,7 @@ var text : Array = [
 	"Reloading.",
 	"Reloading..",
 	"Reloading..."
-]
+	]
 
 func _on_timer_timeout() -> void:
 	print(i)

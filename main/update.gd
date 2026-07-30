@@ -8,7 +8,7 @@ var text : Array = [
 	"Updating Launcher.",
 	"Updating Launcher..",
 	"Updating Launcher..."
-]
+	]
 
 
 
@@ -28,7 +28,7 @@ func _on_timer_timeout() -> void:
 func _ready():
 	DisplayServer.window_set_min_size(Vector2(640, 360))
 	update_check()
-	$"../Panel/Label".text = current_version
+	$"../Panel/Version Label".text = current_version
 
 func update_check():
 	$"../HTTPRequest".download_file = "user://Version.txt"

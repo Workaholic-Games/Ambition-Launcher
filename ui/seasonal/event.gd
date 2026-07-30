@@ -1,4 +1,7 @@
+@icon("res://editor_icons/event.png")
 extends Node2D
+
+
 
 func _ready() -> void:
 	var date = Time.get_date_dict_from_system()
