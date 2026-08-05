@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://7wvlbsb0aabd"]
 
+[ext_resource type="Texture2D" uid="uid://law4qg6wg0te" path="res://main/store_pages/videos/assets/scroll.png" id="1_1j5qc"]
 [ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_3pocd"]
 [ext_resource type="Texture2D" uid="uid://bflq6aolwj8c7" path="res://main/settings/selected.png" id="2_1j5qc"]
 [ext_resource type="Texture2D" uid="uid://bqwegysme4msk" path="res://main/settings/unselected.png" id="3_2pcmr"]
@@ -7,44 +8,73 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p1rt"]
 bg_color = Color(0.09, 0.09, 0.09, 1)
 border_width_left = 2
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10o2q"]
 bg_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6g8n"]
 bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
 border_width_left = 2
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2m0a"]
 bg_color = Color(0.14, 0.14, 0.14, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86m3o"]
 bg_color = Color(0.1, 0.1, 0.1, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug50d"]
 bg_color = Color(0.25, 0.25, 0.25, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_86m3o"]
-color = Color(0.48, 0.48, 0.48, 1)
-thickness = 9
+color = Color(0.7176471, 0, 0, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ug50d"]
-color = Color(0.77, 0.77, 0.77, 1)
-thickness = 9
+color = Color(0.5464117, 0, 0, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_m2m0a"]
-color = Color(1, 1, 1, 1)
-thickness = 9
+color = Color(0.28235295, 0, 0, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xvamo"]
-thickness = 9
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pocd"]
+atlas = ExtResource("1_1j5qc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j5qc"]
+atlas = ExtResource("1_1j5qc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3pocd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1j5qc"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_78kbg"]
 color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
+grow_begin = -2.0
+grow_end = 0.0
 thickness = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l5r5"]
 bg_color = Color(0, 0, 0, 0.68235296)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6g8n"]
 
@@ -53,44 +83,54 @@ bg_color = Color(0, 0, 0, 0.68235296)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug50d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvamo"]
-bg_color = Color(0.48, 0.48, 0.48, 1)
+bg_color = Color(0.7176471, 0, 0, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogguv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otj2g"]
 bg_color = Color(0.02, 0.02, 0.02, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 expand_margin_left = 3.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10o2q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xu5d"]
 bg_color = Color(0.11858138, 0.11858138, 0.11858138, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k1lq"]
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjti2"]
 bg_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogguv"]
 bg_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nlnu"]
 content_margin_right = 15.0
 bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh3ls"]
 content_margin_right = 15.0
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78kbg"]
 bg_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00hrq"]
 bg_color = Color(0, 0.69, 0.057499945, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec18n"]
 bg_color = Color(0.11489687, 0.1148968, 0.11489678, 1)
+border_color = Color(0.7176471, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0g8s"]
 bg_color = Color(0.12, 0.12, 0.12, 1)
@@ -103,17 +143,17 @@ border_width_left = 2
 border_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ogguv"]
-color = Color(0.48, 0.48, 0.48, 1)
+color = Color(0.7176471, 0, 0, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5p1rt"]
-color = Color(0.77, 0.77, 0.77, 1)
+color = Color(0.54509807, 0, 0, 1)
 thickness = 9
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_10o2q"]
-color = Color(1, 1, 1, 1)
+color = Color(0.28235295, 0, 0, 1)
 thickness = 9
 vertical = true
 
@@ -121,18 +161,14 @@ vertical = true
 thickness = 9
 vertical = true
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_otj2g"]
-color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
-thickness = 8
-vertical = true
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1w1fa"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_j0g8s"]
-color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
-thickness = 8
-vertical = true
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p73wk"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_svek6"]
 color = Color(0.023529412, 0.023529412, 0.023529412, 0.5882353)
+grow_begin = 0.0
+grow_end = 0.0
 thickness = 8
 vertical = true
 
@@ -158,10 +194,10 @@ HScrollBar/styles/grabber = SubResource("StyleBoxLine_86m3o")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_ug50d")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_m2m0a")
 HScrollBar/styles/scroll = SubResource("StyleBoxLine_xvamo")
-HSlider/icons/grabber = ExtResource("1_3pocd")
-HSlider/icons/grabber_highlight = ExtResource("1_3pocd")
-HSlider/styles/grabber_area = SubResource("StyleBoxLine_78kbg")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_78kbg")
+HSlider/icons/grabber = SubResource("AtlasTexture_3pocd")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_1j5qc")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_3pocd")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_1j5qc")
 HSlider/styles/slider = SubResource("StyleBoxLine_78kbg")
 Hover_Label/base_type = &"Label"
 Hover_Label/colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -215,6 +251,6 @@ VScrollBar/styles/scroll = SubResource("StyleBoxLine_y6g8n")
 VSlider/icons/grabber = ExtResource("1_3pocd")
 VSlider/icons/grabber_highlight = ExtResource("1_3pocd")
 VSlider/icons/tick = null
-VSlider/styles/grabber_area = SubResource("StyleBoxLine_otj2g")
-VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_j0g8s")
+VSlider/styles/grabber_area = SubResource("StyleBoxEmpty_1w1fa")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_p73wk")
 VSlider/styles/slider = SubResource("StyleBoxLine_svek6")

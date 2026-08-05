@@ -1,5 +1,5 @@
 extends TextureButton
-@export var menu : Panel 
+@export var menu : TextureButton
 @export var index : int
 
 

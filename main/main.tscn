@@ -12,64 +12,39 @@
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
-[ext_resource type="Texture2D" uid="uid://doiwvp57g8tl7" path="res://game_assets/covers/bulba_and_the_gang.png" id="14_8gen5"]
+[ext_resource type="PackedScene" uid="uid://boivsvlnsewke" path="res://main/store/store_item.tscn" id="15_dfolu"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
-[ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="15_x7gk6"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://main/settings/settings.gd" id="16_3a0l5"]
+[ext_resource type="Resource" uid="uid://chvernrw33afx" path="res://custom_resources/game_data/fnab1.tres" id="16_42w5j"]
+[ext_resource type="Resource" uid="uid://cp4mwov6cofos" path="res://custom_resources/game_data/fnab2.tres" id="17_dfolu"]
 [ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://main/community.gd" id="17_j32lm"]
 [ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
+[ext_resource type="Resource" uid="uid://b83ra8oaqu4te" path="res://custom_resources/game_data/veg.tres" id="18_m7axd"]
+[ext_resource type="Resource" uid="uid://cvbj2852nsd4e" path="res://custom_resources/game_data/gffa.tres" id="18_p80qw"]
 [ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
-[ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="20_4u1yx"]
+[ext_resource type="Resource" uid="uid://cd4mi3tlyre0h" path="res://custom_resources/game_data/bitcoin_miner.tres" id="19_m7axd"]
 [ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
 [ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
-[ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="21_7flok"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
-[ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="21_hupd3"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
-[ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="22_tipqc"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
-[ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="23_gtbh3"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
-[ext_resource type="Texture2D" uid="uid://dimfwqabfoyny" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191838.png" id="24_j17j7"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
-[ext_resource type="Texture2D" uid="uid://blv1xq1wvsm4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191923.png" id="25_pddd4"]
 [ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="26_gpx50"]
-[ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="26_mc0d5"]
-[ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="27_0qt1k"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://launcher games/launcher pets/Launcher Pets.gd" id="27_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
-[ext_resource type="Texture2D" uid="uid://2onugyxkrv4u" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192855.png" id="28_o22vj"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
-[ext_resource type="Texture2D" uid="uid://x68uqkhq8i62" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192859.png" id="29_bjyjg"]
-[ext_resource type="Texture2D" uid="uid://bf1wjlm60ph3" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192904.png" id="30_xaw78"]
-[ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="31_7divq"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
-[ext_resource type="Texture2D" uid="uid://baet03e2bwlqr" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193014.png" id="32_6d2a4"]
-[ext_resource type="Texture2D" uid="uid://b0j5v21ii750h" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
+[ext_resource type="Texture2D" uid="uid://2dyhpqfic1rq" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
-[ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="33_uicw0"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
-[ext_resource type="Texture2D" uid="uid://dlhjcy00yintg" path="res://game_assets/thumbnails/GFFA/anjk4-5vowr.png" id="34_qwxpq"]
 [ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="35_571ru"]
-[ext_resource type="Texture2D" uid="uid://b5ll1ptbk7bgx" path="res://game_assets/thumbnails/GFFA/a0p4g-ion82.png" id="35_yoins"]
-[ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="36_bjyjg"]
-[ext_resource type="Texture2D" uid="uid://coduwrplv2xbf" path="res://game_assets/thumbnails/GFFA/ab5pw-1fpan.png" id="36_d1j2r"]
 [ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/videos/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
-[ext_resource type="Texture2D" uid="uid://cqc5jmikj1l5b" path="res://game_assets/thumbnails/GFFA/apfvz-fhu23.png" id="37_42eyl"]
 [ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
-[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="37_uicw0"]
-[ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="38_uicw0"]
-[ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="39_omfc6"]
-[ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="40_d2ack"]
-[ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="41_jltb6"]
 [ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="48_uv824"]
-[ext_resource type="Texture2D" uid="uid://bxfmqi1lh611f" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230114.png" id="49_snp3r"]
-[ext_resource type="Texture2D" uid="uid://dqq3ob7wikh5y" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230122.png" id="50_46muq"]
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://main/lock.png" id="51_lc78y"]
-[ext_resource type="Texture2D" uid="uid://jk5y815kwo7o" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230154.png" id="51_wbtys"]
-[ext_resource type="Texture2D" uid="uid://b37hw75f1qv5o" path="res://game_assets/thumbnails/batg/Screenshot 2026-06-25 230353.png" id="52_nelid"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
@@ -150,6 +125,7 @@
 [ext_resource type="Texture2D" uid="uid://03g8vmnlghlh" path="res://community/drops/image (9).png" id="152_0job1"]
 [ext_resource type="Texture2D" uid="uid://2ny2rxpnclue" path="res://community/drops/image (10).png" id="153_n1olx"]
 [ext_resource type="Texture2D" uid="uid://cgrakei1237yp" path="res://community/drops/image (11).png" id="154_6du4a"]
+[ext_resource type="ButtonGroup" uid="uid://ow6pu04xv5pm" path="res://launcher games/launcher_games_button_group.tres" id="154_p80qw"]
 [ext_resource type="Texture2D" uid="uid://bncyagtq66ily" path="res://community/drops/image (12).png" id="155_jlel5"]
 [ext_resource type="Texture2D" uid="uid://c8unfhwep5qhe" path="res://community/drops/image (13).png" id="156_25cuu"]
 [ext_resource type="Texture2D" uid="uid://cei2ls0l5kur7" path="res://community/drops/image (14).png" id="157_tqfxx"]
@@ -202,38 +178,6 @@ shader_parameter/speed = 1.0000000475
 shader_parameter/angle = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o7yem"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
-atlas = ExtResource("32_lbrtn")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bjyjg"]
-atlas = ExtResource("32_lbrtn")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ei0e"]
-atlas = ExtResource("31_w8nh6")
-region = Rect2(0, 0, 16.289528, 16.39955)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lero"]
-atlas = ExtResource("31_w8nh6")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
-atlas = ExtResource("28_5mp0f")
-region = Rect2(0, 0, 16.289528, 16.39955)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
-atlas = ExtResource("28_5mp0f")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4u1yx"]
-atlas = ExtResource("31_fqae6")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ttif"]
-atlas = ExtResource("33_xn47k")
-region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gblu"]
 size = Vector2(16, 16)
@@ -485,6 +429,30 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ei0e"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16.289528, 16.39955)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lero"]
+atlas = ExtResource("31_w8nh6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ljg"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(0, 0, 16.289528, 16.39955)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnd3n"]
+atlas = ExtResource("28_5mp0f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u1yx"]
+atlas = ExtResource("31_fqae6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ttif"]
+atlas = ExtResource("33_xn47k")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaw78"]
 atlas = ExtResource("32_6vgeh")
 region = Rect2(0, 0, 16, 16)
@@ -500,6 +468,14 @@ region = Rect2(0, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_pixlj"]
 atlas = ExtResource("142_pixlj")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hupd3"]
+atlas = ExtResource("32_lbrtn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjyjg"]
+atlas = ExtResource("32_lbrtn")
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="Curve" id="Curve_omfc6"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -563,6 +539,7 @@ theme_override_constants/v_separation = 0
 [node name="Library" type="Button" parent="Panel/Tabs/Buttons" unique_id=651700251]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Library"
@@ -570,6 +547,7 @@ text = "Library"
 [node name="Store" type="Button" parent="Panel/Tabs/Buttons" unique_id=940841122]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Store"
@@ -577,6 +555,7 @@ text = "Store"
 [node name="Community" type="Button" parent="Panel/Tabs/Buttons" unique_id=791475924]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 theme_override_fonts/font = ExtResource("2_rvqcv")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
@@ -585,6 +564,7 @@ text = "Community"
 [node name="Changelog" type="Button" parent="Panel/Tabs/Buttons" unique_id=608995006]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Changelog"
@@ -592,6 +572,7 @@ text = "Changelog"
 [node name="Developers" type="Button" parent="Panel/Tabs/Buttons" unique_id=1211144331]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Developers"
@@ -599,6 +580,7 @@ text = "Developers"
 [node name="Settings" type="Button" parent="Panel/Tabs/Buttons" unique_id=576620853]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Settings"
@@ -606,6 +588,7 @@ text = "Settings"
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
+theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Quit Launcher"
@@ -641,7 +624,6 @@ offset_left = 256.0
 offset_top = 120.0
 offset_right = 384.0
 offset_bottom = 240.0
-theme_type_variation = &"Quit"
 script = ExtResource("15_kxcgb")
 
 [node name="Panel" type="Panel" parent="Quit" unique_id=569989287]
@@ -726,62 +708,27 @@ columns = 4
 
 [node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-game_name = "Five Night's at Bulba's"
-game_file_display_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
-version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "Five Nights At Bulbas (Windows)", "FNAB1_Demo_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
-folder_path = "user://FNAB"
-save_data = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas", "Five Nights At Bulbas")
+game = ExtResource("16_42w5j")
 
 [node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("5_xd8mv")
-game_name = "Five Night's at Bulba's 2"
-game_file_display_names = PackedStringArray("Ambition Edition")
-version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
-folder_path = "user://FNAB"
-save_data = PackedStringArray("Five Nights At Bulbas 2")
+game = ExtResource("17_dfolu")
 
 [node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("21_gtc6m")
-game_name = "Gavin's Fantastically Fun Adventure"
-game_file_display_names = PackedStringArray("DEMO")
-version_file_names_windows = PackedStringArray("FirstPerson")
-version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
-folder_path = "user://GFFA"
-save_data = PackedStringArray("Ambition/GFFA")
-font_size = 12
+game = ExtResource("18_p80qw")
 
 [node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("7_1dv2i")
-game_name = "Bitcoin Miner"
-game_file_display_names = PackedStringArray("1.25")
-version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
-folder_path = "user://Bitcoin Miner"
-save_data = PackedStringArray("Bitcoin Miner")
+game = ExtResource("19_m7axd")
 
 [node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 texture_normal = ExtResource("13_bjyjg")
-game_name = "The Vegetable Game"
-game_file_display_names = PackedStringArray("Regrown")
-version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
-version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
-folder_path = "user://Veg"
-save_data = PackedStringArray("The Vegetable Game Regrown")
-
-[node name="BATG" parent="Library/Area/GridContainer" unique_id=345981631 instance=ExtResource("9_qsgxr")]
-layout_mode = 2
-texture_normal = ExtResource("14_8gen5")
-game_name = "Bulba and The Gang"
-game_file_display_names = PackedStringArray("playtest")
-version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
-version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
-folder_path = "user://Bulba and The Gang (FNAB -1)"
-save_data = PackedStringArray("Bulba and The Gang (FNAB -1)")
+game = ExtResource("18_m7axd")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 layout_mode = 0
@@ -860,6 +807,16 @@ one_way_collision_margin = 19.0
 layout_mode = 2
 alignment = 1
 
+[node name="FNAB1" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=930508222 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/FNAB1")
+game = ExtResource("16_42w5j")
+
+[node name="FNAB2" parent="Store/Area/GridContainer/Five Nights at Bulbas (FNAB, FNAB2)/Games" unique_id=421731386 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/FNAB2")
+game = ExtResource("17_dfolu")
+
 [node name="Other (Bitcoin Miner, Veg)" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=443762424]
 custom_minimum_size = Vector2(523, 100)
 layout_mode = 2
@@ -886,6 +843,21 @@ one_way_collision_margin = 19.0
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)" unique_id=824905173]
 layout_mode = 2
 alignment = 1
+
+[node name="Bitcoin" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)/Games" unique_id=452535984 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
+game = ExtResource("19_m7axd")
+
+[node name="GFFA" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)/Games" unique_id=218886575 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/GFFA")
+game = ExtResource("18_p80qw")
+
+[node name="Veg" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)/Games" unique_id=2143589736 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/Veg")
+game = ExtResource("18_m7axd")
 
 [node name="Coming Soon" type="VBoxContainer" parent="Store/Area/GridContainer" unique_id=1289074799]
 custom_minimum_size = Vector2(523, 100)
@@ -941,120 +913,35 @@ visible = false
 layout_mode = 0
 offset_left = 112.112114
 offset_right = 112.112114
-description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
-rating = "Rated: T for Teen
-Difficulty: Normal
-Stability: Good
-Release Date: 11/27/2024"
-version_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Windows.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Demo_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.Mac.zip", "https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/Five.Nights.At.Bulbas.DEMO.Mac.zip")
-version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab/FNAB1_Ambition_Edition_Linux.zip", "no linux :(", "no linux")
-version_file_names_windows = PackedStringArray("FNAB1_Ambition_Edition_Windows", "FNAB1_1.0_Windows", "FNAB1_Demo_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas Ambition Edition", "Five Nights At Bulbas 1.0", "Five Nights At Bulbas")
-version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux", "no linux :(", "no linux")
-folder_path = "user://FNAB"
-Images = Array[Texture]([ExtResource("15_x7gk6"), ExtResource("20_4u1yx"), ExtResource("21_7flok"), ExtResource("22_tipqc"), ExtResource("23_gtbh3"), ExtResource("24_j17j7"), ExtResource("25_pddd4")])
-Videos = Array[VideoStream]([ExtResource("26_gpx50")])
+game = ExtResource("16_42w5j")
 
 [node name="FNAB2" parent="Store Pages" unique_id=1585101297 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112114
 offset_right = 112.112114
-description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
-rating = "Rated: T for Teen
-Difficulty: Hard
-Stability: Great
-Release Date: 4/18/2025"
-version_names = PackedStringArray("Ambition Edition")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Mac.zip")
-version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/fnab2/FNAB2_Ambition_Edition_Linux.zip")
-version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
-version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
-version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
-folder_path = "user://FNAB"
-Images = Array[Texture]([ExtResource("26_mc0d5"), ExtResource("27_0qt1k"), ExtResource("28_o22vj"), ExtResource("29_bjyjg"), ExtResource("30_xaw78"), ExtResource("31_7divq"), ExtResource("32_6d2a4"), ExtResource("33_uicw0")])
-Videos = Array[VideoStream]([ExtResource("36_gmy4t"), ExtResource("35_571ru")])
+game = ExtResource("17_dfolu")
 
 [node name="GFFA" parent="Store Pages" unique_id=1882300884 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "DISCLAIMER: This is an unfinished DEMO.
-
-A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical Marsh of Mortisha under the watch of the Sad Sun.
-
-"
-rating = "Rated: T for Teen
-Difficulty: Newborn
-Stability: Unoptimized
-Release Date: Unknown"
-version_names = PackedStringArray("DEMO")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/FirstPerson.Mac.Shipping.zip")
-version_file_names_windows = PackedStringArray("FirstPerson")
-version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
-folder_path = "user://GFFA"
-Images = Array[Texture]([ExtResource("34_qwxpq"), ExtResource("35_yoins"), ExtResource("36_d1j2r"), ExtResource("37_42eyl")])
-installable = false
+game = ExtResource("18_p80qw")
 
 [node name="Bitcoin Miner" parent="Store Pages" unique_id=1362500682 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "\"Not a computer virus. I promise\" -Sawyer 2026"
-rating = "Rated: E for Everyone
-Difficulty: Easy
-Stability: Fantastic
-Release Date: Sometime 2024"
-version_names = PackedStringArray("1.25")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
-version_file_names_windows = PackedStringArray("Bitcoin Miner")
-folder_path = "user://Bitcoin Miner"
-Images = Array[Texture]([ExtResource("21_hupd3"), ExtResource("36_bjyjg")])
+game = ExtResource("19_m7axd")
 
-[node name="Veg" parent="Store Pages" unique_id=353762828 instance=ExtResource("12_5enwe")]
+[node name="Veg" parent="Store Pages" unique_id=1424822511 instance=ExtResource("12_5enwe")]
 visible = false
 layout_mode = 0
 offset_left = 112.112
 offset_right = 112.112
-description = "DISCLAIMER: MUST HAVE STEAM OPEN FOR OLDER VERSIONS TO WORK. ALSO THIS GAME IS ALSO VERY BUGGY.
-
-You were brought to this land of vegetables by a myserious entity to help defeat The Mold. Go forth young Seedling.
-"
-rating = "Rated: E for Everyone
-Difficulty: Normal
-Stability: Terrible
-Release Date: 11/22/2025"
-version_names = PackedStringArray("Regrown")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Windows.zip")
-version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Mac.zip")
-version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
-version_file_names_mac = PackedStringArray("The Vegetable Game Regrown")
-folder_path = "user://Veg"
-Images = Array[Texture]([ExtResource("37_uicw0"), ExtResource("38_uicw0"), ExtResource("39_omfc6"), ExtResource("40_d2ack"), ExtResource("41_jltb6")])
-Videos = Array[VideoStream]([ExtResource("48_uv824")])
-
-[node name="BATG" parent="Store Pages" unique_id=433374860 instance=ExtResource("12_5enwe")]
-visible = false
-layout_mode = 0
-offset_left = 112.11211
-offset_right = 112.11211
-description = "Join Bulba and The Gang on this Remaster of the Five Night's at Bulba's 2 Minigame: Bulba's Adventure on a mission to kill The Nightguard to obtain WORLD DOMINATION!"
-rating = "Rated: T for Teen
-Difficulty: Hard
-Stability: Great
-Release Date: Unknown"
-version_names = PackedStringArray("FNAB -1")
-version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/batg/Bulba.and.The.Gang.FNAB.-1.zip")
-version_file_names_windows = PackedStringArray("Bulba and The Gang (FNAB -1)")
-folder_path = "user://Bulba and The Gang (FNAB -1)"
-Images = Array[Texture]([ExtResource("49_snp3r"), ExtResource("50_46muq"), ExtResource("51_wbtys"), ExtResource("52_nelid")])
-installable = false
+game = ExtResource("18_m7axd")
 
 [node name="Community" type="Control" parent="." unique_id=1571939401]
 visible = false
@@ -1288,11 +1175,15 @@ horizontal_alignment = 1
 position = Vector2(296, -22)
 scale = Vector2(2, 2)
 texture = ExtResource("51_lc78y")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="Lock2" type="Sprite2D" parent="Community" unique_id=634005068]
 position = Vector2(418, -22)
 scale = Vector2(2, 2)
 texture = ExtResource("51_lc78y")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="Changelog" type="Control" parent="." unique_id=1204020412]
 visible = false
@@ -1796,79 +1687,81 @@ offset_right = 640.0
 offset_bottom = 360.0
 mouse_filter = 2
 
-[node name="Avatar" type="Panel" parent="User" unique_id=848339665]
+[node name="Avatar" type="TextureRect" parent="User" unique_id=2028838953]
 layout_mode = 0
-offset_left = 154.0
-offset_top = 44.0
-offset_right = 194.0
-offset_bottom = 84.0
-scale = Vector2(4, 4)
-theme_type_variation = &"Line"
-
-[node name="Avatar" type="TextureRect" parent="User/Avatar" unique_id=2028838953]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 312.0
+offset_top = 48.0
+offset_right = 440.0
+offset_bottom = 176.0
 texture = ExtResource("73_yoins")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="User" unique_id=1757473915]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 40.0
-offset_right = 568.0
-offset_bottom = 64.0
+offset_left = 272.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 216.0
 theme_type_variation = &"Store_Page"
 text = "Hello User"
 vertical_alignment = 1
 
+[node name="Change Username" type="Button" parent="User" unique_id=1939437075]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 224.0
+offset_right = 480.0
+offset_bottom = 248.0
+theme_type_variation = &"Close_Button"
+text = "Change Username"
+
 [node name="Change Avatar" type="Button" parent="User" unique_id=1408166701]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 216.0
-offset_right = 309.0
-offset_bottom = 256.0
+offset_left = 272.0
+offset_top = 256.0
+offset_right = 480.0
+offset_bottom = 280.0
 theme_type_variation = &"Close_Button"
 toggle_mode = true
 text = "Change Avatar"
 
-[node name="Change Username" type="Button" parent="User" unique_id=1939437075]
-layout_mode = 0
-offset_left = 352.0
-offset_top = 72.0
-offset_right = 568.0
-offset_bottom = 96.0
-theme_type_variation = &"Close_Button"
-text = "Change Username"
-
 [node name="Back" type="Button" parent="User" unique_id=1379773490]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 104.0
-offset_right = 568.0
-offset_bottom = 128.0
+offset_left = 272.0
+offset_top = 288.0
+offset_right = 480.0
+offset_bottom = 312.0
 theme_type_variation = &"Close_Button"
 text = "Exit Account Menu"
 
 [node name="Avatar Selection" type="Panel" parent="User" unique_id=1458801354]
 visible = false
 layout_mode = 0
-offset_left = 328.0
-offset_top = 43.0
-offset_right = 598.0
-offset_bottom = 313.0
+offset_left = 138.0
+offset_top = 48.0
+offset_right = 612.0
+offset_bottom = 320.0
 theme_type_variation = &"Quit"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="User/Avatar Selection" unique_id=418275279]
 layout_mode = 0
-offset_right = 270.0
-offset_bottom = 270.0
+offset_right = 474.0
+offset_bottom = 272.0
 
 [node name="GridContainer" type="GridContainer" parent="User/Avatar Selection/ScrollContainer" unique_id=1324893963]
 layout_mode = 2
 theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = 2
-columns = 8
+columns = 14
+
+[node name="Back" type="Button" parent="User/Avatar Selection" unique_id=1300002806]
+custom_minimum_size = Vector2(208, 24)
+layout_mode = 0
+offset_left = 134.0
+offset_top = 280.0
+offset_right = 342.0
+offset_bottom = 304.0
+theme_type_variation = &"Close_Button"
+text = "Back"
 
 [node name="Username" type="Panel" parent="." unique_id=130943005]
 visible = false
@@ -1919,24 +1812,16 @@ offset_bottom = 17.0
 theme_type_variation = &"Image_Button"
 text = "X"
 
-[node name="Avatar" type="Panel" parent="." unique_id=529804441]
+[node name="Avatar" type="TextureButton" parent="." unique_id=1491619972]
 layout_mode = 0
-offset_left = 604.0
+offset_left = 608.0
 offset_right = 640.0
-offset_bottom = 36.0
-theme_type_variation = &"Line"
-script = ExtResource("73_d1j2r")
-default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("91_ktvun"), ExtResource("92_dfxco"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("107_jqfxn"), ExtResource("108_ebf3y"), ExtResource("109_kuktk"), ExtResource("110_sl5vs"), ExtResource("111_cvllj"), ExtResource("112_jyo0q"), ExtResource("114_cvllj"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("122_oui53"), ExtResource("123_qngap")])
-
-[node name="Avatar" type="TextureButton" parent="Avatar" unique_id=1491619972]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 34.0
-offset_bottom = 34.0
+offset_bottom = 32.0
 texture_normal = ExtResource("107_jqfxn")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("73_d1j2r")
+default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("91_ktvun"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("92_dfxco"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("111_cvllj"), ExtResource("110_sl5vs"), ExtResource("109_kuktk"), ExtResource("108_ebf3y"), ExtResource("107_jqfxn"), ExtResource("112_jyo0q"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("114_cvllj"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("123_qngap"), ExtResource("122_oui53")])
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
 z_index = 3
@@ -1947,6 +1832,7 @@ offset_right = 6.0
 offset_bottom = 142.0
 
 [node name="Drops" parent="Launcher Games" unique_id=854953616 instance=ExtResource("143_mer5n")]
+visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = -14.0
@@ -2191,71 +2077,6 @@ wait_time = 3.8
 [node name="JumpTimer" type="Timer" parent="Launcher Games/Launcher Pets" unique_id=1128844296]
 wait_time = 9.5
 
-[node name="Launcher Pets" type="TextureButton" parent="Launcher Games/Launcher Pets" unique_id=1295541966]
-layout_mode = 0
-offset_left = 74.0
-offset_top = -12.0
-offset_right = 98.0
-offset_bottom = 12.0
-toggle_mode = true
-texture_normal = SubResource("AtlasTexture_hupd3")
-texture_pressed = SubResource("AtlasTexture_bjyjg")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("27_3gblu")
-
-[node name="GridContainer" type="GridContainer" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=1391015889]
-visible = false
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 0
-offset_left = 32.0
-offset_top = 8.0
-offset_right = 68.0
-offset_bottom = 44.0
-columns = 2
-script = ExtResource("28_xn47k")
-
-[node name="Snail Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=1671665789]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_1ei0e")
-texture_pressed = SubResource("AtlasTexture_6lero")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Slime Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=49733039]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_12ljg")
-texture_pressed = SubResource("AtlasTexture_rnd3n")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Square Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=310176782]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_4u1yx")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Blue Guy Button" type="TextureButton" parent="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" unique_id=1540236328]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_1ttif")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Size" type="HSlider" parent="Launcher Games/Launcher Pets/Launcher Pets" unique_id=14604268]
-visible = false
-layout_mode = 0
-offset_left = 32.0
-offset_right = 104.0
-offset_bottom = 16.0
-scale = Vector2(0.725, 0.725)
-min_value = 1.0
-max_value = 10.0
-value = 1.0
-
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Launcher Games/Launcher Pets" unique_id=1696254225]
 process_mode = 4
 visible = false
@@ -2284,13 +2105,84 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(16, 16)
 
+[node name="Size" type="HSlider" parent="Launcher Games/Launcher Pets" unique_id=14604268]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 93.00001
+offset_bottom = 54.000004
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="Label" type="Label" parent="Launcher Games/Launcher Pets/Size" unique_id=1417597708]
+layout_mode = 0
+offset_top = -13.793097
+offset_right = 92.00001
+offset_bottom = 4.2069035
+text = "Pet Size"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Launcher Games/Launcher Pets/Size" unique_id=1938804266]
+show_behind_parent = true
+layout_mode = 0
+offset_top = -15.172409
+offset_right = 92.00001
+offset_bottom = 41.37932
+mouse_filter = 2
+theme_type_variation = &"Quit"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Launcher Games/Launcher Pets" unique_id=1680473921]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 53.0
+offset_right = 94.0
+offset_bottom = 125.0
+alignment = 1
+script = ExtResource("28_xn47k")
+
+[node name="Snail Button" type="TextureButton" parent="Launcher Games/Launcher Pets/HFlowContainer" unique_id=1671665789]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1ei0e")
+texture_pressed = SubResource("AtlasTexture_6lero")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slime Button" type="TextureButton" parent="Launcher Games/Launcher Pets/HFlowContainer" unique_id=49733039]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_12ljg")
+texture_pressed = SubResource("AtlasTexture_rnd3n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Square Button" type="TextureButton" parent="Launcher Games/Launcher Pets/HFlowContainer" unique_id=310176782]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_4u1yx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Blue Guy Button" type="TextureButton" parent="Launcher Games/Launcher Pets/HFlowContainer" unique_id=1540236328]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1ttif")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Dell Button" type="TextureButton" parent="Launcher Games" unique_id=94201817]
 layout_mode = 0
-offset_left = -2.0
-offset_top = -12.0
-offset_right = 22.0
-offset_bottom = 12.0
+offset_left = -6.0
+offset_top = -14.0
+offset_right = 26.0
+offset_bottom = 18.0
 toggle_mode = true
+button_group = ExtResource("154_p80qw")
 texture_normal = SubResource("AtlasTexture_xaw78")
 texture_pressed = SubResource("AtlasTexture_7divq")
 ignore_texture_size = true
@@ -2298,15 +2190,30 @@ stretch_mode = 0
 
 [node name="Drops Button" type="TextureButton" parent="Launcher Games" unique_id=977492925]
 layout_mode = 0
-offset_left = 36.0
-offset_top = -12.0
-offset_right = 60.0
-offset_bottom = 12.0
+offset_left = 32.0
+offset_top = -14.0
+offset_right = 64.0
+offset_bottom = 18.0
 toggle_mode = true
+button_group = ExtResource("154_p80qw")
 texture_normal = SubResource("AtlasTexture_vc7ud")
 texture_pressed = SubResource("AtlasTexture_pixlj")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Launcher Pets Button" type="TextureButton" parent="Launcher Games" unique_id=1295541966]
+layout_mode = 0
+offset_left = 70.0
+offset_top = -14.0
+offset_right = 102.0
+offset_bottom = 18.0
+toggle_mode = true
+button_group = ExtResource("154_p80qw")
+texture_normal = SubResource("AtlasTexture_hupd3")
+texture_pressed = SubResource("AtlasTexture_bjyjg")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("27_3gblu")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
@@ -2381,13 +2288,14 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]
-[connection signal="toggled" from="User/Change Avatar" to="User" method="_on_button_toggled"]
 [connection signal="pressed" from="User/Change Username" to="User" method="_on_button_2_pressed"]
+[connection signal="pressed" from="User/Change Avatar" to="User" method="_on_change_avatar_pressed"]
 [connection signal="pressed" from="User/Back" to="User" method="_on_back_pressed"]
+[connection signal="pressed" from="User/Avatar Selection/Back" to="User" method="_on_button_pressed"]
 [connection signal="text_changed" from="Username/LineEdit" to="Username" method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Username/Button" to="Username" method="_on_button_pressed"]
 [connection signal="pressed" from="Username/Close" to="Username" method="_on_close_pressed"]
-[connection signal="pressed" from="Avatar/Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]
+[connection signal="pressed" from="Avatar" to="Panel/Tabs" method="_on_avatar_pressed"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Who Dell" to="Launcher Games/Dell" method="_on_who_dell_pressed"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Game Install" to="Launcher Games/Dell" method="_on_game_install_pressed"]
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Bug Report" to="Launcher Games/Dell" method="_on_bug_report_pressed"]
@@ -2404,20 +2312,20 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Launcher Games/Dell/ScrollContainer/GridContainer/Join Server" to="Launcher Games/Dell" method="_on_join_server_pressed"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/WalkTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="Launcher Games/Launcher Pets/JumpTimer" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_jump_timer_timeout"]
-[connection signal="toggled" from="Launcher Games/Launcher Pets/Launcher Pets" to="Launcher Games/Launcher Pets/Launcher Pets" method="_on_toggled"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_snail_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_slime_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_square_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/Launcher Pets/GridContainer" method="_on_blue_guy_button_pressed"]
-[connection signal="pressed" from="Launcher Games/Launcher Pets/Launcher Pets/GridContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_blue_guy_button_pressed"]
-[connection signal="value_changed" from="Launcher Games/Launcher Pets/Launcher Pets/Size" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_size_value_changed"]
 [connection signal="mouse_entered" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_entered"]
 [connection signal="mouse_exited" from="Launcher Games/Launcher Pets/CharacterBody2D/Container" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_container_mouse_exited"]
+[connection signal="value_changed" from="Launcher Games/Launcher Pets/Size" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_size_value_changed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Snail Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_snail_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Snail Button" to="Launcher Games/Launcher Pets/HFlowContainer" method="_on_snail_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Slime Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Slime Button" to="Launcher Games/Launcher Pets/HFlowContainer" method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Square Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Square Button" to="Launcher Games/Launcher Pets/HFlowContainer" method="_on_square_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/CharacterBody2D" method="_on_blue_guy_button_pressed"]
+[connection signal="pressed" from="Launcher Games/Launcher Pets/HFlowContainer/Blue Guy Button" to="Launcher Games/Launcher Pets/HFlowContainer" method="_on_blue_guy_button_pressed"]
 [connection signal="toggled" from="Launcher Games/Dell Button" to="Launcher Games/Dell" method="_on_dell_toggled"]
 [connection signal="toggled" from="Launcher Games/Drops Button" to="Launcher Games/Drops" method="_on_drops_button_toggled"]
+[connection signal="toggled" from="Launcher Games/Launcher Pets Button" to="Launcher Games/Launcher Pets Button" method="_on_toggled"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="Shuffle" to="." method="_on_shuffle_finished"]

@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cbgr61lcxu86q"]
+
+[ext_resource type="Script" uid="uid://dlv5nepxh5ymv" path="res://main/store_pages/videos/video_player.gd" id="1_t7hd1"]
+[ext_resource type="VideoStream" uid="uid://bqugsbqbk1qhw" path="res://branding/intro.ogv" id="2_1typm"]
+[ext_resource type="Texture2D" uid="uid://bibw1pfsgk3xf" path="res://main/store_pages/videos/assets/play_button.png" id="3_mw731"]
+[ext_resource type="Texture2D" uid="uid://41trsbwg5m8r" path="res://main/store_pages/videos/assets/pause.png" id="4_7pyqb"]
+[ext_resource type="Texture2D" uid="uid://cotrdvikxjo6o" path="res://main/store_pages/videos/assets/volume.png" id="5_dthph"]
+[ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="6_s6vid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w1fa"]
+atlas = ExtResource("3_mw731")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q28cp"]
+atlas = ExtResource("3_mw731")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p73wk"]
+atlas = ExtResource("4_7pyqb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7hd1"]
+atlas = ExtResource("3_mw731")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m65yi"]
+atlas = ExtResource("5_dthph")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtbn2"]
+atlas = ExtResource("5_dthph")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1w1fa"]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("6_s6vid")
+
+[node name="Panel" type="Panel" unique_id=509022307]
+custom_minimum_size = Vector2(384, 216)
+custom_maximum_size = Vector2(384, 216)
+offset_right = 384.0
+offset_bottom = 216.0
+mouse_filter = 2
+script = ExtResource("1_t7hd1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1181984356]
+texture_filter = 2
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 216.0
+stream = ExtResource("2_1typm")
+expand = true
+
+[node name="Panel" type="Panel" parent="." unique_id=1983448665]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_top = 176.0
+offset_right = 384.0
+offset_bottom = 216.0
+
+[node name="Start Button" type="TextureButton" parent="." unique_id=1325689813]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_1w1fa")
+texture_hover = SubResource("AtlasTexture_q28cp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Playback Position" type="HSlider" parent="." unique_id=1490772833]
+visible = false
+layout_mode = 1
+offset_left = 8.0
+offset_top = 179.0
+offset_right = 376.0
+offset_bottom = 195.0
+scrollable = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1221324972]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 195.0
+offset_right = 376.0
+offset_bottom = 213.0
+theme_override_constants/separation = 8
+
+[node name="Play_Pause" type="TextureButton" parent="HBoxContainer" unique_id=1125620092]
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 2
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_p73wk")
+texture_pressed = SubResource("AtlasTexture_t7hd1")
+stretch_mode = 0
+
+[node name="Volume Toggle" type="TextureButton" parent="HBoxContainer" unique_id=344253221]
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 2
+theme_type_variation = &"Image_Button"
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_m65yi")
+texture_hover = SubResource("AtlasTexture_xtbn2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Volume" type="HSlider" parent="HBoxContainer" unique_id=1429972160]
+visible = false
+custom_minimum_size = Vector2(72, 16)
+custom_maximum_size = Vector2(72, 16)
+layout_mode = 2
+min_value = -20.0
+max_value = 20.0
+
+[node name="Time" type="Label" parent="HBoxContainer" unique_id=2014669447]
+custom_minimum_size = Vector2(62, 18)
+custom_maximum_size = Vector2(62, 18)
+layout_mode = 2
+text = "0:00/0:00"
+
+[node name="Tap" type="AudioStreamPlayer" parent="." unique_id=418301019]
+stream = SubResource("AudioStreamRandomizer_1w1fa")
+volume_db = -12.0
+pitch_scale = 1.54
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="drag_ended" from="Playback Position" to="." method="_on_playback_position_drag_ended"]
+[connection signal="drag_started" from="Playback Position" to="." method="_on_playback_position_drag_started"]
+[connection signal="mouse_entered" from="Playback Position" to="." method="_on_playback_position_mouse_entered"]
+[connection signal="toggled" from="HBoxContainer/Play_Pause" to="." method="_on_play_pause_toggled"]
+[connection signal="mouse_entered" from="HBoxContainer/Volume Toggle" to="." method="_on_volume_toggle_mouse_entered"]
+[connection signal="toggled" from="HBoxContainer/Volume Toggle" to="." method="_on_volume_toggle_toggled"]
+[connection signal="value_changed" from="HBoxContainer/Volume" to="." method="_on_volume_value_changed"]

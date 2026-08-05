@@ -1,21 +1,21 @@
-extends Node
+extends HFlowContainer
 var pet_spawned : bool = false
 
 
 
 func button_pressed():
 	if pet_spawned == false:
-		$"../../CharacterBody2D".position = Vector2(355, 34)
-		$"../../CharacterBody2D".process_mode =Node.PROCESS_MODE_INHERIT
-		$"../../CharacterBody2D".visible = true
-		$"../../WalkTimer".start()
-		$"../../JumpTimer".start()
+		$"../CharacterBody2D".position = Vector2(355, 34)
+		$"../CharacterBody2D".process_mode =Node.PROCESS_MODE_INHERIT
+		$"../CharacterBody2D".visible = true
+		$"../WalkTimer".start()
+		$"../JumpTimer".start()
 		pet_spawned = true
 	else:
-		$"../../CharacterBody2D".visible = false
-		$"../../CharacterBody2D".process_mode = Node.PROCESS_MODE_DISABLED
-		$"../../WalkTimer".stop()
-		$"../../JumpTimer".stop()
+		$"../CharacterBody2D".visible = false
+		$"../CharacterBody2D".process_mode = Node.PROCESS_MODE_DISABLED
+		$"../WalkTimer".start()
+		$"../JumpTimer".start()
 		pet_spawned = false
 
 func _on_slime_button_pressed() -> void:

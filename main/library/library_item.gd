@@ -1,15 +1,7 @@
 extends TextureButton
 
-@export var game_name : String
-@export var game_file_display_names : PackedStringArray
-@export var version_file_names_windows : PackedStringArray
-@export var version_file_names_mac : PackedStringArray
-@export var version_file_names_linux : PackedStringArray
-@export var folder_path : String = "user://Test"
-@export var save_data : PackedStringArray
-@export var font_size : int = 16
-
-@onready var save_path = get_root_userdata_path() + "/" + save_data[selected_version]
+@export var game : GameData
+@onready var save_path = get_root_userdata_path() + "/" + game.save_data_folder_name[selected_version]
 
 var installed : bool = false
 var selected_version : int = -1
@@ -28,8 +20,8 @@ func get_root_userdata_path() -> String:
 	return path
 
 func _ready() -> void:
-	$"VBoxContainer/Game Label".text = game_name
-	$"VBoxContainer/Game Label".add_theme_font_size_override("font_size", font_size)
+	$"VBoxContainer/Game Label".text = game.name
+	$"VBoxContainer/Game Label".add_theme_font_size_override("font_size", game.font_size)
 	
 	if Main.launcher_data.last_played == self.name:
 		get_parent().call_deferred("move_child", self, 0)
@@ -41,17 +33,17 @@ func _on_pressed() -> void:
 		return
 	
 	var actual_index = ui_to_back[selected_version]
-	var absolute_path = ProjectSettings.globalize_path(folder_path + "//Ambition_Installer_Windows.exe")
+	var absolute_path = ProjectSettings.globalize_path(game.folder_path + "//Ambition_Installer_Windows.exe")
 	
 	match Main.operating_system:
 		"Windows":
-			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_windows[actual_index] + ".exe")
+			absolute_path = ProjectSettings.globalize_path(game.folder_path + "//" + game.version_file_names_windows[actual_index] + ".exe")
 			OS.shell_open(absolute_path)
 		"macOS":
-			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_mac[actual_index] + ".app")
+			absolute_path = ProjectSettings.globalize_path(game.folder_path + "//" + game.version_file_names_mac[actual_index] + ".app")
 			OS.shell_open(absolute_path)
 		"Linux":
-			absolute_path = ProjectSettings.globalize_path(folder_path + "//" + version_file_names_linux[actual_index])
+			absolute_path = ProjectSettings.globalize_path(game.folder_path + "//" + game.version_file_names_linux[actual_index])
 			OS.shell_open(absolute_path)
 	
 	Main.launcher_data.last_played = self.name
@@ -68,15 +60,16 @@ func _on_uninstall_pressed() -> void:
 		
 	match Main.operating_system:
 		"Windows":
-			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_windows[actual_index] + ".exe")
+			full_path = ProjectSettings.globalize_path(game.folder_path + "/" + game.version_file_names_windows[actual_index] + ".exe")
+			print(full_path)
 			OS.move_to_trash(full_path)
-			if !str(DirAccess.open(folder_path).get_files()).contains(".exe"):
-				remove_recursive(folder_path)
+			if !str(DirAccess.open(game.folder_path).get_files()).contains(".exe"):
+				remove_recursive(game.folder_path)
 		"macOS":
-			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_mac[actual_index] + ".app")
+			full_path = ProjectSettings.globalize_path(game.folder_path + "/" + game.version_file_names_mac[actual_index] + ".app")
 			OS.move_to_trash(full_path)
 		"Linux":
-			full_path = ProjectSettings.globalize_path(folder_path + "/" + version_file_names_linux[actual_index])
+			full_path = ProjectSettings.globalize_path(game.folder_path + "/" + game.version_file_names_linux[actual_index])
 			OS.move_to_trash(full_path)
 	installed = false
 	check()
@@ -90,26 +83,25 @@ func check():
 	selected_version = -1
 	$VBoxContainer/Update.visible = false
 	
-	for i in range(game_file_display_names.size()):
+	for i in range(game.version_names.size()):
 		var is_installed = false
 		
 		match Main.operating_system:
 			"Windows":
-				if i < version_file_names_windows.size():
-					var path = folder_path + "//" + version_file_names_windows[i] + ".exe"
+				if i < game.version_file_names_windows.size():
+					var path = game.folder_path + "//" + game.version_file_names_windows[i] + ".exe"
 					is_installed = FileAccess.file_exists(path)
 			"macOS":
-				if i < version_file_names_mac.size():
-					var path = folder_path + "//" + version_file_names_mac[i] + ".app"
+				if i < game.version_file_names_mac.size():
+					var path = game.folder_path + "//" + game.version_file_names_mac[i] + ".app"
 					is_installed = DirAccess.dir_exists_absolute(path)
-					
 			"Linux":
-				if i < version_file_names_mac.size():
-					var path = folder_path + "//" + version_file_names_linux[i]
+				if i < game.version_file_names_mac.size():
+					var path = game.folder_path + "//" + game.version_file_names_linux[i]
 					is_installed = DirAccess.dir_exists_absolute(path)
 
 		if is_installed == true:
-			$Versions.add_item(game_file_display_names[i])
+			$Versions.add_item(game.version_names[i])
 			ui_to_back.append(i)
 		
 		
@@ -118,11 +110,11 @@ func check():
 		visible = true
 		$Versions.select(0)
 		_on_versions_item_selected(0)
-		if $Versions.get_item_text(0) != game_file_display_names.get(0):
-			$VBoxContainer/Update.visible = true
+		#if $Versions.get_item_text(0) != game.save_data_folder_name.get(0):
+			#$VBoxContainer/Update.visible = true
 	else:
-		if DirAccess.dir_exists_absolute(folder_path):
-			DirAccess.remove_absolute(folder_path)
+		if DirAccess.dir_exists_absolute(game.folder_path):
+			DirAccess.remove_absolute(game.folder_path)
 
 
 # Version Selector
@@ -150,8 +142,5 @@ func remove_recursive(path: String) -> void:
 		print("An error occurred when trying to access the path: ", path)
 
 func _on_texture_button_pressed() -> void:
-	save_path = get_root_userdata_path() + "/" + save_data[selected_version]
+	save_path = get_root_userdata_path() + "/" + game.save_data_folder_name[selected_version]
 	OS.shell_open(save_path)
-	print(save_data)
-	print(save_path)
-	print(selected_version)

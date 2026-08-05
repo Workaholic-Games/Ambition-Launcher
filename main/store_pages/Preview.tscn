@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://qgml2sj40asn"]
+
+[ext_resource type="Script" uid="uid://cjwvkixn1qtlo" path="res://main/store_pages/preview.gd" id="1_5ahtr"]
+[ext_resource type="Texture2D" uid="uid://dbilflts7b5xc" path="res://main/store_pages/videos/assets/arrow.png" id="2_or56f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ahtr"]
+atlas = ExtResource("2_or56f")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or56f"]
+atlas = ExtResource("2_or56f")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euj2f"]
+atlas = ExtResource("2_or56f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aivlf"]
+atlas = ExtResource("2_or56f")
+region = Rect2(16, 0, 16, 16)
+
+[node name="Preview" type="Control" unique_id=928583968]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 216.0
+script = ExtResource("1_5ahtr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=125738208]
+custom_maximum_size = Vector2(384, 216)
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 216.0
+offset_transform_enabled = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer" unique_id=810512511]
+custom_minimum_size = Vector2(384, 216)
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 0
+
+[node name="Left Button" type="TextureButton" parent="." unique_id=1260760847]
+z_index = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_right = 32.0
+offset_bottom = 16.0
+grow_vertical = 2
+theme_type_variation = &"Image_Button"
+texture_normal = SubResource("AtlasTexture_5ahtr")
+texture_hover = SubResource("AtlasTexture_or56f")
+stretch_mode = 0
+
+[node name="Right Button" type="TextureButton" parent="." unique_id=800609326]
+z_index = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_type_variation = &"Image_Button"
+texture_normal = SubResource("AtlasTexture_euj2f")
+texture_hover = SubResource("AtlasTexture_aivlf")
+stretch_mode = 0
+
+[connection signal="pressed" from="Left Button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Right Button" to="." method="_on_right_button_pressed"]

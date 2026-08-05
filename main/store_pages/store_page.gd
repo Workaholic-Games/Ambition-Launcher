@@ -1,25 +1,8 @@
 @icon("res://editor_icons/shop_item.png")
 extends Control
 class_name StorePage
-@export_multiline var description : String
-@export_multiline var rating : String
 
-## The names that will be displayed in engine
-@export var version_names : PackedStringArray
-
-@export var version_links_windows : PackedStringArray
-@export var version_links_mac : PackedStringArray
-@export var version_links_linux : PackedStringArray
-
-## The .exe .app or .x86_64 file names to be opened by the launcher
-@export var version_file_names_windows : PackedStringArray
-@export var version_file_names_mac : PackedStringArray
-@export var version_file_names_linux : PackedStringArray
-
-@export var folder_path : String = "user://Test"
-@export var Images : Array[Texture]
-@export var Videos: Array[VideoStream]
-@export var installable : bool = true
+@export var game : GameData
 
 var os_name : String = "Windows"
 var selected_link : int = 0
@@ -28,45 +11,32 @@ var can_download : bool = true
 
 
 func _ready() -> void:
-	if installable == false:
+	if game.installable == false:
 		$"Install or Back/Install".visible = false
 	
-	$"Game Description".text = description
-	$"Age Rating".text = rating
+	$"Game Description".text = game.description
+	$"Stuff/Release Date".text = "Release Date: " + game.release_date
+	$Stuff/Genre.text = "Genre: " + game.genre
+	$Stuff/Difficulty.text = "Difficulty: " + game.difficulty
+	$"Stuff/Age Rating".text = "Age Rating: " + game.age_rating
+	$"Stuff/Main Dev".text = "Main Developer: " + game.main_dev
+	$Stuff/Stability.text = "Stability: " + game.stability
+	$"Stuff/Max Players".text = "Max Players: " + game.max_players
 	
-	for v in Videos.size():
-		var new_video = load("res://main/store_pages/videos/video_player.tscn").instantiate()
-		new_video.scale = Vector2(0.171, 0.178)
-		new_video.video = Videos[v]
-		
-		$CarouselContainer/Control.add_child(new_video)
 	
-	for image in Images.size():
-		var new_image = Panel.new()
-		new_image.position.y = -104.174
-		new_image.size = Vector2(344, 208.348)
-		new_image.theme_type_variation = "Line"
-		$CarouselContainer/Control.add_child(new_image)
-		
-		var thumbnail = Sprite2D.new()
-		thumbnail.scale = Vector2(0.171, 0.178)
-		thumbnail.texture = Images.get(image)
-		thumbnail.position = Vector2(172.0, 104.0)
-		new_image.add_child(thumbnail)
-		
-	for i in range(version_names.size()):
+	for i in range(game.version_names.size()):
 		match Main.operating_system:
 			"Windows": 
 				$"Versions Windows".visible = true
-				$"Versions Windows".add_item(version_names[i])
+				$"Versions Windows".add_item(game.version_names[i])
 				os_name = "_Windows"
 			"macOS": 
 				$"Versions Mac".visible = true
-				$"Versions Mac".add_item(version_names[i])
+				$"Versions Mac".add_item(game.version_names[i])
 				os_name = "_Mac"
 			"Linux": 
 				$"Versions Linux".visible = true
-				$"Versions Linux".add_item(version_names[i])
+				$"Versions Linux".add_item(game.version_names[i])
 				os_name = "_Linux"
 	
 	check_for_reinstall()
@@ -80,18 +50,18 @@ func _on_install_pressed() -> void:
 	print("Install")
 	$"../../Tap".play()
 	
-	if not DirAccess.dir_exists_absolute(folder_path):
-		var err = DirAccess.make_dir_absolute(folder_path)
+	if not DirAccess.dir_exists_absolute(game.folder_path):
+		var err = DirAccess.make_dir_absolute(game.folder_path)
 		
 		if err == OK:
 			pass
 			
 	if can_download == true:
-		$HTTPRequest.download_file = folder_path + "//Package.zip"
+		$HTTPRequest.download_file = game.folder_path + "//Package.zip"
 		match Main.operating_system:
-			"Windows": $HTTPRequest.request(version_links_windows.get(selected_link))
-			"macOS": $HTTPRequest.request(version_links_mac.get(selected_link))
-			"Linux": $HTTPRequest.request(version_links_linux.get(selected_link))
+			"Windows": $HTTPRequest.request(game.version_links_windows.get(selected_link))
+			"macOS": $HTTPRequest.request(game.version_links_mac.get(selected_link))
+			"Linux": $HTTPRequest.request(game.version_links_linux.get(selected_link))
 		
 		can_download = false
 		$ProgressBar.visible = false
@@ -101,7 +71,7 @@ func _on_install_pressed() -> void:
 func _on_http_request_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	print("https complete")
 	var reader := ZIPReader.new()
-	var err = reader.open(folder_path + "//Package.zip")
+	var err = reader.open(game.folder_path + "//Package.zip")
 	
 	if err != OK:
 		print("err != ok")
@@ -115,7 +85,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		if file_path.begins_with("__MACOSX") or file_path.get_file().begins_with("._"):
 			continue
 		
-		var full_path = folder_path.path_join(file_path)
+		var full_path = game.folder_path.path_join(file_path)
 		
 		if file_path.ends_with("/"):
 			DirAccess.make_dir_recursive_absolute(full_path)
@@ -138,10 +108,10 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 	
 	if OS.get_name() == "macOS":
 		
-		var app_bundle_name = version_file_names_mac.get(selected_link) + ".app"
-		var binary_name = version_file_names_mac.get(selected_link)
+		var app_bundle_name = game.version_file_names_mac.get(selected_link) + ".app"
+		var binary_name = game.version_file_names_mac.get(selected_link)
 		
-		var app_path_absolute = ProjectSettings.globalize_path(folder_path + "//" + app_bundle_name)
+		var app_path_absolute = ProjectSettings.globalize_path(game.folder_path + "//" + app_bundle_name)
 		
 		if binary_name == "Five Nights At Bulbas 1.0":
 			binary_name = "Five Nights At Bulbas"
@@ -160,7 +130,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 		if xattr_err != 0:
 			print("Warning: xattr failed with code ", xattr_err)
 	
-	DirAccess.remove_absolute(folder_path + "//Package.zip") 
+	DirAccess.remove_absolute(game.folder_path + "//Package.zip") 
 	
 	$ProgressBar.visible = false
 	can_download = true
@@ -169,7 +139,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 func check_for_reinstall():
 	var is_installed = false
 	
-	var path = folder_path + "//" + version_file_names_windows[selected_link] + ".exe"
+	var path = game.folder_path + "//" + game.version_file_names_windows[selected_link] + ".exe"
 	is_installed = FileAccess.file_exists(path)
 	
 	if is_installed != false:
@@ -189,23 +159,6 @@ func _physics_process(_delta: float) -> void:
 		var total = $HTTPRequest.get_body_size()
 		if total > 0:
 			$ProgressBar.value = (float(downloaded) / total) * 100
-	if $CarouselContainer.selected_index == 0:
-		$"Left Button".visible = false
-	else:
-		$"Left Button".visible = true
-		
-	if $CarouselContainer.selected_index == Images.size() - 1 or Images.size() == 0:
-		$"Right Button".visible = false
-	else:
-		$"Right Button".visible = true
-
-func _on_left_button_pressed() -> void:
-	$"../../Tap".play()
-	$CarouselContainer._left()
-
-func _on_right_button_pressed() -> void:
-	$"../../Tap".play()
-	$CarouselContainer._right()
 
 
 

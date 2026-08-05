@@ -1,17 +1,14 @@
 @icon("res://editor_icons/shop_icon.png")
 extends TextureButton
 @export var page : StorePage
-@export var from_dev : bool = false
-@export var cover : Texture2D
-@export var game_name : String
-@export var font_size : int = 16
+@export var game : GameData
 
 
 
 func _ready() -> void:
-	texture_normal = cover
-	$"Game Label".text = game_name
-	$"Game Label".add_theme_font_size_override("font_size", font_size)
+	texture_normal = game.cover
+	$"Game Label".text = game.name
+	$"Game Label".add_theme_font_size_override("font_size", game.font_size)
 
 # Hover Effects
 func _on_mouse_entered() -> void:

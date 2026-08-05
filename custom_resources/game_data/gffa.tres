@@ -9,16 +9,19 @@
 
 [resource]
 script = ExtResource("1_awsiy")
-name = "Gavin's Fantastically Fun "
+name = "Gavin's Fantastically Fun Adventure"
 description = "DISCLAIMER: This is an unfinished DEMO.
-
 A small look at the Fantastically Fun Adventure of Gavin! Go through the Magical Marsh of Mortisha under the watch of the Sad Sun.
 "
-age_rating = "Rated: T for Teen"
-difficulty = "Difficulty: Newborn"
-stability = "Stability: Unoptimized"
-release_data = "Release Date: Unknown"
+release_date = "Unknown"
+genre = "My Little Pony"
+difficulty = "Newborn"
+age_rating = "T for Teen"
+main_dev = "Jonathan"
+stability = "Good"
+max_players = "1"
 cover = ExtResource("1_hitgi")
+font_size = 12
 images = Array[Texture2D]([ExtResource("2_lqgvf"), ExtResource("3_pq0vu"), ExtResource("4_wyt8q"), ExtResource("5_i57ym")])
 version_names = PackedStringArray("DEMO")
 version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/gffa/GFFA_Windows.zip")
@@ -27,4 +30,5 @@ version_file_names_windows = PackedStringArray("DEMO")
 version_file_names_mac = PackedStringArray("FirstPerson-Mac-Shipping")
 folder_path = "user://GFFA"
 save_data_folder_name = PackedStringArray("Ambition/GFFA")
+installable = false
 metadata/_custom_type_script = "uid://dk1pj38x77q1e"

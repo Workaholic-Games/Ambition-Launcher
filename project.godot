@@ -61,7 +61,6 @@ Collision=""
 [gui]
 
 theme/default_font_antialiasing=0
-theme/custom="uid://7wvlbsb0aabd"
 theme/custom_font="uid://cju7vrq1y7gpl"
 
 [input]
@@ -112,3 +111,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

@@ -12,7 +12,9 @@ func _on_store_pressed() -> void:
 	hide_ui()
 	for node in get_tree().get_nodes_in_group("Collision"):
 		node.set_deferred("disabled", false)
+	
 	$"../../Store".show()
+	$"../../Store Pages".show()
 func _on_community_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()

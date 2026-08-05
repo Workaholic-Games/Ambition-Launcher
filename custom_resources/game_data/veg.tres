@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://b83ra8oaqu4te"]
+
+[ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="1_58gag"]
+[ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_s023i"]
+[ext_resource type="Texture2D" uid="uid://cm66fueikdp7g" path="res://game_assets/thumbnails/veg/vegetable_game.png" id="2_l5xkx"]
+[ext_resource type="Texture2D" uid="uid://bw6oamu8tlmul" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194426.png" id="3_qucwe"]
+[ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="4_8iexh"]
+[ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="5_12kpi"]
+[ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="6_7q0ad"]
+[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="8_l5xkx"]
+
+[resource]
+script = ExtResource("1_s023i")
+name = "The Vegetable Game Regrown"
+description = "Vegetables."
+release_date = "11/22/2025"
+genre = "Sandbox"
+difficulty = "Hard"
+age_rating = "E10 for Everyone 10+"
+main_dev = "Bulba"
+stability = "Horrendous"
+max_players = "1"
+cover = ExtResource("1_58gag")
+images = Array[Texture2D]([ExtResource("2_l5xkx"), ExtResource("4_8iexh"), ExtResource("5_12kpi"), ExtResource("6_7q0ad"), ExtResource("3_qucwe")])
+videos = Array[VideoStream]([ExtResource("8_l5xkx")])
+version_names = PackedStringArray("Regrown")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Windows.zip")
+version_links_mac = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/veg_og/Vegetable.Game.Regrown.Mac.zip")
+version_file_names_windows = PackedStringArray("Vegetable Game Regrown")
+version_file_names_mac = PackedStringArray("The Vegetable Game Regrown.app")
+folder_path = "user://The Vegetable Game Regrown"
+save_data_folder_name = PackedStringArray("The Vegetable Game Regrown")
+metadata/_custom_type_script = "uid://dk1pj38x77q1e"

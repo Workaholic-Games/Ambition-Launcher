@@ -3,11 +3,10 @@ extends TextureButton
 
 
 func _on_toggled(toggled_on: bool) -> void:
-	$"../../../Tap".play()
+	$"../../Tap".play()
 	if toggled_on:
-		$"GridContainer".visible = true
-		$Size.visible = true
-		
+		$"../Launcher Pets/HFlowContainer".show()
+		$"../Launcher Pets/Size".show()
 	else:
-		$"GridContainer".visible = false
-		$Size.visible = false
+		$"../Launcher Pets/HFlowContainer".hide()
+		$"../Launcher Pets/Size".hide()

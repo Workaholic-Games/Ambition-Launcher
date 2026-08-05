@@ -15,10 +15,13 @@
 script = ExtResource("1_elm2x")
 name = "Five Night's at Bulba's"
 description = "My First game. You work the night shift at Bulba's Milkshakes and Fries trying to survive against Bulba and the crew until 6AM."
-age_rating = "Rated: T for Teen"
-difficulty = "Difficulty: Normal"
-stability = "Stability: Good"
-release_data = "Release Date: 11/27/2024"
+release_date = "10/31/2024"
+genre = "Horror"
+difficulty = "Normal"
+age_rating = "T for Teen"
+main_dev = "Developer: Bulba"
+stability = "Good"
+max_players = "1"
 cover = ExtResource("1_ofu32")
 images = Array[Texture2D]([ExtResource("2_j5nu2"), ExtResource("3_i0148"), ExtResource("4_wkwuy"), ExtResource("5_r4usm"), ExtResource("6_bag78"), ExtResource("7_mp1pi"), ExtResource("8_fs03y")])
 videos = Array[VideoStream]([ExtResource("10_a5n6o")])

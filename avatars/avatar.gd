@@ -1,5 +1,5 @@
 @icon("res://editor_icons/account.png")
-extends Panel
+extends TextureButton
 @export var default_avatars : Array[Texture2D]
 var avatar_instance = load("res://avatars/avatar_instance.tscn")
 
@@ -13,13 +13,13 @@ func _ready() -> void:
 	for i in default_avatars.size():
 		var new_avatar = avatar_instance.instantiate()
 		new_avatar.index = i
-		new_avatar.menu = self
+		new_avatar.menu = $"."
 		
 		$"../User/Avatar Selection/ScrollContainer/GridContainer".add_child(new_avatar)
 	
-		$Avatar.texture_normal = default_avatars[Main.launcher_data.avatar]
-		$"../User/Avatar/Avatar".texture = default_avatars[Main.launcher_data.avatar]
+		texture_normal = default_avatars[Main.launcher_data.avatar]
+		$"../User/Avatar".texture = default_avatars[Main.launcher_data.avatar]
 
 func update_avatar():
-	$Avatar.texture_normal = default_avatars[Main.launcher_data.avatar]
-	$"../User/Avatar/Avatar".texture = default_avatars[Main.launcher_data.avatar]
+	texture_normal = default_avatars[Main.launcher_data.avatar]
+	$"../User/Avatar".texture = default_avatars[Main.launcher_data.avatar]

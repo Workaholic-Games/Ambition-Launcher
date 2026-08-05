@@ -6,11 +6,9 @@ extends Control
 func _ready() -> void:
 	$Label.text = "Hello " + Main.launcher_data.username
 
-func _on_button_toggled(toggled_on: bool) -> void:
+func _on_change_avatar_pressed() -> void:
 	$"../Tap".play()
-	match toggled_on:
-		true: $"Avatar Selection".show()
-		false: $"Avatar Selection".hide()
+	$"Avatar Selection".show()
 
 func _on_button_2_pressed() -> void:
 	$"../Tap".play()
@@ -21,3 +19,7 @@ func _on_back_pressed() -> void:
 	$"../Tap".play()
 	$"../Avatar".show()
 	hide()
+
+
+func _on_button_pressed() -> void:
+	$"Avatar Selection".hide()

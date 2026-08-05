@@ -16,10 +16,13 @@
 script = ExtResource("1_lxcpu")
 name = "Five Night's at Bulba's 2"
 description = "Welcome back to Bulba's. You return to Bulba's brand new location. Back to survive the night shift yet again. This time with new threats and old threats. With some more minigames in-between nights as well."
-age_rating = "Rated: T for Teen"
-difficulty = "Difficulty: Hard"
-stability = "Stability: Great"
-release_data = "Release Date: 4/18/2025"
+release_date = "4/18/2024"
+genre = "Horror"
+difficulty = "Hard"
+age_rating = "T for Teen"
+main_dev = "Bulba"
+stability = "Great"
+max_players = "2"
 cover = ExtResource("1_4cwys")
 images = Array[Texture2D]([ExtResource("2_m13qp"), ExtResource("3_ect4o"), ExtResource("4_hv6sk"), ExtResource("5_tjdyl"), ExtResource("6_8un48"), ExtResource("7_tcyi8"), ExtResource("8_7apdv"), ExtResource("9_kl47n")])
 videos = Array[VideoStream]([ExtResource("11_50lpr")])

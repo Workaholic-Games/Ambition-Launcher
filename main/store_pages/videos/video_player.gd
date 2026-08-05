@@ -23,16 +23,21 @@ func _process(_delta: float) -> void:
 		$"Playback Position".value = $VideoStreamPlayer.stream_position
 	else:
 		$VideoStreamPlayer.stream_position = $"Playback Position".value
-	pass
+	
+	$HBoxContainer/Time.text = str(snapped($VideoStreamPlayer.stream_position, 0.1)) + "/" + str(snapped($VideoStreamPlayer.get_stream_length(), 0.1))
 
 func _on_start_button_pressed() -> void:
 	$Tap.play()
+	$VideoStreamPlayer.paused = false
+	$"Playback Position".show()
+	$HBoxContainer.show()
+	$Panel.show()
+	$"Start Button".hide()
+	
 	if is_finished == true:
 		$VideoStreamPlayer.play()
-	$VideoStreamPlayer.paused = false
-	$"Start Button".hide()
+	
 	started = true
-	pass # Replace with function body.
 
 
 # Drag Related
@@ -57,37 +62,16 @@ func _on_video_stream_player_finished() -> void:
 	$"Start Button".texture_normal = load("res://main/store_pages/videos/assets/loop.tres")
 	$"Start Button".texture_hover = load("res://main/store_pages/videos/assets/loop_hover.tres")
 
-func _on_video_stream_player_mouse_entered() -> void:
-	if started == true:
-		$"Playback Position".show()
-		$Play_Pause.show()
-		$"Volume Toggle".show()
 
-func _on_video_stream_player_mouse_exited() -> void:
-	$"Playback Position".hide()
-	$Play_Pause.hide()
-	$"Volume Toggle".hide()
-
-func _on_playback_position_mouse_entered() -> void:
-	$"Playback Position".show()
-	$Play_Pause.show()
-	$"Volume Toggle".show()
-
-func _on_play_pause_mouse_entered() -> void:
-	$"Playback Position".show()
-	$Play_Pause.show()
-	$"Volume Toggle".show()
 
 
 # Video Player Volume Related
 func _on_volume_toggle_toggled(toggled_on: bool) -> void:
 	$Tap.play()
 	if toggled_on == true:
-		$"Volume Toggle".text = "↓"
-		$Volume.show()
+		$HBoxContainer/Volume.show()
 	else:
-		$"Volume Toggle".text = "↑"
-		$Volume.hide()
+		$HBoxContainer/Volume.hide()
 
 func _on_volume_value_changed(value: float) -> void:
 	$VideoStreamPlayer.volume_db = value
@@ -96,10 +80,10 @@ func _on_volume_value_changed(value: float) -> void:
 
 func _on_volume_toggle_mouse_entered() -> void:
 	$"Playback Position".show()
-	$Play_Pause.show()
-	$"Volume Toggle".show()
+	$HBoxContainer/Play_Pause.show()
+	$"HBoxContainer/Volume Toggle".show()
 
 func _on_volume_mouse_entered() -> void:
 	$"Playback Position".show()
-	$Play_Pause.show()
-	$"Volume Toggle".show()
+	$HBoxContainer/Play_Pause.show()
+	$"HBoxContainer/Volume Toggle".show()
