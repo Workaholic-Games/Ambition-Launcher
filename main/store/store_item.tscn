@@ -3,14 +3,6 @@
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://main/store/store_item.gd" id="1_vbu4v"]
 [ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="2_6erqr"]
 
-[sub_resource type="Gradient" id="Gradient_mh5tx"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 1, 1, 0.11764706)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
-gradient = SubResource("Gradient_mh5tx")
-fill_from = Vector2(0, 1)
-
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ujogu"]
 random_pitch = 1.0594631
 streams_count = 1
@@ -22,22 +14,38 @@ ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("1_vbu4v")
 
-[node name="Hover" type="Sprite2D" parent="." unique_id=1991008879]
+[node name="Hover" type="Panel" parent="." unique_id=1033371272]
 visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
+self_modulate = Color(1, 1, 1, 0.3137255)
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 180.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
 
 [node name="Game Label" type="Label" parent="." unique_id=1062450772]
 visible = false
 texture_filter = 1
+custom_minimum_size = Vector2(120, 52)
+custom_maximum_size = Vector2(120, 52)
 layout_mode = 0
-offset_top = 141.0
+offset_top = 128.0
 offset_right = 120.0
 offset_bottom = 180.0
 theme_type_variation = &"Hover_Label"
+text = "eee"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Panel" type="Panel" parent="Game Label" unique_id=325624800]
+self_modulate = Color(1, 1, 1, 0.5882353)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 52.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
 
 [node name="Tap" type="AudioStreamPlayer" parent="." unique_id=279131190]
 stream = SubResource("AudioStreamRandomizer_ujogu")

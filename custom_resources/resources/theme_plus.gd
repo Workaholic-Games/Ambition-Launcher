@@ -2,9 +2,6 @@
 extends Theme
 class_name ThemePlus
 
-@export_tool_button("Kill") var kill = kill_stuff
-@export var thing_to_kill : String
-
 var line_stylebox : StyleBoxFlat = StyleBoxFlat.new()
 
 var tab_button_normal_stylebox : StyleBoxFlat = StyleBoxFlat.new()
@@ -14,10 +11,6 @@ var close_button_normal_stylebox : StyleBoxFlat = StyleBoxFlat.new()
 var close_button_hover_stylebox : StyleBoxFlat = StyleBoxFlat.new()
 var close_button_pressed_stylebox : StyleBoxFlat = StyleBoxFlat.new()
 
-
-
-func kill_stuff():
-	remove_type(thing_to_kill)
 
 func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 	stylebox.border_color = accent_color
@@ -38,6 +31,10 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		set_color("collapsed_font_color", "FoldableContainer", value)
 		set_color("hover_font_color", "FoldableContainer", value)
 		set_color("font_color", "LineEdit", value)
+		set_color("font_placeholder_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
+		set_color("font_selected_color", "LineEdit", value)
+		set_color("selection_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
+		set_color("caret_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
 
 @export var accent_color : Color = Color(1.0, 1.0, 1.0, 1.0):
 	set(value):
@@ -96,6 +93,8 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		stylebox_setup("normal", "Button", close_button_normal_stylebox)
 		set_stylebox("title_collapsed_panel", "FoldableContainer", close_button_normal_stylebox)
 		set_stylebox("title_collapsed_hover_panel", "FoldableContainer", close_button_normal_stylebox)
+		set_stylebox("panel", "FoldableContainer", close_button_normal_stylebox)
+		set_stylebox("title_panel", "FoldableContainer", close_button_normal_stylebox)
 @export var close_button_hover : Color = Color(1.0, 1.0, 1.0, 1.0):
 	set(value):
 		close_button_hover = value
@@ -109,33 +108,35 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		close_button_pressed_stylebox.bg_color = value
 		close_button_pressed_stylebox.border_color = accent_color
 		stylebox_setup("pressed", "Button", close_button_pressed_stylebox)
-		set_stylebox("panel", "FoldableContainer", close_button_pressed_stylebox)
-		set_stylebox("title_panel", "FoldableContainer", close_button_pressed_stylebox)
 
 
 @export var slider : StyleBoxLine:
 	set(value):
 		slider = value
 		set_stylebox("grabber", "HScrollBar", value)
-		set_stylebox("slider", "HSlider", value)
-		value.vertical = true
 		
-		set_stylebox("grabber", "VScrollBar", value)
-		set_stylebox("slider", "VSlider", value)
+		var vertical = value.duplicate()
+		vertical.vertical = true
+		
+		set_stylebox("grabber", "VScrollBar", vertical)
 @export var slider_hover : StyleBoxLine:
 	set(value):
 		slider_hover = value
 		set_stylebox("grabber_highlight", "HScrollBar", value)
-		value.vertical = true
 		
-		set_stylebox("grabber_highlight", "VScrollBar", value)
+		var vertical = value.duplicate()
+		vertical.vertical = true
+		
+		set_stylebox("grabber_highlight", "VScrollBar", vertical)
 @export var slider_pressed : StyleBoxLine:
 	set(value):
 		slider_pressed = value
 		set_stylebox("grabber_pressed", "HScrollBar", value)
-		value.vertical = true
 		
-		set_stylebox("grabber_pressed", "VScrollBar", value)
+		var vertical = value.duplicate()
+		vertical.vertical = true
+		
+		set_stylebox("grabber_pressed", "VScrollBar", vertical)
 @export var slider_background : StyleBoxLine:
 	set(value):
 		slider_background = value
@@ -144,15 +145,25 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		set_stylebox("slider", "HSlider", value)
 		set_stylebox("grabber_area", "HSlider", value)
 		set_stylebox("grabber_area_highlight", "HSlider", value)
-		value.vertical = true
 		
-		set_stylebox("scroll", "VScrollBar", value)
-		set_stylebox("slider", "VSlider", value)
-		set_stylebox("grabber_area", "HSlider", value)
-		set_stylebox("grabber_area_highlight", "HSlider", value)
+		var vertical = value.duplicate()
+		vertical.vertical = true
 		
+		set_stylebox("scroll", "VScrollBar", vertical)
+		set_stylebox("slider", "VSlider", vertical)
+		set_stylebox("grabber_area", "VSlider", vertical)
+		set_stylebox("grabber_area_highlight", "VSlider", vertical)
 @export var scroll_icon : Texture2D:
 	set(value):
 		scroll_icon = value
 		set_icon("grabber", "HSlider", value)
 		set_icon("grabber_highlight", "HSlider", value)
+		set_icon("grabber_disabled", "HSlider", value)
+
+
+@export_subgroup("Debug")
+@export_tool_button("Kill") var kill = kill_stuff
+@export var thing_to_kill : String
+
+func kill_stuff():
+	remove_type(thing_to_kill)

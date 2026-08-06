@@ -530,16 +530,15 @@ offset_right = 108.0
 offset_bottom = 360.0
 
 [node name="Buttons" type="GridContainer" parent="Panel/Tabs" unique_id=997375876]
-custom_minimum_size = Vector2(50, 0)
 layout_mode = 0
-offset_right = 110.0
-offset_bottom = 360.0
+offset_right = 108.37884
+offset_bottom = 126.0
 scale = Vector2(0.9965045, 1)
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 
 [node name="Library" type="Button" parent="Panel/Tabs/Buttons" unique_id=651700251]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -547,7 +546,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Library"
 
 [node name="Store" type="Button" parent="Panel/Tabs/Buttons" unique_id=940841122]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -555,7 +554,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Store"
 
 [node name="Community" type="Button" parent="Panel/Tabs/Buttons" unique_id=791475924]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 theme_override_fonts/font = ExtResource("2_rvqcv")
@@ -564,7 +563,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Community"
 
 [node name="Changelog" type="Button" parent="Panel/Tabs/Buttons" unique_id=608995006]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -572,7 +571,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Changelog"
 
 [node name="Developers" type="Button" parent="Panel/Tabs/Buttons" unique_id=1211144331]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -580,7 +579,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Developers"
 
 [node name="Settings" type="Button" parent="Panel/Tabs/Buttons" unique_id=576620853]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -588,7 +587,7 @@ button_group = ExtResource("3_bfcn8")
 text = "Settings"
 
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(108.379, 0)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -1236,45 +1235,96 @@ offset_bottom = 60.0
 script = ExtResource("16_3a0l5")
 music = Array[AudioStream]([ExtResource("67_qngap"), ExtResource("68_26tnx"), ExtResource("69_26tnx"), ExtResource("69_mer5n")])
 
-[node name="Window" type="OptionButton" parent="Settings" unique_id=2136730873]
+[node name="WindowMode" type="Button" parent="Settings" unique_id=355426751]
+visible = false
+z_index = 1
 layout_mode = 0
-offset_left = 120.449005
-offset_top = 4.000004
+offset_left = 120.0
+offset_top = 4.0
 offset_right = 352.0
-offset_bottom = 30.000004
-selected = 0
-item_count = 4
-popup/item_0/text = "Windowed"
-popup/item_0/id = 0
-popup/item_1/text = "Maximized"
-popup/item_1/id = 1
-popup/item_2/text = "Fullscreen"
-popup/item_2/id = 2
-popup/item_3/text = "Exclusive Fullscreen"
-popup/item_3/id = 3
+offset_bottom = 28.0
+toggle_mode = true
+text = " Window Mode"
 
-[node name="Label" type="Label" parent="Settings/Window" unique_id=148624935]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/WindowMode" unique_id=1304033577]
 layout_mode = 0
-offset_top = -23.999996
-offset_right = 40.0
-text = "Window Mode"
-vertical_alignment = 2
+offset_top = 24.0
+offset_right = 231.0
+offset_bottom = 120.0
+theme_override_constants/separation = 0
 
-[node name="Themes" type="OptionButton" parent="Settings" unique_id=563725016]
+[node name="Windowed" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=1437852021]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Windowed"
+alignment = 0
+
+[node name="Maximized" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=2057945053]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Maximized"
+alignment = 0
+
+[node name="Fullscreen" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=1356478358]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Fullscreen"
+alignment = 0
+
+[node name="ExclusiveFullscreen" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=461878618]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Exclusive Fullscreen"
+alignment = 0
+
+[node name="Themes" type="Button" parent="Settings" unique_id=290712190]
+z_index = 1
 layout_mode = 0
-offset_left = 119.999954
+offset_left = 120.0
 offset_top = 52.0
-offset_right = 350.57495
-offset_bottom = 78.71431
-scale = Vector2(1.0061805, 0.9732614)
+offset_right = 352.0
+offset_bottom = 76.0
+toggle_mode = true
+text = " Themes"
 
-[node name="Label" type="Label" parent="Settings/Themes" unique_id=1340238910]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Themes" unique_id=1031933575]
 layout_mode = 0
-offset_left = -3.0517578e-05
-offset_top = -24.659351
-offset_right = 47.99997
-text = "Theme:"
-vertical_alignment = 2
+offset_top = 24.0
+offset_right = 231.0
+offset_bottom = 120.0
+theme_override_constants/separation = 0
+
+[node name="Dark Mode" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=533521873]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Dark Mode"
+alignment = 0
+
+[node name="Light Mode" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=1858008737]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Light Mode"
+alignment = 0
+
+[node name="Fresh Mint" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=716479657]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Fresh Mint"
+alignment = 0
+
+[node name="Grape" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=1454177734]
+custom_minimum_size = Vector2(232, 24)
+custom_maximum_size = Vector2(232, 24)
+layout_mode = 2
+text = " Grape"
+alignment = 0
 
 [node name="Startup Location" type="OptionButton" parent="Settings" unique_id=1787472182]
 layout_mode = 0
@@ -1767,17 +1817,16 @@ script = ExtResource("57_qwxpq")
 [node name="LineEdit" type="LineEdit" parent="Username" unique_id=254969524]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 15.0
+offset_top = 8.0
 offset_right = 240.0
-offset_bottom = 41.0
-placeholder_text = "Username..."
+offset_bottom = 34.0
+placeholder_text = " Username..."
 
 [node name="Button" type="Button" parent="Username" unique_id=1041139814]
-visible = false
 layout_mode = 0
-offset_left = 88.0
-offset_top = 47.0
-offset_right = 160.0
+offset_left = 35.0
+offset_top = 40.0
+offset_right = 115.0
 offset_bottom = 65.0
 text = "Apply
 "
@@ -1785,21 +1834,20 @@ text = "Apply
 [node name="Panel" type="Panel" parent="Username" unique_id=1264892127]
 show_behind_parent = true
 layout_mode = 0
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 252.0
-offset_bottom = 76.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 250.0
+offset_bottom = 74.0
 mouse_filter = 2
 theme_type_variation = &"Line"
 
 [node name="Close" type="Button" parent="Username" unique_id=1973291473]
 layout_mode = 0
-offset_left = 240.0
-offset_top = -3.0
-offset_right = 248.0
-offset_bottom = 17.0
-text = "X"
-flat = true
+offset_left = 133.0
+offset_top = 40.0
+offset_right = 213.0
+offset_bottom = 65.0
+text = "Back"
 
 [node name="Avatar" type="TextureButton" parent="." unique_id=1491619972]
 layout_mode = 0
@@ -2253,8 +2301,6 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
 [connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
 [connection signal="pressed" from="Community/Modding Guide" to="Community" method="_on_modding_guide_pressed"]
-[connection signal="item_selected" from="Settings/Window" to="Settings" method="_on_window_item_selected"]
-[connection signal="item_selected" from="Settings/Themes" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
 [connection signal="item_selected" from="Settings/Music" to="Settings" method="_on_music_item_selected"]

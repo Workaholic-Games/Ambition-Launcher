@@ -5,14 +5,6 @@
 [ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://ui/shaders/rgb.gdshader" id="3_fxfku"]
 [ext_resource type="Texture2D" uid="uid://dky1xc01ou7q" path="res://main/library/folder.png" id="3_h0j4e"]
 
-[sub_resource type="Gradient" id="Gradient_mh5tx"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 1, 1, 0.11764706)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kicgq"]
-gradient = SubResource("Gradient_mh5tx")
-fill_from = Vector2(0, 1)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1jjqb"]
 shader = ExtResource("3_fxfku")
 shader_parameter/strength = 0.50000002375
@@ -40,11 +32,14 @@ ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("2_ybi6t")
 
-[node name="Hover" type="Sprite2D" parent="." unique_id=1476178982]
+[node name="Hover" type="Panel" parent="." unique_id=572918350]
 visible = false
-position = Vector2(60, 89.992004)
-scale = Vector2(1.8750001, 2.8127503)
-texture = SubResource("GradientTexture2D_kicgq")
+self_modulate = Color(1, 1, 1, 0.3137255)
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 180.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
 
 [node name="Uninstall" type="Button" parent="." unique_id=1635288642]
 layout_mode = 0
@@ -70,6 +65,15 @@ theme_type_variation = &"Hover_Label"
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="Panel" type="Panel" parent="VBoxContainer/Game Label" unique_id=778035618]
+self_modulate = Color(1, 1, 1, 0.5882353)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
+
 [node name="Update" type="Label" parent="VBoxContainer" unique_id=1509434945]
 visible = false
 material = SubResource("ShaderMaterial_1jjqb")
@@ -80,11 +84,13 @@ text = "  New Update!"
 vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="VBoxContainer/Update" unique_id=926866433]
+self_modulate = Color(1, 1, 1, 0.5882353)
 show_behind_parent = true
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 18.0
-theme_type_variation = &"Quit"
+mouse_filter = 2
+theme_type_variation = &"Panel2"
 
 [node name="Versions" type="OptionButton" parent="." unique_id=853332808]
 layout_mode = 0
