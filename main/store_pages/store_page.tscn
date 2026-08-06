@@ -36,9 +36,9 @@ page = NodePath("..")
 [node name="Versions Windows" type="OptionButton" parent="." unique_id=1955193242]
 visible = false
 layout_mode = 0
-offset_left = 166.0
+offset_left = 154.0
 offset_top = 232.0
-offset_right = 334.0
+offset_right = 346.0
 offset_bottom = 256.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
@@ -46,7 +46,7 @@ fit_to_longest_item = false
 [node name="Version Select Label" type="Label" parent="Versions Windows" unique_id=1372846403]
 layout_mode = 0
 offset_top = 24.0
-offset_right = 168.0
+offset_right = 192.0
 offset_bottom = 48.0
 text = "Version Select"
 horizontal_alignment = 1
@@ -55,39 +55,38 @@ vertical_alignment = 1
 [node name="Versions Mac" type="OptionButton" parent="." unique_id=680259942]
 visible = false
 layout_mode = 0
-offset_left = 166.0
+offset_left = 154.0
 offset_top = 232.0
-offset_right = 334.0
+offset_right = 346.0
 offset_bottom = 256.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
 
 [node name="Version Select Label" type="Label" parent="Versions Mac" unique_id=351358849]
-visible = false
 layout_mode = 0
 offset_top = 24.0
-offset_right = 168.0
+offset_right = 192.0
 offset_bottom = 48.0
-text = "Version Select:"
+text = "Version Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Versions Linux" type="OptionButton" parent="." unique_id=174234688]
 visible = false
 layout_mode = 0
-offset_left = 166.0
+offset_left = 154.0
 offset_top = 232.0
-offset_right = 334.0
-offset_bottom = 264.0
+offset_right = 346.0
+offset_bottom = 256.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tkre5")
 fit_to_longest_item = false
 
 [node name="Version Select Label" type="Label" parent="Versions Linux" unique_id=5516797]
 layout_mode = 0
-offset_top = 32.0
-offset_right = 160.0
-offset_bottom = 56.0
-text = "Version Select:"
+offset_top = 24.0
+offset_right = 192.0
+offset_bottom = 48.0
+text = "Version Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -102,13 +101,11 @@ theme_override_constants/separation = 8
 [node name="Install" type="Button" parent="Install or Back" unique_id=150448576]
 custom_minimum_size = Vector2(152, 32)
 layout_mode = 2
-theme_type_variation = &"Close_Button"
 text = "Install"
 
 [node name="Back" type="Button" parent="Install or Back" unique_id=1063336792]
 custom_minimum_size = Vector2(152, 32)
 layout_mode = 2
-theme_type_variation = &"Close_Button"
 text = "Back to Store"
 
 [node name="Game Description" type="RichTextLabel" parent="." unique_id=275411826]
