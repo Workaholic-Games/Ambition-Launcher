@@ -6,6 +6,7 @@ var selected_version : int = -1
 var ui_to_back : Array[int] = []
 
 
+
 func _ready() -> void:
 	check()
 
@@ -25,7 +26,7 @@ func _on_versions_item_selected(index: int) -> void:
 	selected_version = index
 
 
-func _on_pressed() -> void:
+func _on_play_pressed() -> void:
 	if selected_version == -1 or ui_to_back.is_empty():
 		return
 	
@@ -45,7 +46,6 @@ func _on_pressed() -> void:
 	
 	Main.launcher_data.last_played = self.name
 
-# Uninstall Version of game
 func _on_uninstall_pressed() -> void:
 	if selected_version == -1 or ui_to_back.is_empty():
 		return 
@@ -77,7 +77,6 @@ func _on_folder_pressed() -> void:
 
 func check():
 	$Versions.clear()
-	visible = false
 	ui_to_back.clear()
 	selected_version = -1
 	$VBoxContainer/Update.visible = false
@@ -98,11 +97,10 @@ func check():
 				if i < game.version_file_names_mac.size():
 					var path = game.folder_path + "//" + game.version_file_names_linux[i]
 					is_installed = DirAccess.dir_exists_absolute(path)
-
+		
 		if is_installed == true:
 			$Versions.add_item(game.version_names[i])
 			ui_to_back.append(i)
-		
 		
 	if $Versions.item_count > 0:
 		installed = true
@@ -112,6 +110,8 @@ func check():
 		#if $Versions.get_item_text(0) != game.save_data_folder_name.get(0):
 			#$VBoxContainer/Update.visible = true
 	else:
+		get_parent().hide()
+		
 		if DirAccess.dir_exists_absolute(game.folder_path):
 			DirAccess.remove_absolute(game.folder_path)
 
@@ -126,3 +126,6 @@ func remove_recursive(path: String) -> void:
 		DirAccess.remove_absolute(path)
 	else:
 		print("An error occurred when trying to access the path: ", path)
+
+func _on_visibility_changed() -> void:
+	check()

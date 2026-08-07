@@ -122,3 +122,7 @@ func _on_http_request_request_completed(_result: int, _response_code: int, _head
 
 func _on_intro_finished() -> void:
 	$"../Intro".queue_free()
+
+
+func _on_update_pressed() -> void:
+	update_check()

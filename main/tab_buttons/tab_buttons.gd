@@ -7,6 +7,9 @@ func _on_library_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
 	$"../../Library".show()
+	$"../../Library Pages".show()
+	$"../../Avatar".hide()
+	
 func _on_store_pressed() -> void:
 	$"../../Tap".play()
 	hide_ui()
@@ -53,6 +56,10 @@ func hide_ui():
 	$"../../Quit".visible = false
 	$"../../User".visible = false
 	$"../../Avatar".show()
+	$"../../Library Pages".hide()
+	for i in $"../../Library Pages".get_children():
+		i.hide()
+	
 	for page in $"../../Store Pages".get_children():
 		page.visible = false
 	for node in get_tree().get_nodes_in_group("Collision"):

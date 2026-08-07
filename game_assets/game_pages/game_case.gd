@@ -1,4 +1,5 @@
 extends Node3D
+@export var game : GameData
 @export var camera : Camera3D
 var rotating : bool = false
 var open : bool = false
@@ -10,6 +11,12 @@ var can_open : bool = true
 
 func _ready() -> void:
 	$Case.rotate_y(-45.0)
+	
+	$Case/Offset/Cover.texture = game.hinge
+	$Case/Offset/Front/Cover.texture = game.cover
+	$Case/Offset/Back/Back.texture = game.back
+	
+	$Case/Offset/Back/CD.material_override.albedo_texture = game.disc
 
 func _input(event):
 	if Input.is_action_just_pressed("grab"):
@@ -27,9 +34,9 @@ func _input(event):
 			$Close.play()
 	
 	if Input.is_action_just_pressed("scroll_up"):
-		camera.fov = clamp(camera.fov - 2, 60, 150)
+		camera.fov = clamp(camera.fov - 2, 60, 100)
 	if Input.is_action_just_pressed("scroll_down"):
-		camera.fov = clamp(camera.fov + 2, 60, 150)
+		camera.fov = clamp(camera.fov + 2, 60, 100)
 	
 	if Input.is_action_pressed("rotate"):
 		if event is InputEventMouseMotion:

@@ -5,7 +5,7 @@ var can_scroll : bool = true
 var playing_ad : bool = false
 var can_skip_ad : bool = true
 var on_drops : bool = false
-
+var ad_cap : int = 0
 
 
 func _ready() -> void:
@@ -31,6 +31,7 @@ func _input(_event: InputEvent) -> void:
 			var tween = create_tween()
 			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical - 232, 0.2)
 			can_scroll = false
+			ad_cap += 1
 			ad_check()
 			await get_tree().create_timer(0.2).timeout
 			can_scroll = true
@@ -44,13 +45,15 @@ func _input(_event: InputEvent) -> void:
 			var tween = create_tween()
 			tween.tween_property($ScrollContainer, "scroll_vertical", $ScrollContainer.scroll_vertical + 232, 0.2)
 			can_scroll = false
+			ad_cap += 1
 			ad_check()
 			await get_tree().create_timer(0.2).timeout
 			can_scroll = true
 
 func ad_check():
-	var ad = randi_range(0, 20)
-	if ad == 20:
+	var ad = randi_range(0, 10)
+	if ad == 10 and ad_cap >= 5:
+		ad_cap = 0
 		$Ads.stream = ads.pick_random()
 		$Ads.play()
 		$Ads.show()

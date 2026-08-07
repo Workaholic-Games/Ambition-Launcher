@@ -14,6 +14,9 @@ class_name GameData
 
 @export_subgroup("Media")
 @export var cover : Texture2D
+@export var hinge : Texture2D
+@export var back : Texture2D
+@export var disc : Texture2D
 @export var font_size : int = 16
 @export var images : Array[Texture2D]
 @export var videos : Array[VideoStream]

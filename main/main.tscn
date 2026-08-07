@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="Theme" uid="uid://i2y3i1ptg53l" path="res://ui/themes/grape.tres" id="1_8g473"]
+[ext_resource type="Theme" uid="uid://b0vf1ab3mirsv" path="res://ui/themes/neon.tres" id="1_hpfjw"]
 [ext_resource type="Theme" uid="uid://ds4j7dyddneu7" path="res://ui/themes/fresh_mint.tres" id="1_m7axd"]
 [ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://main/settings/themes.gd" id="1_p0fg6"]
 [ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
@@ -8,10 +9,13 @@
 [ext_resource type="Theme" uid="uid://c2ecanj0qisjj" path="res://ui/themes/dark_theme.tres" id="3_e77u7"]
 [ext_resource type="Theme" uid="uid://dssuru5t3q1wb" path="res://ui/themes/light_theme.tres" id="4_8g473"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://main/search_menu.gd" id="4_l7kjj"]
+[ext_resource type="Theme" uid="uid://btw7s26f4bcjw" path="res://ui/themes/high_contrast.tres" id="5_p80qw"]
 [ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
 [ext_resource type="Script" uid="uid://dxuwvtpiouklv" path="res://main/update.gd" id="6_fl0aj"]
+[ext_resource type="Theme" uid="uid://dlu001cnshvbi" path="res://ui/themes/jarvis.tres" id="6_hpfjw"]
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://main/library/library.gd" id="8_gjwx3"]
+[ext_resource type="Theme" uid="uid://cpknqb1htao3j" path="res://ui/themes/evergreen_forest.tres" id="8_m7axd"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
@@ -21,33 +25,50 @@
 [ext_resource type="Resource" uid="uid://chvernrw33afx" path="res://custom_resources/game_data/fnab1.tres" id="16_42w5j"]
 [ext_resource type="Resource" uid="uid://cp4mwov6cofos" path="res://custom_resources/game_data/fnab2.tres" id="17_dfolu"]
 [ext_resource type="Script" uid="uid://dnonrh0a84q5r" path="res://main/community.gd" id="17_j32lm"]
-[ext_resource type="Texture2D" uid="uid://dndt1bf5byk4g" path="res://community/MEMES_AHHHHHHHHH.png" id="18_13033"]
 [ext_resource type="Resource" uid="uid://b83ra8oaqu4te" path="res://custom_resources/game_data/veg.tres" id="18_m7axd"]
 [ext_resource type="Resource" uid="uid://cvbj2852nsd4e" path="res://custom_resources/game_data/gffa.tres" id="18_p80qw"]
-[ext_resource type="Texture2D" uid="uid://06h7lyjapqtc" path="res://community/Untitled437_20260409184528.png" id="19_12ljg"]
 [ext_resource type="Resource" uid="uid://cd4mi3tlyre0h" path="res://custom_resources/game_data/bitcoin_miner.tres" id="19_m7axd"]
-[ext_resource type="Texture2D" uid="uid://dpcemqvuyoxmc" path="res://community/bulba_asgore_confirmed.png" id="20_12ljg"]
-[ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
 [ext_resource type="PackedScene" uid="uid://bketsn6c8fgoq" path="res://game_assets/game_pages/caseui.tscn" id="22_m7axd"]
-[ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
+[ext_resource type="Texture2D" uid="uid://hq18bglfix4b" path="res://game_assets/world_assets/fnab1/tile.png" id="26_d7e4n"]
 [ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="26_gpx50"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://launcher games/launcher pets/Launcher Pets.gd" id="27_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://csbw42kiw2poy" path="res://game_assets/world_assets/fnab1/Bulba STAGE.png" id="27_rnbvo"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://c5qk3080aprim" path="res://community/Untitled563_20260728181938.png" id="28_dfolu"]
+[ext_resource type="Texture2D" uid="uid://do3gftioe6f8m" path="res://game_assets/world_assets/fnab1/Gigabot JUMPSCARE.png" id="28_fcixt"]
+[ext_resource type="Texture2D" uid="uid://m4cgwu54myn2" path="res://game_assets/world_assets/fnab1/Charlie OUTSIDE DOOR.png" id="28_vxh88"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
+[ext_resource type="PackedScene" uid="uid://ckvlhgyk5pfis" path="res://main/developers/dev_button.tscn" id="29_8g473"]
+[ext_resource type="Texture2D" uid="uid://ch3cc8snhm61n" path="res://community/sonshakes_and_fries.png" id="29_p80qw"]
+[ext_resource type="Texture2D" uid="uid://cqyn8dsgex2yl" path="res://game_assets/world_assets/fnab1/Gamer Mark RIGHT HALL.png" id="29_ymjft"]
+[ext_resource type="Texture2D" uid="uid://ck15ttscttkqe" path="res://main/developers/bulba.png" id="30_c203k"]
+[ext_resource type="Texture2D" uid="uid://bgjh6nfue28b2" path="res://community/Screenshot_2026-07-11_213203.png" id="30_m7axd"]
+[ext_resource type="Texture2D" uid="uid://b71j7armgy6dh" path="res://main/developers/jonathan.png" id="31_70lts"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
+[ext_resource type="Texture2D" uid="uid://dfr3chnavhgi7" path="res://game_assets/world_assets/fnab1/Cash Claire JUMPSCARE.png" id="31_u2yh7"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
 [ext_resource type="Texture2D" uid="uid://2dyhpqfic1rq" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
+[ext_resource type="Texture2D" uid="uid://dewdotpn46tla" path="res://game_assets/world_assets/fnab1/Night Guard.png" id="32_d25uf"]
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
+[ext_resource type="Texture2D" uid="uid://bp8xhfvkxpa0o" path="res://main/developers/sawyer.png" id="32_u0r11"]
+[ext_resource type="Texture2D" uid="uid://dy1jemtsodxjo" path="res://main/developers/diego.png" id="33_atdf6"]
+[ext_resource type="Texture2D" uid="uid://dfo1hx3suq0vx" path="res://game_assets/world_assets/fnab1/Emotional Support Fries.png" id="33_fb01j"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
+[ext_resource type="Texture2D" uid="uid://2cga5i1g8svq" path="res://main/developers/claire.png" id="34_kungx"]
 [ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="35_571ru"]
+[ext_resource type="PackedScene" uid="uid://dgo0swgxvrraq" path="res://main/developers/dev_bio.tscn" id="35_eyvb1"]
 [ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/videos/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
-[ext_resource type="Texture2D" uid="uid://b2gra5tlyk0xd" path="res://community/Screenshot_2025-11-06_150636.png" id="37_j17j7"]
+[ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="36_j128u"]
+[ext_resource type="AudioStream" uid="uid://cwap8x08hljxx" path="res://sounds/music/Fresh Grapes.mp3" id="45_vcvpu"]
+[ext_resource type="AudioStream" uid="uid://hkxpixr8kor3" path="res://sounds/music/Vineyard Vibes.mp3" id="46_d7e4n"]
+[ext_resource type="AudioStream" uid="uid://d3e5m04gsryh" path="res://sounds/music/Sober Serenity.mp3" id="47_rnbvo"]
 [ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="48_uv824"]
+[ext_resource type="AudioStream" uid="uid://d0sh0xu5o6kta" path="res://sounds/music/The Eternal Night.ogg" id="48_vxh88"]
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://main/lock.png" id="51_lc78y"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
@@ -82,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://bjkrfnv07b35w" path="res://avatars/fnab2_nightguard.png" id="92_dfxco"]
 [ext_resource type="Texture2D" uid="uid://bunmnxgbi4adp" path="res://avatars/batg_charles.png" id="94_th44a"]
 [ext_resource type="Texture2D" uid="uid://bfwbgmk331fot" path="res://avatars/batg_mark.png" id="95_nrk8p"]
+[ext_resource type="Texture2D" uid="uid://bkqiihtqyg546" path="res://avatars/moothics_cow.png" id="96_e77u7"]
 [ext_resource type="Texture2D" uid="uid://bknni413cj364" path="res://avatars/batg_gigabot.png" id="96_n7cka"]
 [ext_resource type="Texture2D" uid="uid://demlrmls7kd5k" path="res://avatars/batg_claire.png" id="97_b7rj1"]
 [ext_resource type="Texture2D" uid="uid://c4vv8met0pjjm" path="res://avatars/batg_gavin.png" id="98_x50uf"]
@@ -169,19 +191,29 @@
 [ext_resource type="Texture2D" uid="uid://dyag4a3w2n3n4" path="res://community/drops/image (51).png" id="194_0gr68"]
 [ext_resource type="Texture2D" uid="uid://bguahav254x0t" path="res://community/drops/image (52).png" id="195_43mne"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p80qw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcvpu"]
+albedo_texture = ExtResource("26_d7e4n")
+uv1_triplanar = true
+texture_filter = 0
 
-[sub_resource type="Sky" id="Sky_hw1er"]
-sky_material = SubResource("ProceduralSkyMaterial_p80qw")
+[sub_resource type="PlaneMesh" id="PlaneMesh_vcvpu"]
+material = SubResource("StandardMaterial3D_vcvpu")
+size = Vector2(25, 25)
 
 [sub_resource type="Environment" id="Environment_m7axd"]
 background_mode = 2
-sky = SubResource("Sky_hw1er")
 ambient_light_source = 3
 reflected_light_source = 2
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eyvb1"]
+load_path = "res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o7yem"]
 shader = ExtResource("61_w2e2n")
@@ -509,6 +541,11 @@ streams_count = 1
 stream_0/stream = ExtResource("140_o7yem")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mef85"]
+streams_count = 4
+stream_0/stream = ExtResource("45_vcvpu")
+stream_1/stream = ExtResource("46_d7e4n")
+stream_2/stream = ExtResource("47_rnbvo")
+stream_3/stream = ExtResource("48_vxh88")
 
 [sub_resource type="Environment" id="Environment_3a0l5"]
 background_mode = 3
@@ -520,8 +557,8 @@ layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("3_e77u7")
 script = ExtResource("1_p0fg6")
-themes = Array[Theme]([ExtResource("3_e77u7"), ExtResource("4_8g473"), ExtResource("1_m7axd"), ExtResource("1_8g473")])
-theme_names = Array[String](["Dark Mode", "Light Mode", "Fresh Mint", "Grape"])
+themes = Array[Theme]([ExtResource("3_e77u7"), ExtResource("4_8g473"), ExtResource("5_p80qw"), ExtResource("1_m7axd"), ExtResource("1_8g473"), ExtResource("6_hpfjw"), ExtResource("8_m7axd"), ExtResource("1_hpfjw")])
+theme_names = Array[String](["Dark Mode", "Light Mode", "High Contrast", "Fresh Mint", "Grape", "J.A.R.V.I.S", "Evergreen Forest", "Neon"])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -642,9 +679,9 @@ text = "VERSION"
 visible = false
 z_index = 15
 layout_mode = 0
-offset_left = 256.0
+offset_left = 312.0
 offset_top = 120.0
-offset_right = 384.0
+offset_right = 440.0
 offset_bottom = 240.0
 script = ExtResource("15_kxcgb")
 
@@ -767,7 +804,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="FNAB" type="Control" parent="Library Pages" unique_id=523003102]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -783,12 +819,82 @@ scale = Vector2(0.25, 0.25)
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB/SubViewportContainer" unique_id=1073184110]
-own_world_3d = true
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 0
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=1251719832]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1939105854]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -20.295221, 0)
+mesh = SubResource("PlaneMesh_vcvpu")
+
+[node name="Sprite3D" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1795659317]
+transform = Transform3D(0.49999997, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.49999997, 26.330452, 0, -46.146564)
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("27_rnbvo")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=690435627]
+transform = Transform3D(0.29007357, 0, -0.9570043, 0, 1, 0, 0.9570043, 0, 0.29007357, 36.916588, 0, -17.344004)
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("28_fcixt")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1621692345]
+transform = Transform3D(-0.5375075, 0, -0.84325886, 0, 1, 0, 0.84325886, 0, -0.5375075, 44.690628, 0, 27.93885)
+flip_h = true
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("28_vxh88")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1055071622]
+transform = Transform3D(-0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.7071067, 32.73784, 0, 48.724888)
+flip_h = true
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("29_ymjft")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1913215835]
+transform = Transform3D(-0.44118398, 0, -0.8974166, 0, 1, 0, 0.8974166, 0, -0.44118398, 7.294403, 0, 52.116405)
+flip_h = true
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("31_u2yh7")
+region_enabled = true
+region_rect = Rect2(24, 0, 23, 37)
+
+[node name="Sprite3D6" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1517473449]
+transform = Transform3D(0.5565936, 0, -0.8307848, 0, 1, 0, 0.8307848, 0, 0.5565936, 13.149284, -6, -53.290398)
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("32_d25uf")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 27)
+
+[node name="Sprite3D7" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1067844387]
+transform = Transform3D(0.32260513, 0, -0.94653344, 0, 1, 0, 0.94653344, 0, 0.32260513, 20.149284, -13, -28.324753)
+pixel_size = 1.0
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("33_fb01j")
+region_rect = Rect2(0, 0, 18, 27)
 
 [node name="GameCase" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=418215869 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
+game = ExtResource("16_42w5j")
 camera = NodePath("../Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=1770230409]
@@ -961,10 +1067,141 @@ context_menu_enabled = false
 emoji_menu_enabled = false
 
 [node name="Developers" type="Control" parent="." unique_id=871039976]
+visible = false
 anchors_preset = 0
 offset_top = 80.0
 offset_right = 40.0
 offset_bottom = 120.0
+
+[node name="Bulba" parent="Developers" unique_id=961799538 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 64.0
+offset_right = 324.0
+offset_bottom = 96.0
+text = "Bulba
+Gabriel Webb"
+bio = NodePath("../Bulba Bio")
+avatar = ExtResource("30_c203k")
+
+[node name="Jonathan" parent="Developers" unique_id=1121329441 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 64.0
+offset_right = 412.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 10
+text = "NinjaBot2010
+Jonathan Emmons"
+bio = NodePath("../Jonathan Bio")
+avatar = ExtResource("31_70lts")
+
+[node name="Sawyer" parent="Developers" unique_id=514891212 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 64.0
+offset_right = 500.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 10
+text = "TheProOfFPS
+Sawyer Rodgers"
+bio = NodePath("../Sawyer Bio")
+avatar = ExtResource("32_u0r11")
+
+[node name="Diego" parent="Developers" unique_id=1423075353 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 184.0
+offset_right = 364.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 10
+text = "Froggermand
+Diego Florran"
+bio = NodePath("../Diego Bio")
+avatar = ExtResource("33_atdf6")
+
+[node name="Claire" parent="Developers" unique_id=1328940608 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 184.0
+offset_right = 452.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 10
+text = "CloudyCritter
+Claire Wilson"
+bio = NodePath("../Claire Bio")
+avatar = ExtResource("34_kungx")
+
+[node name="Bulba Bio" parent="Developers" unique_id=1142850733 node_paths=PackedStringArray("featured_page") instance=ExtResource("35_eyvb1")]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = -80.0
+offset_right = 640.2449
+offset_bottom = 279.99997
+avatar = SubResource("CompressedTexture2D_eyvb1")
+dev_name = "Gabriel"
+bio = "Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series, The Vegetable Game and Head Developer of the Ambition Launcher."
+rank = "C.E.O."
+pronoun = "He/Him"
+featured = Array[ExtResource("36_j128u")]([ExtResource("16_42w5j"), ExtResource("17_dfolu"), ExtResource("18_m7axd")])
+featured_page = [NodePath("../../Store Pages/FNAB1"), NodePath("../../Store Pages/FNAB2"), NodePath("../../Store Pages/Veg")]
+
+[node name="Jonathan Bio" parent="Developers" unique_id=1777280139 node_paths=PackedStringArray("featured_page") instance=ExtResource("35_eyvb1")]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = -80.0
+offset_right = 640.2449
+offset_bottom = 279.99997
+avatar = ExtResource("31_70lts")
+dev_name = "Jonathan"
+bio = "Head Developer of the Ambition Launcher, Gavin's Fantastically Fun Adventure, and a secret project."
+rank = "Rank: Employee"
+pronoun = "He/Him"
+featured = Array[ExtResource("36_j128u")]([ExtResource("18_p80qw")])
+featured_page = [NodePath("../../Store Pages/GFFA")]
+
+[node name="Sawyer Bio" parent="Developers" unique_id=1213034635 node_paths=PackedStringArray("featured_page") instance=ExtResource("35_eyvb1")]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = -80.0
+offset_right = 640.2449
+offset_bottom = 279.99997
+avatar = ExtResource("32_u0r11")
+dev_name = "Sawyer"
+bio = "Co-Founder of Workaholic Games and Head Developer of Bitcoin Miner and TOE."
+rank = "Rank: CO-CEO"
+pronoun = "He/Him"
+featured = Array[ExtResource("36_j128u")]([ExtResource("19_m7axd")])
+featured_page = [NodePath("../../Store Pages/Bitcoin Miner")]
+
+[node name="Diego Bio" parent="Developers" unique_id=1429890886 instance=ExtResource("35_eyvb1")]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = -80.0
+offset_right = 640.2449
+offset_bottom = 279.99997
+avatar = ExtResource("33_atdf6")
+dev_name = "Diego"
+bio = "Head Developer of most of our Minecraft Server projects."
+rank = "Head Crafter"
+pronoun = "He/Him"
+
+[node name="Claire Bio" parent="Developers" unique_id=101440923 instance=ExtResource("35_eyvb1")]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = -80.0
+offset_right = 640.2449
+offset_bottom = 279.99997
+avatar = ExtResource("34_kungx")
+dev_name = "Claire"
+bio = "Artist hired by Bulba to work on specific projects."
+rank = "Artist"
+pronoun = "They/Them"
 
 [node name="Store Pages" type="Control" parent="." unique_id=1439287199]
 z_index = 1
@@ -1048,7 +1285,15 @@ offset_bottom = 40.0
 [node name="Panel" type="Panel" parent="Community/Featured" unique_id=20987269]
 layout_mode = 0
 offset_left = 120.0
-offset_top = 32.0
+offset_top = 16.0
+offset_right = 616.0
+offset_bottom = 152.0
+theme_type_variation = &"Panel2"
+
+[node name="Panel2" type="Panel" parent="Community/Featured" unique_id=1660012645]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 168.0
 offset_right = 616.0
 offset_bottom = 312.0
 theme_type_variation = &"Panel2"
@@ -1056,9 +1301,8 @@ theme_type_variation = &"Panel2"
 [node name="Best Artwork" type="Label" parent="Community/Featured" unique_id=338952825]
 layout_mode = 0
 offset_left = 120.0
-offset_top = 16.0
 offset_right = 632.0
-offset_bottom = 160.0
+offset_bottom = 144.0
 theme_override_font_sizes/font_size = 12
 text = "Best Art"
 
@@ -1095,7 +1339,7 @@ offset_left = 32.0
 offset_top = 32.0
 offset_right = 128.0
 offset_bottom = 128.0
-texture = ExtResource("19_12ljg")
+texture = ExtResource("28_dfolu")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Bulba Art" unique_id=1850589535]
@@ -1105,7 +1349,7 @@ offset_top = 96.0
 offset_right = 124.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 12
-text = "Title - KitKat"
+text = "Art idk - CloudyCritter"
 horizontal_alignment = 1
 
 [node name="Jonathan Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=439289867]
@@ -1114,7 +1358,6 @@ offset_left = 192.0
 offset_top = 32.0
 offset_right = 288.0
 offset_bottom = 128.0
-texture = ExtResource("23_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Jonathan Art" unique_id=794045597]
@@ -1124,7 +1367,7 @@ offset_top = 96.0
 offset_right = 124.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 12
-text = "Seedling - GigaAdam64"
+text = "Not enough art"
 horizontal_alignment = 1
 
 [node name="Sawyer Art" type="TextureRect" parent="Community/Featured/Best Artwork" unique_id=1539715783]
@@ -1133,7 +1376,6 @@ offset_left = 368.0
 offset_top = 32.0
 offset_right = 464.0
 offset_bottom = 128.0
-texture = ExtResource("20_12ljg")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Artwork/Sawyer Art" unique_id=2082768414]
@@ -1143,52 +1385,52 @@ offset_top = 96.0
 offset_right = 128.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 12
-text = "GABE ASGORE - GigaAdam64"
+text = "Not enough art"
 horizontal_alignment = 1
 
 [node name="Best Memes" type="Label" parent="Community/Featured" unique_id=197830391]
 layout_mode = 0
 offset_left = 120.0
-offset_top = 168.0
+offset_top = 152.0
 offset_right = 632.0
-offset_bottom = 312.0
+offset_bottom = 296.0
 theme_override_font_sizes/font_size = 12
 text = "Best Memes"
 
 [node name="Bulba\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=998676779]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 15.0
+offset_top = 30.0
 offset_right = 144.0
-offset_bottom = 33.0
+offset_bottom = 48.0
 text = "Bulba's Pick"
 horizontal_alignment = 1
 
 [node name="Jonathan\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=391824318]
 layout_mode = 0
 offset_left = 176.0
-offset_top = 15.0
+offset_top = 30.0
 offset_right = 304.0
-offset_bottom = 33.0
+offset_bottom = 48.0
 text = "Jonathan's Pick"
 horizontal_alignment = 1
 
 [node name="Sawyer\'s Pick" type="Label" parent="Community/Featured/Best Memes" unique_id=2083139813]
 layout_mode = 0
 offset_left = 352.0
-offset_top = 15.0
+offset_top = 30.0
 offset_right = 480.0
-offset_bottom = 33.0
+offset_bottom = 48.0
 text = "Sawyer's Pick"
 horizontal_alignment = 1
 
 [node name="Bulba Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=770749474]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 32.0
+offset_top = 47.0
 offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("37_j17j7")
+offset_bottom = 143.0
+texture = ExtResource("29_p80qw")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Bulba Meme" unique_id=1641051508]
@@ -1197,17 +1439,18 @@ offset_left = -24.0
 offset_top = 96.0
 offset_right = 124.0
 offset_bottom = 114.0
-theme_override_font_sizes/font_size = 12
-text = "Cog-Mo"
+theme_override_font_sizes/font_size = 8
+text = "time for a wave of memes - GigaAdam64"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Jonathan Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=1313359070]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 32.0
+offset_top = 47.0
 offset_right = 288.0
-offset_bottom = 128.0
-texture = ExtResource("18_13033")
+offset_bottom = 143.0
+texture = ExtResource("30_m7axd")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Jonathan Meme" unique_id=64430464]
@@ -1216,17 +1459,17 @@ offset_left = -24.0
 offset_top = 96.0
 offset_right = 124.0
 offset_bottom = 114.0
-theme_override_font_sizes/font_size = 12
-text = "GigaAdam64"
+theme_override_font_sizes/font_size = 8
+text = "time for a wave of memes - GigaAdam64"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Sawyer Meme" type="TextureRect" parent="Community/Featured/Best Memes" unique_id=1853477269]
 layout_mode = 0
 offset_left = 368.0
-offset_top = 32.0
+offset_top = 47.0
 offset_right = 464.0
-offset_bottom = 128.0
-texture = ExtResource("20_n5kpq")
+offset_bottom = 143.0
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Sawyer Meme" unique_id=399822536]
@@ -1236,7 +1479,7 @@ offset_top = 96.0
 offset_right = 128.0
 offset_bottom = 114.0
 theme_override_font_sizes/font_size = 12
-text = "GigaAdam64"
+text = "Undecided"
 horizontal_alignment = 1
 
 [node name="Lock" type="Sprite2D" parent="Community" unique_id=1207621899]
@@ -1306,6 +1549,7 @@ offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 60.0
 script = ExtResource("16_3a0l5")
+music = Array[AudioStream]([ExtResource("45_vcvpu"), ExtResource("46_d7e4n"), ExtResource("47_rnbvo"), ExtResource("48_vxh88")])
 
 [node name="Window Mode" type="OptionButton" parent="Settings" unique_id=288803998]
 custom_minimum_size = Vector2(232, 26)
@@ -1497,6 +1741,14 @@ offset_bottom = -1.0
 text = "UI Volumes"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="Update" type="Button" parent="Settings" unique_id=1312194824]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 238.0
+offset_right = 352.0
+offset_bottom = 264.0
+text = "Check for Updates"
 
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
 visible = false
@@ -1855,6 +2107,7 @@ offset_bottom = 272.0
 [node name="GridContainer" type="GridContainer" parent="User/Avatar Selection/ScrollContainer" unique_id=1324893963]
 layout_mode = 2
 theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
 columns = 14
 
 [node name="Back" type="Button" parent="User/Avatar Selection" unique_id=1300002806]
@@ -1921,7 +2174,7 @@ texture_normal = ExtResource("107_jqfxn")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("73_d1j2r")
-default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("91_ktvun"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("92_dfxco"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("111_cvllj"), ExtResource("110_sl5vs"), ExtResource("109_kuktk"), ExtResource("108_ebf3y"), ExtResource("107_jqfxn"), ExtResource("112_jyo0q"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("114_cvllj"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("123_qngap"), ExtResource("122_oui53")])
+default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("91_ktvun"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("92_dfxco"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("111_cvllj"), ExtResource("110_sl5vs"), ExtResource("109_kuktk"), ExtResource("108_ebf3y"), ExtResource("107_jqfxn"), ExtResource("112_jyo0q"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("114_cvllj"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("122_oui53"), ExtResource("123_qngap"), ExtResource("96_e77u7")])
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
 z_index = 3
@@ -2309,7 +2562,7 @@ script = ExtResource("68_d2ack")
 
 [node name="Snow" type="CPUParticles2D" parent="Event" unique_id=1278912574]
 visible = false
-z_index = 5
+z_index = 12
 position = Vector2(320, 176)
 amount = 30
 texture = ExtResource("68_omfc6")
@@ -2364,6 +2617,7 @@ polygon = PackedVector2Array(0, 360, 0, 0, 640, 0, 640, 360)
 [connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="timeout" from="Update/Timer" to="Update" method="_on_timer_timeout"]
+[connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
@@ -2377,6 +2631,7 @@ polygon = PackedVector2Array(0, 360, 0, 0, 640, 0, 640, 360)
 [connection signal="item_selected" from="Settings/Music" to="Settings" method="_on_music_item_selected"]
 [connection signal="value_changed" from="Settings/Music Volume" to="Settings" method="_on_music_volume_value_changed"]
 [connection signal="value_changed" from="Settings/UI Volume" to="Settings" method="_on_ui_volume_value_changed"]
+[connection signal="pressed" from="Settings/Update" to="Update" method="_on_update_pressed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]

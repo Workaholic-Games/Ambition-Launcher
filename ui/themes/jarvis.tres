@@ -1,0 +1,197 @@
+[gd_resource type="Theme" script_class="ThemePlus" format=3 uid="uid://dlu001cnshvbi"]
+
+[ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_xmeh6"]
+[ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_p1h6u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmeh6"]
+bg_color = Color(0.007843138, 0.16862746, 0.17254902, 1)
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1h6u"]
+bg_color = Color(0.003921569, 0.09803922, 0.101960786, 1)
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vnbp"]
+bg_color = Color(0.018667825, 0.27456367, 0.27878863, 1)
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxupd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ofgg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m7axd"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_m7axd"]
+color = Color(0.16862746, 0.8, 0.8117647, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vm3u2"]
+color = Color(0.121630915, 0.6237495, 0.6331015, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_itfvo"]
+color = Color(0.06994762, 0.41026828, 0.41559565, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_21t6h"]
+color = Color(0.003921569, 0.09803922, 0.101960786, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgqu7"]
+atlas = ExtResource("1_xmeh6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6v6a"]
+bg_color = Color(0.17009999, 0.7993351, 0.81, 1)
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2pj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rt4f"]
+bg_color = Color(0.003921569, 0.09803922, 0.101960786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpfjw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p80qw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfolu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsl60"]
+bg_color = Color(0.16862746, 0.8, 0.8117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3g8g2"]
+bg_color = Color(0.0056374073, 0.09739857, 0.10006278, 1)
+border_width_left = 2
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc1ol"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixg8n"]
+bg_color = Color(0.009699598, 0.16865215, 0.17438498, 1)
+border_width_left = 2
+border_color = Color(0.17009999, 0.7993351, 0.81, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_852j6"]
+color = Color(0.16862746, 0.5647059, 0.8117647, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_7ur87"]
+color = Color(0.06959285, 0.34642917, 0.51378775, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6vhno"]
+color = Color(0.037986256, 0.23798949, 0.36208534, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_egsx8"]
+color = Color(0.7176471, 0.7176471, 0.7176471, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 8
+vertical = true
+
+[resource]
+Button/colors/font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+Button/colors/font_hover_color = Color(0.16862746, 0.8, 0.8117647, 1)
+Button/colors/font_hover_pressed_color = Color(0.16862746, 0.8, 0.8117647, 1)
+Button/colors/font_pressed_color = Color(0.16862746, 0.8, 0.8117647, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_xmeh6")
+Button/styles/normal = SubResource("StyleBoxFlat_p1h6u")
+Button/styles/pressed = SubResource("StyleBoxFlat_5vnbp")
+FoldableContainer/colors/collapsed_font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+FoldableContainer/colors/font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+FoldableContainer/colors/hover_font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+FoldableContainer/icons/expanded_arrow = SubResource("AtlasTexture_cxupd")
+FoldableContainer/icons/folded_arrow = SubResource("AtlasTexture_1ofgg")
+FoldableContainer/styles/focus = SubResource("StyleBoxEmpty_m7axd")
+FoldableContainer/styles/panel = SubResource("StyleBoxFlat_p1h6u")
+FoldableContainer/styles/title_collapsed_hover_panel = SubResource("StyleBoxFlat_p1h6u")
+FoldableContainer/styles/title_collapsed_panel = SubResource("StyleBoxFlat_p1h6u")
+FoldableContainer/styles/title_hover = SubResource("StyleBoxFlat_xmeh6")
+FoldableContainer/styles/title_panel = SubResource("StyleBoxFlat_p1h6u")
+HScrollBar/styles/grabber = SubResource("StyleBoxLine_m7axd")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_vm3u2")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_itfvo")
+HScrollBar/styles/scroll = SubResource("StyleBoxLine_21t6h")
+HSlider/icons/grabber = SubResource("AtlasTexture_kgqu7")
+HSlider/icons/grabber_disabled = SubResource("AtlasTexture_kgqu7")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_kgqu7")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_21t6h")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_21t6h")
+HSlider/styles/slider = SubResource("StyleBoxLine_21t6h")
+Label/colors/font__color = Color(1, 1, 1, 1)
+Label/colors/font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+Line/base_type = &"Panel"
+Line/styles/panel = SubResource("StyleBoxFlat_a6v6a")
+LineEdit/colors/caret_color = Color(0.16862746, 0.8, 0.8117647, 0.588)
+LineEdit/colors/font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+LineEdit/colors/font_placeholder_color = Color(0.16862746, 0.8, 0.8117647, 0.588)
+LineEdit/colors/font_selected_color = Color(0.16862746, 0.8, 0.8117647, 1)
+LineEdit/colors/selection_color = Color(0.16862746, 0.8, 0.8117647, 0.314)
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_y2pj5")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_5rt4f")
+Panel/styles/panel = SubResource("StyleBoxFlat_hpfjw")
+Panel2/base_type = &"Panel"
+Panel2/styles/panel = SubResource("StyleBoxFlat_5rt4f")
+PopPanel/styles/panel = SubResource("StyleBoxFlat_5rt4f")
+PopupMenu/colors/font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+PopupMenu/colors/font_hover_color = Color(0.16862746, 0.8, 0.8117647, 1)
+PopupMenu/font_sizes/font_size = 12
+PopupMenu/icons/radio_checked = SubResource("AtlasTexture_p80qw")
+PopupMenu/icons/radio_unchecked = SubResource("AtlasTexture_dfolu")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_xmeh6")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_5rt4f")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_5rt4f")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_gsl60")
+RichTextLabel/colors/default_color = Color(0.16862746, 0.8, 0.8117647, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_5rt4f")
+TabButton/base_type = &"Button"
+TabButton/styles/hover = SubResource("StyleBoxFlat_3g8g2")
+TabButton/styles/normal = SubResource("StyleBoxFlat_tc1ol")
+TabButton/styles/pressed = SubResource("StyleBoxFlat_ixg8n")
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_852j6")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_7ur87")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_6vhno")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_egsx8")
+VSlider/styles/grabber_area = SubResource("StyleBoxLine_egsx8")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_egsx8")
+VSlider/styles/slider = SubResource("StyleBoxLine_egsx8")
+script = ExtResource("2_p1h6u")
+font_color = Color(0.16862746, 0.8, 0.8117647, 1)
+accent_color = Color(0.17009999, 0.7993351, 0.81, 1)
+background_panel = SubResource("StyleBoxFlat_hpfjw")
+background_panel_2 = SubResource("StyleBoxFlat_5rt4f")
+progress_bar_background = SubResource("StyleBoxFlat_5rt4f")
+progress_bar = SubResource("StyleBoxFlat_gsl60")
+tab_button_normal = Color(0, 0, 0, 1)
+tab_button_hover = Color(0.0056374073, 0.09739857, 0.10006278, 1)
+tab_button_pressed = Color(0.009699598, 0.16865215, 0.17438498, 1)
+close_button_normal = Color(0.003921569, 0.09803922, 0.101960786, 1)
+close_button_hover = Color(0.007843138, 0.16862746, 0.17254902, 1)
+close_button_pressed = Color(0.018667825, 0.27456367, 0.27878863, 1)
+slider = SubResource("StyleBoxLine_m7axd")
+slider_hover = SubResource("StyleBoxLine_vm3u2")
+slider_pressed = SubResource("StyleBoxLine_itfvo")
+slider_background = SubResource("StyleBoxLine_21t6h")
+scroll_icon = SubResource("AtlasTexture_kgqu7")
+metadata/_custom_type_script = "uid://86r5i1sh65t2"

@@ -7,6 +7,7 @@ var cursors: Dictionary = {
 	"Fry": load("res://main/settings/cursors/fry_cursor.png"),
 	"Seedling": load("res://main/settings/cursors/seedling_cursor.png"),
 	"Sun": load("res://main/settings/cursors/sad_sun_cursor.png"),
+	"Moon": load("res://main/settings/cursors/mortisha_moon_cursor.png"),
 	}
 @export var music : Array[AudioStream]
 
@@ -89,6 +90,11 @@ func _ready():
 		$"../Music".play()
 	
 	$Font.select(Main.launcher_data.font)
+	
+	for child in get_children():
+		if child is OptionButton:
+			child.get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
+
 
 # Window settings
 func _on_window_mode_item_selected(index: int) -> void:

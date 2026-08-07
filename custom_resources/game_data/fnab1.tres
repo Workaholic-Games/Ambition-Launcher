@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://chvernrw33afx"]
 
 [ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_elm2x"]
-[ext_resource type="Texture2D" uid="uid://bwp5jfjfvnj2t" path="res://game_assets/covers/fnab.png" id="1_ofu32"]
+[ext_resource type="Texture2D" uid="uid://dgnx1nmy5x2ku" path="res://game_assets/covers/fnab/fnab_back.png" id="1_wkwuy"]
 [ext_resource type="Texture2D" uid="uid://ehdyilok003e" path="res://game_assets/thumbnails/fnab1/fnab.png" id="2_j5nu2"]
+[ext_resource type="Texture2D" uid="uid://dfnmnew34erwi" path="res://game_assets/covers/fnab/fnab.png" id="2_r4usm"]
+[ext_resource type="Texture2D" uid="uid://c62w3kiys5dam" path="res://game_assets/covers/fnab/fnab_disc.png" id="3_bag78"]
 [ext_resource type="Texture2D" uid="uid://cop64et2xtrh2" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191613.png" id="3_i0148"]
+[ext_resource type="Texture2D" uid="uid://c00afldn3v1nc" path="res://game_assets/covers/fnab/fnab_hinge.png" id="4_mp1pi"]
 [ext_resource type="Texture2D" uid="uid://fris73gwf4i" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191654.png" id="4_wkwuy"]
 [ext_resource type="Texture2D" uid="uid://c2vftl5ks53dp" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191700.png" id="5_r4usm"]
 [ext_resource type="Texture2D" uid="uid://csc5hdur6xl7u" path="res://game_assets/thumbnails/fnab1/Screenshot 2026-05-21 191707.png" id="6_bag78"]
@@ -22,7 +25,10 @@ age_rating = "T for Teen"
 main_dev = "Developer: Bulba"
 stability = "Good"
 max_players = "1"
-cover = ExtResource("1_ofu32")
+cover = ExtResource("2_r4usm")
+hinge = ExtResource("4_mp1pi")
+back = ExtResource("1_wkwuy")
+disc = ExtResource("3_bag78")
 images = Array[Texture2D]([ExtResource("2_j5nu2"), ExtResource("3_i0148"), ExtResource("4_wkwuy"), ExtResource("5_r4usm"), ExtResource("6_bag78"), ExtResource("7_mp1pi"), ExtResource("8_fs03y")])
 videos = Array[VideoStream]([ExtResource("10_a5n6o")])
 version_names = PackedStringArray("Ambition Edition", "1.0", "DEMO")

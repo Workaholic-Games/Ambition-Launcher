@@ -2,6 +2,7 @@ extends TextureButton
 
 @export var game : GameData
 @export var menu : Control
+var versions : Array = []
 
 
 
@@ -22,3 +23,29 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	get_parent().move_child(self, 0)
 	menu.show()
+
+func check():
+	for i in range(game.version_names.size()):
+		var is_installed = false
+		
+		match Main.operating_system:
+			"Windows":
+				if i < game.version_file_names_windows.size():
+					var path = game.folder_path + "//" + game.version_file_names_windows[i] + ".exe"
+					is_installed = FileAccess.file_exists(path)
+			"macOS":
+				if i < game.version_file_names_mac.size():
+					var path = game.folder_path + "//" + game.version_file_names_mac[i] + ".app"
+					is_installed = DirAccess.dir_exists_absolute(path)
+			"Linux":
+				if i < game.version_file_names_mac.size():
+					var path = game.folder_path + "//" + game.version_file_names_linux[i]
+					is_installed = DirAccess.dir_exists_absolute(path)
+		
+		if is_installed == true:
+			versions.append(game.version_names[i])
+		
+	if versions.size() > 0:
+		show()
+	else:
+		hide()

@@ -4,15 +4,15 @@
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_k3qhw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0if5"]
-bg_color = Color(0.1254902, 0.043137256, 0.23529412, 1)
+bg_color = Color(0.105882354, 0.03529412, 0.20392157, 1)
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3qhw"]
-bg_color = Color(0.09803922, 0.03137255, 0.1882353, 1)
+bg_color = Color(0.06666667, 0.019607844, 0.14117648, 1)
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2p0"]
-bg_color = Color(0.17590874, 0.070719205, 0.3162863, 1)
+bg_color = Color(0.13645941, 0.05237814, 0.25309396, 1)
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxupd"]
@@ -40,7 +40,7 @@ grow_end = 0.0
 thickness = 8
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_21t6h"]
-color = Color(0.09803922, 0.03137255, 0.1882353, 1)
+color = Color(0.06666667, 0.019607844, 0.14117648, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
@@ -56,10 +56,10 @@ border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2pj5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rt4f"]
-bg_color = Color(0.09146664, 0.024000002, 0.2, 1)
+bg_color = Color(0.06850728, 0.018781269, 0.14256835, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpfjw"]
-bg_color = Color(0.05882353, 0.015686275, 0.12941177, 1)
+bg_color = Color(0.029776847, 0.0075648427, 0.08111837, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qy8ot"]
 
@@ -71,16 +71,16 @@ bg_color = Color(0.05882353, 0.015686275, 0.12941177, 1)
 bg_color = Color(0.10000005, 0.6, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfmx1"]
-bg_color = Color(0.09688974, 0.030734107, 0.1894556, 1)
+bg_color = Color(0.06666667, 0.019607844, 0.14117648, 1)
 border_width_left = 2
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wgje"]
-bg_color = Color(0.058370013, 0.0169, 0.13, 1)
+bg_color = Color(0.03137255, 0.007843138, 0.08235294, 1)
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gadyv"]
-bg_color = Color(0.1254902, 0.043137256, 0.23529412, 1)
+bg_color = Color(0.10769277, 0.033994038, 0.20378292, 1)
 border_width_left = 2
 border_color = Color(0.30491412, 0.0011685183, 0.60778034, 1)
 
@@ -186,12 +186,12 @@ background_panel = SubResource("StyleBoxFlat_hpfjw")
 background_panel_2 = SubResource("StyleBoxFlat_5rt4f")
 progress_bar_background = SubResource("StyleBoxFlat_5rt4f")
 progress_bar = SubResource("StyleBoxFlat_gsl60")
-tab_button_normal = Color(0.058370013, 0.0169, 0.13, 1)
-tab_button_hover = Color(0.09688974, 0.030734107, 0.1894556, 1)
-tab_button_pressed = Color(0.1254902, 0.043137256, 0.23529412, 1)
-close_button_normal = Color(0.09803922, 0.03137255, 0.1882353, 1)
-close_button_hover = Color(0.1254902, 0.043137256, 0.23529412, 1)
-close_button_pressed = Color(0.17590874, 0.070719205, 0.3162863, 1)
+tab_button_normal = Color(0.03137255, 0.007843138, 0.08235294, 1)
+tab_button_hover = Color(0.06666667, 0.019607844, 0.14117648, 1)
+tab_button_pressed = Color(0.10769277, 0.033994038, 0.20378292, 1)
+close_button_normal = Color(0.06666667, 0.019607844, 0.14117648, 1)
+close_button_hover = Color(0.105882354, 0.03529412, 0.20392157, 1)
+close_button_pressed = Color(0.13645941, 0.05237814, 0.25309396, 1)
 slider = SubResource("StyleBoxLine_m7axd")
 slider_hover = SubResource("StyleBoxLine_vm3u2")
 slider_pressed = SubResource("StyleBoxLine_itfvo")

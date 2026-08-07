@@ -1,9 +1,6 @@
 [gd_scene format=4 uid="uid://cglv4rvectu7q"]
 
 [ext_resource type="Script" uid="uid://eaiea37kyday" path="res://game_assets/game_pages/game_case.gd" id="1_r616l"]
-[ext_resource type="Texture2D" uid="uid://dgnx1nmy5x2ku" path="res://game_assets/covers/fnab_back.png" id="2_q0trt"]
-[ext_resource type="Texture2D" uid="uid://c00afldn3v1nc" path="res://game_assets/covers/fnab_hinge.png" id="2_u8e4i"]
-[ext_resource type="Texture2D" uid="uid://c62w3kiys5dam" path="res://game_assets/covers/fnab_disc.png" id="3_y144f"]
 [ext_resource type="AudioStream" uid="uid://c5o7ffk4ddo5i" path="res://sounds/case_open.mp3" id="5_iv7fk"]
 [ext_resource type="AudioStream" uid="uid://7nkqr1yx2o11" path="res://sounds/case_close.mp3" id="6_h7upm"]
 
@@ -57,6 +54,13 @@ height = 379
 fill_from = Vector2(0, 1)
 metadata/_snap_enabled = true
 
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q0trt"]
+gradient = SubResource("Gradient_q0trt")
+width = 265
+height = 380
+fill_from = Vector2(0, 1)
+metadata/_snap_enabled = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3k50d"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7vx8j"]
@@ -91,18 +95,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7vx8j")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r616l"]
-load_path = "res://.godot/imported/fnab.png-ac154780d6160a237982ce1389db21b7.ctex"
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_q0trt"]
-gradient = SubResource("Gradient_q0trt")
-width = 265
-height = 380
-fill_from = Vector2(0, 1)
-metadata/_snap_enabled = true
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qo5j"]
-albedo_texture = ExtResource("3_y144f")
 metallic = 1.0
 roughness = 0.25
 uv1_scale = Vector3(0.065, 0.065, 0.065)
@@ -331,7 +324,6 @@ transparent = false
 shaded = true
 alpha_cut = 2
 texture_filter = 0
-texture = ExtResource("2_u8e4i")
 
 [node name="Film" type="Sprite3D" parent="Case/Offset/Cover" unique_id=1130614298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983738)
@@ -339,6 +331,14 @@ pixel_size = 0.06
 shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_y144f")
+
+[node name="Film2" type="Sprite3D" parent="Case/Offset/Cover" unique_id=37836055]
+transform = Transform3D(0.12, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.088)
+pixel_size = 0.06
+transparent = false
+shaded = true
+alpha_cut = 2
+texture = SubResource("GradientTexture2D_q0trt")
 
 [node name="Front" type="Node3D" parent="Case/Offset" unique_id=1539044472]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 0)
@@ -356,11 +356,18 @@ transparent = false
 shaded = true
 alpha_cut = 2
 texture_filter = 0
-texture = SubResource("CompressedTexture2D_r616l")
 
 [node name="Film" type="Sprite3D" parent="Case/Offset/Front/Cover" unique_id=1812593427]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983726)
 pixel_size = 0.06
+shaded = true
+alpha_cut = 2
+texture = SubResource("GradientTexture2D_q0trt")
+
+[node name="Film" type="Sprite3D" parent="Case/Offset/Front" unique_id=1944031085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8710003, 0, 0.08840892)
+pixel_size = 0.06
+transparent = false
 shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_q0trt")
@@ -386,11 +393,18 @@ transparent = false
 shaded = true
 alpha_cut = 2
 texture_filter = 0
-texture = ExtResource("2_q0trt")
 
 [node name="Film" type="Sprite3D" parent="Case/Offset/Back/Back" unique_id=287472380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983726)
 pixel_size = 0.06
+shaded = true
+alpha_cut = 2
+texture = SubResource("GradientTexture2D_q0trt")
+
+[node name="Film" type="Sprite3D" parent="Case/Offset/Back" unique_id=586326794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.871, 0, 0.088)
+pixel_size = 0.06
+transparent = false
 shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_q0trt")

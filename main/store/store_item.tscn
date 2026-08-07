@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://boivsvlnsewke"]
 
-[ext_resource type="Texture2D" uid="uid://dfnmnew34erwi" path="res://game_assets/covers/fnab.png" id="1_uwkhu"]
+[ext_resource type="Texture2D" uid="uid://dfnmnew34erwi" path="res://game_assets/covers/fnab/fnab.png" id="1_uwkhu"]
 [ext_resource type="Script" uid="uid://nmfdwkt0okv" path="res://main/store/store_item.gd" id="1_vbu4v"]
 [ext_resource type="AudioStream" uid="uid://dt0nxclgcwn1" path="res://sounds/tap.mp3" id="2_6erqr"]
 
@@ -20,6 +20,8 @@ script = ExtResource("1_vbu4v")
 [node name="Hover" type="Panel" parent="." unique_id=1033371272]
 visible = false
 self_modulate = Color(1, 1, 1, 0.3137255)
+custom_minimum_size = Vector2(120, 172)
+custom_maximum_size = Vector2(120, 172)
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 172.0
