@@ -31,10 +31,12 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		set_color("collapsed_font_color", "FoldableContainer", value)
 		set_color("hover_font_color", "FoldableContainer", value)
 		set_color("font_color", "LineEdit", value)
-		set_color("font_placeholder_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
+		set_color("font_placeholder_color", "LineEdit", Color(value.r, value.g, value.b, 0.588))
 		set_color("font_selected_color", "LineEdit", value)
-		set_color("selection_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
-		set_color("caret_color", "LineEdit", Color(value.r, value.b, value.g, 0.588))
+		set_color("selection_color", "LineEdit", Color(value.r, value.g, value.b, 0.314))
+		set_color("caret_color", "LineEdit", Color(value.r, value.g, value.b, 0.588))
+		set_color("font_color", "PopupMenu", value)
+		set_color("font_hover_color", "PopupMenu", value)
 
 @export var accent_color : Color = Color(1.0, 1.0, 1.0, 1.0):
 	set(value):
@@ -51,7 +53,8 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		background_panel_2 = value
 		set_stylebox("panel", "Panel2", value)
 		set_stylebox("normal", "RichTextLabel", value)
-		set_stylebox("normal", "LineEdit", value)
+		set_stylebox("panel", "PopupMenu", value)
+		set_font_size("font_size", "PopupMenu", 12)
 
 
 @export var progress_bar_background : StyleBox:
@@ -102,6 +105,7 @@ func stylebox_setup(state : String, name : String, stylebox : StyleBox):
 		close_button_hover_stylebox.border_color = accent_color
 		stylebox_setup("hover", "Button", close_button_hover_stylebox)
 		set_stylebox("title_hover", "FoldableContainer", close_button_hover_stylebox)
+		set_stylebox("hover", "PopupMenu", close_button_hover_stylebox)
 @export var close_button_pressed : Color = Color(1.0, 1.0, 1.0, 1.0):
 	set(value):
 		close_button_pressed = value

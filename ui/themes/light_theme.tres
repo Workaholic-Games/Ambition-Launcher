@@ -4,16 +4,16 @@
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_vi7sd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hwl0"]
-bg_color = Color(0.5411765, 0.5411765, 0.5411765, 1)
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+bg_color = Color(0.70980394, 0.70980394, 0.70980394, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vi7sd"]
-bg_color = Color(0.7176471, 0.7176471, 0.7176471, 1)
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+bg_color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85kwt"]
-bg_color = Color(0.3665946, 0.3665946, 0.36659455, 1)
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+bg_color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxupd"]
 
@@ -50,8 +50,8 @@ atlas = ExtResource("1_4hwl0")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qahab"]
-bg_color = Color(0.17009999, 0.5647049, 0.81, 1)
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+bg_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2pj5"]
 
@@ -61,46 +61,50 @@ bg_color = Color(0.75398445, 0.7539837, 0.75398415, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpfjw"]
 bg_color = Color(0.8646751, 0.86467516, 0.8646751, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p80qw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfolu"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsl60"]
 bg_color = Color(0.10000005, 0.6, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcifm"]
-bg_color = Color(0.7162962, 0.71629626, 0.7162961, 1)
+bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
 border_width_left = 2
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2dii"]
 bg_color = Color(0.8627451, 0.8627451, 0.8627451, 1)
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joxb8"]
-bg_color = Color(0.5409905, 0.5409905, 0.5409905, 1)
+bg_color = Color(0.70796657, 0.7079665, 0.7079665, 1)
 border_width_left = 2
-border_color = Color(0.17009999, 0.5647049, 0.81, 1)
+border_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_lntvy"]
-color = Color(0.8117647, 0.16862746, 0.16862746, 1)
+color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2ebkx"]
-color = Color(0.6612467, 0.120857336, 0.12399823, 1)
+color = Color(0.06959285, 0.34642917, 0.51378775, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2bdw2"]
-color = Color(0.41565615, 0.060547277, 0.06061814, 1)
+color = Color(0.037986256, 0.23798949, 0.36208534, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_64k6u"]
-color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+color = Color(0.7176471, 0.7176471, 0.7176471, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
@@ -143,12 +147,20 @@ LineEdit/colors/caret_color = Color(0, 0, 0, 0.588)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.588)
 LineEdit/colors/font_selected_color = Color(0, 0, 0, 1)
-LineEdit/colors/selection_color = Color(0, 0, 0, 0.588)
+LineEdit/colors/selection_color = Color(0, 0, 0, 0.314)
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_y2pj5")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_5rt4f")
 Panel/styles/panel = SubResource("StyleBoxFlat_hpfjw")
 Panel2/base_type = &"Panel"
 Panel2/styles/panel = SubResource("StyleBoxFlat_5rt4f")
+PopPanel/styles/panel = SubResource("StyleBoxFlat_5rt4f")
+PopupMenu/colors/font_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)
+PopupMenu/font_sizes/font_size = 12
+PopupMenu/icons/radio_checked = SubResource("AtlasTexture_p80qw")
+PopupMenu/icons/radio_unchecked = SubResource("AtlasTexture_dfolu")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_4hwl0")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_5rt4f")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_5rt4f")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_gsl60")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
@@ -166,17 +178,17 @@ VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_64k6u")
 VSlider/styles/slider = SubResource("StyleBoxLine_64k6u")
 script = ExtResource("2_vi7sd")
 font_color = Color(0, 0, 0, 1)
-accent_color = Color(0.17009999, 0.5647049, 0.81, 1)
+accent_color = Color(0.16862746, 0.5647059, 0.8117647, 1)
 background_panel = SubResource("StyleBoxFlat_hpfjw")
 background_panel_2 = SubResource("StyleBoxFlat_5rt4f")
 progress_bar_background = SubResource("StyleBoxFlat_5rt4f")
 progress_bar = SubResource("StyleBoxFlat_gsl60")
 tab_button_normal = Color(0.8627451, 0.8627451, 0.8627451, 1)
-tab_button_hover = Color(0.7162962, 0.71629626, 0.7162961, 1)
-tab_button_pressed = Color(0.5409905, 0.5409905, 0.5409905, 1)
-close_button_normal = Color(0.7176471, 0.7176471, 0.7176471, 1)
-close_button_hover = Color(0.5411765, 0.5411765, 0.5411765, 1)
-close_button_pressed = Color(0.3665946, 0.3665946, 0.36659455, 1)
+tab_button_hover = Color(0.8089983, 0.8089983, 0.80899817, 1)
+tab_button_pressed = Color(0.70796657, 0.7079665, 0.7079665, 1)
+close_button_normal = Color(0.80784315, 0.80784315, 0.80784315, 1)
+close_button_hover = Color(0.70980394, 0.70980394, 0.70980394, 1)
+close_button_pressed = Color(0.59717613, 0.59717613, 0.5971761, 1)
 slider = SubResource("StyleBoxLine_m7axd")
 slider_hover = SubResource("StyleBoxLine_vm3u2")
 slider_pressed = SubResource("StyleBoxLine_itfvo")

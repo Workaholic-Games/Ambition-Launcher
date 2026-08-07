@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://bketsn6c8fgoq"]
+
+[ext_resource type="Script" uid="uid://c6ibjhb3xmfkt" path="res://game_assets/game_pages/caseui.gd" id="1_6l3tm"]
+[ext_resource type="Texture2D" uid="uid://dky1xc01ou7q" path="res://main/library/folder.png" id="2_53g7n"]
+[ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://ui/shaders/rgb.gdshader" id="3_53g7n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k81xx"]
+atlas = ExtResource("2_53g7n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tbjm"]
+atlas = ExtResource("2_53g7n")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0m0n"]
+atlas = ExtResource("2_53g7n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srv55"]
+shader = ExtResource("3_53g7n")
+shader_parameter/strength = 0.50000002375
+shader_parameter/speed = 1.0000000475
+shader_parameter/angle = 0.0
+
+[node name="CaseUI" type="Control" unique_id=543016446]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6l3tm")
+
+[node name="Versions" type="OptionButton" parent="." unique_id=1742289855]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 16.0
+offset_right = 504.0
+offset_bottom = 48.0
+clip_text = true
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/id = 0
+
+[node name="Folder" type="TextureButton" parent="." unique_id=109636206]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 24.0
+offset_right = 632.0
+offset_bottom = 40.0
+texture_normal = SubResource("AtlasTexture_k81xx")
+texture_pressed = SubResource("AtlasTexture_5tbjm")
+texture_hover = SubResource("AtlasTexture_w0m0n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Folder Label" type="Label" parent="." unique_id=1111858116]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 16.0
+offset_right = 608.0
+offset_bottom = 48.0
+text = "Save Folder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="." unique_id=1443572712]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 216.0
+offset_bottom = 48.0
+text = "Play"
+
+[node name="Uninstall" type="Button" parent="." unique_id=699416460]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 48.0
+text = "Uninstall"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=264822881]
+layout_mode = 0
+offset_top = 97.0
+offset_right = 120.0
+offset_bottom = 180.0
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="Game Label" type="Label" parent="VBoxContainer" unique_id=1424318207]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_type_variation = &"Hover_Label"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Game Label" unique_id=1839892021]
+self_modulate = Color(1, 1, 1, 0.5882353)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
+
+[node name="Update" type="Label" parent="VBoxContainer" unique_id=278714425]
+visible = false
+material = SubResource("ShaderMaterial_srv55")
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+theme_override_font_sizes/font_size = 16
+text = "  New Update!"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Update" unique_id=564115746]
+self_modulate = Color(1, 1, 1, 0.5882353)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_type_variation = &"Panel2"
+
+[connection signal="pressed" from="Folder" to="." method="_on_folder_pressed"]

@@ -37,6 +37,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Ads" type="VideoStreamPlayer" parent="." unique_id=1497071076]
+visible = false
 layout_mode = 0
 offset_top = 88.0
 offset_right = 108.0

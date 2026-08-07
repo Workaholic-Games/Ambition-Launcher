@@ -6,7 +6,7 @@ var cursors: Dictionary = {
 	"Dark": load("res://main/settings/cursors/dark_cursor.png"),
 	"Fry": load("res://main/settings/cursors/fry_cursor.png"),
 	"Seedling": load("res://main/settings/cursors/seedling_cursor.png"),
-	"Sun": load("res://main/settings/cursors/sad_sun.png"),
+	"Sun": load("res://main/settings/cursors/sad_sun_cursor.png"),
 	}
 @export var music : Array[AudioStream]
 
@@ -14,13 +14,19 @@ var cursors: Dictionary = {
 
 # Applying of settings on startup
 func _ready():
-	return
-	
 	match Main.launcher_data.window_mode:
-		0: $Window.emit_signal("item_selected", 0)
-		1: $Window.emit_signal("item_selected", 1)
-		2: $Window.emit_signal("item_selected", 2)
-		3: $Window.emit_signal("item_selected", 3)
+		0: 
+			$"Window Mode".emit_signal("item_selected", 0)
+			$"Window Mode".select(0)
+		1: 
+			$"Window Mode".emit_signal("item_selected", 1)
+			$"Window Mode".select(1)
+		2: 
+			$"Window Mode".emit_signal("item_selected", 2)
+			$"Window Mode".select(2)
+		3: 
+			$"Window Mode".emit_signal("item_selected", 3)
+			$"Window Mode".select(3)
 	
 	match Main.launcher_data.start_page:
 		0: 
@@ -49,7 +55,7 @@ func _ready():
 			$"../Panel/Tabs/Buttons/Settings".set_pressed_no_signal(true)
 	
 	for cursor in cursors.keys():
-		$Cursor.add_item(cursor)
+		$Cursor.add_item("" + cursor)
 	
 	var cursor : String = $Cursor.get_item_text(Main.launcher_data.cursor)
 	Input.set_custom_mouse_cursor(cursors[cursor], Input.CURSOR_ARROW)
@@ -81,9 +87,11 @@ func _ready():
 	else:
 		$"../Music".stream = music[Main.launcher_data.current_song - 2]
 		$"../Music".play()
+	
+	$Font.select(Main.launcher_data.font)
 
 # Window settings
-func _on_window_item_selected(index: int) -> void:
+func _on_window_mode_item_selected(index: int) -> void:
 	$"../Tap".play()
 	match index:
 		0: 
@@ -101,21 +109,20 @@ func _on_window_item_selected(index: int) -> void:
 
 # Updating setting if you click F11 and such
 func _process(_delta: float) -> void:
-	return
-	#var mode = DisplayServer.window_get_mode()
-	#if mode == DisplayServer.WINDOW_MODE_MAXIMIZED: $Window.select(1)
-	#elif mode == DisplayServer.WINDOW_MODE_WINDOWED: $Window.select(0)
-	#elif mode == DisplayServer.WINDOW_MODE_MINIMIZED: $Window.select(0)
-	#elif mode == DisplayServer.WINDOW_MODE_FULLSCREEN: $Window.select(2)
-	#elif mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: $Window.select(3)
-	#
-	#if Input.is_action_just_pressed("fullscreen"):
-		#if mode == DisplayServer.WINDOW_MODE_FULLSCREEN or mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: 
-			#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-			#Main.launcher_data.window_mode = 0
-		#else:
-			#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-			#Main.launcher_data.window_mode = 2
+	var mode = DisplayServer.window_get_mode()
+	if mode == DisplayServer.WINDOW_MODE_MAXIMIZED: $"Window Mode".select(1)
+	elif mode == DisplayServer.WINDOW_MODE_WINDOWED: $"Window Mode".select(0)
+	elif mode == DisplayServer.WINDOW_MODE_MINIMIZED: $"Window Mode".select(0)
+	elif mode == DisplayServer.WINDOW_MODE_FULLSCREEN: $"Window Mode".select(2)
+	elif mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: $"Window Mode".select(3)
+
+	if Input.is_action_just_pressed("fullscreen"):
+		if mode == DisplayServer.WINDOW_MODE_FULLSCREEN or mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN: 
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			Main.launcher_data.window_mode = 0
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			Main.launcher_data.window_mode = 2
 
 # Move user to Startup Location
 func _on_startup_location_item_selected(index: int) -> void:

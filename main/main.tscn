@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
-[ext_resource type="Theme" uid="uid://c2ecanj0qisjj" path="res://ui/themes/dark_theme.tres" id="1_m7axd"]
+[ext_resource type="Theme" uid="uid://i2y3i1ptg53l" path="res://ui/themes/grape.tres" id="1_8g473"]
+[ext_resource type="Theme" uid="uid://ds4j7dyddneu7" path="res://ui/themes/fresh_mint.tres" id="1_m7axd"]
 [ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://main/settings/themes.gd" id="1_p0fg6"]
 [ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
-[ext_resource type="FontFile" uid="uid://cju7vrq1y7gpl" path="res://ui/fonts/Tiny5-Regular.ttf" id="2_rvqcv"]
 [ext_resource type="ButtonGroup" uid="uid://j3y6jjuhasti" path="res://main/tab_buttons/main_buttons.tres" id="3_bfcn8"]
+[ext_resource type="Theme" uid="uid://c2ecanj0qisjj" path="res://ui/themes/dark_theme.tres" id="3_e77u7"]
+[ext_resource type="Theme" uid="uid://dssuru5t3q1wb" path="res://ui/themes/light_theme.tres" id="4_8g473"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://main/search_menu.gd" id="4_l7kjj"]
 [ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
 [ext_resource type="Script" uid="uid://dxuwvtpiouklv" path="res://main/update.gd" id="6_fl0aj"]
 [ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://main/library/library.gd" id="8_gjwx3"]
-[ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library/library_item.tscn" id="9_qsgxr"]
+[ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
 [ext_resource type="PackedScene" uid="uid://boivsvlnsewke" path="res://main/store/store_item.tscn" id="15_dfolu"]
@@ -28,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ctttmqkvx0u3x" path="res://community/Screenshot_2026-04-08_213918.png" id="20_n5kpq"]
 [ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
+[ext_resource type="PackedScene" uid="uid://bketsn6c8fgoq" path="res://game_assets/game_pages/caseui.tscn" id="22_m7axd"]
 [ext_resource type="Texture2D" uid="uid://ce2x1rg1bibxg" path="res://community/Seedling_thingy.png" id="23_12ljg"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
@@ -50,12 +53,8 @@
 [ext_resource type="Script" uid="uid://dnpvhuwmt3wdd" path="res://main/user/username.gd" id="57_qwxpq"]
 [ext_resource type="Script" uid="uid://bprpamjaodemn" path="res://main/reloading.gd" id="61_twbhu"]
 [ext_resource type="Shader" uid="uid://cbwjbruao2olk" path="res://ui/shaders/rgb.gdshader" id="61_w2e2n"]
-[ext_resource type="AudioStream" uid="uid://cwap8x08hljxx" path="res://sounds/music/Fresh Grapes.mp3" id="67_qngap"]
-[ext_resource type="AudioStream" uid="uid://hkxpixr8kor3" path="res://sounds/music/Vineyard Vibes.mp3" id="68_26tnx"]
 [ext_resource type="Script" uid="uid://bswm6vyfc4uhf" path="res://ui/seasonal/event.gd" id="68_d2ack"]
 [ext_resource type="Texture2D" uid="uid://bcbwtid356ip6" path="res://ui/seasonal/snowflake.png" id="68_omfc6"]
-[ext_resource type="AudioStream" uid="uid://d3e5m04gsryh" path="res://sounds/music/Sober Serenity.mp3" id="69_26tnx"]
-[ext_resource type="AudioStream" uid="uid://d0sh0xu5o6kta" path="res://sounds/music/The Eternal Night.ogg" id="69_mer5n"]
 [ext_resource type="Texture2D" uid="uid://dpbl3yw6410wp" path="res://avatars/batg_bulba.png" id="72_46muq"]
 [ext_resource type="Texture2D" uid="uid://blumq4hl87ls1" path="res://avatars/fnab1_bulba.png" id="72_ljnho"]
 [ext_resource type="Script" uid="uid://bxdw3vrs2di15" path="res://avatars/avatar.gd" id="73_d1j2r"]
@@ -140,6 +139,7 @@
 [ext_resource type="Texture2D" uid="uid://cfj35rbp18hrd" path="res://community/drops/image (22).png" id="165_7gy4k"]
 [ext_resource type="Texture2D" uid="uid://cmsn4ej6wmtmx" path="res://community/drops/image (23).png" id="166_dwcwd"]
 [ext_resource type="Texture2D" uid="uid://bnqm5083enut" path="res://community/drops/image (24).png" id="167_0wqly"]
+[ext_resource type="PackedScene" uid="uid://cglv4rvectu7q" path="res://game_assets/game_pages/gamecase.tscn" id="167_p80qw"]
 [ext_resource type="Texture2D" uid="uid://030rryx00onk" path="res://community/drops/image (25).png" id="168_20f0n"]
 [ext_resource type="Texture2D" uid="uid://eegj4cagv32m" path="res://community/drops/image (26).png" id="169_aeq82"]
 [ext_resource type="Texture2D" uid="uid://dfm4bkmmywxse" path="res://community/drops/image (27).png" id="170_ac5b7"]
@@ -169,6 +169,17 @@
 [ext_resource type="Texture2D" uid="uid://dyag4a3w2n3n4" path="res://community/drops/image (51).png" id="194_0gr68"]
 [ext_resource type="Texture2D" uid="uid://bguahav254x0t" path="res://community/drops/image (52).png" id="195_43mne"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p80qw"]
+
+[sub_resource type="Sky" id="Sky_hw1er"]
+sky_material = SubResource("ProceduralSkyMaterial_p80qw")
+
+[sub_resource type="Environment" id="Environment_m7axd"]
+background_mode = 2
+sky = SubResource("Sky_hw1er")
+ambient_light_source = 3
+reflected_light_source = 2
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
 
@@ -177,6 +188,8 @@ shader = ExtResource("61_w2e2n")
 shader_parameter/strength = 0.50000002375
 shader_parameter/speed = 1.0000000475
 shader_parameter/angle = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfolu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o7yem"]
 
@@ -505,8 +518,10 @@ adjustment_enabled = true
 [node name="Main" type="Control" unique_id=1449737561]
 layout_mode = 3
 anchors_preset = 0
-theme = ExtResource("1_m7axd")
+theme = ExtResource("3_e77u7")
 script = ExtResource("1_p0fg6")
+themes = Array[Theme]([ExtResource("3_e77u7"), ExtResource("4_8g473"), ExtResource("1_m7axd"), ExtResource("1_8g473")])
+theme_names = Array[String](["Dark Mode", "Light Mode", "Fresh Mint", "Grape"])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -538,7 +553,8 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 
 [node name="Library" type="Button" parent="Panel/Tabs/Buttons" unique_id=651700251]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -546,7 +562,8 @@ button_group = ExtResource("3_bfcn8")
 text = "Library"
 
 [node name="Store" type="Button" parent="Panel/Tabs/Buttons" unique_id=940841122]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -554,16 +571,17 @@ button_group = ExtResource("3_bfcn8")
 text = "Store"
 
 [node name="Community" type="Button" parent="Panel/Tabs/Buttons" unique_id=791475924]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
-theme_override_fonts/font = ExtResource("2_rvqcv")
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
 text = "Community"
 
 [node name="Changelog" type="Button" parent="Panel/Tabs/Buttons" unique_id=608995006]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -571,7 +589,8 @@ button_group = ExtResource("3_bfcn8")
 text = "Changelog"
 
 [node name="Developers" type="Button" parent="Panel/Tabs/Buttons" unique_id=1211144331]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -579,7 +598,8 @@ button_group = ExtResource("3_bfcn8")
 text = "Developers"
 
 [node name="Settings" type="Button" parent="Panel/Tabs/Buttons" unique_id=576620853]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
@@ -587,12 +607,13 @@ button_group = ExtResource("3_bfcn8")
 text = "Settings"
 
 [node name="Quit Launcher" type="Button" parent="Panel/Tabs/Buttons" unique_id=2073025503]
-custom_minimum_size = Vector2(108.379, 0)
+custom_minimum_size = Vector2(108.379, 18)
+custom_maximum_size = Vector2(108.379, 18)
 layout_mode = 2
 theme_type_variation = &"TabButton"
 toggle_mode = true
 button_group = ExtResource("3_bfcn8")
-text = "Quit Launcher"
+text = "Quit"
 
 [node name="Line Right" type="Panel" parent="Panel/Tabs" unique_id=459346034]
 layout_mode = 0
@@ -630,10 +651,10 @@ script = ExtResource("15_kxcgb")
 [node name="Panel" type="Panel" parent="Quit" unique_id=569989287]
 show_behind_parent = true
 layout_mode = 0
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 136.0
-offset_bottom = 128.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 130.0
+offset_bottom = 122.0
 mouse_filter = 2
 theme_type_variation = &"Line"
 
@@ -705,9 +726,10 @@ script = ExtResource("8_gjwx3")
 layout_mode = 2
 columns = 4
 
-[node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 instance=ExtResource("9_qsgxr")]
+[node name="FNAB (Five Night\'s at Bulba\'s)" parent="Library/Area/GridContainer" unique_id=1778090871 node_paths=PackedStringArray("menu") instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game = ExtResource("16_42w5j")
+menu = NodePath("../../../../Library Pages/FNAB")
 
 [node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
@@ -734,9 +756,53 @@ layout_mode = 0
 offset_left = 192.0
 offset_right = 576.0
 offset_bottom = 32.0
-placeholder_text = "Search your Library..."
+placeholder_text = " Search your Library..."
 context_menu_enabled = false
 emoji_menu_enabled = false
+
+[node name="Library Pages" type="Control" parent="." unique_id=1461528965]
+z_index = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FNAB" type="Control" parent="Library Pages" unique_id=523003102]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/FNAB" unique_id=1151640580]
+z_index = -1
+custom_maximum_size = Vector2(2120, 1440)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 2230.0
+offset_bottom = 1440.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB/SubViewportContainer" unique_id=1073184110]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(2120, 1440)
+render_target_update_mode = 0
+
+[node name="GameCase" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=418215869 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=1770230409]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -0.025932312)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=368255813]
+environment = SubResource("Environment_m7axd")
+
+[node name="CaseUI" parent="Library Pages/FNAB" unique_id=543016446 instance=ExtResource("22_m7axd")]
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+game = ExtResource("16_42w5j")
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
 visible = false
@@ -848,11 +914,6 @@ layout_mode = 2
 page = NodePath("../../../../../../Store Pages/Bitcoin Miner")
 game = ExtResource("19_m7axd")
 
-[node name="GFFA" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)/Games" unique_id=218886575 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
-layout_mode = 2
-page = NodePath("../../../../../../Store Pages/GFFA")
-game = ExtResource("18_p80qw")
-
 [node name="Veg" parent="Store/Area/GridContainer/Other (Bitcoin Miner, Veg)/Games" unique_id=2143589736 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
 layout_mode = 2
 page = NodePath("../../../../../../Store Pages/Veg")
@@ -884,6 +945,11 @@ one_way_collision_margin = 19.0
 [node name="Games" type="HBoxContainer" parent="Store/Area/GridContainer/Coming Soon" unique_id=770636206]
 layout_mode = 2
 alignment = 1
+
+[node name="GFFA" parent="Store/Area/GridContainer/Coming Soon/Games" unique_id=218886575 node_paths=PackedStringArray("page") instance=ExtResource("15_dfolu")]
+layout_mode = 2
+page = NodePath("../../../../../../Store Pages/GFFA")
+game = ExtResource("18_p80qw")
 
 [node name="Search Bar" type="LineEdit" parent="Store" unique_id=1887941621]
 layout_mode = 0
@@ -979,13 +1045,20 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Panel" type="Panel" parent="Community/Featured" unique_id=20987269]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 32.0
+offset_right = 616.0
+offset_bottom = 312.0
+theme_type_variation = &"Panel2"
+
 [node name="Best Artwork" type="Label" parent="Community/Featured" unique_id=338952825]
 layout_mode = 0
 offset_left = 120.0
 offset_top = 16.0
 offset_right = 632.0
 offset_bottom = 160.0
-theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Art"
 
@@ -1079,7 +1152,6 @@ offset_left = 120.0
 offset_top = 168.0
 offset_right = 632.0
 offset_bottom = 312.0
-theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 12
 text = "Best Memes"
 
@@ -1228,110 +1300,66 @@ text = "Changelog"
 vertical_alignment = 1
 
 [node name="Settings" type="Control" parent="." unique_id=841640467]
+visible = false
 anchors_preset = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 60.0
 script = ExtResource("16_3a0l5")
-music = Array[AudioStream]([ExtResource("67_qngap"), ExtResource("68_26tnx"), ExtResource("69_26tnx"), ExtResource("69_mer5n")])
 
-[node name="WindowMode" type="Button" parent="Settings" unique_id=355426751]
-visible = false
-z_index = 1
+[node name="Window Mode" type="OptionButton" parent="Settings" unique_id=288803998]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
 layout_mode = 0
 offset_left = 120.0
 offset_top = 4.0
 offset_right = 352.0
-offset_bottom = 28.0
-toggle_mode = true
-text = " Window Mode"
+offset_bottom = 30.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
+selected = 0
+item_count = 4
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Maximized"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+popup/item_3/text = "Exclusive Fullscreen"
+popup/item_3/id = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings/WindowMode" unique_id=1304033577]
+[node name="Label" type="Label" parent="Settings/Window Mode" unique_id=382815324]
 layout_mode = 0
-offset_top = 24.0
-offset_right = 231.0
-offset_bottom = 120.0
-theme_override_constants/separation = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Window Mode"
+vertical_alignment = 2
 
-[node name="Windowed" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=1437852021]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Windowed"
-alignment = 0
-
-[node name="Maximized" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=2057945053]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Maximized"
-alignment = 0
-
-[node name="Fullscreen" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=1356478358]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Fullscreen"
-alignment = 0
-
-[node name="ExclusiveFullscreen" type="Button" parent="Settings/WindowMode/VBoxContainer" unique_id=461878618]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Exclusive Fullscreen"
-alignment = 0
-
-[node name="Themes" type="Button" parent="Settings" unique_id=290712190]
-z_index = 1
+[node name="Themes" type="OptionButton" parent="Settings" unique_id=511932778]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
 layout_mode = 0
 offset_left = 120.0
 offset_top = 52.0
 offset_right = 352.0
-offset_bottom = 76.0
-toggle_mode = true
-text = " Themes"
+offset_bottom = 78.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Themes" unique_id=1031933575]
+[node name="Label" type="Label" parent="Settings/Themes" unique_id=298799725]
 layout_mode = 0
-offset_top = 24.0
-offset_right = 231.0
-offset_bottom = 120.0
-theme_override_constants/separation = 0
-
-[node name="Dark Mode" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=533521873]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Dark Mode"
-alignment = 0
-
-[node name="Light Mode" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=1858008737]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Light Mode"
-alignment = 0
-
-[node name="Fresh Mint" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=716479657]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Fresh Mint"
-alignment = 0
-
-[node name="Grape" type="Button" parent="Settings/Themes/VBoxContainer" unique_id=1454177734]
-custom_minimum_size = Vector2(232, 24)
-custom_maximum_size = Vector2(232, 24)
-layout_mode = 2
-text = " Grape"
-alignment = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "UI Theme"
+vertical_alignment = 2
 
 [node name="Startup Location" type="OptionButton" parent="Settings" unique_id=1787472182]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
 layout_mode = 0
 offset_left = 120.0
 offset_top = 100.0
 offset_right = 352.0
 offset_bottom = 126.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
 selected = 0
 item_count = 6
 popup/item_0/text = "Library                   "
@@ -1355,11 +1383,14 @@ text = "Startup Location"
 vertical_alignment = 2
 
 [node name="Cursor" type="OptionButton" parent="Settings" unique_id=2072359811]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
 layout_mode = 0
 offset_left = 120.0
 offset_top = 148.0
 offset_right = 352.0
 offset_bottom = 174.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
 
 [node name="Label" type="Label" parent="Settings/Cursor" unique_id=1203996602]
 layout_mode = 0
@@ -1368,12 +1399,44 @@ offset_right = 40.0
 text = "Cursor Theme"
 vertical_alignment = 2
 
+[node name="Font" type="OptionButton" parent="Settings" unique_id=497006100]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 196.0
+offset_right = 352.0
+offset_bottom = 222.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
+selected = 0
+item_count = 5
+popup/item_0/text = "Tiny5 (DEFAULT)"
+popup/item_0/id = 0
+popup/item_1/text = "GoogleSans"
+popup/item_1/id = 1
+popup/item_2/text = "Jersey10"
+popup/item_2/id = 2
+popup/item_3/text = "Coolville"
+popup/item_3/id = 3
+popup/item_4/text = "PixelifySans"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="Settings/Font" unique_id=1261349986]
+layout_mode = 0
+offset_top = -23.999996
+offset_right = 40.0
+text = "Font"
+vertical_alignment = 2
+
 [node name="Music" type="OptionButton" parent="Settings" unique_id=1279101931]
+custom_minimum_size = Vector2(232, 26)
+custom_maximum_size = Vector2(232, 26)
 layout_mode = 0
 offset_left = 360.0
 offset_top = 4.0
 offset_right = 592.0
 offset_bottom = 30.0
+theme_override_icons/arrow = SubResource("AtlasTexture_dfolu")
 selected = 1
 item_count = 6
 popup/item_0/text = "None"
@@ -1719,6 +1782,7 @@ wait_time = 0.25
 
 [node name="User" type="Control" parent="." unique_id=1895220794]
 visible = false
+z_index = 2
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1729,7 +1793,6 @@ layout_mode = 0
 offset_left = 110.0
 offset_right = 640.0
 offset_bottom = 360.0
-mouse_filter = 2
 
 [node name="Avatar" type="TextureRect" parent="User" unique_id=2028838953]
 layout_mode = 0
@@ -1805,12 +1868,12 @@ text = "Back"
 
 [node name="Username" type="Panel" parent="." unique_id=130943005]
 visible = false
+z_index = 2
 layout_mode = 1
 offset_left = 251.0
 offset_top = 144.0
 offset_right = 499.0
 offset_bottom = 216.0
-mouse_filter = 2
 theme_type_variation = &"Quit"
 script = ExtResource("57_qwxpq")
 
@@ -1912,11 +1975,11 @@ size = Vector2i(864, 1528)
 render_target_update_mode = 0
 
 [node name="Camera" type="Camera3D" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=838411321]
-transform = Transform3D(-4.3711385e-08, -2.9802322e-08, 1, 1.7460929e-15, 1, 2.9802322e-08, -1, 3.0487937e-15, -4.3711385e-08, 7.643097, 0.75570416, 0)
+transform = Transform3D(-4.3711385e-08, -2.9802322e-08, 1, 1.7460929e-15, 1, 2.9802322e-08, -1, 3.0487937e-15, -4.3711385e-08, 7.643097, 0.75570416, 73)
 fov = 90.0
 
 [node name="Dell" parent="Launcher Games/Dell/SubViewportContainer/SubViewport" unique_id=1716658321 instance=ExtResource("24_p0fg6")]
-transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, -1.0104165, 0)
+transform = Transform3D(0.9999873, 0, -0.0050439835, 0, 1, 0, 0.0050439835, 0, 0.9999873, 0, -1.0104165, 73)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Launcher Games/Dell" unique_id=791405224]
 layout_mode = 0
@@ -2285,6 +2348,12 @@ bus = &"Music"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796921495]
 environment = SubResource("Environment_3a0l5")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1466749144]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=258332953]
+build_mode = 1
+polygon = PackedVector2Array(0, 360, 0, 0, 640, 0, 640, 360)
+
 [connection signal="pressed" from="Panel/Tabs/Buttons/Library" to="Panel/Tabs" method="_on_library_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Store" to="Panel/Tabs" method="_on_store_pressed"]
 [connection signal="pressed" from="Panel/Tabs/Buttons/Community" to="Panel/Tabs" method="_on_community_pressed"]
@@ -2295,14 +2364,16 @@ environment = SubResource("Environment_3a0l5")
 [connection signal="pressed" from="Quit/Yes" to="Quit" method="_on_yes_pressed"]
 [connection signal="pressed" from="Quit/No" to="Quit" method="_on_no_pressed"]
 [connection signal="timeout" from="Update/Timer" to="Update" method="_on_timer_timeout"]
-[connection signal="visibility_changed" from="Library" to="Library/Area" method="_on_library_visibility_changed"]
 [connection signal="text_changed" from="Library/Search Bar" to="Library" method="_on_search_bar_text_changed"]
 [connection signal="text_changed" from="Store/Search Bar" to="Store" method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="Community/Featured Art" to="Community" method="_on_featured_art_pressed"]
 [connection signal="pressed" from="Community/Install Mods" to="Community" method="_on_install_mods_pressed"]
 [connection signal="pressed" from="Community/Modding Guide" to="Community" method="_on_modding_guide_pressed"]
+[connection signal="item_selected" from="Settings/Window Mode" to="Settings" method="_on_window_mode_item_selected"]
+[connection signal="item_selected" from="Settings/Themes" to="." method="_on_themes_item_selected"]
 [connection signal="item_selected" from="Settings/Startup Location" to="Settings" method="_on_startup_location_item_selected"]
 [connection signal="item_selected" from="Settings/Cursor" to="Settings" method="_on_cursor_item_selected"]
+[connection signal="item_selected" from="Settings/Font" to="." method="_on_font_item_selected"]
 [connection signal="item_selected" from="Settings/Music" to="Settings" method="_on_music_item_selected"]
 [connection signal="value_changed" from="Settings/Music Volume" to="Settings" method="_on_music_volume_value_changed"]
 [connection signal="value_changed" from="Settings/UI Volume" to="Settings" method="_on_ui_volume_value_changed"]

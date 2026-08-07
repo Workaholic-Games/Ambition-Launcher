@@ -117,15 +117,15 @@ text = "Edit Description in Inspector"
 [node name="Stuff" type="VBoxContainer" parent="." unique_id=513639403]
 z_index = 2
 layout_mode = 0
-offset_left = 10.0
+offset_left = 7.0
 offset_top = 232.0
-offset_right = 134.0
+offset_right = 131.0
 offset_bottom = 352.0
 theme_override_constants/separation = 0
 
 [node name="Release Date" type="Label" parent="Stuff" unique_id=1623701672]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -134,8 +134,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Genre" type="Label" parent="Stuff" unique_id=404029162]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -144,8 +144,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Difficulty" type="Label" parent="Stuff" unique_id=1679709487]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -154,8 +154,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Age Rating" type="Label" parent="Stuff" unique_id=1939253104]
-custom_minimum_size = Vector2(120, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -164,8 +164,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Main Dev" type="Label" parent="Stuff" unique_id=1424924132]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -174,8 +174,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Stability" type="Label" parent="Stuff" unique_id=983263956]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8
@@ -184,8 +184,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Max Players" type="Label" parent="Stuff" unique_id=447416894]
-custom_minimum_size = Vector2(160, 16)
-custom_maximum_size = Vector2(124, -1)
+custom_minimum_size = Vector2(124, 16)
+custom_maximum_size = Vector2(124, 16)
 layout_mode = 2
 theme_type_variation = &"Store_Page"
 theme_override_font_sizes/font_size = 8

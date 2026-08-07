@@ -17,3 +17,4 @@ class_name data
 	"Music": 0,
 	}
 @export var current_song : int = 0
+@export var font : int = 0
