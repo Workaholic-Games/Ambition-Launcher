@@ -28,8 +28,14 @@ func _input(event):
 		if open == true:
 			$Case/AnimationPlayer.play("open")
 			$Open.play(0.06)
+			await get_tree().create_timer(0.25).timeout
+			$Case/Offset/Back/CD/Label3D.show()
+			$"Case/Tutorial Animations".play("Rotate Open")
+			await $"Case/Tutorial Animations".animation_finished
+			$"Case/Tutorial Animations".play("Rotate Idle")
 		else:
 			$Case/AnimationPlayer.play("close")
+			$"Case/Tutorial Animations".play_backwards("Rotate Open")
 			await get_tree().create_timer(0.25).timeout
 			$Close.play()
 	
@@ -49,10 +55,18 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("q"):
 		$Case/Offset/Back/CD.rotation_degrees.z += 5
 		$Case/Offset/Back/CD.rotation_degrees.z = wrap($Case/Offset/Back/CD.rotation_degrees.z, 0, 360)
+		if $Case/Offset/Back/CD/Label3D.visible:
+			await get_tree().create_timer(1).timeout
+			$Case/Offset/Back/CD/Label3D.hide()
+			$"Case/Tutorial Animations".stop()
 	
 	if Input.is_action_pressed("e"):
 		$Case/Offset/Back/CD.rotation_degrees.z -= 5
 		$Case/Offset/Back/CD.rotation_degrees.z = wrap($Case/Offset/Back/CD.rotation_degrees.z, 0, 360)
+		if $Case/Offset/Back/CD/Label3D.visible:
+			await get_tree().create_timer(1).timeout
+			$Case/Offset/Back/CD/Label3D.hide()
+			$"Case/Tutorial Animations".stop()
 
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" script_class="ThemePlus" format=3 uid="uid://btw7s26f4bcjw"]
 
-[ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_2g86n"]
+[ext_resource type="Texture2D" uid="uid://dmvj1kx5jugpn" path="res://main/settings/scroll.png" id="1_2g86n"]
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_bi010"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g86n"]
@@ -83,28 +83,28 @@ border_width_left = 2
 border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_el06f"]
-color = Color(0.16862746, 0.5647059, 0.8117647, 1)
+color = Color(1, 1, 1, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_pq0nk"]
-color = Color(0.06959285, 0.34642917, 0.51378775, 1)
+color = Color(0.6955032, 0.6955031, 0.6955031, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_0wgy4"]
-color = Color(0.037986256, 0.23798949, 0.36208534, 1)
+color = Color(0.5489626, 0.5489626, 0.54896253, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_jndih"]
-color = Color(0.7176471, 0.7176471, 0.7176471, 1)
+color = Color(0.05882353, 0.05882353, 0.05882353, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8

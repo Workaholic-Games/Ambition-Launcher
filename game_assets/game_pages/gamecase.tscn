@@ -300,6 +300,85 @@ _data = {
 &"open": SubResource("Animation_q0trt")
 }
 
+[sub_resource type="Animation" id="Animation_8os08"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.11352205, 0.5164252)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Offset/Back/CD/Label3D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0adws"]
+resource_name = "Rotate Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 6.08, 0.516), Vector3(0, 7.561, 0.516), Vector3(0, 6.08, 0.516)]
+}
+
+[sub_resource type="Animation" id="Animation_pspqm"]
+resource_name = "Rotate Open"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(0.30778763, 0.30778763),
+"update": 0,
+"values": [Vector3(0, 0.11352205, 0.5164252), Vector3(0, 6.790188, 0.5164252)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Offset/Back/CD/Label3D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1.741102, 1.741102),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8a2es"]
+_data = {
+&"RESET": SubResource("Animation_8os08"),
+&"Rotate Idle": SubResource("Animation_0adws"),
+&"Rotate Open": SubResource("Animation_pspqm")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a2es"]
 size = Vector2(640, 370)
 
@@ -380,8 +459,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 7.9648323, 9.536743e
 material_override = SubResource("StandardMaterial3D_8qo5j")
 mesh = SubResource("ArrayMesh_2gfdx")
 
+[node name="Label3D" type="Label3D" parent="Case/Offset/Back/CD" unique_id=247586014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11352205, 0.5164252)
+visible = false
+billboard = 2
+no_depth_test = true
+alpha_cut = 2
+render_priority = 7
+text = "Press Q and E to Rotate"
+font_size = 365
+outline_size = 0
+
 [node name="Cube_001" type="MeshInstance3D" parent="Case/Offset/Back" unique_id=478087141]
-transform = Transform3D(-8.322677, 0, -4.438368e-09, 0, 11.885675, 0, 7.275916e-07, 0, -0.050769, 8.2668, 0, 0)
+transform = Transform3D(-8.322676, 0.0029567652, -4.438367e-09, 0.0020704083, 11.885674, 1.1041199e-12, 7.2759156e-07, 0, -0.050768998, 8.2668, 0, 0)
 material_override = SubResource("StandardMaterial3D_r616l")
 mesh = SubResource("ArrayMesh_o7ydk")
 
@@ -411,6 +501,10 @@ texture = SubResource("GradientTexture2D_q0trt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Case" unique_id=1434726495]
 libraries/ = SubResource("AnimationLibrary_u8e4i")
+
+[node name="Tutorial Animations" type="AnimationPlayer" parent="Case" unique_id=2093323961]
+root_node = NodePath("../AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_8a2es")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1406453839]
 transform = Transform3D(0.23300184, 0.2747149, -0.9328677, -0.062272005, 0.96151644, 0.26759788, 0.9704805, -0.0042592585, 0.24114206, 0, 0, 0)

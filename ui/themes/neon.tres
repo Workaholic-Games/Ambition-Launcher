@@ -85,21 +85,21 @@ border_width_left = 2
 border_color = Color(0.465, 0, 0.93, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_jketw"]
-color = Color(0.8117647, 0.16862746, 0.16862746, 1)
+color = Color(0.81, 0.17009999, 0.41539493, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_3gbf3"]
-color = Color(0.6612467, 0.120857336, 0.12399823, 1)
+color = Color(0.5971745, 0.08933706, 0.29318193, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_orfj7"]
-color = Color(0.41565615, 0.060547277, 0.06061814, 1)
+color = Color(0.3831048, 0.03953004, 0.17835724, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8

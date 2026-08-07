@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://gxvmgkcrwpwf"]
+
+[node name="Control" type="Control" unique_id=1831498928]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1066255877]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 512.0
+offset_bottom = 320.0
+
+[node name="Left" type="TextureButton" parent="Panel" unique_id=1433620159]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 288.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Left" unique_id=633288071]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 280.0
+text = "Page 1"
+
+[node name="Right" type="TextureButton" parent="Panel" unique_id=981904985]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 384.0
+offset_bottom = 288.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Right" unique_id=160674332]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 280.0
+text = "Page 2"

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" script_class="ThemePlus" format=3 uid="uid://i2y3i1ptg53l"]
 
-[ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_p0if5"]
+[ext_resource type="Texture2D" uid="uid://dmvj1kx5jugpn" path="res://main/settings/scroll.png" id="1_p0if5"]
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_k3qhw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0if5"]
@@ -106,7 +106,7 @@ thickness = 8
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_dkd8d"]
-color = Color(0.09803922, 0.03137255, 0.1882353, 1)
+color = Color(0.06666667, 0.019607844, 0.14117648, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8

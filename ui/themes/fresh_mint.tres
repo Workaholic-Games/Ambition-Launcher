@@ -1,6 +1,6 @@
 [gd_resource type="Theme" script_class="ThemePlus" format=3 uid="uid://ds4j7dyddneu7"]
 
-[ext_resource type="Texture2D" uid="uid://bvpxp2wh1emp7" path="res://main/settings/scroll.png" id="1_nbg6i"]
+[ext_resource type="Texture2D" uid="uid://dmvj1kx5jugpn" path="res://main/settings/scroll.png" id="1_nbg6i"]
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_inq74"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbg6i"]
