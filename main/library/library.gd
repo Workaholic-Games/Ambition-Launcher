@@ -7,6 +7,5 @@ func _ready() -> void:
 
 
 func _on_library_visibility_changed() -> void:
-	print("VISIBILTY CHANGED")
 	for i in $GridContainer.get_children():
 		i.check()

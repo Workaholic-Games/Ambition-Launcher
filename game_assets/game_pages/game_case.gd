@@ -16,6 +16,7 @@ func _ready() -> void:
 	$Case/Offset/Front/Cover.texture = game.cover
 	$Case/Offset/Back/Back.texture = game.back
 	
+	$Case/Offset/Back/CD.material_override = $Case/Offset/Back/CD.material_override.duplicate()
 	$Case/Offset/Back/CD.material_override.albedo_texture = game.disc
 
 func _input(event):
@@ -26,10 +27,11 @@ func _input(event):
 		open = !open
 		can_open = false
 		if open == true:
+			$Case/Offset/Back/Label3D.font = get_parent().get_parent().get_parent().get_parent().get_parent().get_theme_default_font()
 			$Case/AnimationPlayer.play("open")
 			$Open.play(0.06)
 			await get_tree().create_timer(0.25).timeout
-			$Case/Offset/Back/CD/Label3D.show()
+			$Case/Offset/Back/Label3D.show()
 			$"Case/Tutorial Animations".play("Rotate Open")
 			await $"Case/Tutorial Animations".animation_finished
 			$"Case/Tutorial Animations".play("Rotate Idle")
@@ -55,17 +57,17 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("q"):
 		$Case/Offset/Back/CD.rotation_degrees.z += 5
 		$Case/Offset/Back/CD.rotation_degrees.z = wrap($Case/Offset/Back/CD.rotation_degrees.z, 0, 360)
-		if $Case/Offset/Back/CD/Label3D.visible:
-			await get_tree().create_timer(1).timeout
-			$Case/Offset/Back/CD/Label3D.hide()
+		if $Case/Offset/Back/Label3D.visible:
+			await get_tree().create_timer(0.2).timeout
+			$Case/Offset/Back/Label3D.hide()
 			$"Case/Tutorial Animations".stop()
 	
 	if Input.is_action_pressed("e"):
 		$Case/Offset/Back/CD.rotation_degrees.z -= 5
 		$Case/Offset/Back/CD.rotation_degrees.z = wrap($Case/Offset/Back/CD.rotation_degrees.z, 0, 360)
-		if $Case/Offset/Back/CD/Label3D.visible:
-			await get_tree().create_timer(1).timeout
-			$Case/Offset/Back/CD/Label3D.hide()
+		if $Case/Offset/Back/Label3D.visible:
+			await get_tree().create_timer(1.0).timeout
+			$Case/Offset/Back/Label3D.hide()
 			$"Case/Tutorial Animations".stop()
 
 

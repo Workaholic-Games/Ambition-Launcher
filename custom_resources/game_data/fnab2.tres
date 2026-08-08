@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cp4mwov6cofos"]
 
-[ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="1_4cwys"]
+[ext_resource type="Texture2D" uid="uid://em1vosfoalwb" path="res://game_assets/covers/fnab2/fnab2_back.png" id="1_hv6sk"]
 [ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_lxcpu"]
 [ext_resource type="Texture2D" uid="uid://ddm7u73rt1602" path="res://game_assets/thumbnails/fnab2/fnab2.png" id="2_m13qp"]
+[ext_resource type="Texture2D" uid="uid://bfliadwegvjja" path="res://game_assets/covers/fnab2/fnab2.png" id="2_tjdyl"]
+[ext_resource type="Texture2D" uid="uid://bqqvhr0ysu47d" path="res://game_assets/covers/fnab2/fnab2_disc.png" id="3_8un48"]
 [ext_resource type="Texture2D" uid="uid://dlw0qdladkbxd" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192847.png" id="3_ect4o"]
 [ext_resource type="Texture2D" uid="uid://2onugyxkrv4u" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192855.png" id="4_hv6sk"]
+[ext_resource type="Texture2D" uid="uid://ckmccmxwwytmj" path="res://game_assets/covers/fnab2/fnab2_hinge.png" id="4_tcyi8"]
 [ext_resource type="Texture2D" uid="uid://x68uqkhq8i62" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192859.png" id="5_tjdyl"]
 [ext_resource type="Texture2D" uid="uid://bf1wjlm60ph3" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192904.png" id="6_8un48"]
 [ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="7_tcyi8"]
@@ -23,7 +26,10 @@ age_rating = "T for Teen"
 main_dev = "Bulba"
 stability = "Great"
 max_players = "2"
-cover = ExtResource("1_4cwys")
+cover = ExtResource("2_tjdyl")
+hinge = ExtResource("4_tcyi8")
+back = ExtResource("1_hv6sk")
+disc = ExtResource("3_8un48")
 images = Array[Texture2D]([ExtResource("2_m13qp"), ExtResource("3_ect4o"), ExtResource("4_hv6sk"), ExtResource("5_tjdyl"), ExtResource("6_8un48"), ExtResource("7_tcyi8"), ExtResource("8_7apdv"), ExtResource("9_kl47n")])
 videos = Array[VideoStream]([ExtResource("11_50lpr")])
 version_names = PackedStringArray("Ambition Edition")

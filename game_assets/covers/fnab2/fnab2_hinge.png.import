@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do3gftioe6f8m"
-path="res://.godot/imported/Gigabot JUMPSCARE.png-b9b102dc2585f6c385e0aa821c34bd6e.ctex"
+uid="uid://ckmccmxwwytmj"
+path="res://.godot/imported/fnab2_hinge.png-b5903de43c201ead184f83b589c250e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/world_assets/fnab1/Gigabot JUMPSCARE.png"
-dest_files=["res://.godot/imported/Gigabot JUMPSCARE.png-b9b102dc2585f6c385e0aa821c34bd6e.ctex"]
+source_file="res://game_assets/covers/fnab2/fnab2_hinge.png"
+dest_files=["res://.godot/imported/fnab2_hinge.png-b5903de43c201ead184f83b589c250e3.ctex"]
 
 [params]
 

@@ -8,6 +8,7 @@ var versions : Array = []
 
 func _ready() -> void:
 	$"Game Label".text = game.name
+	texture_normal = game.cover
 	$"Game Label".add_theme_font_size_override("font_size", game.font_size)
 	
 	if Main.launcher_data.last_played == self.name:
@@ -25,6 +26,7 @@ func _on_pressed() -> void:
 	menu.show()
 
 func check():
+	versions.clear()
 	for i in range(game.version_names.size()):
 		var is_installed = false
 		

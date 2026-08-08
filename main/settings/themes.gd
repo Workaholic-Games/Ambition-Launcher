@@ -18,6 +18,7 @@ func _ready() -> void:
 	
 	theme = themes[Main.launcher_data.theme]
 	$Settings/Themes.select(Main.launcher_data.theme)
+	$Settings/Font.select(Main.launcher_data.font)
 
 func _on_themes_item_selected(index: int) -> void:
 	$Tap.play()
@@ -31,7 +32,6 @@ func _on_shuffle_finished() -> void:
 
 
 func _on_font_item_selected(index: int) -> void:
-	Main.launcher_data.font = index
 	for theme_to_change in themes:
 		match index:
 			0: theme_to_change.default_font = load("res://ui/fonts/Tiny5-Regular.ttf")
@@ -39,3 +39,5 @@ func _on_font_item_selected(index: int) -> void:
 			2: theme_to_change.default_font = load("res://ui/fonts/Jersey10-Regular.ttf")
 			3: theme_to_change.default_font = load("res://ui/fonts/Coolville.otf")
 			4: theme_to_change.default_font = load("res://ui/fonts/PixelifySans-VariableFont_wght.ttf")
+	
+	Main.launcher_data.font = index

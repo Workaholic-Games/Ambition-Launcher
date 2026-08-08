@@ -7,7 +7,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r616l"]
 render_priority = 1
 transparency = 1
-albedo_color = Color(1, 1, 1, 0.47058824)
+albedo_color = Color(0.61, 0.61, 0.61, 0.47058824)
 clearcoat_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ug4nk"]
@@ -45,13 +45,6 @@ shadow_mesh = SubResource("ArrayMesh_mcaoh")
 [sub_resource type="Gradient" id="Gradient_q0trt"]
 offsets = PackedFloat32Array(0.33333334, 0.5, 0.6666667)
 colors = PackedColorArray(1, 1, 1, 0.019607844, 1, 1, 1, 0.019607844, 1, 1, 1, 0.019607844)
-metadata/_snap_enabled = true
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_y144f"]
-gradient = SubResource("Gradient_q0trt")
-width = 38
-height = 379
-fill_from = Vector2(0, 1)
 metadata/_snap_enabled = true
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_q0trt"]
@@ -96,8 +89,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7vx8j")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qo5j"]
-metallic = 1.0
-roughness = 0.25
+vertex_color_is_srgb = true
+metallic = 0.5
+roughness = 0.42
 uv1_scale = Vector3(0.065, 0.065, 0.065)
 uv1_offset = Vector3(0.5, -0.5, 0)
 uv1_triplanar = true
@@ -210,6 +204,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, -8.3)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Cover:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.012002468, 0, -0.08416271)]
+}
 
 [sub_resource type="Animation" id="Animation_u8e4i"]
 resource_name = "close"
@@ -250,6 +256,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, -8.3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Cover:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.012, 0, -0.12), Vector3(0.012002468, 0, -0.08416271)]
 }
 
 [sub_resource type="Animation" id="Animation_q0trt"]
@@ -292,6 +310,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, -8.3), Vector3(0, 0, -1.6600001)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Cover:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.012002468, 0, -0.08416271), Vector3(0.012, 0, -0.12)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u8e4i"]
 _data = {
@@ -305,7 +335,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/path = NodePath("../Offset/Back/Label3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -317,14 +347,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Offset/Back/CD/Label3D:modulate")
+tracks/1/path = NodePath("../Offset/Back/Label3D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(0, 1, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_0adws"]
@@ -334,14 +364,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/path = NodePath("../Offset/Back/Label3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.96666664, 2),
+"times": PackedFloat32Array(-0.033333335, 0.96666664, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 6.08, 0.516), Vector3(0, 7.561, 0.516), Vector3(0, 6.08, 0.516)]
+"values": [Vector3(9, 9, 0.516), Vector3(9, 9.5, 0.516), Vector3(9, 9, 0.516)]
 }
 
 [sub_resource type="Animation" id="Animation_pspqm"]
@@ -350,26 +380,26 @@ length = 0.26666668
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Offset/Back/CD/Label3D:position")
+tracks/0/path = NodePath("../Offset/Back/Label3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.26666668),
 "transitions": PackedFloat32Array(0.30778763, 0.30778763),
 "update": 0,
-"values": [Vector3(0, 0.11352205, 0.5164252), Vector3(0, 6.790188, 0.5164252)]
+"values": [Vector3(9, 0.114, 0.516), Vector3(9, 9, 0.516)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Offset/Back/CD/Label3D:modulate")
+tracks/1/path = NodePath("../Offset/Back/Label3D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.26666668),
 "transitions": PackedFloat32Array(1.741102, 1.741102),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(0, 1, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8a2es"]
@@ -400,22 +430,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012002468, 0, -0.08416271)
 flip_h = true
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture_filter = 0
 
-[node name="Film" type="Sprite3D" parent="Case/Offset/Cover" unique_id=1130614298]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983738)
-pixel_size = 0.06
-shaded = true
-alpha_cut = 2
-texture = SubResource("GradientTexture2D_y144f")
-
-[node name="Film2" type="Sprite3D" parent="Case/Offset/Cover" unique_id=37836055]
+[node name="Film" type="Sprite3D" parent="Case/Offset/Cover" unique_id=37836055]
 transform = Transform3D(0.12, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.088)
+modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_q0trt")
 
@@ -432,43 +454,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.870616, 0, -0.08416271)
 flip_h = true
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture_filter = 0
 
-[node name="Film" type="Sprite3D" parent="Case/Offset/Front/Cover" unique_id=1812593427]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983726)
-pixel_size = 0.06
-shaded = true
-alpha_cut = 2
-texture = SubResource("GradientTexture2D_q0trt")
-
 [node name="Film" type="Sprite3D" parent="Case/Offset/Front" unique_id=1944031085]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8710003, 0, 0.08840892)
+modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_q0trt")
 
 [node name="Back" type="Node3D" parent="Case/Offset" unique_id=932699369]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
 
+[node name="Label3D" type="Label3D" parent="Case/Offset/Back" unique_id=247586014]
+transform = Transform3D(0.99998784, -0.004926231, 0, 0.004926231, 0.99998784, 0, 0, 0, 0.99999994, 0, 0.11352205, 0.5164252)
+visible = false
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+alpha_cut = 2
+texture_filter = 0
+render_priority = 7
+modulate = Color(0, 1, 0, 1)
+text = "Press Q and E to Rotate"
+outline_size = 0
+
 [node name="CD" type="MeshInstance3D" parent="Case/Offset/Back" unique_id=1237652751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 7.9648323, 9.536743e-07, 0.46674627)
 material_override = SubResource("StandardMaterial3D_8qo5j")
 mesh = SubResource("ArrayMesh_2gfdx")
-
-[node name="Label3D" type="Label3D" parent="Case/Offset/Back/CD" unique_id=247586014]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11352205, 0.5164252)
-visible = false
-billboard = 2
-no_depth_test = true
-alpha_cut = 2
-render_priority = 7
-text = "Press Q and E to Rotate"
-font_size = 365
-outline_size = 0
 
 [node name="Cube_001" type="MeshInstance3D" parent="Case/Offset/Back" unique_id=478087141]
 transform = Transform3D(-8.322676, 0.0029567652, -4.438367e-09, 0.0020704083, 11.885674, 1.1041199e-12, 7.2759156e-07, 0, -0.050768998, 8.2668, 0, 0)
@@ -480,22 +496,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.871, 0, -0.09463179)
 flip_h = true
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture_filter = 0
 
-[node name="Film" type="Sprite3D" parent="Case/Offset/Back/Back" unique_id=287472380]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018405914, 0, -0.01983726)
-pixel_size = 0.06
-shaded = true
-alpha_cut = 2
-texture = SubResource("GradientTexture2D_q0trt")
-
 [node name="Film" type="Sprite3D" parent="Case/Offset/Back" unique_id=586326794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.871, 0, 0.088)
+modulate = Color(0.70380783, 0.70380783, 0.70380783, 1)
 pixel_size = 0.06
 transparent = false
-shaded = true
 alpha_cut = 2
 texture = SubResource("GradientTexture2D_q0trt")
 
@@ -506,9 +514,10 @@ libraries/ = SubResource("AnimationLibrary_u8e4i")
 root_node = NodePath("../AnimationPlayer")
 libraries/ = SubResource("AnimationLibrary_8a2es")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1406453839]
+[node name="Light" type="DirectionalLight3D" parent="." unique_id=1406453839]
 transform = Transform3D(0.23300184, 0.2747149, -0.9328677, -0.062272005, 0.96151644, 0.26759788, 0.9704805, -0.0042592585, 0.24114206, 0, 0, 0)
-light_energy = 0.3
+light_energy = 0.2
+light_volumetric_fog_energy = 0.0
 
 [node name="Open" type="AudioStreamPlayer" parent="." unique_id=965382706]
 stream = ExtResource("5_iv7fk")

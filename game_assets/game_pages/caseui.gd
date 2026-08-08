@@ -1,5 +1,6 @@
 extends Control
 @export var game : GameData
+@export var library_item : TextureButton
 @onready var save_path = get_root_userdata_path() + "/" + game.save_data_folder_name[selected_version]
 var installed : bool = false
 var selected_version : int = -1
@@ -56,7 +57,6 @@ func _on_uninstall_pressed() -> void:
 	match Main.operating_system:
 		"Windows":
 			full_path = ProjectSettings.globalize_path(game.folder_path + "/" + game.version_file_names_windows[actual_index] + ".exe")
-			print(full_path)
 			OS.move_to_trash(full_path)
 			if !str(DirAccess.open(game.folder_path).get_files()).contains(".exe"):
 				remove_recursive(game.folder_path)
@@ -68,6 +68,7 @@ func _on_uninstall_pressed() -> void:
 			OS.move_to_trash(full_path)
 	installed = false
 	check()
+	library_item.check()
 
 func _on_folder_pressed() -> void:
 	save_path = get_root_userdata_path() + "/" + game.save_data_folder_name[selected_version]

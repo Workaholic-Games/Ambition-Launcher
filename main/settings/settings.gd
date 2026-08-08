@@ -89,8 +89,6 @@ func _ready():
 		$"../Music".stream = music[Main.launcher_data.current_song - 2]
 		$"../Music".play()
 	
-	$Font.select(Main.launcher_data.font)
-	
 	for child in get_children():
 		if child is OptionButton:
 			child.get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST

@@ -16,7 +16,6 @@ func _ready():
 	
 	DirAccess.make_dir_absolute(file_path)
 	load_data()
-	print(launcher_data.username)
 
 # Save Data related
 func load_data():

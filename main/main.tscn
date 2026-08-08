@@ -10,15 +10,12 @@
 [ext_resource type="Theme" uid="uid://dssuru5t3q1wb" path="res://ui/themes/light_theme.tres" id="4_8g473"]
 [ext_resource type="Script" uid="uid://co5lodeyobgu0" path="res://main/search_menu.gd" id="4_l7kjj"]
 [ext_resource type="Theme" uid="uid://btw7s26f4bcjw" path="res://ui/themes/high_contrast.tres" id="5_p80qw"]
-[ext_resource type="Texture2D" uid="uid://dqdcu2vvje2on" path="res://game_assets/covers/Library Capsule FNAB2.png" id="5_xd8mv"]
 [ext_resource type="Script" uid="uid://dxuwvtpiouklv" path="res://main/update.gd" id="6_fl0aj"]
 [ext_resource type="Theme" uid="uid://dlu001cnshvbi" path="res://ui/themes/jarvis.tres" id="6_hpfjw"]
-[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="7_1dv2i"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://main/library/library.gd" id="8_gjwx3"]
 [ext_resource type="Theme" uid="uid://cpknqb1htao3j" path="res://ui/themes/evergreen_forest.tres" id="8_m7axd"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
-[ext_resource type="Texture2D" uid="uid://bwlse28tuasbm" path="res://game_assets/covers/Library Capsule Vegetable Game.png" id="13_bjyjg"]
 [ext_resource type="PackedScene" uid="uid://boivsvlnsewke" path="res://main/store/store_item.tscn" id="15_dfolu"]
 [ext_resource type="Script" uid="uid://b2dcbn4v850cv" path="res://main/tab_buttons/quit_launcher.gd" id="15_kxcgb"]
 [ext_resource type="Script" uid="uid://6bt6hco2xcv1" path="res://main/settings/settings.gd" id="16_3a0l5"]
@@ -28,36 +25,28 @@
 [ext_resource type="Resource" uid="uid://b83ra8oaqu4te" path="res://custom_resources/game_data/veg.tres" id="18_m7axd"]
 [ext_resource type="Resource" uid="uid://cvbj2852nsd4e" path="res://custom_resources/game_data/gffa.tres" id="18_p80qw"]
 [ext_resource type="Resource" uid="uid://cd4mi3tlyre0h" path="res://custom_resources/game_data/bitcoin_miner.tres" id="19_m7axd"]
-[ext_resource type="Texture2D" uid="uid://ck74dvq86ab5c" path="res://game_assets/covers/gffa.png" id="21_gtc6m"]
 [ext_resource type="Script" uid="uid://csdlqs8746h37" path="res://main/tos.gd" id="21_p0fg6"]
 [ext_resource type="PackedScene" uid="uid://bketsn6c8fgoq" path="res://game_assets/game_pages/caseui.tscn" id="22_m7axd"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
-[ext_resource type="Texture2D" uid="uid://hq18bglfix4b" path="res://game_assets/world_assets/fnab1/tile.png" id="26_d7e4n"]
+[ext_resource type="VideoStream" uid="uid://d288wbs13kx6m" path="res://game_assets/covers/fnab/FNAB1_Video.ogv" id="25_vcvpu"]
 [ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="26_gpx50"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://launcher games/launcher pets/Launcher Pets.gd" id="27_5mp0f"]
-[ext_resource type="Texture2D" uid="uid://csbw42kiw2poy" path="res://game_assets/world_assets/fnab1/Bulba STAGE.png" id="27_rnbvo"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://c5qk3080aprim" path="res://community/Untitled563_20260728181938.png" id="28_dfolu"]
-[ext_resource type="Texture2D" uid="uid://do3gftioe6f8m" path="res://game_assets/world_assets/fnab1/Gigabot JUMPSCARE.png" id="28_fcixt"]
-[ext_resource type="Texture2D" uid="uid://m4cgwu54myn2" path="res://game_assets/world_assets/fnab1/Charlie OUTSIDE DOOR.png" id="28_vxh88"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="PackedScene" uid="uid://ckvlhgyk5pfis" path="res://main/developers/dev_button.tscn" id="29_8g473"]
 [ext_resource type="Texture2D" uid="uid://ch3cc8snhm61n" path="res://community/sonshakes_and_fries.png" id="29_p80qw"]
-[ext_resource type="Texture2D" uid="uid://cqyn8dsgex2yl" path="res://game_assets/world_assets/fnab1/Gamer Mark RIGHT HALL.png" id="29_ymjft"]
 [ext_resource type="Texture2D" uid="uid://ck15ttscttkqe" path="res://main/developers/bulba.png" id="30_c203k"]
 [ext_resource type="Texture2D" uid="uid://bgjh6nfue28b2" path="res://community/Screenshot_2026-07-11_213203.png" id="30_m7axd"]
 [ext_resource type="Texture2D" uid="uid://b71j7armgy6dh" path="res://main/developers/jonathan.png" id="31_70lts"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
-[ext_resource type="Texture2D" uid="uid://dfr3chnavhgi7" path="res://game_assets/world_assets/fnab1/Cash Claire JUMPSCARE.png" id="31_u2yh7"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
 [ext_resource type="Texture2D" uid="uid://2dyhpqfic1rq" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
-[ext_resource type="Texture2D" uid="uid://dewdotpn46tla" path="res://game_assets/world_assets/fnab1/Night Guard.png" id="32_d25uf"]
 [ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://bp8xhfvkxpa0o" path="res://main/developers/sawyer.png" id="32_u0r11"]
 [ext_resource type="Texture2D" uid="uid://dy1jemtsodxjo" path="res://main/developers/diego.png" id="33_atdf6"]
-[ext_resource type="Texture2D" uid="uid://dfo1hx3suq0vx" path="res://game_assets/world_assets/fnab1/Emotional Support Fries.png" id="33_fb01j"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://2cga5i1g8svq" path="res://main/developers/claire.png" id="34_kungx"]
 [ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="35_571ru"]
@@ -191,19 +180,11 @@
 [ext_resource type="Texture2D" uid="uid://dyag4a3w2n3n4" path="res://community/drops/image (51).png" id="194_0gr68"]
 [ext_resource type="Texture2D" uid="uid://bguahav254x0t" path="res://community/drops/image (52).png" id="195_43mne"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcvpu"]
-albedo_texture = ExtResource("26_d7e4n")
-uv1_triplanar = true
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_vcvpu"]
-material = SubResource("StandardMaterial3D_vcvpu")
-size = Vector2(25, 25)
-
 [sub_resource type="Environment" id="Environment_m7axd"]
 background_mode = 2
 ambient_light_source = 3
 reflected_light_source = 2
+tonemap_mode = 1
 fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
@@ -753,10 +734,9 @@ search = "library"
 
 [node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 64.0
+offset_left = 110.0
 offset_right = 640.0
-offset_bottom = 352.0
+offset_bottom = 360.0
 script = ExtResource("8_gjwx3")
 
 [node name="GridContainer" type="GridContainer" parent="Library/Area" unique_id=1987771235]
@@ -768,27 +748,25 @@ layout_mode = 2
 game = ExtResource("16_42w5j")
 menu = NodePath("../../../../Library Pages/FNAB")
 
-[node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 instance=ExtResource("9_qsgxr")]
+[node name="FNAB2 (Five Night\'s at Bulba\'s 2)" parent="Library/Area/GridContainer" unique_id=177751127 node_paths=PackedStringArray("menu") instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("5_xd8mv")
 game = ExtResource("17_dfolu")
+menu = NodePath("../../../../Library Pages/FNAB2")
 
 [node name="GFFA (Gavin\'s Fantastically Fun Adventure, Scaryhead)" parent="Library/Area/GridContainer" unique_id=114714791 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("21_gtc6m")
 game = ExtResource("18_p80qw")
 
 [node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("7_1dv2i")
 game = ExtResource("19_m7axd")
 
 [node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
 layout_mode = 2
-texture_normal = ExtResource("13_bjyjg")
 game = ExtResource("18_m7axd")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
+visible = false
 layout_mode = 0
 offset_left = 192.0
 offset_right = 576.0
@@ -798,6 +776,7 @@ context_menu_enabled = false
 emoji_menu_enabled = false
 
 [node name="Library Pages" type="Control" parent="." unique_id=1461528965]
+visible = false
 z_index = 1
 anchors_preset = 0
 offset_right = 40.0
@@ -808,8 +787,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Video" type="VideoStreamPlayer" parent="Library Pages/FNAB" unique_id=871389413]
+texture_filter = 2
+layout_mode = 0
+offset_left = 55.0
+offset_right = 695.0
+offset_bottom = 360.0
+mouse_filter = 2
+stream = ExtResource("25_vcvpu")
+autoplay = true
+expand = true
+loop = true
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/FNAB" unique_id=1151640580]
-z_index = -1
 custom_maximum_size = Vector2(2120, 1440)
 layout_mode = 0
 offset_left = 110.0
@@ -819,79 +809,10 @@ scale = Vector2(0.25, 0.25)
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB/SubViewportContainer" unique_id=1073184110]
+transparent_bg = true
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 4
-
-[node name="World" type="Node3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=1251719832]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1939105854]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -20.295221, 0)
-mesh = SubResource("PlaneMesh_vcvpu")
-
-[node name="Sprite3D" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1795659317]
-transform = Transform3D(0.49999997, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.49999997, 26.330452, 0, -46.146564)
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("27_rnbvo")
-
-[node name="Sprite3D4" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=690435627]
-transform = Transform3D(0.29007357, 0, -0.9570043, 0, 1, 0, 0.9570043, 0, 0.29007357, 36.916588, 0, -17.344004)
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("28_fcixt")
-
-[node name="Sprite3D2" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1621692345]
-transform = Transform3D(-0.5375075, 0, -0.84325886, 0, 1, 0, 0.84325886, 0, -0.5375075, 44.690628, 0, 27.93885)
-flip_h = true
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("28_vxh88")
-
-[node name="Sprite3D3" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1055071622]
-transform = Transform3D(-0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.7071067, 32.73784, 0, 48.724888)
-flip_h = true
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("29_ymjft")
-
-[node name="Sprite3D5" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1913215835]
-transform = Transform3D(-0.44118398, 0, -0.8974166, 0, 1, 0, 0.8974166, 0, -0.44118398, 7.294403, 0, 52.116405)
-flip_h = true
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("31_u2yh7")
-region_enabled = true
-region_rect = Rect2(24, 0, 23, 37)
-
-[node name="Sprite3D6" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1517473449]
-transform = Transform3D(0.5565936, 0, -0.8307848, 0, 1, 0, 0.8307848, 0, 0.5565936, 13.149284, -6, -53.290398)
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("32_d25uf")
-region_enabled = true
-region_rect = Rect2(0, 0, 18, 27)
-
-[node name="Sprite3D7" type="Sprite3D" parent="Library Pages/FNAB/SubViewportContainer/SubViewport/World" unique_id=1067844387]
-transform = Transform3D(0.32260513, 0, -0.94653344, 0, 1, 0, 0.94653344, 0, 0.32260513, 20.149284, -13, -28.324753)
-pixel_size = 1.0
-shaded = true
-alpha_cut = 2
-texture_filter = 0
-texture = ExtResource("33_fb01j")
-region_rect = Rect2(0, 0, 18, 27)
+render_target_update_mode = 0
 
 [node name="GameCase" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=418215869 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
 game = ExtResource("16_42w5j")
@@ -904,11 +825,48 @@ current = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=368255813]
 environment = SubResource("Environment_m7axd")
 
-[node name="CaseUI" parent="Library Pages/FNAB" unique_id=543016446 instance=ExtResource("22_m7axd")]
+[node name="CaseUI" parent="Library Pages/FNAB" unique_id=543016446 node_paths=PackedStringArray("library_item") instance=ExtResource("22_m7axd")]
 layout_mode = 1
 offset_right = -40.0
 offset_bottom = -40.0
 game = ExtResource("16_42w5j")
+library_item = NodePath("../../../Library/Area/GridContainer/FNAB (Five Night\'s at Bulba\'s)")
+
+[node name="FNAB2" type="Control" parent="Library Pages" unique_id=1679611398]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/FNAB2" unique_id=887527156]
+z_index = -1
+custom_maximum_size = Vector2(2120, 1440)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 2230.0
+offset_bottom = 1440.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB2/SubViewportContainer" unique_id=1717258583]
+handle_input_locally = false
+size = Vector2i(2120, 1440)
+render_target_update_mode = 0
+
+[node name="GameCase" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=324298551 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -249.09583)
+game = ExtResource("17_dfolu")
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=821063493]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -249.12177)
+current = true
+
+[node name="CaseUI" parent="Library Pages/FNAB2" unique_id=2053088864 node_paths=PackedStringArray("library_item") instance=ExtResource("22_m7axd")]
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+game = ExtResource("17_dfolu")
+library_item = NodePath("../../../Library/Area/GridContainer/FNAB2 (Five Night\'s at Bulba\'s 2)")
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
 visible = false
@@ -1199,7 +1157,7 @@ offset_right = 640.2449
 offset_bottom = 279.99997
 avatar = ExtResource("34_kungx")
 dev_name = "Claire"
-bio = "Artist hired by Bulba to work on specific projects."
+bio = "Artist hired by Bulba to work on a specific set of projects."
 rank = "Artist"
 pronoun = "They/Them"
 
@@ -1517,7 +1475,25 @@ offset_top = -36.0
 offset_right = 590.0
 offset_bottom = 284.0
 bbcode_enabled = true
-text = "Reduced Frequency of advertisements in the Workaholic Drops feature.
+text = "Added the ability to customize the launchers font (May vary in visual quality)
+
+Overhauled how library items worked and made it super cool
+
+Changed the Developer Menu.
+Changed the Account Menu.
+Changed Custom Cursor Textures and added the Moon Cursor
+Changed Scaryhead Related Avatars
+Added Mortisha Moon and Moothics Cow Avatars
+
+Bunch of UI changes and improved existing UI themes.
+
+Added the following UI themes:
+-High Contrast
+-J.A.R.V.I.S
+-Evergreen Forest
+-Neon
+
+Reduced Frequency of advertisements in the Workaholic Drops feature
 Removed Herobrine
 
 Thanks for using the launcher! :D"

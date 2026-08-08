@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csbw42kiw2poy"
-path="res://.godot/imported/Bulba STAGE.png-a8d845e4e9568726788f2a01d2fc90e0.ctex"
+uid="uid://bfliadwegvjja"
+path="res://.godot/imported/fnab2.png-ddfbc528ce948b0fcca639f5327173ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/world_assets/fnab1/Bulba STAGE.png"
-dest_files=["res://.godot/imported/Bulba STAGE.png-a8d845e4e9568726788f2a01d2fc90e0.ctex"]
+source_file="res://game_assets/covers/fnab2/fnab2.png"
+dest_files=["res://.godot/imported/fnab2.png-ddfbc528ce948b0fcca639f5327173ba.ctex"]
 
 [params]
 
