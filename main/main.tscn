@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://dgo0swgxvrraq" path="res://main/developers/dev_bio.tscn" id="35_eyvb1"]
 [ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/videos/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
 [ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="36_j128u"]
+[ext_resource type="Texture2D" uid="uid://beuli3w15sxj1" path="res://community/Screenshot_2026-07-11_220625.png" id="39_fx4dj"]
 [ext_resource type="AudioStream" uid="uid://cwap8x08hljxx" path="res://sounds/music/Fresh Grapes.mp3" id="45_vcvpu"]
 [ext_resource type="AudioStream" uid="uid://hkxpixr8kor3" path="res://sounds/music/Vineyard Vibes.mp3" id="46_d7e4n"]
 [ext_resource type="AudioStream" uid="uid://d3e5m04gsryh" path="res://sounds/music/Sober Serenity.mp3" id="47_rnbvo"]
@@ -1428,6 +1429,7 @@ offset_left = 368.0
 offset_top = 47.0
 offset_right = 464.0
 offset_bottom = 143.0
+texture = ExtResource("39_fx4dj")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Community/Featured/Best Memes/Sawyer Meme" unique_id=399822536]
