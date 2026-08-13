@@ -777,7 +777,6 @@ context_menu_enabled = false
 emoji_menu_enabled = false
 
 [node name="Library Pages" type="Control" parent="." unique_id=1461528965]
-visible = false
 z_index = 1
 anchors_preset = 0
 offset_right = 40.0
@@ -813,7 +812,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="GameCase" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=418215869 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
 game = ExtResource("16_42w5j")
@@ -851,7 +850,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB2/SubViewportContainer" unique_id=1717258583]
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="GameCase" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=324298551 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -249.09583)
@@ -1069,9 +1068,9 @@ avatar = ExtResource("32_u0r11")
 
 [node name="Diego" parent="Developers" unique_id=1423075353 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
 layout_mode = 0
-offset_left = 280.0
+offset_left = 328.0
 offset_top = 184.0
-offset_right = 364.0
+offset_right = 412.0
 offset_bottom = 216.0
 theme_override_font_sizes/font_size = 10
 text = "Froggermand
@@ -1080,6 +1079,7 @@ bio = NodePath("../Diego Bio")
 avatar = ExtResource("33_atdf6")
 
 [node name="Claire" parent="Developers" unique_id=1328940608 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
+visible = false
 layout_mode = 0
 offset_left = 368.0
 offset_top = 184.0
