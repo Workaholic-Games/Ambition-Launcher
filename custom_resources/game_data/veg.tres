@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://crl1xugq7xos" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194453.png" id="4_8iexh"]
 [ext_resource type="Texture2D" uid="uid://cw3nkorakfoxf" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194515.png" id="5_12kpi"]
 [ext_resource type="Texture2D" uid="uid://c2cwy84lgf6hj" path="res://game_assets/thumbnails/veg/Screenshot 2026-05-21 194630.png" id="6_7q0ad"]
-[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="8_l5xkx"]
+[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/background/Vegetable Game Trailer.ogv" id="8_l5xkx"]
 
 [resource]
 script = ExtResource("1_s023i")

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d1iglidor7ls3"]
 
 [ext_resource type="Theme" uid="uid://i2y3i1ptg53l" path="res://ui/themes/grape.tres" id="1_8g473"]
-[ext_resource type="Theme" uid="uid://b0vf1ab3mirsv" path="res://ui/themes/neon.tres" id="1_hpfjw"]
 [ext_resource type="Theme" uid="uid://ds4j7dyddneu7" path="res://ui/themes/fresh_mint.tres" id="1_m7axd"]
 [ext_resource type="Script" uid="uid://bo1f2jmxmh3rx" path="res://main/settings/themes.gd" id="1_p0fg6"]
 [ext_resource type="Script" uid="uid://utklm5a2n5wg" path="res://main/tab_buttons/tab_buttons.gd" id="2_exgh8"]
@@ -14,6 +13,7 @@
 [ext_resource type="Theme" uid="uid://dlu001cnshvbi" path="res://ui/themes/jarvis.tres" id="6_hpfjw"]
 [ext_resource type="Script" uid="uid://bchat6lvbg3lq" path="res://main/library/library.gd" id="8_gjwx3"]
 [ext_resource type="Theme" uid="uid://cpknqb1htao3j" path="res://ui/themes/evergreen_forest.tres" id="8_m7axd"]
+[ext_resource type="Theme" uid="uid://bac1rjs01e4av" path="res://ui/themes/hacker.tres" id="9_fx4dj"]
 [ext_resource type="PackedScene" uid="uid://c7euu153tj8we" path="res://main/library_item.tscn" id="9_qsgxr"]
 [ext_resource type="PackedScene" uid="uid://pyf70rc5r3m7" path="res://main/store_pages/store_page.tscn" id="12_5enwe"]
 [ext_resource type="PackedScene" uid="uid://boivsvlnsewke" path="res://main/store/store_item.tscn" id="15_dfolu"]
@@ -29,35 +29,34 @@
 [ext_resource type="PackedScene" uid="uid://bketsn6c8fgoq" path="res://game_assets/game_pages/caseui.tscn" id="22_m7axd"]
 [ext_resource type="Script" uid="uid://dkiydj4pien72" path="res://launcher games/dell/dell.gd" id="24_6l2pj"]
 [ext_resource type="PackedScene" uid="uid://dl7a0bfmrnoob" path="res://launcher games/dell/dell.tscn" id="24_p0fg6"]
-[ext_resource type="VideoStream" uid="uid://d288wbs13kx6m" path="res://game_assets/covers/fnab/FNAB1_Video.ogv" id="25_vcvpu"]
-[ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/videos/fnab1_trailer.ogv" id="26_gpx50"]
+[ext_resource type="VideoStream" uid="uid://dk7q2ek8edjbn" path="res://game_assets/background/fnab1_trailer.ogv" id="26_gpx50"]
 [ext_resource type="Script" uid="uid://cof1t1m3mkxe7" path="res://launcher games/launcher pets/Launcher Pets Button.gd" id="27_3gblu"]
 [ext_resource type="Script" uid="uid://bed0x8e13mcot" path="res://launcher games/launcher pets/Launcher Pets.gd" id="27_5mp0f"]
+[ext_resource type="Texture2D" uid="uid://dlj0cox6gvihg" path="res://main/developers/bulba.webp" id="27_fx4dj"]
 [ext_resource type="Texture2D" uid="uid://45baci8tanyh" path="res://launcher games/launcher pets/slime/slime.png" id="28_5mp0f"]
 [ext_resource type="Texture2D" uid="uid://c5qk3080aprim" path="res://community/Untitled563_20260728181938.png" id="28_dfolu"]
+[ext_resource type="Texture2D" uid="uid://donbk5723b1uw" path="res://main/developers/sawyer.webp" id="28_j128u"]
 [ext_resource type="Script" uid="uid://r6wb36xd52ut" path="res://launcher games/launcher pets/Pet Buttons.gd" id="28_xn47k"]
 [ext_resource type="PackedScene" uid="uid://ckvlhgyk5pfis" path="res://main/developers/dev_button.tscn" id="29_8g473"]
 [ext_resource type="Texture2D" uid="uid://ch3cc8snhm61n" path="res://community/sonshakes_and_fries.png" id="29_p80qw"]
-[ext_resource type="Texture2D" uid="uid://ck15ttscttkqe" path="res://main/developers/bulba.png" id="30_c203k"]
 [ext_resource type="Texture2D" uid="uid://bgjh6nfue28b2" path="res://community/Screenshot_2026-07-11_213203.png" id="30_m7axd"]
 [ext_resource type="Texture2D" uid="uid://b71j7armgy6dh" path="res://main/developers/jonathan.png" id="31_70lts"]
 [ext_resource type="Texture2D" uid="uid://b1fn8t0w3cssf" path="res://launcher games/launcher pets/square/square.png" id="31_fqae6"]
 [ext_resource type="Texture2D" uid="uid://2t4ye52utxrf" path="res://launcher games/launcher pets/snail/snail.png" id="31_w8nh6"]
 [ext_resource type="Texture2D" uid="uid://2dyhpqfic1rq" path="res://launcher games/dell/dell.png" id="32_6vgeh"]
-[ext_resource type="Texture2D" uid="uid://ctolpaynidewk" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
-[ext_resource type="Texture2D" uid="uid://bp8xhfvkxpa0o" path="res://main/developers/sawyer.png" id="32_u0r11"]
+[ext_resource type="Texture2D" uid="uid://b66x5eisrrfqd" path="res://launcher games/launcher pets/pet_collar.png" id="32_lbrtn"]
 [ext_resource type="Texture2D" uid="uid://dy1jemtsodxjo" path="res://main/developers/diego.png" id="33_atdf6"]
 [ext_resource type="Texture2D" uid="uid://u66f30a5esyg" path="res://launcher games/launcher pets/blue_guy/blue_guy.png" id="33_xn47k"]
 [ext_resource type="Texture2D" uid="uid://2cga5i1g8svq" path="res://main/developers/claire.png" id="34_kungx"]
-[ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="35_571ru"]
+[ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/background/fnab2_trailer.ogv" id="35_571ru"]
 [ext_resource type="PackedScene" uid="uid://dgo0swgxvrraq" path="res://main/developers/dev_bio.tscn" id="35_eyvb1"]
-[ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/videos/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
+[ext_resource type="VideoStream" uid="uid://cr7ffsko4gml1" path="res://game_assets/background/Five Nights at Bulbas 2.3 Trailer.ogv" id="36_gmy4t"]
 [ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="36_j128u"]
 [ext_resource type="Texture2D" uid="uid://beuli3w15sxj1" path="res://community/Screenshot_2026-07-11_220625.png" id="39_fx4dj"]
 [ext_resource type="AudioStream" uid="uid://cwap8x08hljxx" path="res://sounds/music/Fresh Grapes.mp3" id="45_vcvpu"]
 [ext_resource type="AudioStream" uid="uid://hkxpixr8kor3" path="res://sounds/music/Vineyard Vibes.mp3" id="46_d7e4n"]
 [ext_resource type="AudioStream" uid="uid://d3e5m04gsryh" path="res://sounds/music/Sober Serenity.mp3" id="47_rnbvo"]
-[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/videos/Vegetable Game Trailer.ogv" id="48_uv824"]
+[ext_resource type="VideoStream" uid="uid://c6bfh1daoof53" path="res://game_assets/background/Vegetable Game Trailer.ogv" id="48_uv824"]
 [ext_resource type="AudioStream" uid="uid://d0sh0xu5o6kta" path="res://sounds/music/The Eternal Night.ogg" id="48_vxh88"]
 [ext_resource type="Texture2D" uid="uid://bt8bggeblm3di" path="res://main/lock.png" id="51_lc78y"]
 [ext_resource type="Script" uid="uid://20dvqbcewn28" path="res://main/user/user.gd" id="56_42eyl"]
@@ -165,6 +164,7 @@
 [ext_resource type="Texture2D" uid="uid://b20rs4rqv4v17" path="res://community/drops/image (35).png" id="178_ek2bi"]
 [ext_resource type="Texture2D" uid="uid://cye0i12k5u18a" path="res://community/drops/image (36).png" id="179_vyxbw"]
 [ext_resource type="Texture2D" uid="uid://cmdar08287apt" path="res://community/drops/image (37).png" id="180_dv4h0"]
+[ext_resource type="Texture2D" uid="uid://ilwe18jf0ivx" path="res://game_assets/world_assets/FNABBG.png" id="180_fx4dj"]
 [ext_resource type="Texture2D" uid="uid://dgee6vgnrbabi" path="res://community/drops/image (38).png" id="181_uquvt"]
 [ext_resource type="Texture2D" uid="uid://bnvbffv1ovd48" path="res://community/drops/image (39).png" id="182_68tyb"]
 [ext_resource type="Texture2D" uid="uid://d0waxvw738023" path="res://community/drops/image (40).png" id="183_25tof"]
@@ -193,9 +193,6 @@ fog_density = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5pd"]
 size = Vector2(536, 10)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eyvb1"]
-load_path = "res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o7yem"]
 shader = ExtResource("61_w2e2n")
@@ -539,8 +536,8 @@ layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("3_e77u7")
 script = ExtResource("1_p0fg6")
-themes = Array[Theme]([ExtResource("3_e77u7"), ExtResource("4_8g473"), ExtResource("5_p80qw"), ExtResource("1_m7axd"), ExtResource("1_8g473"), ExtResource("6_hpfjw"), ExtResource("8_m7axd"), ExtResource("1_hpfjw")])
-theme_names = Array[String](["Dark Mode", "Light Mode", "High Contrast", "Fresh Mint", "Grape", "J.A.R.V.I.S", "Evergreen Forest", "Neon"])
+themes = Array[Theme]([ExtResource("3_e77u7"), ExtResource("4_8g473"), ExtResource("5_p80qw"), ExtResource("1_m7axd"), ExtResource("1_8g473"), ExtResource("6_hpfjw"), ExtResource("8_m7axd"), ExtResource("9_fx4dj")])
+theme_names = Array[String](["Dark Mode", "Light Mode", "High Contrast", "Fresh Mint", "Grape", "J.A.R.V.I.S", "Evergreen Forest", "Hacker"])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1624516011]
 z_index = 1
@@ -735,8 +732,9 @@ search = "library"
 
 [node name="Area" type="ScrollContainer" parent="Library" unique_id=491017469]
 layout_mode = 0
-offset_left = 110.0
-offset_right = 640.0
+offset_left = 125.0
+offset_top = 32.0
+offset_right = 639.0
 offset_bottom = 360.0
 script = ExtResource("8_gjwx3")
 
@@ -783,21 +781,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="FNAB" type="Control" parent="Library Pages" unique_id=523003102]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Video" type="VideoStreamPlayer" parent="Library Pages/FNAB" unique_id=871389413]
-texture_filter = 2
+[node name="CustomBackground" type="TextureRect" parent="Library Pages/FNAB" unique_id=2074438790]
+custom_minimum_size = Vector2(530, 360)
 layout_mode = 0
-offset_left = 55.0
-offset_right = 695.0
+offset_left = 110.0
+offset_right = 640.0
 offset_bottom = 360.0
-mouse_filter = 2
-stream = ExtResource("25_vcvpu")
-autoplay = true
-expand = true
-loop = true
+texture = ExtResource("180_fx4dj")
+expand_mode = 1
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/FNAB" unique_id=1151640580]
 custom_maximum_size = Vector2(2120, 1440)
@@ -812,7 +808,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="GameCase" parent="Library Pages/FNAB/SubViewportContainer/SubViewport" unique_id=418215869 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
 game = ExtResource("16_42w5j")
@@ -833,12 +829,21 @@ game = ExtResource("16_42w5j")
 library_item = NodePath("../../../Library/Area/GridContainer/FNAB (Five Night\'s at Bulba\'s)")
 
 [node name="FNAB2" type="Control" parent="Library Pages" unique_id=1679611398]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="CustomBackground" type="TextureRect" parent="Library Pages/FNAB2" unique_id=966724304]
+custom_minimum_size = Vector2(530, 360)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("180_fx4dj")
+expand_mode = 1
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/FNAB2" unique_id=887527156]
-z_index = -1
 custom_maximum_size = Vector2(2120, 1440)
 layout_mode = 0
 offset_left = 110.0
@@ -850,7 +855,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Library Pages/FNAB2/SubViewportContainer" unique_id=1717258583]
 handle_input_locally = false
 size = Vector2i(2120, 1440)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="GameCase" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=324298551 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -249.09583)
@@ -1040,7 +1045,7 @@ offset_bottom = 96.0
 text = "Bulba
 Gabriel Webb"
 bio = NodePath("../Bulba Bio")
-avatar = ExtResource("30_c203k")
+avatar = ExtResource("27_fx4dj")
 
 [node name="Jonathan" parent="Developers" unique_id=1121329441 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
 layout_mode = 0
@@ -1064,7 +1069,7 @@ theme_override_font_sizes/font_size = 10
 text = "TheProOfFPS
 Sawyer Rodgers"
 bio = NodePath("../Sawyer Bio")
-avatar = ExtResource("32_u0r11")
+avatar = ExtResource("28_j128u")
 
 [node name="Diego" parent="Developers" unique_id=1423075353 node_paths=PackedStringArray("bio") instance=ExtResource("29_8g473")]
 layout_mode = 0
@@ -1098,7 +1103,7 @@ offset_left = 110.0
 offset_top = -80.0
 offset_right = 640.2449
 offset_bottom = 279.99997
-avatar = SubResource("CompressedTexture2D_eyvb1")
+avatar = ExtResource("27_fx4dj")
 dev_name = "Gabriel"
 bio = "Founder and C.E.O. of Workaholic Games. Creator of the Five Nights at Bulba's series, The Vegetable Game and Head Developer of the Ambition Launcher."
 rank = "C.E.O."
@@ -1128,7 +1133,7 @@ offset_left = 110.0
 offset_top = -80.0
 offset_right = 640.2449
 offset_bottom = 279.99997
-avatar = ExtResource("32_u0r11")
+avatar = ExtResource("28_j128u")
 dev_name = "Sawyer"
 bio = "Co-Founder of Workaholic Games and Head Developer of Bitcoin Miner and TOE."
 rank = "Rank: CO-CEO"
@@ -1145,7 +1150,7 @@ offset_right = 640.2449
 offset_bottom = 279.99997
 avatar = ExtResource("33_atdf6")
 dev_name = "Diego"
-bio = "Head Developer of most of our Minecraft Server projects."
+bio = "Head Developer of most of our recent Minecraft Server projects."
 rank = "Head Crafter"
 pronoun = "He/Him"
 
@@ -1496,6 +1501,7 @@ Added the following UI themes:
 -Neon
 
 Reduced Frequency of advertisements in the Workaholic Drops feature
+
 Removed Herobrine
 
 Thanks for using the launcher! :D"
@@ -1636,7 +1642,7 @@ popup/item_0/text = "Tiny5 (DEFAULT)"
 popup/item_0/id = 0
 popup/item_1/text = "GoogleSans"
 popup/item_1/id = 1
-popup/item_2/text = "Jersey10"
+popup/item_2/text = "Jersey25"
 popup/item_2/id = 2
 popup/item_3/text = "Coolville"
 popup/item_3/id = 3
@@ -2057,7 +2063,6 @@ offset_left = 272.0
 offset_top = 256.0
 offset_right = 480.0
 offset_bottom = 280.0
-toggle_mode = true
 text = "Change Avatar"
 
 [node name="Back" type="Button" parent="User" unique_id=1379773490]
@@ -2152,7 +2157,7 @@ texture_normal = ExtResource("107_jqfxn")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("73_d1j2r")
-default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("91_ktvun"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("92_dfxco"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("111_cvllj"), ExtResource("110_sl5vs"), ExtResource("109_kuktk"), ExtResource("108_ebf3y"), ExtResource("107_jqfxn"), ExtResource("112_jyo0q"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("114_cvllj"), ExtResource("116_k0vy6"), ExtResource("117_678nm"), ExtResource("118_w2e2n"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("122_oui53"), ExtResource("123_qngap"), ExtResource("96_e77u7")])
+default_avatars = Array[Texture2D]([ExtResource("72_ljnho"), ExtResource("73_mk0oj"), ExtResource("74_vyb7n"), ExtResource("75_bfdoy"), ExtResource("76_p66im"), ExtResource("77_v6wbg"), ExtResource("78_0yfeg"), ExtResource("79_v8baf"), ExtResource("80_3bgud"), ExtResource("81_pc78h"), ExtResource("91_ktvun"), ExtResource("82_pc78h"), ExtResource("83_ts2mh"), ExtResource("84_mmxjx"), ExtResource("85_7s7fj"), ExtResource("86_42ldh"), ExtResource("87_aw48e"), ExtResource("88_678nm"), ExtResource("88_vmwr3"), ExtResource("92_dfxco"), ExtResource("89_oipmw"), ExtResource("90_sdt21"), ExtResource("72_46muq"), ExtResource("94_th44a"), ExtResource("95_nrk8p"), ExtResource("96_n7cka"), ExtResource("97_b7rj1"), ExtResource("98_x50uf"), ExtResource("99_702jf"), ExtResource("100_u3ta2"), ExtResource("101_ugik1"), ExtResource("102_jqfxn"), ExtResource("111_cvllj"), ExtResource("110_sl5vs"), ExtResource("109_kuktk"), ExtResource("108_ebf3y"), ExtResource("107_jqfxn"), ExtResource("112_jyo0q"), ExtResource("103_n7cka"), ExtResource("104_b7rj1"), ExtResource("105_x50uf"), ExtResource("106_702jf"), ExtResource("113_sl5vs"), ExtResource("115_jyo0q"), ExtResource("114_cvllj"), ExtResource("116_k0vy6"), ExtResource("118_w2e2n"), ExtResource("117_678nm"), ExtResource("119_o7yem"), ExtResource("120_mef85"), ExtResource("121_g4og3"), ExtResource("122_oui53"), ExtResource("123_qngap"), ExtResource("96_e77u7")])
 
 [node name="Launcher Games" type="Control" parent="." unique_id=1855740201]
 z_index = 3

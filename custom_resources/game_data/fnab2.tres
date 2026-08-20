@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://mbe205r438f0" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 192909.png" id="7_tcyi8"]
 [ext_resource type="Texture2D" uid="uid://baet03e2bwlqr" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193014.png" id="8_7apdv"]
 [ext_resource type="Texture2D" uid="uid://0tfom1e7avjk" path="res://game_assets/thumbnails/fnab2/Screenshot 2026-05-21 193026.png" id="9_kl47n"]
-[ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/videos/fnab2_trailer.ogv" id="11_50lpr"]
+[ext_resource type="VideoStream" uid="uid://78d6vjsl82jm" path="res://game_assets/background/fnab2_trailer.ogv" id="11_50lpr"]
 
 [resource]
 script = ExtResource("1_lxcpu")

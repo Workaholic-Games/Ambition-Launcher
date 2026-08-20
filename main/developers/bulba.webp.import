@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck15ttscttkqe"
-path="res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"
+uid="uid://dlj0cox6gvihg"
+path="res://.godot/imported/bulba.webp-6766cd1c509cb10857b8146c3e17dbed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/developers/bulba.png"
-dest_files=["res://.godot/imported/bulba.png-305a891b6d2d7f71b17bfcd1671f76e1.ctex"]
+source_file="res://main/developers/bulba.webp"
+dest_files=["res://.godot/imported/bulba.webp-6766cd1c509cb10857b8146c3e17dbed.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

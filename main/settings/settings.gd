@@ -92,8 +92,6 @@ func _ready():
 	for child in get_children():
 		if child is OptionButton:
 			child.get_popup().canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
-
-
 # Window settings
 func _on_window_mode_item_selected(index: int) -> void:
 	$"../Tap".play()

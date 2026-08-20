@@ -12,7 +12,7 @@ func _ready() -> void:
 		match Main.launcher_data.font:
 			0: theme_to_change.default_font = load("res://ui/fonts/Tiny5-Regular.ttf")
 			1: theme_to_change.default_font = load("res://ui/fonts/GoogleSans-VariableFont_GRAD,opsz,wght.ttf")
-			2: theme_to_change.default_font = load("res://ui/fonts/Jersey10-Regular.ttf")
+			2: theme_to_change.default_font = load("res://ui/fonts/Jersey25-Regular.ttf")
 			3: theme_to_change.default_font = load("res://ui/fonts/Coolville.otf")
 			4: theme_to_change.default_font = load("res://ui/fonts/PixelifySans-VariableFont_wght.ttf")
 	
@@ -36,7 +36,7 @@ func _on_font_item_selected(index: int) -> void:
 		match index:
 			0: theme_to_change.default_font = load("res://ui/fonts/Tiny5-Regular.ttf")
 			1: theme_to_change.default_font = load("res://ui/fonts/GoogleSans-VariableFont_GRAD,opsz,wght.ttf")
-			2: theme_to_change.default_font = load("res://ui/fonts/Jersey10-Regular.ttf")
+			2: theme_to_change.default_font = load("res://ui/fonts/Jersey25-Regular.ttf")
 			3: theme_to_change.default_font = load("res://ui/fonts/Coolville.otf")
 			4: theme_to_change.default_font = load("res://ui/fonts/PixelifySans-VariableFont_wght.ttf")
 	

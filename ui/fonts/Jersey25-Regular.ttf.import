@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ddkw01r7ak0on"
-path="res://.godot/imported/Jersey10-Regular.ttf-7751d5d786306a2992cad59764128392.fontdata"
+uid="uid://deqd3gg5grmjh"
+path="res://.godot/imported/Jersey25-Regular.ttf-4cb13b5e74eaee77e9e5e33bb0ca30db.fontdata"
 
 [deps]
 
-source_file="res://ui/fonts/Jersey10-Regular.ttf"
-dest_files=["res://.godot/imported/Jersey10-Regular.ttf-7751d5d786306a2992cad59764128392.fontdata"]
+source_file="res://ui/fonts/Jersey25-Regular.ttf"
+dest_files=["res://.godot/imported/Jersey25-Regular.ttf-4cb13b5e74eaee77e9e5e33bb0ca30db.fontdata"]
 
 [params]
 
@@ -23,7 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=3
-subpixel_positioning=4
+subpixel_positioning=2
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
@@ -34,7 +34,8 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
-"size": Vector2i(16, 0)
+"size": Vector2i(16, 0),
+&"variation_embolden": 0.0
 }]
 language_support={}
 script_support={}
