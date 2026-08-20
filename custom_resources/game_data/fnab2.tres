@@ -39,6 +39,6 @@ version_links_linux = PackedStringArray("https://github.com/Workaholic-Games/Amb
 version_file_names_windows = PackedStringArray("FNAB2_Ambition_Edition_Windows")
 version_file_names_mac = PackedStringArray("Five Nights At Bulbas 2")
 version_file_names_linux = PackedStringArray("FNAB1_Ambition_Edition_Linux")
-folder_path = "user://FNAB"
+folder_path = "user://FNAB2"
 save_data_folder_name = PackedStringArray("Five Nights At Bulbas 2")
 metadata/_custom_type_script = "uid://dk1pj38x77q1e"

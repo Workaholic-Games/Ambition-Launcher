@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cd4mi3tlyre0h"]
 
-[ext_resource type="Texture2D" uid="uid://c3bf0g0h0f62a" path="res://game_assets/covers/bitcoin_miner.png" id="1_8q7hh"]
+[ext_resource type="Texture2D" uid="uid://c5ajlf7bt6i8j" path="res://game_assets/covers/bitcoin_miner/bitcoin_back.png" id="1_trqd4"]
 [ext_resource type="Script" uid="uid://dk1pj38x77q1e" path="res://custom_resources/resources/game_data.gd" id="1_w6mor"]
 [ext_resource type="Texture2D" uid="uid://jcgo38mgojv3" path="res://game_assets/thumbnails/bitcoin/bitcoin_miner.png" id="2_g8e7t"]
+[ext_resource type="Texture2D" uid="uid://b0o21k4prgmv3" path="res://game_assets/covers/bitcoin_miner/bitcoin.png" id="2_js0k2"]
 [ext_resource type="Texture2D" uid="uid://dnvpier2v2mbn" path="res://game_assets/thumbnails/bitcoin/Screenshot 2026-05-21 193308.png" id="3_7dp26"]
+[ext_resource type="Texture2D" uid="uid://c3v1e2g46w6fp" path="res://game_assets/covers/bitcoin_miner/bitcoin_disc.png" id="3_o5q8w"]
+[ext_resource type="Texture2D" uid="uid://desjbn66qb7jk" path="res://game_assets/covers/bitcoin_miner/bitcoin_hinge.png" id="4_r8ari"]
 
 [resource]
 script = ExtResource("1_w6mor")
@@ -16,11 +19,14 @@ age_rating = "E for Everyone"
 main_dev = "Sawyer"
 stability = "Fantastic"
 max_players = "1"
-cover = ExtResource("1_8q7hh")
+cover = ExtResource("2_js0k2")
+hinge = ExtResource("4_r8ari")
+back = ExtResource("1_trqd4")
+disc = ExtResource("3_o5q8w")
 images = Array[Texture2D]([ExtResource("2_g8e7t"), ExtResource("3_7dp26")])
 version_names = PackedStringArray("1.25")
-version_links_windows = PackedStringArray("Bitcoin.Miner.1.25")
-version_file_names_windows = PackedStringArray("Ambition_Windows")
+version_links_windows = PackedStringArray("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/games/Bitcoin.Miner.1.25.zip")
+version_file_names_windows = PackedStringArray("Bitcoin.Miner.1.25")
 folder_path = "user://Bitcoin Miner"
 save_data_folder_name = PackedStringArray("Bitcoin Miner")
 metadata/_custom_type_script = "uid://dk1pj38x77q1e"

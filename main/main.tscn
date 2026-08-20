@@ -756,13 +756,15 @@ menu = NodePath("../../../../Library Pages/FNAB2")
 layout_mode = 2
 game = ExtResource("18_p80qw")
 
-[node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 instance=ExtResource("9_qsgxr")]
+[node name="Bitcoin Miner" parent="Library/Area/GridContainer" unique_id=1993959584 node_paths=PackedStringArray("menu") instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game = ExtResource("19_m7axd")
+menu = NodePath("../../../../Library Pages/BitcoinMiner")
 
-[node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 instance=ExtResource("9_qsgxr")]
+[node name="Veg" parent="Library/Area/GridContainer" unique_id=1021648132 node_paths=PackedStringArray("menu") instance=ExtResource("9_qsgxr")]
 layout_mode = 2
 game = ExtResource("18_m7axd")
+menu = NodePath("../../../../Library Pages/Veg")
 
 [node name="Search Bar" type="LineEdit" parent="Library" unique_id=834488182]
 visible = false
@@ -858,12 +860,12 @@ size = Vector2i(2120, 1440)
 render_target_update_mode = 0
 
 [node name="GameCase" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=324298551 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -249.09583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -585.0958)
 game = ExtResource("17_dfolu")
 camera = NodePath("../Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="Library Pages/FNAB2/SubViewportContainer/SubViewport" unique_id=821063493]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -249.12177)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -585.12177)
 current = true
 
 [node name="CaseUI" parent="Library Pages/FNAB2" unique_id=2053088864 node_paths=PackedStringArray("library_item") instance=ExtResource("22_m7axd")]
@@ -872,6 +874,96 @@ offset_right = -40.0
 offset_bottom = -40.0
 game = ExtResource("17_dfolu")
 library_item = NodePath("../../../Library/Area/GridContainer/FNAB2 (Five Night\'s at Bulba\'s 2)")
+
+[node name="BitcoinMiner" type="Control" parent="Library Pages" unique_id=288325008]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CustomBackground" type="TextureRect" parent="Library Pages/BitcoinMiner" unique_id=1891599793]
+custom_minimum_size = Vector2(530, 360)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("180_fx4dj")
+expand_mode = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/BitcoinMiner" unique_id=1596734739]
+custom_maximum_size = Vector2(2120, 1440)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 2230.0
+offset_bottom = 1440.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Library Pages/BitcoinMiner/SubViewportContainer" unique_id=275896206]
+handle_input_locally = false
+size = Vector2i(2120, 1440)
+render_target_update_mode = 0
+
+[node name="GameCase" parent="Library Pages/BitcoinMiner/SubViewportContainer/SubViewport" unique_id=85454175 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -960.0958)
+game = ExtResource("19_m7axd")
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Library Pages/BitcoinMiner/SubViewportContainer/SubViewport" unique_id=512429480]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -960.12177)
+current = true
+
+[node name="CaseUI" parent="Library Pages/BitcoinMiner" unique_id=1872757827 node_paths=PackedStringArray("library_item") instance=ExtResource("22_m7axd")]
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+game = ExtResource("19_m7axd")
+library_item = NodePath("../../../Library/Area/GridContainer/Bitcoin Miner")
+
+[node name="Veg" type="Control" parent="Library Pages" unique_id=2088564439]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CustomBackground" type="TextureRect" parent="Library Pages/Veg" unique_id=429668941]
+custom_minimum_size = Vector2(530, 360)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("180_fx4dj")
+expand_mode = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Library Pages/Veg" unique_id=2105654646]
+custom_maximum_size = Vector2(2120, 1440)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 2230.0
+offset_bottom = 1440.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Library Pages/Veg/SubViewportContainer" unique_id=1300049920]
+handle_input_locally = false
+size = Vector2i(2120, 1440)
+render_target_update_mode = 0
+
+[node name="GameCase" parent="Library Pages/Veg/SubViewportContainer/SubViewport" unique_id=1166436463 node_paths=PackedStringArray("camera") instance=ExtResource("167_p80qw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -254.09583)
+game = ExtResource("18_m7axd")
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Library Pages/Veg/SubViewportContainer/SubViewport" unique_id=1714162052]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -33.946537, 1.9073486e-06, -254.12177)
+current = true
+
+[node name="CaseUI" parent="Library Pages/Veg" unique_id=1293406867 node_paths=PackedStringArray("library_item") instance=ExtResource("22_m7axd")]
+layout_mode = 1
+offset_right = -40.0
+offset_bottom = -40.0
+game = ExtResource("18_m7axd")
+library_item = NodePath("../../../Library/Area/GridContainer/Veg")
 
 [node name="Store" type="Control" parent="." unique_id=2112552624 node_paths=PackedStringArray("items")]
 visible = false

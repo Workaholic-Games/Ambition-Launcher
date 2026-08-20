@@ -127,9 +127,5 @@ func remove_recursive(path: String) -> void:
 	else:
 		print("An error occurred when trying to access the path: ", path)
 
-func _on_visibility_changed() -> void:
-	check()
-
-
 func _on_back_pressed() -> void:
 	get_parent().hide()
