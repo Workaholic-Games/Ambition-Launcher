@@ -80,7 +80,6 @@ func check():
 	$Versions.clear()
 	ui_to_back.clear()
 	selected_version = -1
-	$VBoxContainer/Update.visible = false
 	
 	for i in range(game.version_names.size()):
 		var is_installed = false
@@ -130,3 +129,7 @@ func remove_recursive(path: String) -> void:
 
 func _on_visibility_changed() -> void:
 	check()
+
+
+func _on_back_pressed() -> void:
+	get_parent().hide()

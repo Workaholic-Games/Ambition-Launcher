@@ -3,17 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dmvj1kx5jugpn" path="res://main/settings/scroll.png" id="1_bb6im"]
 [ext_resource type="Script" uid="uid://86r5i1sh65t2" path="res://custom_resources/resources/theme_plus.gd" id="2_k672l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oylj0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb6im"]
 bg_color = Color(0.08627451, 0.08627451, 0.08627451, 1)
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhex1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k672l"]
 bg_color = Color(0.043137256, 0.043137256, 0.043137256, 1)
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gja71"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phxwv"]
 bg_color = Color(0.11858138, 0.11858138, 0.11858138, 1)
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxupd"]
 
@@ -49,7 +49,7 @@ thickness = 8
 atlas = ExtResource("1_bb6im")
 region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfx3y"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56j80"]
 bg_color = Color(0, 0.92941177, 0.015686275, 1)
 border_color = Color(0, 0.92941177, 0.015686275, 1)
 
@@ -70,42 +70,42 @@ bg_color = Color(0.021434652, 0.02143463, 0.021434627, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsl60"]
 bg_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqdr5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_501kh"]
 bg_color = Color(0.04303915, 0.043039158, 0.04303913, 1)
 border_width_left = 2
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iebw0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfnsg"]
 bg_color = Color(0.019607844, 0.019607844, 0.019607844, 1)
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sh2to"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsc0b"]
 bg_color = Color(0.08468992, 0.08468994, 0.08468989, 1)
 border_width_left = 2
-border_color = Color(0.465, 0, 0.93, 1)
+border_color = Color(0, 0.92941177, 0.015686275, 1)
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_0p1eh"]
-color = Color(0.81, 0.17009999, 0.41539493, 1)
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_yv42s"]
+color = Color(0, 0.92941177, 0.015686275, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_7xdxg"]
-color = Color(0.5971745, 0.08933706, 0.29318193, 1)
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_cx7xp"]
+color = Color(1.5883148e-06, 0.6483887, 0.007002832, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_wweag"]
-color = Color(0.3831048, 0.03953004, 0.17835724, 1)
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kdijr"]
+color = Color(0, 0.2949214, 0.0014748225, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 8
 vertical = true
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_eu0vm"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_cp5u7"]
 color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 grow_begin = 0.0
 grow_end = 0.0
@@ -117,20 +117,20 @@ Button/colors/font_color = Color(0, 0.93, 0.015499986, 1)
 Button/colors/font_hover_color = Color(0, 0.93, 0.015499986, 1)
 Button/colors/font_hover_pressed_color = Color(0, 0.93, 0.015499986, 1)
 Button/colors/font_pressed_color = Color(0, 0.93, 0.015499986, 1)
-Button/styles/hover = SubResource("StyleBoxFlat_oylj0")
-Button/styles/normal = SubResource("StyleBoxFlat_vhex1")
-Button/styles/pressed = SubResource("StyleBoxFlat_gja71")
+Button/styles/hover = SubResource("StyleBoxFlat_bb6im")
+Button/styles/normal = SubResource("StyleBoxFlat_k672l")
+Button/styles/pressed = SubResource("StyleBoxFlat_phxwv")
 FoldableContainer/colors/collapsed_font_color = Color(0, 0.93, 0.015499986, 1)
 FoldableContainer/colors/font_color = Color(0, 0.93, 0.015499986, 1)
 FoldableContainer/colors/hover_font_color = Color(0, 0.93, 0.015499986, 1)
 FoldableContainer/icons/expanded_arrow = SubResource("AtlasTexture_cxupd")
 FoldableContainer/icons/folded_arrow = SubResource("AtlasTexture_1ofgg")
 FoldableContainer/styles/focus = SubResource("StyleBoxEmpty_m7axd")
-FoldableContainer/styles/panel = SubResource("StyleBoxFlat_vhex1")
-FoldableContainer/styles/title_collapsed_hover_panel = SubResource("StyleBoxFlat_vhex1")
-FoldableContainer/styles/title_collapsed_panel = SubResource("StyleBoxFlat_vhex1")
-FoldableContainer/styles/title_hover = SubResource("StyleBoxFlat_oylj0")
-FoldableContainer/styles/title_panel = SubResource("StyleBoxFlat_vhex1")
+FoldableContainer/styles/panel = SubResource("StyleBoxFlat_k672l")
+FoldableContainer/styles/title_collapsed_hover_panel = SubResource("StyleBoxFlat_k672l")
+FoldableContainer/styles/title_collapsed_panel = SubResource("StyleBoxFlat_k672l")
+FoldableContainer/styles/title_hover = SubResource("StyleBoxFlat_bb6im")
+FoldableContainer/styles/title_panel = SubResource("StyleBoxFlat_k672l")
 HScrollBar/styles/grabber = SubResource("StyleBoxLine_m7axd")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_vm3u2")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_itfvo")
@@ -144,7 +144,7 @@ HSlider/styles/slider = SubResource("StyleBoxLine_21t6h")
 Label/colors/font__color = Color(1, 1, 1, 1)
 Label/colors/font_color = Color(0, 0.93, 0.015499986, 1)
 Line/base_type = &"Panel"
-Line/styles/panel = SubResource("StyleBoxFlat_yfx3y")
+Line/styles/panel = SubResource("StyleBoxFlat_56j80")
 LineEdit/colors/caret_color = Color(0, 0.93, 0.015499986, 0.588)
 LineEdit/colors/font_color = Color(0, 0.93, 0.015499986, 1)
 LineEdit/colors/font_placeholder_color = Color(0, 0.93, 0.015499986, 0.588)
@@ -160,7 +160,7 @@ PopupMenu/colors/font_hover_color = Color(0, 0.93, 0.015499986, 1)
 PopupMenu/font_sizes/font_size = 12
 PopupMenu/icons/radio_checked = SubResource("AtlasTexture_qy8ot")
 PopupMenu/icons/radio_unchecked = SubResource("AtlasTexture_21t6h")
-PopupMenu/styles/hover = SubResource("StyleBoxFlat_oylj0")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_bb6im")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_5rt4f")
 PopupMenu/styles/separator = SubResource("StyleBoxEmpty_21t6h")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_5rt4f")
@@ -168,16 +168,16 @@ ProgressBar/styles/fill = SubResource("StyleBoxFlat_gsl60")
 RichTextLabel/colors/default_color = Color(0, 0.93, 0.015499986, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_5rt4f")
 TabButton/base_type = &"Button"
-TabButton/styles/hover = SubResource("StyleBoxFlat_nqdr5")
-TabButton/styles/normal = SubResource("StyleBoxFlat_iebw0")
-TabButton/styles/pressed = SubResource("StyleBoxFlat_sh2to")
-VScrollBar/styles/grabber = SubResource("StyleBoxLine_0p1eh")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_7xdxg")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_wweag")
-VScrollBar/styles/scroll = SubResource("StyleBoxLine_eu0vm")
-VSlider/styles/grabber_area = SubResource("StyleBoxLine_eu0vm")
-VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_eu0vm")
-VSlider/styles/slider = SubResource("StyleBoxLine_eu0vm")
+TabButton/styles/hover = SubResource("StyleBoxFlat_501kh")
+TabButton/styles/normal = SubResource("StyleBoxFlat_nfnsg")
+TabButton/styles/pressed = SubResource("StyleBoxFlat_gsc0b")
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_yv42s")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_cx7xp")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_kdijr")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_cp5u7")
+VSlider/styles/grabber_area = SubResource("StyleBoxLine_cp5u7")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_cp5u7")
+VSlider/styles/slider = SubResource("StyleBoxLine_cp5u7")
 script = ExtResource("2_k672l")
 font_color = Color(0, 0.93, 0.015499986, 1)
 accent_color = Color(0, 0.92941177, 0.015686275, 1)
