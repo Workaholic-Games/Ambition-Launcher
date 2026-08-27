@@ -1826,6 +1826,15 @@ offset_right = 352.0
 offset_bottom = 264.0
 text = "Check for Updates"
 
+[node name="SecretButton" type="Button" parent="Settings" unique_id=1783272269]
+visible = false
+layout_mode = 0
+offset_left = 488.0
+offset_top = 322.0
+offset_right = 640.0
+offset_bottom = 340.0
+text = "bulba's secret button"
+
 [node name="TOS" type="Panel" parent="." unique_id=1122946722]
 visible = false
 z_index = 20
@@ -2632,6 +2641,9 @@ script = ExtResource("27_3gblu")
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=483937049]
 use_threads = true
 
+[node name="Modpack" type="HTTPRequest" parent="." unique_id=1499682294]
+use_threads = true
+
 [node name="Event" type="Node2D" parent="." unique_id=628519764]
 script = ExtResource("68_d2ack")
 
@@ -2707,6 +2719,7 @@ polygon = PackedVector2Array(0, 360, 0, 0, 640, 0, 640, 360)
 [connection signal="value_changed" from="Settings/Music Volume" to="Settings" method="_on_music_volume_value_changed"]
 [connection signal="value_changed" from="Settings/UI Volume" to="Settings" method="_on_ui_volume_value_changed"]
 [connection signal="pressed" from="Settings/Update" to="Update" method="_on_update_pressed"]
+[connection signal="pressed" from="Settings/SecretButton" to="Settings" method="_on_secret_button_pressed"]
 [connection signal="pressed" from="TOS/Deny" to="TOS" method="_on_deny_pressed"]
 [connection signal="pressed" from="TOS/Accept" to="TOS" method="_on_accept_pressed"]
 [connection signal="timeout" from="Reloading/Timer" to="Reloading" method="_on_timer_timeout"]
@@ -2749,5 +2762,6 @@ polygon = PackedVector2Array(0, 360, 0, 0, 640, 0, 640, 360)
 [connection signal="toggled" from="Launcher Games/Drops Button" to="Launcher Games/Drops" method="_on_drops_button_toggled"]
 [connection signal="toggled" from="Launcher Games/Launcher Pets Button" to="Launcher Games/Launcher Pets Button" method="_on_toggled"]
 [connection signal="request_completed" from="HTTPRequest" to="Update" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="Modpack" to="Settings" method="_on_modpack_request_completed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="Shuffle" to="." method="_on_shuffle_finished"]

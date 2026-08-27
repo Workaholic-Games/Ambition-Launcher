@@ -181,3 +181,17 @@ func _notification(what: int) -> void:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 	elif what == NOTIFICATION_APPLICATION_FOCUS_IN:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+
+
+
+func _on_secret_button_pressed() -> void:
+	$"../Modpack".download_file = OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/Modpack.mrpack"
+	$"../Modpack".request("https://github.com/Workaholic-Games/Ambition-Launcher/releases/download/modpack/Lord.of.Da.Wings.mrpack")
+
+
+func _on_modpack_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+	pass
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("secret"):
+		$SecretButton.show()

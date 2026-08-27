@@ -129,3 +129,7 @@ func remove_recursive(path: String) -> void:
 
 func _on_back_pressed() -> void:
 	get_parent().hide()
+
+
+func _on_visibility_changed() -> void:
+	check()
